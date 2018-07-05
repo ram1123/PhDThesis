@@ -1,4 +1,4 @@
-thesis.pdf: ThesisBibliography.bib thesis.tex chapters/*.tex frontback/*.tex gloss.tex
+thesis.pdf: ThesisBibliography.bib thesis.tex chapters/*.tex frontback/*.tex
 	pdflatex -shell-escape thesis
 	bibtex thesis
 	pdflatex -shell-escape thesis
@@ -10,6 +10,5 @@ partial:
 	pdflatex -shell-escape thesis
 
 clean:
-	rm -f *.lot *.lof *.lol *.toc *.log *.out *.aux *.blg *.bbl thesis.pdf chapters/*.aux frontback/*.aux
-
+	rm -f *.lot *.lof *.lol *.toc *.log *.out *.aux *.blg *.bbl thesis.pdf chapters/*.aux frontback/*.aux  *.aux *.bbl *.log *.out *.blg *.toc *.gz *.xml *.nlo *.lot *.lof *.ist *.ind *.ilg *.idx *.glo *.acn *.acr *.agl *.bbl *.bcf *.blg *.alg *.sav *.bak
 rebuild: clean thesis.pdf
