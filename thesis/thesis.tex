@@ -11,6 +11,12 @@
 \usepackage{colortbl}
 \usepackage{hhline}
 
+% packages for todonotes
+\usepackage[colorlinks]{hyperref}
+\usepackage[table]{xcolor}
+\usepackage[colorinlistoftodos]{todonotes}
+% \usepackage{menukeys}
+
 \usepackage{url}
 
 \usepackage[backend=bibtex,style=numeric,sorting=none]{biblatex}
@@ -37,30 +43,31 @@
  \pagestyle{plain}
 
 % Front pages =================================================================
- \include{frontback/titlepage}
-  \cleardoublepage \include{frontback/declare}
-  \cleardoublepage\include{frontback/originality}
-  \cleardoublepage\include{frontback/saf1}
-  \cleardoublepage\include{frontback/saf2}
-  \cleardoublepage\include{frontback/dedicate}
-  \cleardoublepage\include{frontback/acknowledgement}
-  \cleardoublepage \include{frontback/abstract}
+ % \include{frontback/titlepage}
+ \listoftodos
+  % \cleardoublepage \include{frontback/declare}
+  % \cleardoublepage\include{frontback/originality}
+  % \cleardoublepage\include{frontback/saf1}
+  % \cleardoublepage\include{frontback/saf2}
+  % \cleardoublepage\include{frontback/dedicate}
+  % \cleardoublepage\include{frontback/acknowledgement}
+  % \cleardoublepage \include{frontback/abstract}
 
-  \pagestyle{headings}
-  \cleardoublepage%\include{frontback/toc}
-   \tableofcontents 
-   \listoffigures 
-   \listoftables
+  % \pagestyle{headings}
+  % \cleardoublepage%\include{frontback/toc}
+   % \tableofcontents 
+   % \listoffigures 
+   % \listoftables
   % Content =====================================================================
   \pagenumbering{arabic}
-  \cleardoublepage
+  % \cleardoublepage
   \include{chapters/LHC}
 
-  \newpage 
+  % \newpage 
   \printbibliography
-  \printindex
-  \cleardoublepage
-  \printglossary[type=\acronymtype,title=Acronyms]
+  % \printindex
+  % \cleardoublepage
+  % \printglossary[type=\acronymtype,title=Acronyms]
 
 
   % \appendix
