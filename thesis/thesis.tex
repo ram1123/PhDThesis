@@ -6,6 +6,15 @@
 \usepackage{graphicx}
 \usepackage[usenames, dvipsnames]{color}
 
+% To add line number
+\usepackage{lineno}
+
+\usepackage{comment}
+
+% for <bra> <ket> notation 
+\usepackage{braket}
+
+
 % for highligted tables
 \usepackage{tabularx}
 \usepackage{colortbl}
@@ -39,6 +48,7 @@
  
 
 \begin{document}
+ \linenumbers
  \pagenumbering{roman}
  \pagestyle{plain}
 
@@ -61,7 +71,13 @@
   % Content =====================================================================
   \pagenumbering{arabic}
   % \cleardoublepage
+  \include{chapters/Introduction}
+  \include{chapters/Introduction2}
+  \include{chapters/Introduction3}
   \include{chapters/LHC}
+  \include{chapters/VBS}
+  \include{chapters/GEM_Detectors_Motivation}
+  \include{chapters/GEM_Detectors}
 
   % \newpage 
   \printbibliography
