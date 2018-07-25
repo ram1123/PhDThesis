@@ -11,9 +11,13 @@
 
 \usepackage{comment}
 
+\usepackage{epigraph}
+
 % for <bra> <ket> notation 
 \usepackage{braket}
 
+% for degree symbol (https://tex.stackexchange.com/questions/384873/what-is-the-degree-symbol)
+\usepackage{siunitx}
 
 % for highligted tables
 \usepackage{tabularx}
@@ -71,13 +75,15 @@
   % Content =====================================================================
   \pagenumbering{arabic}
   % \cleardoublepage
-  \include{chapters/Introduction}
-  \include{chapters/Introduction2}
-  \include{chapters/Introduction3}
+  % \include{chapters/Introduction}
+  % \include{chapters/Introduction2}
+  % \include{chapters/Introduction3}
   \include{chapters/LHC}
-  \include{chapters/VBS}
-  \include{chapters/GEM_Detectors_Motivation}
-  \include{chapters/GEM_Detectors}
+  \include{chapters/LHC-CMS}
+  \include{chapters/LHC-DataTaking}
+  % \include{chapters/VBS}
+  % \include{chapters/GEM_Detectors_Motivation}
+  % \include{chapters/GEM_Detectors}
 
   % \newpage 
   \printbibliography
