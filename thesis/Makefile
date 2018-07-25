@@ -1,7 +1,6 @@
 thesis.pdf: ThesisBibliography.bib thesis.tex chapters/*.tex frontback/*.tex
 	pdflatex -shell-escape thesis
 	bibtex thesis
-	pdflatex -shell-escape thesis
 	makeglossaries thesis
 	pdflatex -shell-escape thesis
 
