@@ -12,7 +12,7 @@ The famous quote ``history repeats itself" applies well to the \acrfull{hep} exp
 
 The \acrshort{lhc} is  a hadron collider which can accelerate the two proton beams in opposite direction with maximum of 14 TeV energy in a 26.6 km long tunnel which is about 100 m underground. The \acrshort{lhc} is the latest and most-powerful accelerator everbuilt. It is a proton-proton collider built to improve our understanding of fundamental physics. It started on 21$^{st}$ October 2008. It is built in the same tunnel where there was Large Electron Positron (LEP) collider, that collides electrons and positrons. LEP collaboration decided to switch to hadron collider because of following advantages:
 \begin{itemize}
-    \item Hadron collider can reach a higher center of mass (COM) energy, because of much lower synchrotron radiation emitted by hadrons as compared to electrons. Synchrotron radiation loss is directory proportional to $(Energy/mass)^4$. \todo[fancyline]{Add exact number for electrons and protons synchrotron loss.}
+    \item Hadron collider can reach a higher Center Of Mass (COM) energy, because of much lower synchrotron radiation \footnote{The radiation emitted by charged particle during acceleration in a circular path is known as synchrotron radiation. As the particlee will loose energy with this so we must provide the additional energy to keep the beam at constant energy.} emitted by hadrons as compared to electrons. Synchrotron radiation loss is directory proportional to $(Energy/mass)^4$. \todo[fancyline]{Add exact number for electrons and protons synchrotron loss.}
     \item As hadrons are composite particles so it allows us to scan over wide range of energy.
 \end{itemize}
 
@@ -190,8 +190,17 @@ In LHC there are four interaction points (IPs) where the two proton beams are ma
 	\caption{LHC geometry with arcs and straight sections.}
 	\label{fig:LHCgeometry}
 \end{figure}
+\newline
+{\bf ATLAS} (A Toroidal LHC Apparatus) and {\bf CMS} (Compact Muon Solenoid) are large general-purpose detectors having similar design and same physics goal. CMS detector will be described in detail in Section~\ref{sec:cms_experiment}. The main difference in the two is in their magnet systems. One additional choice that affects this is the momentum resoultion for muons. The momentum resolution for muons, $\Delta p_T/p_T$, are proportional to  $B^{-1}L^{-2}$, where B is magnetic field and L is distance of momentum measurement from the IP of detector. So, To imporve the momentum resoltuion there are two possible choices.
 
-{\bf ATLAS} (A Toroidal LHC Apparatus) and {\bf CMS} (Compact Muon Solenoid) are large general-purpose detectors having similar design and same physics goal. The main difference in the two is in their magnet systems. ATLAS has an eight toroidal magnets combined with a smaller inner solenoid while CMS has a powerful solenoid magnet only. CMS detector will be described in detail in Section~\ref{sec:cms_experiment}.
+\begin{enumerate}
+	\item Increase the magnetic field with compact design, or
+	\item Work with low magnetic field with long lever arm, L
+\end{enumerate}
+
+There is also a third possiblity to increase the lever arm as well as magnetic field but it will increase the cost of detector by several factor. So, CMS chooses the first point, i.e., to increase the magnetic field with compact design\footnote{This is why there is word {\bf compact} in the name of CMS.} while ATLAS chooses the design with low magnetic field with logn lever arm.
+
+% ATLAS has an eight toroidal magnets combined with a smaller inner solenoid while CMS has a powerful solenoid magnet only.
 
 {\bf ALICE} (A Large Ion Collider Experiment) is a heavy-ion detector. It is specially designed for the study of strongly interacting matter at high densities in quark-gluon plasma phase.
 
@@ -200,23 +209,23 @@ In LHC there are four interaction points (IPs) where the two proton beams are ma
 {\bf LHCf} (Large Hadron Collider forward) and {\bf TOTEM} (TOTal cross-section, Elastic scattering and diffraction dissociation Measurement at the LHC) are located near ATLAS and CMS respectively, for the study of forward physics.
 % section experiments_at_the_lhc (end)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{CMS Experiment} % (fold)
-\label{sec:cms_experiment}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{CMS Experiment} % (fold)
+% \label{sec:cms_experiment}
 
-The CMS is a general-purpose detector at the LHC. It is built around a huge solenoid magnet. This takes the form of a cylindrical coil of superconducting cable that generates a field of 4 Tesla, about 100,000 times the magnetic field of the Earth. The field is confined by a steel ``yoke'' that forms the bulk of the detector's 12,500-tonne weight. The complete detector is 21 meters long, 15 meters wide and 15 meter high.
+% The CMS is a general-purpose detector at the LHC. It is built around a huge solenoid magnet. This takes the form of a cylindrical coil of superconducting cable that generates a field of 4 Tesla, about 100,000 times the magnetic field of the Earth. The field is confined by a steel ``yoke'' that forms the bulk of the detector's 12,500-tonne weight. The complete detector is 21 meters long, 15 meters wide and 15 meter high.
 
-\subsection{Detector Design} % (fold)
-\label{sub:detector_design}
+% \subsection{Detector Design} % (fold)
+% \label{sub:detector_design}
 
-% subsection cms_detector_design (end)
-CMS\cite{paper:JINST:CMSCollaboration} detector is a general purpose deetector which consist of layers of material that exploit the different properties of particles to catch and measure the energy and momentum of each particles passing through it. So, CMS needs:
-\begin{itemize}
-	\item a high quality central tracking system to give accurate momentum measurements with good efficienccy of offline tagging of b-jets and $\tau$'s.
-	\item a high resolution ($\approx$ 1\% at 100 GeV) method to detect and measure electrons and photons (an electromagnetic calorimeter) and isolate them.
-	\item a ``hermetic” hadron calorimeter, designed to entirely surround the collision and prevent particles from escaping along with fine lateral segmentation.
-	\item a high performance system to detect and measure muons with good time and momentum resolution ($\approx$ 1\% at 100 GeV).
-\end{itemize}
+% % subsection cms_detector_design (end)
+% CMS\cite{paper:JINST:CMSCollaboration} detector is a general purpose deetector which consist of layers of material that exploit the different properties of particles to catch and measure the energy and momentum of each particles passing through it. So, CMS needs:
+% \begin{itemize}
+% 	\item a high quality central tracking system to give accurate momentum measurements with good efficienccy of offline tagging of b-jets and $\tau$'s.
+% 	\item a high resolution ($\approx$ 1\% at 100 GeV) method to detect and measure electrons and photons (an electromagnetic calorimeter) and isolate them.
+% 	\item a ``hermetic” hadron calorimeter, designed to entirely surround the collision and prevent particles from escaping along with fine lateral segmentation.
+% 	\item a high performance system to detect and measure muons with good time and momentum resolution ($\approx$ 1\% at 100 GeV).
+% \end{itemize}
 % The CMS experiment has been built as a general purpose detector with excellent tracking and particle identification capabilities designed to fully explore the physics potential of the LHC. The CMS comprise the following sub-detectors:
 % \begin{itemize}
 % 	\item The inner tracking system is used for the identification and track measurement of charged particles.
@@ -227,49 +236,49 @@ CMS\cite{paper:JINST:CMSCollaboration} detector is a general purpose deetector w
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{CMS sub-systems} % (fold)
-\label{sub:cms_sub_systems}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{CMS sub-systems} % (fold)
+% \label{sub:cms_sub_systems}
 
-% subsection cms_sub_systems (end)
+% % subsection cms_sub_systems (end)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Tracker} % (fold)
-\label{ssub:tracker}
-% subsection tracker (end)
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsubsection{Tracker} % (fold)
+% \label{ssub:tracker}
+% % subsection tracker (end)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The Electromagnetic Calorimeter} % (fold)
-\label{sub:the_electromagnetic_calorimeter}
-% subsection the_electromagnetic_calorimeter (end)
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsubsection{The Electromagnetic Calorimeter} % (fold)
+% \label{sub:the_electromagnetic_calorimeter}
+% % subsection the_electromagnetic_calorimeter (end)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The Hadronic Calorimeter} % (fold)
-\label{sub:the_hadronic_calorimeter}
-% subsection the_hadronic_calorimeter (end)
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsubsection{The Hadronic Calorimeter} % (fold)
+% \label{sub:the_hadronic_calorimeter}
+% % subsection the_hadronic_calorimeter (end)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The Muon System} % (fold)
-\label{sub:the_muon_system}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsubsection{The Muon System} % (fold)
+% \label{sub:the_muon_system}
 
-% subsection the_muon_system (end)
+% % subsection the_muon_system (end)
 
-% section cms_experiment (end)
+% % section cms_experiment (end)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{CMS Trigger and Data Acquisition system} % (fold)
-\label{sec:cms_trigger_and_data_acquisition_system}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{CMS Trigger and Data Acquisition system} % (fold)
+% \label{sec:cms_trigger_and_data_acquisition_system}
 
-% section cms_trigger_and_data_acquisition_system (end)
+% % section cms_trigger_and_data_acquisition_system (end)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{CMS Offline Computing} % (fold)
-\label{sec:cms_offline_computing}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{CMS Offline Computing} % (fold)
+% \label{sec:cms_offline_computing}
 
 % section cms_offline_computing (end)
 
