@@ -1,3 +1,15 @@
+# Table of Content
+
+---
+
+1. [Some points](#mythesis)
+2. [Thesis progress](#theesis-progress)
+3. [To-Do](#to-do)
+4. [Latex to Word conversion](#latex-to-word-conversion)
+5. [Autocompletations](#autocompletations)
+
+---
+
 # MyThesis
 
 - Make tags of thesis whenever I give thesis to read someone.
@@ -16,6 +28,14 @@
     4. http://iopscience.iop.org/article/10.1143/JJAP.3.342
 2. Add energy loss per turn for electrons in LHC
 3. 
+
+# Latex to Word Conversion
+
+```bash
+pandoc thesis.tex --bibliography=ThesisBibliography.bib --reference-doc=reference_thesis.docx  -o thesis.docx
+```
+
+Reference: [https://jabranham.com/blog/2016/11/using-pandoc-export-to-word/](https://jabranham.com/blog/2016/11/using-pandoc-export-to-word/)
 
 # Autocompletations
 
