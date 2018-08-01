@@ -27,8 +27,8 @@
 % packages for todonotes
 \usepackage[colorlinks]{hyperref}
 \usepackage[table]{xcolor}
-% \usepackage[colorinlistoftodos]{todonotes}
-\usepackage[disable]{todonotes} % To hide uncomment this and comment upper line
+\usepackage[colorinlistoftodos]{todonotes}
+% \usepackage[disable]{todonotes} % To hide uncomment this and comment upper line
 % \usepackage{menukeys}
 
 \usepackage{url}
@@ -43,6 +43,7 @@
 \usepackage[acronym,toc,nomain,nonumberlist]{glossaries}
 \makeglossaries
 
+\usepackage[toc,page]{appendix}
 %
 %	define all acronyms
 %
@@ -85,6 +86,10 @@
   % \include{chapters/VBS}
   % \include{chapters/GEM_Detectors_Motivation}
   % \include{chapters/GEM_Detectors}
+  
+  \begin{appendices}
+     \include{appendix/synchtron_radiation}
+  \end{appendices}
 
   % \newpage 
   \printbibliography

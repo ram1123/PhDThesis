@@ -144,7 +144,8 @@ Average mean pile-up (2012) &    ?? \\
 Average mean pile-up (2016) &    ?? \\
 \hline
 Energy loss per turn at 14 TeV              &   7 keV   \\
-Energy loss per turn for electrons          &  \begin{minipage}{5cm}  \todo[inline]{add synchrotron energy loss for electrons} \end{minipage}     \\
+Energy loss per turn for electrons at 104.6 GeV          &  40,000 keV     \\
+% synchtron radiation for electrons: Reference: Particle Physics Experiments at high energy colliders by John Hauptman
 \end{tabular}
 \caption{LHC technical parameters for proton-proton collisions: nominal, 2012 and 2016 values.\cite{Bruce2016, Schoerner-Sadenius2015, LHC-parameters-2016, LHC-tdr-vol1}.}
 \label{table:LHC-parameters}
@@ -189,14 +190,14 @@ In LHC there are four IPs where two proton beams are made to collide. At every I
 	\label{fig:LHCgeometry}
 \end{figure}
 \newline
-{\bf ATLAS} (A Toroidal LHC Apparatus) and {\bf CMS} (Compact Muon Solenoid) are large general-purpose detectors having similar design and similar goal. CMS detector will be described in detail in Section~\ref{sec:cms_experiment}. The main difference in the two is in their magnet systems. One additional choice that affects this is the momentum resoultion for muons. The momentum resolution for muons, $\Delta p_T/p_T$, are proportional to  $B^{-1}L^{-2}$, where B is magnetic field and L is distance of momentum measurement from the IP of detector. So, To imporve the momentum resoltuion there are two possible choices.
+{\bf ATLAS} (A Toroidal LHC Apparatus) and {\bf CMS} (Compact Muon Solenoid) are large general-purpose\footnote{Here, general purpose means this machines will be used for many different kind of physics searches.} detectors having similar design and similar goal. CMS detector will be described in detail in Section~\ref{sec:cms_experiment}. The main difference in the two is in their magnet systems. One additional choice that affects this is the momentum resolution for muons. The momentum resolution for muons, $\Delta p_T/p_T$, are proportional to  $B^{-1}L^{-2}$, where B is magnetic field and L is distance of momentum measurement from the IP of detector. So, To improve the momentum resolution there are two possible choices.
 
 \begin{enumerate}
 	\item Increase the magnetic field with compact design, or
 	\item Work with low magnetic field with long lever arm, L
 \end{enumerate}
 
-There is also a third possibility to improve the momentum resolution by increasing the leaver arm as well as magnetic field, but it increases the cost of the detector by several factors. So, CMS chooses the first point, i.e., to increase the magnetic field with compact design\footnote{This is why there is word {\bf compact} in the name of CMS.} while ATLAS chooses the design with low magnetic field with logn lever arm.
+There is also a third possibility to improve the momentum resolution by increasing the leaver arm as well as magnetic field, but it increases the cost of the detector by several factors. So, CMS chooses the first point, i.e., to increase the magnetic field with compact design\footnote{This is why there is word {\bf compact} in the name of CMS.} while ATLAS chooses the design with low magnetic field with long lever arm.
 
 % ATLAS has an eight toroidal magnets combined with a smaller inner solenoid while CMS has a powerful solenoid magnet only.
 
@@ -210,8 +211,30 @@ There is also a third possibility to improve the momentum resolution by increasi
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{CMS Experiment} % (fold)
 \label{sec:cms_experiment}
+While designing a HEP detector we need to take into account the environment created by the two proton-proton collision at LHC. Following things we need to take into account:
 
-The CMS is a general-purpose detector at the LHC. It is built around a huge solenoid magnet. This takes the form of a cylindrical coil of superconducting cable that generates a field of 4 Tesla, about 100,000 times the magnetic field of the Earth. The field is confined by a steel ``yoke'' that forms the bulk of the detector's 12,500-tonne weight. The complete detector is 21 meters long, 15 meters wide and 15 meter high.
+\begin{itemize}
+	\item \textbf{Delivered Luminosity from LHC} THis tis.
+	\item \textbf{Produced ratiation} this
+	\item \textbf{pile up}. this
+	\item \textbf{Event rate}thsil
+\end{itemize}
+
+When the two beam of proton collides then thousands of particles are produced and out of them only 9 particles are of interest from detector construction point of view. They are photons ($\gamma$), electrons ($e$), muons ($\mu$), pions ($\pi^{\pm}$), kaon ($K^{\pm},~K_L,~K_S$), protons ($p$), and neutrons ($n$). Out of rest there are three neutrinos which interacts only weakly that do not interact in light mass HEP detectors and others are short lived particles. So, 
+
+
+CMS detector is shown in Figure~\ref{fig:CMS-detector}.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/LHC/cms_complete_labelled.pdf}
+	\caption{CMS detector drawing}
+	\label{fig:CMS-detector}
+\end{figure}
+
+
+
+% The CMS is a general-purpose detector at the LHC. It is built around a huge solenoid magnet. This takes the form of a cylindrical coil of superconducting cable that generates a field of 4 Tesla, about 100,000 times the magnetic field of the Earth. The field is confined by a steel ``yoke'' that forms the bulk of the detector's 12,500-tonne weight. The complete detector is 21 meters long, 15 meters wide and 15 meter high.
 
 % \subsection{Detector Design} % (fold)
 % \label{sub:detector_design}
