@@ -8,7 +8,7 @@ In this chapter, the working and the design parameters of \acrfull{lhc} and its 
 \section{The Large Hadron Collider} % (fold)
 \label{sec:the_large_hadron_collider}
 
-The famous quote ``history repeats itself" applies well to the \acrfull{hep} experiments. The starting point of experimental particle physics is the Rutherford $\alpha$-particle scattering, which is suggested by Ernest Rutherford and carried out by the two assistant  Hans Geiger and Ernest Marsden in early 20th century. In this experiment Rutherford suggested to aim the beam of $\alpha$-particles to the thin gold foil and using the experimental findings they suggested the well known structure of today's atom, in which the most of mass centered at core of atom which is known as nucleus and the electrons  rotates around the nucleus. Even now we are doing the same thing just the method changed from ``natural accelerator"\footnote{radioactivity and cosmic rays} to the ``man-made" accelerator that can accelerate particles with the velocity close to the speed of light. The design and working of the accelerator has changed a lot over a period of time in going from MeV to GeV and in the TeV range. Now, these machines are not only used in \acrshort{hep} experiments, but also extends their arenas to treating human beings from cancer therapy, radioisotope production, 3-D x-ray\todo[fancyline]{Add citations to the applications}, also to the industry for uses like material processing, sterilization, security scan, water treatment, and many more. 
+The famous quote ``history repeats itself" applies well to the \acrfull{hep} experiments. The starting point of experimental particle physics is the Rutherford $\alpha$-particle scattering, which is suggested by Ernest Rutherford and carried out by the two assistant  Hans Geiger and Ernest Marsden in early 20th century~\cite{Hauptman2010}. In this experiment Rutherford suggested to aim the beam of $\alpha$-particles to the thin gold foil and using the experimental findings they suggested the well known structure of today's atom, in which the most of mass centered at core of atom which is known as nucleus and the electrons  rotates around the nucleus. Even now we are doing the same thing just the method changed from ``natural accelerator"\footnote{radioactivity and cosmic rays} to the ``man-made" accelerator that can accelerate particles with the velocity close to the speed of light. The design and working of the accelerator has changed a lot over a period of time in going from MeV to GeV and in the TeV range. Now, these machines are not only used in \acrshort{hep} experiments, but also extends their arenas to treating human beings from cancer therapy, radioisotope production, 3-D x-ray\todo[fancyline]{Add citations to the applications}, also to the industry for uses like material processing, sterilization, security scan, water treatment, and many more. 
 
 The \acrshort{lhc} is  a hadron collider which can accelerate two proton beams, moving in opposite direction, to a maximum of 14 TeV energy in a 26.6 km long tunnel which is about 100 m underground. The \acrshort{lhc} is the latest and most-powerful accelerator everbuilt. It is a proton-proton collider built to improve our understanding of fundamental physics. It started on 21$^{st}$ October 2008 and is positioned in the samee tunnel that earlier had Large Electron Positron Collider (LEP). The LEP collaboration decided to switch to hadron collider because of following advantages:
 \begin{itemize}
@@ -51,13 +51,13 @@ The CERN accelerator complex is shown in Figure~\ref{fig:CERN-accelerator-comple
 % subsection accelerating_structure (end)
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=1.0\textwidth]{figures/LHC/distribution_of_protons_en.pdf}
+	\includegraphics[width=1.0\textwidth]{figures/LHC/distribution_of_protons_en.jpg}
 	\caption{Other experiments at the LHC accelerating chain \cite{OtherExpAtLHCAcceleratingChain}}
 	\label{fig:OtherExpAtAccStructure}
 \end{figure}
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=1.35\textwidth]{figures/CERN_Accelerator_Complex-v2016.pdf}
+	\includegraphics[width=1.35\textwidth]{figures/LHC/CERN_Accelerator_Complex-v2016.jpg}
 	\caption{LHC accelerator chain along with all its other experiments which uses proton beam from other part of accelerator either from PSB, PS or SPS\cite{Fig-CERN-accelerator-complex}}
 	\label{fig:CERN-accelerator-complex}
 \end{figure}
@@ -139,9 +139,9 @@ $\epsilon_n$(transverse emittance, rms, normalized) (at collision point) &   3.7
 total longitudinal emittance (at injection) & 1.0 eVs \\
 total longitudinal emittance (at collision) & 2.5 eVs \\
 \hline
-Average mean pile-up (nominal) &   \begin{minipage}{5cm} \todo[inline]{Add pile-up for 2012 and 2016}\end{minipage} \\
-Average mean pile-up (2012) &    ?? \\
-Average mean pile-up (2016) &    ?? \\
+Average mean pile-up (nominal) &   25 \\
+Average mean pile-up (2012) &    20 \\
+Average mean pile-up (2016) &    40 \\
 \hline
 Energy loss per turn at 14 TeV              &   7 keV   \\
 Energy loss per turn for electrons at 104.6 GeV          &  40,000 keV     \\
@@ -211,30 +211,90 @@ There is also a third possibility to improve the momentum resolution by increasi
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{CMS Experiment} % (fold)
 \label{sec:cms_experiment}
-While designing a HEP detector we need to take into account the environment created by the two proton-proton collision at LHC. Following things we need to take into account:
+In a HEP detectors there are two different categories of conditons are imposed. They are:
 
 \begin{itemize}
-	\item \textbf{Delivered Luminosity from LHC} THis tis.
-	\item \textbf{Produced ratiation} this
-	\item \textbf{pile up}. this
-	\item \textbf{Event rate}thsil
+	\item restrictions imposed from the accelerator conditions.
+	\item restrictions because of physics goal.
 \end{itemize}
 
-When the two beam of proton collides then thousands of particles are produced and out of them only 9 particles are of interest from detector construction point of view. They are photons ($\gamma$), electrons ($e$), muons ($\mu$), pions ($\pi^{\pm}$), kaon ($K^{\pm},~K_L,~K_S$), protons ($p$), and neutrons ($n$). Out of rest there are three neutrinos which interacts only weakly that do not interact in light mass HEP detectors and others are short lived particles. So, 
+% While designing a HEP detector we need to take into account the environment created by the two proton-proton collision at LHC. So, the restriction imposes on detectors from LHC enviornment are
 
+Restrictions imposed on detector from the LHC are:
 
-CMS detector is shown in Figure~\ref{fig:CMS-detector}.
+\begin{itemize}
+	\item \textbf{High luminosity delivered by LHC:} As the delivered luminosity is high this implies every-time the two proton bunches cross each other there will be more than one p-p interactions\footnote{More than one p-p interaction in one bunch crossing is known as pile-up. It is also given as the product of inelastic p-p cross-section ($\sigma_{inel}$), instantaneous luminosity ($L$) and the mean time interval between two collision, ($< t >$). \begin{equation}
+		mean~pile-up = \sigma_{inel} \times L \times <t>
+	\end{equation}}. This is one of greatest challenges. This implies more than 1000 particles passes through detector. This imposes condition that the detector should be highly granular this results with increase number of channels that should be synchronized with each other.
+	\item \textbf{Event rate:} At LHC, the two proton bunches crosses each other at every 25 ns. So, the response time for all the sub-system of detector should be less than 25 ns.
+	\item \textbf{Produced radiation:} At every 25ns the detectors are bombarded with more than 1000 particles so all the sub-detectors should be radiation hard including its electronics, cables, glue, screws, and so on.
+\end{itemize}
 
+Restrictions imposed on detector from physics goal are:
+
+\begin{itemize}
+	\item Good muon identification and momentum resolution ($\approx$ 1\% at 100 GeV).
+	\item EEfficient triggering and tracking of b-jets and $\tau$'s.
+	\item High resolution electromagnetic calorimeter to detect electrons and photons.
+	\item Good missing transverse energy resolution and di-jet mass resolution requires a ``hermetic'' hadron calorimeter with full geometric coverage and fine lateral segmentation.
+\end{itemize}
+
+% When the two beam of proton collides then thousands of particles are produced and out of them only 9 particles are of interest from detector construction point of view. They are photons ($\gamma$), electrons ($e$), muons ($\mu$), pions ($\pi^{\pm}$), kaon ($K^{\pm},~K_L,~K_S$), protons ($p$), and neutrons ($n$). Out of rest there are three neutrinos which interacts only weakly that do not interact in light mass HEP detectors and others are short lived particles. So, 
+
+Based on the above condition CMS detector was designed in cylindrical shape having each detector one on top of other with beam pipe at center. To have full geometric coverage it is designed with a barrel region and two endcap regions. Main part of the CMS detector is its superconducting magnet system with a high magnetic field of 4 Tesla to accurately measure the high momentum particles and its muon system. Muon system kept outside the magnet but sandwiched in its return yoke. While the tracking system and calorimeters are placed inside the magnet. CMS detector design is shown in Figure~\ref{fig:CMS-detector}.
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.95\textwidth]{figures/LHC/cms_complete_labelled.pdf}
+	\includegraphics[width=0.95\textwidth]{figures/LHC/cms_120918_03.png}
 	\caption{CMS detector drawing}
 	\label{fig:CMS-detector}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{CMS sub-systems} % (fold)
+\label{sub:cms_sub_systems}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Magnet} % (fold)
+\label{ssub:magnet}
+Magnet system of CMS consists of a superconducting solenoid magnet with 3.8 T magnetic field. It is 12.5 m in length and 6 meter in inner diameter. The high mangnetic field ensures the appropriate bending power of the high-energy charged particles to precisely measure its momentum. It is shown in Figure~\ref{fig:CMS-magnet}.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/LHC/CMS_magnet.jpg}
+	\caption{CMS Magnet system}
+	\label{fig:CMS-magnet}
+\end{figure}
+
+% subsubsection magnet (end)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Tracker} % (fold)
+\label{ssub:tracker}
+% subsection tracker (end)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The Electromagnetic Calorimeter} % (fold)
+\label{sub:the_electromagnetic_calorimeter}
+% subsection the_electromagnetic_calorimeter (end)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The Hadronic Calorimeter} % (fold)
+\label{sub:the_hadronic_calorimeter}
+% subsection the_hadronic_calorimeter (end)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The Muon System} % (fold)
+\label{sub:the_muon_system}
+
+% subsection the_muon_system (end)
+% subsection cms_sub_systems (end)
 
 
-% The CMS is a general-purpose detector at the LHC. It is built around a huge solenoid magnet. This takes the form of a cylindrical coil of superconducting cable that generates a field of 4 Tesla, about 100,000 times the magnetic field of the Earth. The field is confined by a steel ``yoke'' that forms the bulk of the detector's 12,500-tonne weight. The complete detector is 21 meters long, 15 meters wide and 15 meter high.
 
 % \subsection{Detector Design} % (fold)
 % \label{sub:detector_design}
@@ -257,37 +317,7 @@ CMS detector is shown in Figure~\ref{fig:CMS-detector}.
 
 
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{CMS sub-systems} % (fold)
-% \label{sub:cms_sub_systems}
 
-% % subsection cms_sub_systems (end)
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsubsection{Tracker} % (fold)
-% \label{ssub:tracker}
-% % subsection tracker (end)
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsubsection{The Electromagnetic Calorimeter} % (fold)
-% \label{sub:the_electromagnetic_calorimeter}
-% % subsection the_electromagnetic_calorimeter (end)
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsubsection{The Hadronic Calorimeter} % (fold)
-% \label{sub:the_hadronic_calorimeter}
-% % subsection the_hadronic_calorimeter (end)
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsubsection{The Muon System} % (fold)
-% \label{sub:the_muon_system}
-
-% % subsection the_muon_system (end)
 
 % % section cms_experiment (end)
 
@@ -325,3 +355,14 @@ CMS detector is shown in Figure~\ref{fig:CMS-detector}.
 % Because of limited geometrical space in LHC ring the beam pipe was designed as a ``twin-aperture" magnets, where superconducing ring is housed in a common return yoke and cryostat.
 
 % chapter the_lhc_and_cms_machine (end)
+
+
+% The CMS is a general-purpose detector at the LHC. It is built around a huge solenoid magnet. This takes the form of a cylindrical coil of superconducting cable that generates a field of 4 Tesla, about 100,000 times the magnetic field of the Earth. The field is confined by a steel ``yoke'' that forms the bulk of the detector's 12,500-tonne weight. The complete detector is 21 meters long, 15 meters wide and 15 meter high.
+
+
+% \begin{figure}[!htbp]
+% 	\centering
+% 	\includegraphics[width=0.95\textwidth]{figures/LHC/cms_complete_labelled.png}
+% 	\caption{CMS detector drawing}
+% 	\label{fig:CMS-detector-2}
+% \end{figure}
