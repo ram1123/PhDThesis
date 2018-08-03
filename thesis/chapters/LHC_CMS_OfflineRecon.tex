@@ -10,9 +10,9 @@ In this chapter, the working and the design parameters of \acrfull{lhc} and its 
 
 The famous quote ``history repeats itself" applies well to the \acrfull{hep} experiments. The starting point of experimental particle physics is the Rutherford $\alpha$-particle scattering, which is suggested by Ernest Rutherford and carried out by the two assistant  Hans Geiger and Ernest Marsden in early 20th century~\cite{Hauptman2010}. In this experiment Rutherford suggested to aim the beam of $\alpha$-particles to the thin gold foil and using the experimental findings they suggested the well known structure of today's atom, in which the most of mass centered at core of atom which is known as nucleus and the electrons  rotates around the nucleus. Even now we are doing the same thing just the method changed from ``natural accelerator"\footnote{radioactivity and cosmic rays} to the ``man-made" accelerator that can accelerate particles with the velocity close to the speed of light. The design and working of the accelerator has changed a lot over a period of time in going from MeV to GeV and in the TeV range. Now, these machines are not only used in \acrshort{hep} experiments, but also extends their arenas to treating human beings from cancer therapy, radioisotope production, 3-D x-ray\todo[fancyline]{Add citations to the applications}, also to the industry for uses like material processing, sterilization, security scan, water treatment, and many more. 
 
-The \acrshort{lhc} is  a hadron collider which can accelerate two proton beams, moving in opposite direction, to a maximum of 14 TeV energy in a 26.6 km long tunnel which is about 100 m underground. The \acrshort{lhc} is the latest and most-powerful accelerator everbuilt. It is a proton-proton collider built to improve our understanding of fundamental physics. It started on 21$^{st}$ October 2008 and is positioned in the samee tunnel that earlier had Large Electron Positron Collider (LEP). The LEP collaboration decided to switch to hadron collider because of following advantages:
+The \acrshort{lhc} is  a hadron collider which can accelerate two proton beams, moving in opposite direction, to a maximum of 14 TeV energy in a 26.7 km long tunnel which is about 100 m underground. The \acrshort{lhc} is the latest and most-powerful accelerator everbuilt. It is a proton-proton collider built to improve our understanding of fundamental physics. It started on 21$^{st}$ October 2008 and is positioned in the same tunnel that earlier had Large Electron Positron Collider (LEP). The LEP collaboration decided to switch to hadron collider because of following advantages:
 \begin{itemize}
-    \item Hadron collider can reach a higher Center Of Mass (COM) energy, because of much lower synchrotron radiation \footnote{The radiation emitted by a charged particle during acceleration in a circular path is known as synchrotron radiation. As the particles loses energy in emission of this radiation an additional energy must be provided to keep the beam at constant energy.} emitted by hadrons as compared to electrons. Synchrotron radiation loss is directly proportional to $(Energy/mass)^4$. \todo[fancyline]{Add exact number for electrons and protons synchrotron loss.}
+    \item Hadron collider can reach a higher Center Of Mass (COM) energy, because of much lower synchrotron radiation \footnote{The radiation emitted by a charged particle during acceleration in a circular path is known as synchrotron radiation. As the particles loses energy in emission of this radiation an additional energy must be provided to keep the beam at constant energy.} emitted by hadrons as compared to electrons. Synchrotron radiation loss is directly proportional to $(Energy/mass)^4$.
     \item As hadrons are composite particles, they allow us to scan over wide range of energies.
 \end{itemize}
 
@@ -39,7 +39,7 @@ At LHC, there are two beam pipes each with diameter $\approx$6.3 cm in which pro
 
 Another main part of any particle accelerator is its accelerating structure. A accelerator in the TeV range can not start from rest and go to the TeV range in one go; it should go into several stages depending on the energy. At LHC, the journey of proton starts with grabbing the proton from Hydrogen gas and subsequently going into 5 different stages. The stages can be decreased but could not be decreased to just one. Here, at LHC there are five different stages before reaching to LHC and in between it serves several other experiments at each stage, which are shown pictorially in Figure~\ref{fig:OtherExpAtAccStructure}. The stages for proton acceleration are:
 \begin{itemize}
-    \item Grab proton source: The source of proton is Duoplasmatron\footnote{It strips electron from hydrogen gas and creates a plasma of protons, electrons and molecular ions. This plasma expands towards the extraction electrodes and a proton beam is formed}\cite{LHC-tdr-vol3}. This feeds protons to LINAC2.
+    \item Grab proton source: The source of proton is Duoplasmatron~\cite{LHC-tdr-vol3}. It strips electron from hydrogen gas and creates a plasma of protons, electrons and molecular ions. This plasma expands towards the extraction electrodes and a proton beam is formed. This feeds protons to LINAC2.
     \item LINAC2 (Linear accelerator-2): It is the starting point of proton's journey in the LHC accelerator complex. Here, protons reaches to an energy of 50 $MeV$ using the radio-frequency (RF) cavities\footnote{A RF cavity is an metallic cavity that accelerates the charged particles using the electromagnetic field.} where they also gains 5\% in mass. LINAC2 further feeds to the Proton Synchrotron Booster (PSB).
     \item PSB: It takes 50 $MeV$ proton beams from LINAC2 and accelerate them to 1.4 $GeV$ for injection into Proton Synchrotron (PS).
     \item PS: It is one of key component in the LHC accelerator complex. It increases the energy of protons up-to 25 $GeV$ and feeds to super proton synchrotron.
@@ -81,6 +81,7 @@ As the LHC is a circular collider; magnet system is one of the core parts and gi
 
 
 \begin{table}
+\vspace{-7.8em}
 \centering
 \begin{tabular}[!htbp]{l c}
 \hline
@@ -171,8 +172,8 @@ Based on the definition of luminosity, we can maximize it by following means:
 \begin{itemize}
     \item By decreasing beam emittance, $\epsilon_n$.
     \item By improving the cryogenic system. As the factor $k_b.N_b$ is limited by thermal energy produced by synchrotron radiation.
-    \item By decreasing beam-beam effect\todo[fancyline]{add reference of beam-beam effect}. As it scales with $N_b/ \epsilon_n$ which causes the spread in betatron tunes\todo[fancyline]{add reference of betatron tunes}.
-    \item Also, the space charge \todo[fancyline]{add Reference of space-charge} scales with $N_b/ \epsilon_n$.
+    \item By decreasing beam-beam effect~\cite{Herr2014,Papotti2014}. As it scales with $N_b/ \epsilon_n$ which causes the spread in betatron tunes~\cite{Dubouchet2013}.
+    \item Also, the space charge~\cite{Oeftiger2016} scales with $N_b/ \epsilon_n$.
 \end{itemize}
 % subsection few_key_requirements (end)
 
@@ -211,7 +212,7 @@ There is also a third possibility to improve the momentum resolution by increasi
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{CMS Experiment} % (fold)
 \label{sec:cms_experiment}
-In a HEP detectors there are two different categories of conditons are imposed. They are:
+In the HEP detectors there are two different categories of conditons are imposed. They are:
 
 \begin{itemize}
 	\item restrictions imposed from the accelerator conditions.
@@ -223,25 +224,25 @@ In a HEP detectors there are two different categories of conditons are imposed. 
 Restrictions imposed on detector from the LHC are:
 
 \begin{itemize}
-	\item \textbf{High luminosity delivered by LHC:} As the delivered luminosity is high this implies every-time the two proton bunches cross each other there will be more than one p-p interactions\footnote{More than one p-p interaction in one bunch crossing is known as pile-up. It is also given as the product of inelastic p-p cross-section ($\sigma_{inel}$), instantaneous luminosity ($L$) and the mean time interval between two collision, ($< t >$). \begin{equation}
+	\item \textbf{High luminosity delivered by LHC:} As the delivered luminosity is high this implies every-time the two proton bunches cross each other there will be more than one p-p interactions\footnote{More than one p-p interaction in one bunch crossing is known as pile-up. It can be theoretically calculated as the product of inelastic p-p cross-section ($\sigma_{inel}$), instantaneous luminosity ($L$) and the mean time interval between two collision, ($< t >$). \begin{equation}
 		mean~pile-up = \sigma_{inel} \times L \times <t>
-	\end{equation}}. This is one of greatest challenges. This implies more than 1000 particles passes through detector. This imposes condition that the detector should be highly granular this results with increase number of channels that should be synchronized with each other.
+	\end{equation}}. This is one of greatest challenges. This implies more than 1000 particles passes through detector during every p-p collision. This imposes condition that the detector should be highly granular this results with increase number of channels that should be synchronized with each other.
 	\item \textbf{Event rate:} At LHC, the two proton bunches crosses each other at every 25 ns. So, the response time for all the sub-system of detector should be less than 25 ns.
-	\item \textbf{Produced radiation:} At every 25ns the detectors are bombarded with more than 1000 particles so all the sub-detectors should be radiation hard including its electronics, cables, glue, screws, and so on.
+	\item \textbf{Produced radiation:} At every 25 ns the detectors are bombarded with more than 1000 particles so all the sub-detectors should be radiation hard including its electronics, cables, glue, screws, and so on.
 \end{itemize}
 
 Restrictions imposed on detector from physics goal are:
 
 \begin{itemize}
 	\item Good muon identification and momentum resolution ($\approx$ 1\% at 100 GeV).
-	\item EEfficient triggering and tracking of b-jets and $\tau$'s.
+	\item Efficient triggering and tracking of b-jets and $\tau$'s.
 	\item High resolution electromagnetic calorimeter to detect electrons and photons.
 	\item Good missing transverse energy resolution and di-jet mass resolution requires a ``hermetic'' hadron calorimeter with full geometric coverage and fine lateral segmentation.
 \end{itemize}
 
 % When the two beam of proton collides then thousands of particles are produced and out of them only 9 particles are of interest from detector construction point of view. They are photons ($\gamma$), electrons ($e$), muons ($\mu$), pions ($\pi^{\pm}$), kaon ($K^{\pm},~K_L,~K_S$), protons ($p$), and neutrons ($n$). Out of rest there are three neutrinos which interacts only weakly that do not interact in light mass HEP detectors and others are short lived particles. So, 
 
-Based on the above condition CMS detector was designed in cylindrical shape having each detector one on top of other with beam pipe at center. To have full geometric coverage it is designed with a barrel region and two endcap regions. Main part of the CMS detector is its superconducting magnet system with a high magnetic field of 4 Tesla to accurately measure the high momentum particles and its muon system. Muon system kept outside the magnet but sandwiched in its return yoke. While the tracking system and calorimeters are placed inside the magnet. CMS detector design is shown in Figure~\ref{fig:CMS-detector}.
+Based on the above condition CMS detector was designed in cylindrical shape having each detector on top of other with beam pipe at center. To have full geometric coverage it is designed with a barrel region and two endcap regions. Main part of the CMS detector is its superconducting magnet system with a high magnetic field of 4 Tesla to accurately measure the high momentum particles and its muon system. Muon system kept outside the magnet but sandwiched in its return yoke. While the tracking system and calorimeters are placed inside the magnet. CMS detector design is shown in Figure~\ref{fig:CMS-detector}.
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.95\textwidth]{figures/LHC/cms_120918_03.png}
@@ -249,6 +250,10 @@ Based on the above condition CMS detector was designed in cylindrical shape havi
 	\label{fig:CMS-detector}
 \end{figure}
 
+\subsection{Coordinate System} % (fold)
+\label{sub:coordinate_system}
+
+% subsection coordinate_system (end)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{CMS sub-systems} % (fold)
@@ -258,7 +263,7 @@ Based on the above condition CMS detector was designed in cylindrical shape havi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Magnet} % (fold)
 \label{ssub:magnet}
-Magnet system of CMS consists of a superconducting solenoid magnet with 3.8 T magnetic field. It is 12.5 m in length and 6 meter in inner diameter. The high mangnetic field ensures the appropriate bending power of the high-energy charged particles to precisely measure its momentum. It is shown in Figure~\ref{fig:CMS-magnet}.
+Magnet system of CMS consists of a superconducting solenoid magnet with 3.8 T magnetic field. It is 12.5 m in length and 6 meter in inner diameter. The high magnetic field ensures the appropriate bending power of the high-energy charged particles to precisely measure its momentum. It is shown separately in Figure~\ref{fig:CMS-magnet}.
 
 \begin{figure}[!htbp]
 	\centering
@@ -272,6 +277,8 @@ Magnet system of CMS consists of a superconducting solenoid magnet with 3.8 T ma
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Tracker} % (fold)
 \label{ssub:tracker}
+
+
 % subsection tracker (end)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
