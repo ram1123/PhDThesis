@@ -252,6 +252,18 @@ Based on the above condition CMS detector was designed in cylindrical shape havi
 
 \subsection{Coordinate System} % (fold)
 \label{sub:coordinate_system}
+Right handed coordinate system is used having origin at the nominal IP (Figure~\ref{fig:cms-coordinate-system}). Z-axis is along the beam direction in such a way so that x-axis will point radially to the center of LHC ring and y-direction is pointing upwards. The azimuthal angle, $\phi$, is measured in x-y plane from x-axis and the polar angle, $\theta$, is measured from z-axis. Instead of describing a particle at some polar angle we prefer to use the variable pseudo-rapidity. It is defined as 
+\begin{equation}
+	\eta = -ln[tan(\theta / 2)]
+\end{equation}
+In hadron collider use of pseudo-rapidity is motivated from the invariance of its difference, $\Delta \eta$. Also, the particle density remains constant in barrel region of detector measured in equal rapidity intervals.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/LHC/CMS-coordinate-system.png}
+	\caption{Right handed coordinate system used by CMS.}
+	\label{fig:cms-coordinate-system}
+\end{figure}
 
 % subsection coordinate_system (end)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -277,66 +289,42 @@ Magnet system of CMS consists of a superconducting solenoid magnet with 3.8 T ma
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Tracker} % (fold)
 \label{ssub:tracker}
-
+Tracker is the first detector that encounter the particles emerging from the p-p collision. Its purpose is to measure precisely the tracks of all particles passing through it. It consists of 3 layers of silicon pixel detector to precisely measure the primary vertex, secondary vertex and the impact parameter along with 10 layers of  silicon micro-strip detector. Tracker has length of 5.8 m and outer diameter 2.6 m.
 
 % subsection tracker (end)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The Electromagnetic Calorimeter} % (fold)
-\label{sub:the_electromagnetic_calorimeter}
-% subsection the_electromagnetic_calorimeter (end)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The Hadronic Calorimeter} % (fold)
-\label{sub:the_hadronic_calorimeter}
-% subsection the_hadronic_calorimeter (end)
+\subsubsection{Calorimetry} % (fold)
+\label{ssub:calorimetry}
+In general, calorimeter is a device that measure energy of particles by depositing them into it. In CMS its divided into Electromagnetic CALorimeter (ECAL) and Hadronic CALorimeter (HCAL). ECAL as the name suggest its designed to measure the particles that primely interacts via electromagnetic interaction while HCAL is designed to measure particles that interacts via strong nuclear interactions.\\\\
+ECAL is placed after tracker for detecting the electrons and photons. It is made from lead tungstate ($PbWO_4$) having coverage upto $\eta < 3.0$ including pre-shower system in forward region. The scintillation produced in barrel region is detected by Avalanche photo-diodes and in endcaps it is collected by vacuum photo-triodes. In terms of radiation length\footnote{define it.}, $X_0$, its thickness is 25$X_0$ which guarantees almost full shower containment.\\\\
+In between ECAL and magnet system, brass/scintillator sampling HCAL with coverage upto $\eta < 3.0$ is placed. To have a full geometric coverage HCAL is extended upto $\eta < 5.0$ using forward sampling iron/quartz-fibre calorimeter. This is crucial to measure the (missing) transverse energy of the event. 
+% subsubsection calorimetry (end)
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{The Muon System} % (fold)
 \label{sub:the_muon_system}
-
+From the name of CMS detector its evident that the precise detection of muons is one of main target of CMS detector. The presence of muons in the final state in many interesting physics. So, the detection and efficient reconstruction is very important. It is placed after solenoid magnet system. Its main function is the efficient detection, reconstruction and triggering.
+It is described in details in chapter~\ref{ch:gem}
 % subsection the_muon_system (end)
 % subsection cms_sub_systems (end)
-
-
-
-% \subsection{Detector Design} % (fold)
-% \label{sub:detector_design}
-
-% % subsection cms_detector_design (end)
-% CMS\cite{paper:JINST:CMSCollaboration} detector is a general purpose deetector which consist of layers of material that exploit the different properties of particles to catch and measure the energy and momentum of each particles passing through it. So, CMS needs:
-% \begin{itemize}
-% 	\item a high quality central tracking system to give accurate momentum measurements with good efficienccy of offline tagging of b-jets and $\tau$'s.
-% 	\item a high resolution ($\approx$ 1\% at 100 GeV) method to detect and measure electrons and photons (an electromagnetic calorimeter) and isolate them.
-% 	\item a ``hermetic” hadron calorimeter, designed to entirely surround the collision and prevent particles from escaping along with fine lateral segmentation.
-% 	\item a high performance system to detect and measure muons with good time and momentum resolution ($\approx$ 1\% at 100 GeV).
-% \end{itemize}
-% The CMS experiment has been built as a general purpose detector with excellent tracking and particle identification capabilities designed to fully explore the physics potential of the LHC. The CMS comprise the following sub-detectors:
-% \begin{itemize}
-% 	\item The inner tracking system is used for the identification and track measurement of charged particles.
-% 	\item The electromagnetic calorimeter provides energy measurements. Electrons and photons deposit almost all of their energy in this sub-detector.
-% 	\item Typically the interactions of hadronic jets imply that most of their energy is deposited after traversing more material than given by the electromagnetic calorimeter. The main energy component of these objects is measured with the hadronic calorimeter.
-% 	\item The muon system identifies high energetic muons which can not be confined within the CMS experiment and measures their tracks and respective momenta.
-% \end{itemize}
-
-
-
-
-
 % % section cms_experiment (end)
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{CMS Trigger and Data Acquisition system} % (fold)
-% \label{sec:cms_trigger_and_data_acquisition_system}
 
-% % section cms_trigger_and_data_acquisition_system (end)
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{CMS Offline Computing} % (fold)
-% \label{sec:cms_offline_computing}
+\subsection{CMS Trigger and Data Acquisition system} % (fold)
+\label{sub:cms_trigger_and_data_acquisition_system}
+
+% section cms_trigger_and_data_acquisition_system (end)
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{CMS Offline Computing} % (fold)
+\label{sub:cms_offline_computing}
 
 % section cms_offline_computing (end)
 
@@ -352,19 +340,11 @@ Magnet system of CMS consists of a superconducting solenoid magnet with 3.8 T ma
 
 
 
-% \section{Other Information to be organized}
-
-
-
-% The interaction in HEP experiments are characterized mainly by the center of mass energy along with type and number of particles.
 
 
 % Because of limited geometrical space in LHC ring the beam pipe was designed as a ``twin-aperture" magnets, where superconducing ring is housed in a common return yoke and cryostat.
 
 % chapter the_lhc_and_cms_machine (end)
-
-
-% The CMS is a general-purpose detector at the LHC. It is built around a huge solenoid magnet. This takes the form of a cylindrical coil of superconducting cable that generates a field of 4 Tesla, about 100,000 times the magnetic field of the Earth. The field is confined by a steel ``yoke'' that forms the bulk of the detector's 12,500-tonne weight. The complete detector is 21 meters long, 15 meters wide and 15 meter high.
 
 
 % \begin{figure}[!htbp]
