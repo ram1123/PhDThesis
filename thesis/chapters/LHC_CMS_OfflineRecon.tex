@@ -308,7 +308,7 @@ In between ECAL and magnet system, brass/scintillator sampling HCAL with coverag
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{The Muon System} % (fold)
 \label{sub:the_muon_system}
-From the name of CMS detector its evident that the precise detection of muons is one of main target of CMS detector. The presence of muons in the final state in many interesting physics like the decay of Higgs boson into ZZ to 4 leptons. Specially, the case in which all 4 leptons are muons are known as ``gold platted'' as we can detect muons efficiently over high background at LHC. So, the detection and efficient reconstruction is very important for muons. At CMS muon system as mainly three functions identification, momentum measurement and triggering. To have good momentum measurement and triggering capabilities we have strong superconducting magnet and its flux-return yoke. Also, the flux-return yoke serves as hadron absorber and helps in muon identification. Cross-sectional view of muons system is shown in Figure~\ref{fig:muon-system-cross} It is described in details in chapter~\ref{ch:gem}
+From the name of CMS detector its evident that the precise detection of muons is one of main target of CMS detector. The presence of muons in the final state in many interesting physics like the decay of Higgs boson into ZZ to 4 leptons. Specially, the case in which all 4 leptons are muons are known as ``gold platted'' as we can detect muons efficiently over high background at LHC. So, the detection and efficient reconstruction is very important for muons. At CMS, muon system has mainly three functions. They are identification of muons, momentum measurement and triggering. The strong superconducting magnet system with its return yoke of CMS also helps use to acquire good momentum measurement and triggering capabilities. The return yoke of magnet system also serves as the hadron absorber. The cross-sectional view of muons system is shown in Figure~\ref{fig:muon-system-cross}. It is described in details in Chapter~\ref{ch:gem}
 
 \begin{figure}[htbp]
 	\centering
@@ -325,12 +325,21 @@ From the name of CMS detector its evident that the precise detection of muons is
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{CMS Trigger and Data Acquisition system} % (fold)
 \label{sub:cms_trigger_and_data_acquisition_system}
+In CMS, every second about 1 billion p-p collision is happening. But, till now we don't have a switch with the required bandwidth that can transfer huge data for further processing, and even if we have one, then there is only few fraction of data that are interesting for new physics or help to understand the existing one as most of the collisions are the low-energy glancing collision instead of head on interaction. So, the concept of trigger was introduced first by ZEUS experiment~\cite{ZEUSCollaboration1993} to select the potentially interesting events that can reduce the event rate to just few hundreds such that it will be possible to store and transfer that data for further analysis. The trigger is designed in such a way that it can efficiently accept the interesting events and rejects the non-interesting events.
+
+The CMS trigger system was designed in two steps, level 1 (L1) trigger which is custom hardware process running synchronously with the LHC bunch crossing frequency of 40 MHz and the High Level Trigger (HLT)~\cite{paper:JINST:CMSCollaboration}. L1 trigger selects the events based on the information of calorimeter and muon system. But this decision can't take place within 25 ns so a latency of 3.2 $\mu s$ was added. The maximum allowed frequency at L1 stage is 100 kHz. Then the complete information is sent to HLT processing farm to reduced the event rate to $\sim$100 Hz. The remaining information is sent to Tier-0 centers to store and use it for offline analysis.
+
+
 
 % section cms_trigger_and_data_acquisition_system (end)
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{CMS Offline Computing} % (fold)
 \label{sub:cms_offline_computing}
+Once the decision was taken by trigger system it is ready to be analyzed offline. But, before that the raw data need to be processed to convert it into understandable physics objects like electrons, muons, photons, jets, and so on. This step is known as object reconstructions which is most CPU intensive task in the data processing chain of CMS. In this step one need to reconstruct the primary vertices, track finding algorithms, identify electrons, photons, muons, reconstruct jets, apply b-tagging algorithm to reconstruct b-jets, run detector specific filtering and so on.
+To perform all these steps CMS developed its own software which is known as CMSSW. This is based on Event Data Model (EDM) centered around the concept of event. Here, an event is a C++ object container for all raw and reconstructed data related to a certain collision. These events are stored in ROOT files~\cite{Root1996}. The CMSSW event processing model consists of one executable called cmsRun, and many plug-in modules. These modules contain all the necessary codes for the event processing such as calibration and reconstruction algorithms~\cite{Bayatyan2005}.
+To do the analysis, we also need Monte Carlo (MC) simulations of various Standard Model processes and new physics models. MC events are generated at parton level. Then showering and hadronization is applied and finally these events are put through the GEANT4~\cite{Agostinelli2003} based CMS detector simulation. The result is data similar to what one obtains from the actual detector. This MC data can then also be reconstructed as if it were actually detector data.
+
 
 % section cms_offline_computing (end)
 
