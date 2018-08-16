@@ -1,6 +1,8 @@
 \documentclass[twoside,openright,titlepage,numbers=noenddot,headinclude,%
                footinclude=true,cleardoublepage=empty,abstractoff,BCOR=5mm,%
-               paper=a4,fontsize=11pt]{book}
+               paper=a4,fontsize=12pt]{book}
+
+\usepackage[left=1.5in, right=1in, top=1.25in, bottom=1.25in]{geometry}
 
 \usepackage{scrextend}  % for addmargin command
 \usepackage{graphicx}
@@ -27,8 +29,8 @@
 % packages for todonotes
 \usepackage[colorlinks]{hyperref}
 \usepackage[table]{xcolor}
-\usepackage[colorinlistoftodos]{todonotes}
-% \usepackage[disable]{todonotes} % To hide uncomment this and comment upper line
+% \usepackage[colorinlistoftodos]{todonotes}
+\usepackage[disable]{todonotes} % To hide uncomment this and comment upper line
 % \usepackage{menukeys}
 
 \usepackage{url}
@@ -51,7 +53,10 @@
 \newacronym{lhc}{LHC}{Large Hadron Collider}
 \newacronym{hep}{HEP}{High Energy Physics}
 
+\usepackage{setspace}
  
+% \onehalfspacing
+\doublespacing
 
 \begin{document}
  \linenumbers
@@ -59,14 +64,14 @@
  \pagestyle{plain}
 
 % Front pages =================================================================
- \include{frontback/titlepage}
- \listoftodos
+ % \include{frontback/titlepage}
+ % \listoftodos
   % \cleardoublepage \include{frontback/declare}
-  % \cleardoublepage\include{frontback/originality}
-  % \cleardoublepage\include{frontback/saf1}
-  % \cleardoublepage\include{frontback/saf2}
-  % \cleardoublepage\include{frontback/dedicate}
-  % \cleardoublepage\include{frontback/acknowledgement}
+  % \cleardoublepage \include{frontback/originality}
+  % \cleardoublepage \include{frontback/saf1}
+  % \cleardoublepage \include{frontback/saf2}
+  % \cleardoublepage \include{frontback/dedicate}
+  % \cleardoublepage \include{frontback/acknowledgement}
   % \cleardoublepage \include{frontback/abstract}
 
   % \pagestyle{headings}
@@ -77,15 +82,13 @@
   % Content =====================================================================
   \pagenumbering{arabic}
   % \cleardoublepage
-  % \include{chapters/Introduction}
-  % \include{chapters/Introduction2}
-  % \include{chapters/Introduction3}
-  % \include{chapters/LHC_CMS_OfflineRecon}
-  % \include{chapters/LHC-CMS}
-  % \include{chapters/LHC-DataTaking}
-  % \include{chapters/VBS}
-  \include{chapters/GEM_Detectors}
+  % \include{chapters/1_Introduction}
+  % \include{chapters/1_Introduction2}
+  \include{chapters/2_LHC_CMS_OfflineRecon}
+  \include{chapters/3_GEM_Detectors}
+  \include{chapters/3_GE11-details}
   % \include{chapters/Hardware_org}
+  % \include{chapters/VBS}
   
   % \begin{appendices}
   %    \include{appendix/synchtron_radiation}
