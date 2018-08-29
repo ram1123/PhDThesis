@@ -423,14 +423,14 @@ Muon system & gaseous & efficiency $\epsilon \sim 98\%$ \\
 % % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{CMS Trigger and Data Acquisition system} % (fold)
 \label{sub:cms_trigger_and_data_acquisition_system}
-The LHC produces 1 billion p-p collisions every second and thousands of particles produced during these collisions cross the CMS detector and reconstruction of these events generates several Terabytes of data. However, till now we neither have a switch with the required bandwidth that can transfer enormous data for further processing nor the disk space to store all of them. Even if we have one, then there are only a few fractions of data that are interesting for new physics or help to understand the existing one as most of the collisions is the low-energy glancing collision instead of head-on interaction. The maximum amount of data that can be stored every day is of the order of few Terabytes that decides the rate at which we can accept the events ($\sim$ 100 Hz).The concept of the trigger, method to select events of interest, was first introduced by ZEUS experiment~\cite{ZEUSCollaboration1993}, that handles data in real time, coupled with complex data acquisition system. While designing the trigger one has to keep in mind that trigger should efficiently accept the interesting physics while rejecting the non-interesting ones as whatever information lost at this level can not be recovered.
+The LHC produces 1 billion p-p collisions every second and thousands of particles produced during each collisions that cross the CMS detector and reconstruction of these events generates several Terabytes of data. However, till now we neither have a switch with the required bandwidth that can transfer enormous data for further processing nor the disk space to store all of them. Even if we have one, then there are only a few fractions of data that are interesting for new physics or help to understand the existing one as most of the collisions is the low-energy glancing collision instead of head-on interaction. The maximum amount of data that can be stored every day is of the order of few Terabytes that decides the rate at which we can accept the events ($\sim$ 100 Hz). Thus, the concept of the trigger, method to select events of interest, was first introduced by ZEUS experiment~\cite{ZEUSCollaboration1993}, that handles data in real time, coupled with complex data acquisition (DAQ) system. While designing the trigger one has to keep in mind that trigger should efficiently accept the interesting physics\todo[inline]{define ``interesting physics''} while rejecting the non-interesting ones as whatever information lost at this level can not be recovered.
 
 
 The CMS trigger system is divided into two steps, level 1 (L1) trigger which is a custom hardware process running synchronously with the LHC bunch crossing frequency of 40 MHz and the High-Level Trigger (HLT)~\cite{paper:JINST:CMSCollaboration,Cittolin:578006,Khachatryan2017}. The CMS trigger flow diagram is shown in Fig.~\ref{fig:cms-trigger}. 
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.90\textwidth,height=0.63\textwidth]{figures/LHC/Trigger-flow-diagram.jpeg}
-	\caption{CMS trigger flow diagram.}
+	\caption{CMS trigger flow diagram that uses two level trigger. At level 1, CMS uses information from muon system and calorimeter. Using this information it decides to reject  or pass the event to the HLT for further processing. HLT uses fast offline reconstruction algorithm that uses information from all sub-system, i.e., calorimeter muon system as well as trackers to decide to keep or reject the event.}
 	\label{fig:cms-trigger}
 \end{figure}
 
@@ -444,7 +444,7 @@ The L1 consists of three steps. They are:
 	\item L1 muon trigger,
 	\item L1 global trigger
 \end{itemize}
-Every step at L1 trigger has local, regional and global components. At first the local components, which is also called Trigger Primitive Generators (TPG), are based on the energy deposit in the calorimeter trigger towers\footnote{Trigger towers are the arrays of crystals where energy is deposited.} and track segments or hit patters in the muon chambers, respectively. Next, the regional trigger combines there information to identify the pattern logic and determine ranked and sorted objects such as electrons, photons, or muons. Finally, the global component determines the highest-ranked objects across the detectors and transfer it to the L1 global trigger. The flow diagram of L1 trigger is shown in Fig.~\ref{fig:cms-L1-trigger}.
+Every step at L1 trigger has local, regional and global components. At first the local components, which is also called Trigger Primitive Generators (TPG), are based on the energy deposit in the calorimeter trigger towers\footnote{Trigger towers are the arrays of crystals where energy is deposited.} and track segments or hit patters in the muon chambers, respectively. Next, the regional trigger combines these information to identify the pattern logic and determine ranked and sorted objects such as electrons, photons, or muons. Finally, the global component determines the highest-ranked objects across the detectors and transfer it to the L1 global trigger. The flow diagram of L1 trigger is shown in Fig.~\ref{fig:cms-L1-trigger}.
 	% \includegraphics[width=0.95\textwidth]{figures/LHC/TrigUpgradeBlockDiagram}
 \begin{figure}[htbp]
 	\centering
@@ -463,21 +463,19 @@ The first step of calorimeter trigger is TPG. The TPG is the sum of transverse e
 
 \subsubsection{L1 Muon Trigger} % (fold)
 \label{ssub:l1_muon_trigger}
-In L1 muon trigger, all three muon systems, i.e. DT, CSC and RPC, take part. Considering the difference in particle flux and the magnetic field uniformatiy with $\eta$ the muon track finding was segmented into three regions: Barrel ($|\eta|<0.83$), Overlap ($0.83<|\eta| < 1.24$) and Endcap ($|\eta|>1.24$). A pattern based track finding algorithm~\cite{Eroe2008} is used at endcap and overlap region. It assigns $p_T$ to each tracks using the loop-up-table based on multivariate techniques. While in barrel region a simple extrapolation track finding algorithm is used. Finally, the level-1 global trigger takes all the muons from three different muon sub-detectors regional track finders then sort and rank them using there $p_T$ value and quality.
+In L1 muon trigger, all three muon systems, i.e. DT, CSC and RPC, take part. Considering the difference in particle flux and the magnetic field uniformatiy with $\eta$ the muon track finding was segmented into three regions: Barrel ($|\eta|<0.83$), Overlap ($0.83<|\eta| < 1.24$) and Endcap ($|\eta|>1.24$). A pattern based track finding algorithm~\cite{Eroe2008} is used at endcap and overlap region. It assigns $p_T$ to each tracks using the look-up-table based on multivariate techniques. While in barrel region a simple extrapolation track finding algorithm is used. Finally, the level-1 global trigger takes all the muons from three different muon sub-detectors regional track finders then sort and rank them using there $p_T$ value and quality.
 
 % subsubsection l1_muon_trigger (end)
 
 \subsubsection{L1 Global Trigger} % (fold)
 \label{ssub:l1_global_trigger}
-The L1 global trigger takes input from L1 calorimeter and L1 muon triggers and decides to accept or reject an event. The L1 global trigger receives the calorimeter trigger objects from global calorimeter trigger also the muons from global muon trigger and align them in time. Additionally, a direct trigger signal is also received from the sub-detectors or the TOTEM experiment for some special purpose such as calibration. These received trigger signal to the level 1 global trigger are known as ``technical triggers''. 
+The L1 global trigger takes input from L1 calorimeter and  muon triggers, then decides to accept or reject an event. The L1 global trigger receives the calorimeter trigger objects from global calorimeter trigger also the muons from global muon trigger and align them in time. Additionally, a direct trigger signal is also received from the sub-detectors or the TOTEM experiment for some special purpose such as calibration. These received trigger signal to the level 1 global trigger are known as ``technical triggers''. 
 
 The main part of the global trigger is known as the ``Global Trigger Logic'' board, where all the implemented algorithm are performed. The most basic algorithm consists of applying the $p_T$ or $E_T$ or the jet multiplicity exceed the required cut. Finally the passed events are sent to the data acquisition event manager for further processing by HLT.
 
 % subsubsection l1_global_trigger (end)
 
 % subsubsection level_1_trigger (end)
-
-
 
 \subsubsection{High Level Trigger} % (fold)
 \label{ssub:high_level_trigger}
@@ -493,8 +491,8 @@ In CMS, the HLT has a modular structure, which is shown in Fig.~\ref{fig:HLT_men
 
 All the events that passes HLT selection are stored on local disk (in CMS its Tier 0\footnote{The Worldwide LHC Computing Grid (WLCG) is composed of four levels, or “Tiers”, identified with numbers 0, 1, 2 and 3. Each Tier is made up of several computer centres and provides a specific set of services; they process, store and analyse all the data from the LHC. Tier 0 is the CERN Data Centre. All of the data from the LHC pass through this central hub. Tier 0 distributes the raw data and the reconstructed output to Tier 1’s, and reprocesses data when the LHC is not running.})
 
-\subsubsection{Example of one of HLT Trigger} % (fold)
-\label{ssub:example_of_one_of_hlt_trigger}
+\subsubsection{Example of one of HLT Trigger For Electrons} % (fold)
+\label{ssub:example_of_one_of_hlt_trigger_for_electrons}
 
 % subsubsection example_of_one_of_hlt_trigger (end)
 % The remaining information is sent to Tier-0 centres to store and use it for offline analysis.
@@ -509,12 +507,12 @@ All the events that passes HLT selection are stored on local disk (in CMS its Ti
 
 % % section cms_trigger_and_data_acquisition_system (end)
 
-% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \subsection{CMS Offline Computing} % (fold)
-% \label{sub:cms_offline_computing}
-% Once the data are selected by the trigger system, they are ready to be analysed offline. Before that, the raw data need to be processed, i.e., to convert data into understandable physics objects like electrons, muons, photons, jets, and so on. This step is known as object reconstruction which is the most CPU intensive task in the data processing chain of CMS. In this step one needs to reconstruct the primary vertices, charged particle tracks, identify electrons, photons, muons, reconstruct jets, apply b-tagging algorithm to reconstruct b-jets, run detector specific filtering and so on.
-% To perform all these steps CMS developed its software which is known as CMSSW. This software is based on Event Data Model (EDM) centred around the concept of the event. Here, an event is a C++ object container for all raw and reconstructed data related to a particular collision. Finally, these events are stored in ROOT files~\cite{Root1996}. The CMSSW event processing model consists of one executable called cmsRun, and many plug-in modules. These modules contain all the necessary codes for the event processing such as calibration and reconstruction algorithms~\cite{Bayatyan2005}.
-% To analyse data, we also need MC simulations which are carried out based on the predictions of SM and various new physics models. MC events are generated at parton level. Then showering and hadronization is applied, and finally, these events are put through the GEANT4~\cite{Agostinelli2003} based CMS detector simulation. The result is data similar to what one obtains from the actual detector. This MC data can then also be reconstructed as if it were  detector data.
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{CMS Offline Computing} % (fold)
+\label{sub:cms_offline_computing}
+Once the data are selected by the trigger system, they are ready to be analysed offline. Before that, the raw data need to be processed, i.e., to convert data into understandable physics objects like electrons, muons, photons, jets, and so on. This step is known as object reconstruction which is the most CPU intensive task in the data processing chain of CMS. In this step one needs to reconstruct the primary vertices, charged particle tracks, identify electrons, photons, muons, reconstruct jets, apply b-tagging algorithm to reconstruct b-jets, run detector specific filtering and so on.
+To perform all these steps CMS developed its software which is known as CMSSW. This software is based on Event Data Model (EDM) centred around the concept of the event. Here, an event is a C++ object container for all raw and reconstructed data related to a particular collision. Finally, these events are stored in ROOT files~\cite{Root1996}. The CMSSW event processing model consists of one executable called cmsRun, and many plug-in modules. These modules contain all the necessary codes for the event processing such as calibration and reconstruction algorithms~\cite{Bayatyan2005}.
+To analyse data, we also need MC simulations which are carried out based on the predictions of SM and various new physics models. MC events are generated at parton level. Then showering and hadronization is applied, and finally, these events are put through the GEANT4~\cite{Agostinelli2003} based CMS detector simulation. The result is data similar to what one obtains from the actual detector. This MC data can then also be reconstructed as if it were  detector data.
 
 
 % section cms_offline_computing (end)
