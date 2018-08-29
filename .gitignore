@@ -31,3 +31,5 @@ thesis.pdf
 *.bak
 thesis-blx.bib
 *.tdo
+*.fls
+*.fdb_latexmk

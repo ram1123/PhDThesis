@@ -157,24 +157,80 @@ Energy loss per turn for electrons at 104.6 GeV          &  40,000 keV     \\
 \subsection{Key requirements of a particle accelerator} % (fold)
 \label{sub:few_key_requirements}
 
-The HEP collider is characterised based on two parameters centre of mass energy and the luminosity. The production rate of heavier particles like Higgs increases with the centre of mass energy. The luminosity is proportional to the number of events per second so it should be maximised. Luminosity is defined as:
+The HEP collider is characterised based on two parameters centre of mass energy and the luminosity. The production rate of heavier particles like Higgs increases with the centre of mass energy. Luminosity measures the ability of a collider to produce the required number of interactions. It is the proportionality factor between the number of events per second $dR/dt$ and the cross-section $\sigma_p$~\cite{Muratori2006}.
 \begin{equation}
-    L = \frac{k_bN_b^2f_{rev}\gamma}{4 \pi \epsilon_n \beta^*}
+	\frac{dR}{dt} = L ~~.~~ \sigma_p
+\end{equation}
+Thus, the unit of luminosity is $cm^{-2}s^{-1}$.
+
+\subsubsection{Luminosity calculation} % (fold)
+\label{ssub:luminosity_calculation}
+
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/LHC/Luminosity_calculation.jpg}
+	\caption{caption}
+	\label{fig:label}
+\end{figure}
+
+% The luminosity is proportional to the number of events per second so it should be maximised. Luminosity is the 
+
+Luminosity is defined as:
+\begin{equation}
+    L = \frac{k_bN_1N_2f_{rev}\gamma}{A_{eff}}
+    % L = \frac{k_bN_1N_2f_{rev}\gamma}{4 \pi \epsilon_n \beta^*}
 \end{equation}
 Where,\\
-\hspace{2 cm}$k_b$ is the number of bunches per ring,\\
-\hspace{2 cm}$N_b$ is the number of protons per bunch,\\
+\hspace{2 cm}$k_b$ is the number of bunches per beam,\\
+\hspace{2 cm}$N_1 and N_2$ are the number of protons in the two bunches,\\
 \hspace{2 cm}$f_{rev}$ the revolution frequency,\\
-\hspace{2 cm}$\epsilon_n$ is the normalised RMS transverse beam emittance (same in both )\\
-\hspace{2 cm}$\beta^*$ is the beta-function at the interaction point\\
-
+\hspace{2 cm}$A_{eff}$ is the effective transverse area of the beam,\\
+% \hspace{2 cm}$\epsilon_n$ is the normalised RMS transverse beam emittance (same in both )\\
+% \hspace{2 cm}$\beta^*$ is the beta-function at the interaction point\\
+For a Gaussian beam with spread $\sigma_x$ and $\sigma_y$ in x and y direction respectively, the effective area will be $4\pi \sigma_x \sigma_y$. So that
+\begin{equation}\label{eq:luminosity}
+    L = \frac{k_bN_1N_2f_{rev}\gamma}{4 \pi \sigma_x \sigma_y}
+    % L = \frac{k_bN_1N_2f_{rev}\gamma}{4 \pi \epsilon_n \beta^*}
+\end{equation}
+The beam size, $\sigma_x~.~\sigma_y$, can be expressed in terms of transverse beam emittance\footnote{The transverse emittance is a beam quality concept reflecting the process of bunch preparation (the injector chain), extending all the way back to the source for hadrons. A low emittance particle beam is a beam where the particles are confined to a small distance and have nearly the same momentum. In a colliding beam accelerator, keeping the emittance small means that the likelihood of particle interactions will be greater resulting in higher luminosity. The emittance changes as a function of the beam momentum; increasing the energy of the beam reduces the emittance.} ($\epsilon_n$) and the amplitude function\footnote{The amplitude function, $\beta$ , is determined by the accelerator magnet configuration (basically, the quadrupole magnet arrangement) and powering. } ($\beta^*$, also known as beta-function). The amplitude function can be expressed in terms of cross-sectional size of the bunch ($\sigma_x~.~\sigma_y$) and  the transverse emittance ($\epsilon_n$). The amplitude function $\beta$  becomes 
+\begin{equation}\label{eq:beta_function}
+	\beta = \frac{\pi.\sigma_x.\sigma_y}{\epsilon}
+\end{equation}. If the amplitude function is small, the beam will be narrower, ``squeezed''. If it is high, the beam will be wide and straight. It has unit of length. Thus, we can express luminosity in terms of transverse emittance and the amplitude function as
+\begin{equation}\label{eq:luminosity2}
+    L = \frac{k_bN_1N_2f_{rev}\gamma}{4 \pi \epsilon_n \beta^*}
+\end{equation}
 Based on the definition of luminosity, we can maximise it by following ways:
 \begin{itemize}
     \item By decreasing beam emittance, $\epsilon_n$.
-    \item By improving the cryogenic system: As the factor $k_b.N_b$ is limited by thermal energy produced by synchrotron radiation.
+    \item By improving the cryogenic system: As the factor $k_b~.~N_1~.~N_2$ is limited by thermal energy produced by synchrotron radiation.
     \item By decreasing beam-beam effect~\cite{Herr2014,Papotti2014}. As it scales with $N_b/ \epsilon_n$ which causes the spread in betatron tunes~\cite{Dubouchet2013}.
     \item Also, the space charge~\cite{Oeftiger2016} scales with $N_b/ \epsilon_n$.
 \end{itemize}
+% subsubsection luminosity_calculation (end)
+
+\subsubsection{Integrated luminosity} % (fold)
+\label{ssub:integrated_luminosity}
+The maximum luminosity or the instantaneous luminosity is an important quantity but the final figure of merit is the \textbf{integrated luminosity} as it directly gives us the total number of observed events:
+\begin{equation}
+	L_{int}~.~\sigma_p = number~of~events~of~interest
+\end{equation}
+where, $L_{int}$ is defined as the integral of the delivered luminosity over time. It is the measurement of the collected data size.
+\begin{equation}
+	L_{int} = \int_0^T L(t')dt'
+\end{equation}
+Its unit is $barn^{-1}$. Figure~\ref{fig:lumi-proj-2016-final-v2} shows the integrated luminosity of 2016 as compared to the previous years.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/lumi-proj-2016-final-v2}
+	\caption{The integrated luminosity of the LHC with proton-proton collisions in 2016 compared to previous years. (Image : CERN)}
+	\label{fig:lumi-proj-2016-final-v2}
+\end{figure}
+% subsubsection integrated_luminosity (end)
+
+\todo[inline]{Add luminosity measurement section}
+
+
 % subsection few_key_requirements (end)
 
 % section the_large_hadron_collider (end)
@@ -206,7 +262,7 @@ There is also a third possibility to improve the momentum resolution by increasi
 
 {\bf LHCb} (Large Hadron Collider beauty) is made asymmetrically with respect to the IP of the detector. It is designed specially to investigate the matter-antimatter asymmetry through the study of b-quarks.
 
-{\bf LHCf} (Large Hadron Collider forward) and {\bf TOTEM} (TOTal cross-section, Elastic scattering and diffraction dissociation Measurement at the LHC) are there for the study of forward physics\todo[fancyline]{define forward physics}.
+{\bf LHCf} (Large Hadron Collider forward) and {\bf TOTEM} (TOTal cross-section, Elastic scattering and diffraction dissociation Measurement at the LHC) are there for the study of forward physics\todo[inline]{define forward physics}.
 % section experiments_at_the_lhc (end)
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -216,11 +272,16 @@ The design and components of a HEP detector depends upon the physics goals and o
 \begin{itemize}
 	\item \textbf{High luminosity:} A high value of  delivered luminosity that implies every-time the two proton bunches cross each other there will be more than one p-p interactions\footnote{More than one p-p interaction in one bunch crossing is known as pile-up. It can be theoretically estimated as the product of inelastic p-p cross-section ($\sigma_{inel}$), instantaneous luminosity ($L$) and the mean time interval between two collision, ($< t >$). \begin{equation}
 		mean~pile-up = \sigma_{inel} \times L \times <t>
-	\end{equation}}. Given this, there will be more than $\mathcal{O}(1000)$ particles passing through detector during every p-p collision. Thus, the detector should be highly granular which results in increased number of readout channels that should be synchronised with LHC clock.
+	\end{equation}}. Figure~\ref{fig:pile-up} shows the mean number of interactions for year 2016 and previous years. Given this, there will be more than $\mathcal{O}(1000)$ particles passing through detector during every p-p collision. Thus, the detector should be highly granular which results in increased number of readout channels that should be synchronised with LHC clock.
 	\item \textbf{Response time:} At LHC, the two proton beams cross each other every 25 ns. So, the response time of all the sub-detector systems should be less than 25 ns.
 	\item \textbf{Radiation hardness:} At every 25 ns the detectors are bombarded with more than 1000 particles so all the sub-detectors should be radiation hard including its electronics, cables, glue, screws, and so on.
 \end{itemize}
-
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/LHC/pileup.jpg}
+	\caption{Mean number of interactions per bunch crossing in p-p collision.}
+	\label{fig:pile-up}
+\end{figure}
 Restrictions imposed on detector from the physics goals of the LHC:
 
 \begin{itemize}
@@ -248,7 +309,7 @@ Right handed coordinate system is used at the CMS detector, having origin at the
 \end{equation}
 In the hadron collider use of pseudo-rapidity was motivated from the invariance of its difference, $\Delta \eta$, with respect to the particle boost direction. Also, the particle density remains constant in barrel region of the detector, measured in equal rapidity intervals.
 
-\begin{figure}[htbp]
+\begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.95\textwidth]{figures/LHC/CMS-coordinate-system.png}
 	\caption{Right handed coordinate system used by CMS.}
@@ -316,7 +377,7 @@ From the name of CMS detector it is evident that the precise detection of muons 
 The layout of the CMS muon detector system is shown in Figure~\ref{fig:muon-system-layout}. Three different types of gaseous detectors used for the muon system which were chosen based on the background level, muon rate, uniformity and magnitude of magnetic field. Drift tubes are used as tracking detector in the barrel region with relatively lower magnetic field intensity and which have lower background rates as compared to the endcaps. 
 For the endcap regions Cathode Strip Chamber (CSC) are employed as they are provide precise information about muons momentum and time information even in high radiation environment. The pseudo-rapidity coverage of DTs is $|\eta|<1.2$ and for CSCs is $0.9<|\eta|<2.4$. Along with DTs and CSCs, Resistive Plate Chamber (RPC) detectors are also installed to have a fast dedicated  muon triggering system in both barrel and endcap region up to $|\eta|<1.6$~\cite{muon-tdr}. The CMS muon detector system covers the geometric region up-to $|\eta|<2.4$ but RPCs are deployed up-to $|\eta|<1.6$ as RPCs cannot withstand the radiation level after pseudo-rapidity region of 1.6. Thus to reconstruct muons in pseudo-rapidity region higher than 1.6, CMS collaboration decided to employ Gas Electron Multiplier (GEM) detectors in region  $1.6<|\eta|<2.2$, which is able to provide good space resolution and time resolution even in high environment radiation during Long Shutdown-2 (LS2, 2019-2020). The pseudo-rapidity range is limited to $|\eta|<2.2$ because of space constrains. GEM  detectors are described in details in Chapter~\ref{ch:gem}.
 \begin{figure}[!htbp]
-	\vspace{-3.2em}
+	% \vspace{-3.2em}
 	\centering
 	\includegraphics[width=0.85\textwidth]{figures/LHC/pictures_MuonSys-mod3.png}
 	\caption{Longitudinal layout of one quadrant of the CMS detector. There are four DT stations named MB1-MB4 marked with green colour. Four CMS system in high pseudo-rapidity region named ME1-ME4 in blue colour. Also, there are several RPC stations in barrel region and part of endcap region marked with red colour.}
@@ -359,23 +420,101 @@ Muon system & gaseous & efficiency $\epsilon \sim 98\%$ \\
 \end{table}
 
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{CMS Trigger and Data Acquisition system} % (fold)
 \label{sub:cms_trigger_and_data_acquisition_system}
 The LHC produces 1 billion p-p collisions every second and thousands of particles produced during these collisions cross the CMS detector and reconstruction of these events generates several Terabytes of data. However, till now we neither have a switch with the required bandwidth that can transfer enormous data for further processing nor the disk space to store all of them. Even if we have one, then there are only a few fractions of data that are interesting for new physics or help to understand the existing one as most of the collisions is the low-energy glancing collision instead of head-on interaction. The maximum amount of data that can be stored every day is of the order of few Terabytes that decides the rate at which we can accept the events ($\sim$ 100 Hz).The concept of the trigger, method to select events of interest, was first introduced by ZEUS experiment~\cite{ZEUSCollaboration1993}, that handles data in real time, coupled with complex data acquisition system. While designing the trigger one has to keep in mind that trigger should efficiently accept the interesting physics while rejecting the non-interesting ones as whatever information lost at this level can not be recovered.
 
-The CMS trigger system is divided into two steps, level 1 (L1) trigger which is a custom hardware process running synchronously with the LHC bunch crossing frequency of 40 MHz and the High-Level Trigger (HLT)~\cite{paper:JINST:CMSCollaboration}. The L1 trigger system analyses the events based on the information of calorimeter and muon system and  then selects the interesting events. However, this decision cannot take place within 25 ns, so a latency of 3.2 $\mu s$ was added. The maximum allowed frequency at the L1 stage is 100 kHz. Then the complete information is sent to HLT processing farm to reduced the event rate to $\sim$100 Hz. The remaining information is sent to Tier-0 centres to store and use it for offline analysis.
+
+The CMS trigger system is divided into two steps, level 1 (L1) trigger which is a custom hardware process running synchronously with the LHC bunch crossing frequency of 40 MHz and the High-Level Trigger (HLT)~\cite{paper:JINST:CMSCollaboration,Cittolin:578006,Khachatryan2017}. The CMS trigger flow diagram is shown in Fig.~\ref{fig:cms-trigger}. 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.90\textwidth,height=0.63\textwidth]{figures/LHC/Trigger-flow-diagram.jpeg}
+	\caption{CMS trigger flow diagram.}
+	\label{fig:cms-trigger}
+\end{figure}
+
+\subsubsection{Level-1 Trigger} % (fold)
+\label{ssub:level_1_trigger}
+The L1 trigger checks each event and decides if they can go for further scrutiny by HLT. It analyses each events based on the coarse level granularity information of calorimeter (both ECAL and HCAL) and tracks from muon system. However, this decision cannot take place within 25 ns (i.e. before arrival of next p-p bunch crossing), so a latency\footnote{The latency is the time elapsed between a pp interaction and the arrival of the L1 trigger decision at the Front-End. The Front-End system processes and keep all detector signals in buffer until they are delivered to the Data Acquisition System (DAQ)} of 3.2 $\mu s$ was added, which is named as pipeline memory in Fig.~\ref{fig:cms-trigger}. This reduces the event rate from 40MHz to 100kHz.
+
+The L1 consists of three steps. They are:
+\begin{itemize}
+	\item L1 calorimeter trigger,
+	\item L1 muon trigger,
+	\item L1 global trigger
+\end{itemize}
+Every step at L1 trigger has local, regional and global components. At first the local components, which is also called Trigger Primitive Generators (TPG), are based on the energy deposit in the calorimeter trigger towers\footnote{Trigger towers are the arrays of crystals where energy is deposited.} and track segments or hit patters in the muon chambers, respectively. Next, the regional trigger combines there information to identify the pattern logic and determine ranked and sorted objects such as electrons, photons, or muons. Finally, the global component determines the highest-ranked objects across the detectors and transfer it to the L1 global trigger. The flow diagram of L1 trigger is shown in Fig.~\ref{fig:cms-L1-trigger}.
+	% \includegraphics[width=0.95\textwidth]{figures/LHC/TrigUpgradeBlockDiagram}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/LHC/TriggerBlockDiagram_Eta.jpg}
+	\caption{cms L1 trigger flow diagram~\cite{L1trigger-2013}}
+	\label{fig:cms-L1-trigger}
+\end{figure}
+
+
+\subsubsection{L1 Calorimeter Trigger} % (fold)
+\label{ssub:l1_calorimeter_trigger}
+The first step of calorimeter trigger is TPG. The TPG is the sum of transverse energy measured in ECAL crystals or HCAL readout towers to obtain trigger towers and it also attaches bunch crossing information with this. For triggering purpose the calorimeter deposits are divided into trigger towers. These information is transferred to the Regional Calorimeter Trigger (RCT), which identifies and tag each information with objects such as electrons, muons, photons, and jets. Then these informations are transferred to the Global Calorimeter Trigger (GCT) where the best four candidates in each category are chosen and sent to the global trigger.
+
+% subsubsection l1_calorimeter_trigger (end)
+
+
+\subsubsection{L1 Muon Trigger} % (fold)
+\label{ssub:l1_muon_trigger}
+In L1 muon trigger, all three muon systems, i.e. DT, CSC and RPC, take part. Considering the difference in particle flux and the magnetic field uniformatiy with $\eta$ the muon track finding was segmented into three regions: Barrel ($|\eta|<0.83$), Overlap ($0.83<|\eta| < 1.24$) and Endcap ($|\eta|>1.24$). A pattern based track finding algorithm~\cite{Eroe2008} is used at endcap and overlap region. It assigns $p_T$ to each tracks using the loop-up-table based on multivariate techniques. While in barrel region a simple extrapolation track finding algorithm is used. Finally, the level-1 global trigger takes all the muons from three different muon sub-detectors regional track finders then sort and rank them using there $p_T$ value and quality.
+
+% subsubsection l1_muon_trigger (end)
+
+\subsubsection{L1 Global Trigger} % (fold)
+\label{ssub:l1_global_trigger}
+The L1 global trigger takes input from L1 calorimeter and L1 muon triggers and decides to accept or reject an event. The L1 global trigger receives the calorimeter trigger objects from global calorimeter trigger also the muons from global muon trigger and align them in time. Additionally, a direct trigger signal is also received from the sub-detectors or the TOTEM experiment for some special purpose such as calibration. These received trigger signal to the level 1 global trigger are known as ``technical triggers''. 
+
+The main part of the global trigger is known as the ``Global Trigger Logic'' board, where all the implemented algorithm are performed. The most basic algorithm consists of applying the $p_T$ or $E_T$ or the jet multiplicity exceed the required cut. Finally the passed events are sent to the data acquisition event manager for further processing by HLT.
+
+% subsubsection l1_global_trigger (end)
+
+% subsubsection level_1_trigger (end)
 
 
 
-% section cms_trigger_and_data_acquisition_system (end)
+\subsubsection{High Level Trigger} % (fold)
+\label{ssub:high_level_trigger}
+The complete information of the passed events by L1 trigger is sent to HLT processing farm to reduced the event rate to $\sim$100 Hz. HLT code runs on commercial computers that have about 16,000 CPU cores and performs fast version of offline object reconstruction using the information from all sub-detectors. 
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{CMS Offline Computing} % (fold)
-\label{sub:cms_offline_computing}
-Once the data are selected by the trigger system, they are ready to be analysed offline. Before that, the raw data need to be processed, i.e., to convert data into understandable physics objects like electrons, muons, photons, jets, and so on. This step is known as object reconstruction which is the most CPU intensive task in the data processing chain of CMS. In this step one needs to reconstruct the primary vertices, charged particle tracks, identify electrons, photons, muons, reconstruct jets, apply b-tagging algorithm to reconstruct b-jets, run detector specific filtering and so on.
-To perform all these steps CMS developed its software which is known as CMSSW. This software is based on Event Data Model (EDM) centred around the concept of the event. Here, an event is a C++ object container for all raw and reconstructed data related to a particular collision. Finally, these events are stored in ROOT files~\cite{Root1996}. The CMSSW event processing model consists of one executable called cmsRun, and many plug-in modules. These modules contain all the necessary codes for the event processing such as calibration and reconstruction algorithms~\cite{Bayatyan2005}.
-To analyse data, we also need MC simulations which are carried out based on the predictions of SM and various new physics models. MC events are generated at parton level. Then showering and hadronization is applied, and finally, these events are put through the GEANT4~\cite{Agostinelli2003} based CMS detector simulation. The result is data similar to what one obtains from the actual detector. This MC data can then also be reconstructed as if it were  detector data.
+In CMS, the HLT has a modular structure, which is shown in Fig.~\ref{fig:HLT_menue_workflow}. The menu is sub-divided in paths. There are around 400 different HLT paths for the data taking during Run2. Each path consists a sequence of reconstruction and filtering modules, and it reproduces the offline selection for a given physics object such as photons, electrons, muons, jets, missing momenta, b-tagged jets and so on. The modules in each path either object producers or filters. All the producers and filters are arranged in blocks in order of their complexity, so that faster algorithm runs first and their products are filtered. If a filter fails the rest of path skips. At last the final decision is the logical OR of all the HLT menu decisions.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/LHC/HLT_menu_workflow.png}
+	\caption{The systematic representation of HLT menu and its path\cite{Perrotta2015}.}
+	\label{fig:HLT_menue_workflow}
+\end{figure}
+
+All the events that passes HLT selection are stored on local disk (in CMS its Tier 0\footnote{The Worldwide LHC Computing Grid (WLCG) is composed of four levels, or “Tiers”, identified with numbers 0, 1, 2 and 3. Each Tier is made up of several computer centres and provides a specific set of services; they process, store and analyse all the data from the LHC. Tier 0 is the CERN Data Centre. All of the data from the LHC pass through this central hub. Tier 0 distributes the raw data and the reconstructed output to Tier 1’s, and reprocesses data when the LHC is not running.})
+
+\subsubsection{Example of one of HLT Trigger} % (fold)
+\label{ssub:example_of_one_of_hlt_trigger}
+
+% subsubsection example_of_one_of_hlt_trigger (end)
+% The remaining information is sent to Tier-0 centres to store and use it for offline analysis.
+% subsubsection high_level_trigger (end)
+% The sm cross-section shown in fig~\ref{fig:SM-cross-section}.
+% \begin{figure}[!htbp]
+% 	\centering
+% 	\includegraphics[width=0.55\textwidth]{figures/LHC/crosssections2012_v5.pdf}
+% 	\caption{Standard Model cross sections as a function of collider energy~\cite{Stirling2012}. The total hadronic cross-section is based on parametrisation of the Particle Data Group~\cite{PDG2018}. Other cross-sections are calculated at NLO or NNLO perturbative QCD, using MSTW2008 parton distributions~\cite{Martin2009}.}
+% 	\label{fig:SM-cross-section}
+% \end{figure}
+
+% % section cms_trigger_and_data_acquisition_system (end)
+
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{CMS Offline Computing} % (fold)
+% \label{sub:cms_offline_computing}
+% Once the data are selected by the trigger system, they are ready to be analysed offline. Before that, the raw data need to be processed, i.e., to convert data into understandable physics objects like electrons, muons, photons, jets, and so on. This step is known as object reconstruction which is the most CPU intensive task in the data processing chain of CMS. In this step one needs to reconstruct the primary vertices, charged particle tracks, identify electrons, photons, muons, reconstruct jets, apply b-tagging algorithm to reconstruct b-jets, run detector specific filtering and so on.
+% To perform all these steps CMS developed its software which is known as CMSSW. This software is based on Event Data Model (EDM) centred around the concept of the event. Here, an event is a C++ object container for all raw and reconstructed data related to a particular collision. Finally, these events are stored in ROOT files~\cite{Root1996}. The CMSSW event processing model consists of one executable called cmsRun, and many plug-in modules. These modules contain all the necessary codes for the event processing such as calibration and reconstruction algorithms~\cite{Bayatyan2005}.
+% To analyse data, we also need MC simulations which are carried out based on the predictions of SM and various new physics models. MC events are generated at parton level. Then showering and hadronization is applied, and finally, these events are put through the GEANT4~\cite{Agostinelli2003} based CMS detector simulation. The result is data similar to what one obtains from the actual detector. This MC data can then also be reconstructed as if it were  detector data.
 
 
 % section cms_offline_computing (end)
@@ -383,12 +522,7 @@ To analyse data, we also need MC simulations which are carried out based on the 
 
 
 
-% \begin{figure}[!htbp]
-% 	\centering
-% 	\includegraphics[width=0.95\textwidth]{figures/lumi-proj-2016-final-v2}
-% 	\caption{The integrated luminosity of the LHC with proton-proton collisions in 2016 compared to previous years. Luminosity is a measure of a collider’s efficiency and is proportional to the number of collisions. The integrated luminosity achieved by the LHC in 2016 far surpassed expectations and is double that achieved at a lower energy in 2012. (Image : CERN)\todo[inline]{Update the caption.}}
-% 	\label{fig:lumi-proj-2016-final-v2}
-% \end{figure}
+
 
 
 
