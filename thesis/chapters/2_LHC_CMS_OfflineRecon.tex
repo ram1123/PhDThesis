@@ -423,55 +423,54 @@ Muon system & gaseous & efficiency $\epsilon \sim 98\%$ \\
 % % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{CMS Trigger and Data Acquisition system} % (fold)
 \label{sub:cms_trigger_and_data_acquisition_system}
-The LHC produces 1 billion p-p collisions every second and thousands of particles produced during each collisions that cross the CMS detector and reconstruction of these events generates several Terabytes of data. However, till now we neither have a switch with the required bandwidth that can transfer enormous data for further processing nor the disk space to store all of them. Even if we have one, then there are only a few fractions of data that are interesting for new physics or help to understand the existing one as most of the collisions is the low-energy glancing collision instead of head-on interaction. The maximum amount of data that can be stored every day is of the order of few Terabytes that decides the rate at which we can accept the events ($\sim$ 100 Hz). Thus, the concept of the trigger, method to select events of interest, was first introduced by ZEUS experiment~\cite{ZEUSCollaboration1993}, that handles data in real time, coupled with complex data acquisition (DAQ) system. While designing the trigger one has to keep in mind that trigger should efficiently accept the interesting physics\todo[inline]{define ``interesting physics''} while rejecting the non-interesting ones as whatever information lost at this level can not be recovered.
+The LHC produces 1 billion p-p collisions every second. During each collision thousands of particles produced that cross the CMS detector and reconstruction of these events generates several Terabytes of data. However, till now we neither have a switch with the required bandwidth that can transfer enormous data for further processing nor the disk space to store all of them. Even if we have one, then there are only a few fractions of data that are interesting for new physics or help us to understand the existing one as most of the collisions is the low-energy glancing collision instead of head-on interaction. The maximum amount of data that can be stored every day is of the order of few Terabytes that decides the rate at which we can accept the events ($\sim$ 100 Hz). Thus, the concept of the trigger, method to select events of interest, was first introduced by ZEUS experiment~\cite{ZEUSCollaboration1993}, that handles data in real time, coupled with complex data acquisition (DAQ) system. While designing the trigger one has to keep in mind that trigger should efficiently accept the interesting physics\todo[inline]{define ``interesting physics''}  while rejecting the non-interesting ones as whatever information lost at this level can not be recovered.
 
 
-The CMS trigger system is divided into two steps, level 1 (L1) trigger which is a custom hardware process running synchronously with the LHC bunch crossing frequency of 40 MHz and the High-Level Trigger (HLT)~\cite{paper:JINST:CMSCollaboration,Cittolin:578006,Khachatryan2017}. The CMS trigger flow diagram is shown in Fig.~\ref{fig:cms-trigger}. 
+The CMS trigger system is divided into two steps, Level-1 trigger which is a custom hardware process running synchronously with the LHC bunch crossing frequency of 40 MHz and the High-Level Trigger (HLT)~\cite{paper:JINST:CMSCollaboration,Cittolin:578006,Khachatryan2017}. The CMS trigger flow diagram is shown in Fig.~\ref{fig:cms-trigger}. 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[width=0.90\textwidth,height=0.63\textwidth]{figures/LHC/Trigger-flow-diagram.jpeg}
-	\caption{CMS trigger flow diagram that uses two level trigger. At level 1, CMS uses information from muon system and calorimeter. Using this information it decides to reject  or pass the event to the HLT for further processing. HLT uses fast offline reconstruction algorithm that uses information from all sub-system, i.e., calorimeter muon system as well as trackers to decide to keep or reject the event.}
+	\includegraphics[width=0.70\textwidth,height=0.43\textwidth]{figures/LHC/Trigger-flow-diagram.jpeg}
+	\caption{CMS trigger flow diagram that uses two level trigger. At Level 1, CMS uses information from muon system and calorimeter. Using this information it decides to reject  or pass the event to the HLT farm for further processing. HLT uses fast offline reconstruction algorithm that uses information from all sub-system, i.e., calorimeter muon system as well as trackers to decide to keep or reject the event.}
 	\label{fig:cms-trigger}
 \end{figure}
 
 \subsubsection{Level-1 Trigger} % (fold)
 \label{ssub:level_1_trigger}
-The L1 trigger checks each event and decides if they can go for further scrutiny by HLT. It analyses each events based on the coarse level granularity information of calorimeter (both ECAL and HCAL) and tracks from muon system. However, this decision cannot take place within 25 ns (i.e. before arrival of next p-p bunch crossing), so a latency\footnote{The latency is the time elapsed between a pp interaction and the arrival of the L1 trigger decision at the Front-End. The Front-End system processes and keep all detector signals in buffer until they are delivered to the Data Acquisition System (DAQ)} of 3.2 $\mu s$ was added, which is named as pipeline memory in Fig.~\ref{fig:cms-trigger}. This reduces the event rate from 40MHz to 100kHz.
+The Level-1 trigger checks each event and decides if they can go for further scrutiny by HLT. It analyses each events based on the coarse level granularity information of calorimeter (both ECAL and HCAL) and tracks from muon system. However, this decision cannot take place within 25 ns (i.e. before arrival of next p-p bunch crossing), so a latency\footnote{The latency is the time elapsed between a pp interaction and the arrival of the Level-1 trigger decision at the Front-End. The Front-End system processes and keep all detector signals in buffer until they are delivered to the Data Acquisition System (DAQ)} of 3.2 $\mu s$ was added, which is named as pipeline memory in Fig.~\ref{fig:cms-trigger}. This reduces the event rate from 40MHz to 100kHz.
 
-The L1 consists of three steps. They are:
+The Level-1 consists of three steps. They are:
 \begin{itemize}
-	\item L1 calorimeter trigger,
-	\item L1 muon trigger,
-	\item L1 global trigger
+	\item Level-1 calorimeter trigger,
+	\item Level-1 muon trigger,
+	\item Level-1 global trigger
 \end{itemize}
-Every step at L1 trigger has local, regional and global components. At first the local components, which is also called Trigger Primitive Generators (TPG), are based on the energy deposit in the calorimeter trigger towers\footnote{Trigger towers are the arrays of crystals where energy is deposited.} and track segments or hit patters in the muon chambers, respectively. Next, the regional trigger combines these information to identify the pattern logic and determine ranked and sorted objects such as electrons, photons, or muons. Finally, the global component determines the highest-ranked objects across the detectors and transfer it to the L1 global trigger. The flow diagram of L1 trigger is shown in Fig.~\ref{fig:cms-L1-trigger}.
+Every step at Level-1 trigger has local, regional and global components. At first the local components, which is also called Trigger Primitive Generators (TPG), are based on the energy deposit in the calorimeter trigger towers\footnote{Trigger towers are the arrays of crystals where energy is deposited.} and track segments or hit patters in the muon chambers, respectively. Next, the regional trigger combines these information to identify the pattern logic and determine ranked and sorted objects such as electrons, photons, or muons. Finally, the global component determines the highest-ranked objects across the detectors and transfer it to the Level-1 global trigger. The flow diagram of Level-1 trigger is shown in Fig.~\ref{fig:cms-L1-trigger}.
 	% \includegraphics[width=0.95\textwidth]{figures/LHC/TrigUpgradeBlockDiagram}
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.95\textwidth]{figures/LHC/TriggerBlockDiagram_Eta.jpg}
-	\caption{cms L1 trigger flow diagram~\cite{L1trigger-2013}}
+	\includegraphics[width=0.65\textwidth]{figures/LHC/TriggerBlockDiagram_Eta.jpg}
+	\caption{CMS Level-1 trigger flow diagram~\cite{L1trigger-2013}. On left the hierarchy of calorimeter trigger is shown. On right the different layers of the muon trigger system is shown. Finally the global trigger combines information from both system to take the Level-1 decision.}
 	\label{fig:cms-L1-trigger}
 \end{figure}
 
-
-\subsubsection{L1 Calorimeter Trigger} % (fold)
+\subsubsection{Level-1 Calorimeter Trigger} % (fold)
 \label{ssub:l1_calorimeter_trigger}
-The first step of calorimeter trigger is TPG. The TPG is the sum of transverse energy measured in ECAL crystals or HCAL readout towers to obtain trigger towers and it also attaches bunch crossing information with this. For triggering purpose the calorimeter deposits are divided into trigger towers. These information is transferred to the Regional Calorimeter Trigger (RCT), which identifies and tag each information with objects such as electrons, muons, photons, and jets. Then these informations are transferred to the Global Calorimeter Trigger (GCT) where the best four candidates in each category are chosen and sent to the global trigger.
+The first step of calorimeter trigger is TPG. The TPG is the sum of transverse energy measured in ECAL crystals or HCAL readout towers to obtain trigger towers and it also attaches bunch crossing information with this. For triggering purpose the calorimeter deposits are divided into trigger towers. These information is transferred to the Regional Calorimeter Trigger (RCT). Then these informations are transferred to the Global Calorimeter Trigger (GCT) where the best four candidates in each category are chosen and sent to the global trigger.
 
 % subsubsection l1_calorimeter_trigger (end)
 
 
-\subsubsection{L1 Muon Trigger} % (fold)
+\subsubsection{Level-1 Muon Trigger} % (fold)
 \label{ssub:l1_muon_trigger}
-In L1 muon trigger, all three muon systems, i.e. DT, CSC and RPC, take part. Considering the difference in particle flux and the magnetic field uniformatiy with $\eta$ the muon track finding was segmented into three regions: Barrel ($|\eta|<0.83$), Overlap ($0.83<|\eta| < 1.24$) and Endcap ($|\eta|>1.24$). A pattern based track finding algorithm~\cite{Eroe2008} is used at endcap and overlap region. It assigns $p_T$ to each tracks using the look-up-table based on multivariate techniques. While in barrel region a simple extrapolation track finding algorithm is used. Finally, the level-1 global trigger takes all the muons from three different muon sub-detectors regional track finders then sort and rank them using there $p_T$ value and quality.
+In Level-1 muon trigger, all three muon systems, i.e. DT, CSC and RPC, take part. Considering the difference in particle flux and the magnetic field uniformatiy with $\eta$ the muon track finding was segmented into three regions: Barrel ($|\eta|<0.83$), Overlap ($0.83<|\eta| < 1.24$) and Endcap ($|\eta|>1.24$). A pattern based track finding algorithm~\cite{Eroe2008} is used at endcap and overlap region. It assigns $p_T$ to each tracks using the look-up-table based on multivariate techniques. While in barrel region a simple extrapolation track finding algorithm is used. Finally, the Level-1 global muon trigger takes all the muons from three different muon sub-detectors regional track finders then sort and rank them using there $p_T$ value and quality.
 
 % subsubsection l1_muon_trigger (end)
 
-\subsubsection{L1 Global Trigger} % (fold)
+\subsubsection{Level-1 Global Trigger} % (fold)
 \label{ssub:l1_global_trigger}
-The L1 global trigger takes input from L1 calorimeter and  muon triggers, then decides to accept or reject an event. The L1 global trigger receives the calorimeter trigger objects from global calorimeter trigger also the muons from global muon trigger and align them in time. Additionally, a direct trigger signal is also received from the sub-detectors or the TOTEM experiment for some special purpose such as calibration. These received trigger signal to the level 1 global trigger are known as ``technical triggers''. 
+The Level-1 global trigger takes input from Level-1 calorimeter and  muon triggers. Also, it aligns them in time and  decides to accept or reject an event. Additionally, a direct trigger signal is also received from the sub-detectors or the TOTEM experiment for some special purpose such as calibration. These received trigger signal to the level 1 global trigger are known as ``technical triggers''. 
 
-The main part of the global trigger is known as the ``Global Trigger Logic'' board, where all the implemented algorithm are performed. The most basic algorithm consists of applying the $p_T$ or $E_T$ or the jet multiplicity exceed the required cut. Finally the passed events are sent to the data acquisition event manager for further processing by HLT.
+The main part of the global trigger is known as the ``Global Trigger Logic'' board, where all the implemented algorithm are performed. The most basic algorithm consists of applying the transverse momentum ($p_T$) or the transverse energy ($E_T$) or the jet multiplicity exceed the required cut. Finally the passed events are sent to the data acquisition event manager for further processing by HLT.
 
 % subsubsection l1_global_trigger (end)
 
@@ -479,22 +478,59 @@ The main part of the global trigger is known as the ``Global Trigger Logic'' boa
 
 \subsubsection{High Level Trigger} % (fold)
 \label{ssub:high_level_trigger}
-The complete information of the passed events by L1 trigger is sent to HLT processing farm to reduced the event rate to $\sim$100 Hz. HLT code runs on commercial computers that have about 16,000 CPU cores and performs fast version of offline object reconstruction using the information from all sub-detectors. 
+The complete information of the passed events by Level-1 trigger is sent to HLT processing farm to reduced the event rate to $\sim$100 Hz. HLT code runs on commercial computers that have about 16,000 CPU cores and performs fast version of offline object reconstruction using the information from all sub-detectors. 
 
-In CMS, the HLT has a modular structure, which is shown in Fig.~\ref{fig:HLT_menue_workflow}. The menu is sub-divided in paths. There are around 400 different HLT paths for the data taking during Run2. Each path consists a sequence of reconstruction and filtering modules, and it reproduces the offline selection for a given physics object such as photons, electrons, muons, jets, missing momenta, b-tagged jets and so on. The modules in each path either object producers or filters. All the producers and filters are arranged in blocks in order of their complexity, so that faster algorithm runs first and their products are filtered. If a filter fails the rest of path skips. At last the final decision is the logical OR of all the HLT menu decisions.
+In CMS, the HLT has a modular structure, which is shown in Fig.~\ref{fig:HLT_menue_workflow}. The menu is sub-divided in paths. There are around 400 different HLT paths for the data taking during Run2. Example of several trigger path is given in Table:~\ref{tab:trigger-path}. Each path consists a sequence of reconstruction and filtering modules, and it reproduces the offline selection for a given physics object such as photons, electrons, muons, jets, missing momenta, b-tagged jets and so on. The modules in each path either object producers or filters. All the producers and filters are arranged in blocks in order of their complexity, so that faster algorithm runs first and their products are filtered. If a filter fails the rest of path skips. At last the final decision is the logical OR of all the HLT menu decisions.
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.95\textwidth]{figures/LHC/HLT_menu_workflow.png}
+	\includegraphics[width=0.65\textwidth]{figures/LHC/HLT_menu_workflow.png}
 	\caption{The systematic representation of HLT menu and its path\cite{Perrotta2015}.}
 	\label{fig:HLT_menue_workflow}
 \end{figure}
 
+% To restrict table inside the page
+% Reference: https://tex.stackexchange.com/a/245384/41568
+\begin{table}
+\begin{tabular}[!htbp]{l p{0.5\linewidth}}
+\hline
+{\bf Trigger Path} & {\bf Explanation} \\
+\hline
+HLT\_Ele27\_WPTight\_Gsf\_v7 & Requires at least one electron at HLT level having $p_T$ of 27 GeV with tight working point which is defined in appendix~\ref{cha:working_points_for_electrons_and_muons}. The electron is reconstructed using Gaussian Sum Filter (GSF) technique\footnote{In CMS detector we use large amount of material that includes detector itself along with the on detector electronics, mechanical support and power cooling. Thus along with the ionization energy loss and multiple coulomb scattering it also suffers from energy loss due to bremsstrahlung. Thus, to  precisely model the track, we have to include the material effects. This is done using the linear generalization of Kalman Filter\cite{Kalman1960}, the GSF\cite{Fruehwirth1998,Fruehwirth1997} in the track reconstruction. It assumes all the different components of different degree of the bremsstrahlung under consideration as the sum of several Gaussian mixtures~\cite{Adam2005}.}.\\
+\hline
+HLT\_Ele27\_eta2p1\_WPLoose\_Gsf\_v8 & Requires at least one trigger at HLT level having $p_T$ greater then 27 GeV having loose working point (defined in appendix~\ref{cha:working_points_for_electrons_and_muons}). In addition to this electron should be within pseudo-rapidity region of 2.1.\\
+\hline
+HLT\_Ele27\_eta2p1\_WPTight\_Gsf\_v8 & This is similar to the previous trigger except here tight working point is applied instead of loose.\\
+\hline
+HLT\_IsoMu24\_v 	& Requires at least one isolated muon at HLT level having $p_T$ greater than 24 GeV.	\\
+\hline 
+HLT\_IsoTkMu24\_v & Requires at least one isolated muon at HLT with $p_T$ greater than 24 GeV which is also matched with the tracker muon signature. \\	
+\end{tabular}
+\caption{Example of several electron and muons HLT trigger paths used in 2016.}
+\label{tab:trigger-path}
+\end{table}
+
 All the events that passes HLT selection are stored on local disk (in CMS its Tier 0\footnote{The Worldwide LHC Computing Grid (WLCG) is composed of four levels, or “Tiers”, identified with numbers 0, 1, 2 and 3. Each Tier is made up of several computer centres and provides a specific set of services; they process, store and analyse all the data from the LHC. Tier 0 is the CERN Data Centre. All of the data from the LHC pass through this central hub. Tier 0 distributes the raw data and the reconstructed output to Tier 1’s, and reprocesses data when the LHC is not running.})
 
-\subsubsection{Example of one of HLT Trigger For Electrons} % (fold)
-\label{ssub:example_of_one_of_hlt_trigger_for_electrons}
-
+% \subsubsection{Example of one of HLT Trigger For Electrons} % (fold)
+% \label{ssub:example_of_one_of_hlt_trigger_for_electrons}
+% Here, I am explaining in details one of triggers, \textbf{HLT_Ele27_WPTight_Gsf_v7}, from the HLT trigger menu. 
 % subsubsection example_of_one_of_hlt_trigger (end)
+
+% \subsubsection{Example: Trigger for Muons} % (fold)
+% \label{ssub:example_trigger_for_muons}
+% As described in section~\ref{sub:the_muon_system}, muons are signature of many interesting physics as it contains leptons isolated from many hadronic activity. While the dominant component of muon trigger rate consists of muons from hadron decays. This can be exploited by applying isolation criteria and lowering the $p_T$ threshold. In this way we can optimize the physics reach of CMS detector. Also, muons are used to calibrate the detectors.
+% % Also, in section~\ref{ssub:l1_muon_trigger} it is described.
+
+% As we discussed earlier, at Level-1 upto four muons candidates passes the trigger that exceeds the transverse momentum ($p_T$) threshold and matches muon candidates of DT and CSC along with the RPC candidates. Thus, at HLT we use several different HLT for muons as the type of event that contribute depends on the $p_T$ threshold used. Like, Pion and Kaon decays dominate in the region $p_T<5GeV$. Leptons from b and c-quark decay dominates in the $5~GeV<p_T<35~GeV$ range while at higher $p_T$ values, $W\rightarrow \mu \nu$ or similar topology, events are the main component of the muons passing the Level-1 criteria.
+
+
+% % subsubsection example_trigger_for_muons (end)
+
+% \subsubsection{Example: Trigger for Electrons} % (fold)
+% \label{ssub:example_trigger_for_electrons}
+
+% subsubsection example_trigger_for_electrons (end)
+
 % The remaining information is sent to Tier-0 centres to store and use it for offline analysis.
 % subsubsection high_level_trigger (end)
 % The sm cross-section shown in fig~\ref{fig:SM-cross-section}.

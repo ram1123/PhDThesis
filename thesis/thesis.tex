@@ -26,6 +26,11 @@
 \usepackage{colortbl}
 \usepackage{hhline}
 
+% Below 3 lines are added to behave footnote command as its normal form inside table environment.  Reference: https://tex.stackexchange.com/a/109471/41568
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+\makesavenoteenv{table}
+
 % packages for todonotes
 \usepackage[colorlinks]{hyperref}
 \usepackage[table]{xcolor}
@@ -56,7 +61,7 @@
 \usepackage{setspace}
  
 % \onehalfspacing
-\doublespacing
+% \doublespacing
 
 \begin{document}
  \linenumbers
@@ -65,7 +70,7 @@
 
 % Front pages =================================================================
  % \include{frontback/titlepage}
- % \listoftodos
+ \listoftodos
   % \cleardoublepage \include{frontback/declare}
   % \cleardoublepage \include{frontback/originality}
   % \cleardoublepage \include{frontback/saf1}
@@ -85,14 +90,15 @@
   % \include{chapters/1_Introduction}
   % \include{chapters/1_Introduction2}
   \include{chapters/2_LHC_CMS_OfflineRecon}
-  \include{chapters/3_GEM_Detectors}
-  \include{chapters/3_GE11-details}
+  % \include{chapters/3_GEM_Detectors}
+  % \include{chapters/3_GE11-details}
   % \include{chapters/Hardware_org}
   % \include{chapters/VBS}
   
-  % \begin{appendices}
-  %    \include{appendix/synchtron_radiation}
-  % \end{appendices}
+  \begin{appendices}
+     \include{appendix/synchtron_radiation}
+     \include{appendix/Electron_Working_points}
+  \end{appendices}
 
   % \newpage 
   \printbibliography
