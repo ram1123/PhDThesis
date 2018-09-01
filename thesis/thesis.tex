@@ -61,7 +61,11 @@
 \usepackage{setspace}
  
 % \onehalfspacing
-% \doublespacing
+\doublespacing
+
+% How to make curvy L
+% Reference: https://tex.stackexchange.com/a/11144/41568
+\newcommand{\Lagr}{\mathcal{L}}
 
 \begin{document}
  \linenumbers
@@ -91,14 +95,14 @@
   % \include{chapters/1_Introduction2}
   \include{chapters/2_LHC_CMS_OfflineRecon}
   % \include{chapters/3_GEM_Detectors}
-  % \include{chapters/3_GE11-details}
+  % \include{chapters/3_GE11-TBA}
   % \include{chapters/Hardware_org}
   % \include{chapters/VBS}
   
-  \begin{appendices}
-     \include{appendix/synchtron_radiation}
-     \include{appendix/Electron_Working_points}
-  \end{appendices}
+  % \begin{appendices}
+     % \include{appendix/synchtron_radiation}
+     % \include{appendix/Electron_Working_points}
+  % \end{appendices}
 
   % \newpage 
   \printbibliography
