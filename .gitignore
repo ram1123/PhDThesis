@@ -1,4 +1,6 @@
 thesis.pdf
+*.key
+*.docx
 */.DS_Store
 */*/.DS_Store
 */*/*/.DS_Store
@@ -33,3 +35,4 @@ thesis-blx.bib
 *.tdo
 *.fls
 *.fdb_latexmk
+thesis/chapters/Hardware_org.tex
