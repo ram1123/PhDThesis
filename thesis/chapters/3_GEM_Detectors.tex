@@ -10,7 +10,7 @@ The invention of Multi-Wire Proportional Chamber (MWPC) in 1968 by Georges Charp
 	\item Formation of deposits on the electrodes, which affects the gain and age of the detector.
 	\item In presence of highly ionizing particles sometimes a destructive discharge happens.
 \end{enumerate}
-The invention of Micro-Pattern Gaseous Detector (MPGD) focuses these issues. It has unprecedented spatial resolution, large sensitive area, high rate capability, operational stability along with large life-time in particular the Gas Electron Multiplier (GEM)~\cite{Sauli1997,Sauli1999} detectors. Several new study also shown that if a reasonable precaution are taken on the component quality it might be less vulnerable to the radiation induced ageing than the standard silicon micro-strip detectors~\cite{TITOV2004,Titov2002}.
+The invention of Micro-Pattern Gaseous Detector (MPGD) focuses these issues. It has unprecedented spatial resolution, large sensitive area, high rate capability, operational stability along with long life-time in particular the Gas Electron Multiplier (GEM)~\cite{Sauli1997,Sauli1999} detectors. Several new study also shown that if a reasonable precaution are taken on the component quality it might be less vulnerable to the radiation induced ageing than the standard silicon micro-strip detectors~\cite{TITOV2004,Titov2002}.
 
 % \section{GEM Introduction \& Operational Principle} % (fold)
 % \label{sec:gem_introduction_&_operational_principle}
@@ -25,7 +25,7 @@ It is a thin plastic sheet coated with metal on both sides and chemically pierce
 \end{figure}
 The region inside GEM detector have three different regions: drift electrode, a conversion and drift region.
 %, a GEM mesh collecting and multiplying the charge in a gas avalanche, and induction gap in which a high electric field is used to extract and drift the electrons towards the collecting electrodes. This is shown in Figure \ref{fig:gemgaps}. 
-The large effective gains (up to $10^4$), full efficiency of detection and very good localization accuracies for minimum ionizing particles is promising to us. In the thin gap of GEM few tens of primary ion pairs creates; cascading to two GEM meshes so it can provide large gains and better performances~\cite{Bressan1999}.
+The large effective gains (up to $10^4$), full efficiency of detection and very good localization accuracies for minimum ionizing particles is promising to us. In the thin gap of GEM few tens of primary ion pairs creates; cascading to two GEM meshes so it can provide large gains and better performances with very less probability of discharge~\cite{Bressan1999}.
 \begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[width=0.95\textwidth]{figures/GEM/triple_gem.png}
@@ -37,10 +37,10 @@ The large effective gains (up to $10^4$), full efficiency of detection and very 
 \section{Fabrication \& Characterization} % (fold)
 \label{sec:fabrication_&_characterization}
 \subsection{Foil Production}
-Through Transfer of Technology (TOT) Micropack signed an agreement for the development of GEM foils in India in collaboration with Indian Institutions. After continuous efforts, refining of processes and repeated trials, Micropack has been successful in realizing $10~cm~\times~10~cm$ and $30~cm~\times~30~cm$ GEM foils, meeting the standard dimensional requirements. 
-
-
-The foil production at Micropack started with single-mask process. However, after several attempts it was realized that copper removal through the reverse plating method was challenging. By contrast, the double-mask process succeeded and gave fast results. The double-mask GEM foils were produced by Micropack in a similar fashion as produced at the CERN PCB workshop~\cite{DEOLIVEIRA2009}, using photo-lithographic techniques in which hole patterns are transferred to the copper-clad polyimide substrate using microscopic masks placed on the top and bottom of the substrate. A 15 $\mu$m thick photo-resistive layer is applied on both sides of the substrate and the mask is placed on top of the base material and engraved on the photo-resist by UV-light exposure. The foil used was a 50 $\mu$m PI (Apical Type NP) film with 5 $\mu$m copper foil on either side. Several solvents and acid baths are used to etch copper layer  to form the copper holes. The polyimide is then dissolved by chemical etching using the copper layer as a mask. 
+Through Transfer of Technology (TOT) Micropack signed an agreement for the development of GEM foils in India in collaboration with Indian Institutions. After continuous efforts, refining of processes and repeated trials, Micropack has been successful in realizing $10~cm~\times~10~cm$ and $30~cm~\times~30~cm$ GEM foils, meeting the standard dimensional requirements.
+Micropack started the production with single mask process as this configuration is the one we are going to use in CMS detector. But, after several attempts they realized that this is quite challenging so they switched to double mask process. They quickly succeeded in production of the double-mask GEMs.
+It is produced in a similar fashion as at CERN PCB workshop~\cite{DEOLIVEIRA2009}. The foil used by Micropack was 50 $\mu m$ PI (Apical Type NP) film with 5 $\mu m$ copper coating on both side. Figure~\ref{fig:Foil_and_Cone}(a) shows the $10~cm~\times~10~cm$ GEM foil produced by Micropack and the Fig.~\ref{fig:Foil_and_Cone}(b) shows the cross-sectional view of the foil showing the double conical structure.
+To qualify these GEM foils as commercially and scientifically reliable, a number of quality control test have to be performed. The two main quality control tests are optical test and electrical test. The optical test gives us information about the quality of produced foil like the hole geometry, pitch information and about the defects, if any. While the electrical test gives us information about the leakage current, discharge effects, etc.
 \begin{figure}[!htbp]
     \centering
     \begin{subfigure}[b]{0.46\textwidth}
@@ -54,12 +54,9 @@ The foil production at Micropack started with single-mask process. However, afte
    \caption{(a) 10 cm $\times$ 10 cm GEM foil encapsulated in a frame and (b) Cross-sectional view of the foil showing the double cone structure of the engraved holes. } \label{fig:Foil_and_Cone}
 \end{figure}
 
-Figure \ref{fig:Foil_and_Cone} (a) shows the newly produced 10 cm $\times$ 10 cm GEM foil. Figure \ref{fig:Foil_and_Cone} (b) shows the cross-sectional view of the foil showing the double cone structure of the engraved holes. The realization of the foils has been achieved primarily through accurate lithographic and controlled chemical processes with a double cone hole structure to enhance the end gain.
-
-In order to qualify these GEM foils as commercially and scientifically reliable, a number of quality control tests needed to be performed. Therefore, we have characterized the foils by studying their optical and electrical properties to render them usable for further applications.
 \subsection{Optical Assessment}
-
-
+GEM performance depends heavily on the quality and parameters of GEM foil like thickness of foil, hole diameter, pitch, and defects like missing holes, un-etched areas, excess-etching, burnt areas, etc. To check these defects and to measure the hole-size and pitch several method was developed using an automated 2D-CCD scanner~\cite{Posik2015, Becker2006}. However we used a different technique. We divided the GEM foil into several sectors and captured a high resolution picture using the AF-S Micro Nikon 40 mm 1:2.8G lens. We used a soft box ($1~m~\times~1~m$) light source for uniform illuminating the GEM foil.
+A sketch of the set-up is shown in Fig.~\ref{fig:Optical_Sketch}.
 \begin{figure}[!htbp]
     \centering
     %\begin{subfigure}[b]{0.7\textwidth}
@@ -70,10 +67,7 @@ In order to qualify these GEM foils as commercially and scientifically reliable,
     %\end{subfigure}
    \caption{Sketch of the set-up used for the optical measurements.}   \label{fig:Optical_Sketch}
 \end{figure}
-
-The GEM foil performance depends heavily upon the hole geometry and their pattern. A GEM foil with a 140 $\mu$m pitch using a hexagonal hole pattern contains approximately 600,000 holes. Any irregularity or defect in the hole pattern and its geometry can profoundly affect their performance. It becomes therefore very important to study the hole geometry structure of the foil and to locate every glitch and piece of debris which could lead to foil failure. Though the qualitative estimate of hole density and diameters can  manually be studied using optical microscope but such a technique can become labour intensive especially when there are large number of holes to be analysed. To overcome this problem, various techniques have been developed \cite{Posik2015, Becker2006} to study the optical properties, where geometrical properties of the foils have been measured using an automated 2D CCD scanner. However, in our study we have used a slightly different approach to explore the geometrical properties of the GEM foils. Each of the foils were scanned using Micro lensing technique with an AF-S Micro Nikon 40 mm 1:2.8G lens where multiple images of micrometer resolution per pixel were captured. A Soft Box (1 m $\times$ 1 m) light source has been used to provide uniform illumination to the GEM foils. A sketch of the optical measurement set-up is shown in the Figure~\ref{fig:Optical_Sketch}.
-
-
+Fig~\ref{fig:Optical_01} shows the found defects in the considered GEM foil. Also, the measured number of defects are shown in Fig.~\ref{fig:Optical_04}.
 \begin{figure}[!htbp]
     \centering
     \begin{subfigure}[b]{0.29\textwidth}
@@ -113,9 +107,8 @@ The GEM foil performance depends heavily upon the hole geometry and their patter
    \caption{Observed imperfections in the foils: (a) Un-etched area, (b) under-size hole, (c) over-size hole (d) missing hole, (e) excess etching and (f) burnt area.} \label{fig:Optical_01}
 \end{figure}
 
-The quantities that have been optically measured are the inner and outer hole diameters. The various kinds of possible imperfections that have been observed are un-etched areas, under-size hole, oversize holes, without hole areas, excess etching and burnt holes. All these imperfections are shown in Figure \ref{fig:Optical_01}. 
 % as shown in the Figures \ref{fig:Optical_02} (a) and \ref{fig:Optical_02} (b), respectively. 
-% \begin{figure}[!ht]
+% \begin{figure}[!htbp]
 %     \centering
 %     \begin{subfigure}[b]{0.44\textwidth}
 %         \includegraphics[width=5cm, height=4cm]{figures/GEM/figures/O_1b}
@@ -151,7 +144,7 @@ The quantities that have been optically measured are the inner and outer hole di
 
 \subsection{Electrical Assessment}
 The production quality of GEM foils can be quantified through optical and electrical tests. The optical test gives the information regarding the hole geometry and pitch related information whereas electrical test provides the parameters about the efficacy of the foils and hence is important in determining the quality of GEM foils. Electrical properties of the GEM foils were discerned by measuring its leakage current extended over a period of time after proper cleaning using adhesive roller. We divide electrical tests mainly in two types, quality control short or fast (QC fast) and quality control long (QC long) as per the CERN standards of quality control classification \cite{eleven}, which requires these two tests to be done in order to qualify these foils. The difference between QC fast and QC long lies in applying voltage for shorter or longer periods of time respectively, and monitoring the current. The other difference being that the QC fast gives the preliminary idea of leakage current or electrical connectivity of the foil but for more detailed study, QC long provides the behaviour of the foil at high voltages in terms of information regarding the actual leakage current and the number of discharges, if any, for the reasonably longer duration of time. Here, both the tests have been performed; the electrical connectivity of the foils by QC fast method has been done with insulation tester MIT Megger 420 \cite{twelve}. Using this test, we established that the foils have good electrical connectivity.
-\begin{figure}[!ht]
+\begin{figure}[!htbp]
     \centering
     %\begin{subfigure}[b]{0.7\textwidth}
         \includegraphics[width=12cm,height=8cm]{figures/GEM/figures/10.jpeg}
@@ -162,7 +155,7 @@ The production quality of GEM foils can be quantified through optical and electr
    \caption{Sketch of the set-up used for the measurement of leakage current.} \label{fig:Cleaning_Measurement}
 \end{figure}
 %=====================================================================
-\begin{figure}[!ht]
+\begin{figure}[!htbp]
     \centering
     \begin{subfigure}[b]{0.5\textwidth}
         %\includegraphics[width=7.5cm, height=5.5cm]{Indian_foils_H20.pdf}
@@ -179,7 +172,7 @@ The production quality of GEM foils can be quantified through optical and electr
    \caption{Leakage Current of (a) Micropack Foils and (b) CERN Foils, at an average temperature of T=27$^{\circ}$C and relative humidity equal to 20\%.} \label{fig:L_01}
 \end{figure}
 %=====================================================================
-%\begin{figure}[!ht]
+%\begin{figure}[!htbp]
 %    \centering
 %    \begin{subfigure}[b]{0.75\textwidth}
 %        \includegraphics[width=10cm, height=7cm]{Combined_foils_H20.pdf}
@@ -212,11 +205,16 @@ The proposed upgrade targets the following improvements:
 	\end{itemize}
 
 \subsection{GE11 Details}
-The aim of the CMS GEM Collaboration is the development and the installation of triple-GEM detectors in the forward region of the CMS muon end-caps during the LS2 upgrade foreseen in 2018. The project is named GE1/1, where ``G'' stands for GEM, ``E'' stands for for End-cap, the first ``1'' corresponds to the first muon station and the second ``1'' the first ring of the station. 144 large trapezoidal chambers will be organized by pair to form super-chambers that will cover the full $\phi$ coordinate and the pseudo-rapidiyregion 1.55$ < \eta < $2.18. The detectors will be inserted in front of the ME1/1 station in the slots originally foreseen for RPC detectors as described in FIg%FIXME. 
+The aim of the CMS GEM Collaboration is the development and the installation of triple-GEM detectors in the forward region of the CMS muon end-caps during the LS2 upgrade foreseen in 2018. The project is named GE1/1, where ``G'' stands for GEM, ``E'' stands for for End-cap, the first ``1'' corresponds to the first muon station and the second ``1'' the first ring of the station. 144 large trapezoidal chambers will be organized by pair to form super-chambers that will cover the full $\phi$ coordinate and the pseudo-rapidity region 1.6$ < \eta < $2.2.
+The detectors will be inserted in front of the ME1/1 station in the slots originally foreseen for RPC detectors as described in Fig.~\ref{fig:GE11pos}. 
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/GEM/cms_upg_o_g_b_ni_ge1_r_140227.pdf}
+	\caption{Cross-sectional view of CMS quadrant showing the location of GEM detectors in red.}
+	\label{fig:GE11pos}
+\end{figure}
 The goal is to complement the CSC system to ensure the good reconstruction and selection efficiency after the high-luminosity upgrade of the LHC, while keeping the L1 trigger to an acceptable rate. 
-
-%The GEM detector prototype for the CMS detector~\ref{Chatrchyan:2008aa} is known as GE1/1.
- It is trapezoidal in shape with active area of $990\times (220-445)mm^2$. This size is imposed by the geometry of the vacant high-$\eta$ area in CMS muon endcap. GE1/1 chamber hosts a Triple-GEM detector with a $3/1/2/1~mm$ (drift/transfer 1/transfer 2/induction) electrode gap configuration, as shown in Fig. \ref{GEM:cascade}. The GEM foil ($50\mu m$ thick kapton foil with $5\mu m$ copper on both sides) consists of a thin kapton foil, metal-clad on both side, with a high density of chemically pierced holes. By applying suitable potential difference between two sides, this mesh can act as an amplifier for electrons released by ionization of the gas. The detector readout board is divided into eight $\eta$-partitions with 384 strips each oriented radially along the long side of the detector with a pitch varying from $0.6mm$ (short side) to $1.2mm$ (long side). Each partition is subdivided along the $\phi$-coordinate into three readout sectors with 128 strips or channels each. During test beam we scanned three different sectors of GE1/1, i.e. $(i\eta,i\phi)~=~\{(1,2),(5,2),(8,2)\}$. In Fig. \ref{GE11} red and yellow color shows which sector of GE1/1's are exposed to the beam. Red sectors are taken with gas $Ar/CO_2/CF_4~(45/15/40) $ while yellow sector is taken with gas $Ar/CO_2~(70/30)$.
+It is trapezoidal in shape with active area of $990\times (220-445)mm^2$. This size is imposed by the geometry of the vacant high-$\eta$ area in CMS muon endcap. GE1/1 chamber hosts a Triple-GEM detector with a $3/1/2/1~mm$ (drift/transfer 1/transfer 2/induction) electrode gap configuration, as shown in Fig. \ref{GEM:cascade}. The GEM foil ($50\mu m$ thick kapton foil with $5\mu m$ copper on both sides) consists of a thin kapton foil, metal-clad on both side, with a high density of chemically pierced holes. By applying suitable potential difference between two sides, this mesh can act as an amplifier for electrons released by ionization of the gas. The detector readout board is divided into eight $\eta$-partitions with 384 strips each oriented radially along the long side of the detector with a pitch varying from $0.6mm$ (short side) to $1.2mm$ (long side). Each partition is subdivided along the $\phi$-coordinate into three readout sectors with 128 strips or channels each. During test beam we scanned three different sectors of GE1/1, i.e. $(i\eta,i\phi)~=~\{(1,2),(5,2),(8,2)\}$. In Fig. \ref{GE11} red and yellow color shows which sector of GE1/1's are exposed to the beam. Red sectors are taken with gas $Ar/CO_2/CF_4~(45/15/40) $ while yellow sector is taken with gas $Ar/CO_2~(70/30)$.
 
 \begin{figure}[!htbp]
 \centering
@@ -225,22 +223,19 @@ The goal is to complement the CSC system to ensure the good reconstruction and s
 \label{GEM:cascade}
 \end{figure}
 
-%\begin{figure}[!h]
+%\begin{figure}[!htbp]
 %\centering
 %\includegraphics[width=1.0in]{figures/GEM/GE11.png}
 %\caption{Different $(i\eta,i\phi)$ sectors of full size GE1/1 detector prototype.}
 %\label{GE11}
 %\end{figure}
 
-\subsection{Introduction of GE1/1 System}
-GE1/1 is the first prototype of large size GEM detectors which is going to be installed in high eta region ($1.6<\eta<2.2$) of CMS detector, during LS2. It is a triple-GEM detector \cite{Colaleo:2021453}, i.e. it contains 3 GEM foils, with gap configuration $3/1/2/1~mm$ for Drift / Transfer1 / Transfer2 / Induction gaps respectively, as shown in Fig. \ref{GEM:cascade}. The prototype of GE1/1 is shown in Fig. \ref{GE11}. 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=1.0in]{figures/GEM/GE11.png}
 \caption{Different $(i\eta,i\phi)$ sectors of full size GE1/1 detector prototype.}
 \label{GE11}
 \end{figure}
-It has eight sectors in $i\eta$ direction containing 384 readout strips each oriented radially along the long side of the detector and three sectors in $i\phi$ direction. During test beam we scanned three different sectors of GE1/1, i.e. $(i\eta,i\phi)~=~\{(1,2),(5,2),(8,2)\}$. In Fig. \ref{GE11} red and yellow color shows which sector of GE1/1's are exposed to the beam. Red sectors are taken with gas $Ar/CO_2/CF_4~(45/15/40)$ while yellow sector is taken with gas $Ar/CO_2~(70/30)$. 
 
 
 \subsection{Detector Design Description For Test Beam Analysis}
@@ -287,7 +282,7 @@ The full scale CMS GEM chamber has a trapezoidal shape with dimensions of $990\t
 \subsection{Experimental Setup}
 The GE1/1 detector were tested using $\sim$ 150 GeV muon and pion beams at the CERN SPS test beam facility during October-December 2014. 
 %A simple schematic diagram of the experimental setup is shown in Fig. \ref{TB:Set-up}.
-%\begin{figure}[!h]
+%\begin{figure}[!htbp]
 %\centering
 %\includegraphics[width=2.0in]{figures/GEM/2014_TestBeam_Setup.png}
 %\caption{Schematic of the set-up used for test-beam measurements at CERN.}
@@ -456,7 +451,7 @@ Efficiency, $\epsilon$ is one of the most important parameter for the gaseous de
 where $N_{Trk}$ is the number of reconstructed events by using a linear fit $y = mx + b$ fit to the tracker hit positions, in the tracker with normalized $\chi^2<10$.
 $N_{GE1/1+Trk}$ is the number of reconstructed events for which an actual hit is found in the GE1/1 within $5mm$ of extra-plotted track.
 We are showing here the efficiency as a function of $E_{gain}$, Fig. \ref{Efficiency}. 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=3.5in]{figures/GEM/EfficiencyPlot_wrt_EGain_wError4times_2gas.pdf}
 \caption{Efficiency w.r.t. $E_{gain}$ for two different gases and three different $(i\eta,i\phi)$ sectors.}
@@ -494,7 +489,7 @@ The convolution of the two function is
 where $A$ is the amplitude of the Gaussian function, $\sigma$ is the standard deviation of Gaussian, and $u_{\pm}= t-t_0\pm\frac{f_{clk}}{2}$. 
 We fitted the experimental data with this convoluted function. From, the fit we extract the time resolution of the detector before the convolution. The time resolution as a function of $E_{drift}$ is shown in Fig. \ref{TimeResolution}. The time resolution with $Ar/CO_2$ (70/30) is higher for lower values of $E_{drift}$. However for any given point on the $Ar/CO_2$ curve has a gain approximately one order of magnitude higher gain than the corresponding gain with $Ar/CO_2/CF_4$ (45/15/40).  We are able to reach faster timing at lower gains with the addition of the $CF_4$ and this is important from the point of view of detector safety because this will allow us to operate the detector at lower gains, hence reducing the discharge probability.
 
-\begin{figure}[!h]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=3.5in]{figures/GEM/TimeResolution_wrt_EDrift.pdf}
 \caption{Time-resolution w.r.t. $E_{drift}$ for two different gases.}
