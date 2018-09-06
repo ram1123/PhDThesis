@@ -3,7 +3,7 @@
 
 \section{Introduction} % (fold)
 \label{sec:introduction}
-The invention of Multi-Wire Proportional Chamber (MWPC) in 1968 by Georges Charpak was one of the breakthrough in gaseous detectors, since it had better rate capability vis-a-vis its predecessors~\cite{Charpak1968}. 
+The invention of Multi-Wire Proportional Chamber (MWPC) in 1968 by Georges Charpak was one of the breakthroughs in gaseous detectors, since it had better rate capability vis-a-vis its predecessors~\cite{Charpak1968}. 
 This invention was also led to Nobel prize to George Charpak in 1992. With time the design and performance of MWPC have been improved. But because of our increasing demands with the acquired knowledge its limitation reached in terms of the maximum rate capability and granularity. In 1988 Anton Oed invented the Micro-Strip Gas Counter (MSGC). 
 This detector had overcome the rate limitation due to positive-ion accumulation in the gas volume and able to reach up to few tens of micron in position resolution. 
 Also, it can sustain the particle flux exceeding the $MHz/mm^2$ range. Its performance was very impressive but the long-term study revealed its two weakness. They are:
@@ -14,25 +14,39 @@ Also, it can sustain the particle flux exceeding the $MHz/mm^2$ range. Its perfo
 The invention of Micro-Pattern Gaseous Detector (MPGD) focuses these issues. 
 It has unprecedented spatial resolution, large sensitive area, high rate capability, operational stability along with long lifetime, in particular, the Gas Electron Multiplier (GEM)~\cite{Sauli1997,Sauli1999,detector:1732870} detectors. 
 Several new studies also showed that if a reasonable precaution has taken on the component quality it might be less vulnerable to the radiation-induced ageing than the standard silicon microstrip detectors~\cite{TITOV2004,Titov2002}.
+% section introduction (end)
 
-GEM is a new concept from Fabio Sauli at CERN \cite{Sauli1997}.
-It is a thin plastic sheet coated with metal on both sides and chemically pierced by a regular array of holes a fraction of a millimetre across and apart. 
-Applying a voltage (about 500V on 50$\mu$) across the GEM conducting layers, the resulting high electric field in the holes makes an avalanche of ions and electrons pour through each. 
-The GEM foil is shown in Figure \ref{fig:gem}.
+\section{Design and working principle of GEM} % (fold)
+\label{sec:design_and_working_principle_of_gem}
+
+GEM is a new concept from Fabio Sauli at CERN~\cite{Sauli1997}.
+It is a thin plastic sheet coated with metal on both sides. It is chemically pierced by a regular array of holes using the photolithography and acid etching, as shown in Fig.~\ref{fig:gem} (left).
 \begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=0.95\textwidth]{figures/GEM/KEKDTP3.jpg}
-	\caption{(Left) The gas electron multiplier (GEM) foil can image a two-dimensional position of particles passing through a gaseous chamber. (Right) The cross-sectional view of the GEM shows strong electric fields in the vicinity of holes where electron signals are amplified.}
-	\label{fig:gem}
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/GEM/KEKDTP3.jpg}
+    \caption{(Left) The gas electron multiplier (GEM) foil can image a two-dimensional position of particles passing through a gaseous chamber. (Right) The cross-sectional view of the GEM shows strong electric fields in the vicinity of holes where electron signals are amplified.}
+    \label{fig:gem}
 \end{figure}
-The region inside GEM detector has three different regions: drift electrode, a conversion and drift region.
-%, a GEM mesh collecting and multiplying the charge in a gas avalanche, and induction gap in which a high electric field is used to extract and drift the electrons towards the collecting electrodes. This is shown in Figure \ref{fig:gemgaps}. 
-% The large effective gains (up to $10^4$), full efficiency of detection and very good localization accuracies for minimum ionizing particles is promising to us. 
-% In the thin gap of GEM few tens of primary ion pairs creates; cascading to two GEM meshes so it can provide large gains and better performances with very less probability of discharge~\cite{Bressan1999}.
 
-Generally, a voltage of a few hundred volts is applied across the GEM layers that creates a strong field inside the holes due to the conical shape. 
-This acts as an independent proportional counter as shown in Fig.~\ref{fig:gem}(right). As electron passes through, it gains enough kinetic energy to produce the secondary ionization in the gas, which starts the avalanche process. 
-A simple way to achieve high gain with lower voltage to avoid the electrical breakdown problem is to cascade few GEM foils inside the electrode. 
+A potential is applied betwen the two copper layers. This creates the high electric field through holes. As
+\begin{equation}
+    E = \frac{V}{d}
+\end{equation}
+where E is the electric field in GEM hole, V is the voltage applied between the two copper layers and d is the thickness of the foil. Since the Kapton\footnote{Kapton was choosen as the insulating layer as it has very good insulating power along with that it can sustain very high radiation along with that it works with wide range of temperature. It is a plastic polyimide created by DuPont.} foil is very thin, around 50 $\mu m$, so a high electric field density will be created in the hole which is shown in Fig.~\ref{fig:gem} (right).
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/GEM/SingleGEM_Detector.jpeg}
+    \caption{Outline of a single GEM detector.}
+    \label{fig:gemOutline}
+\end{figure}
+
+The region inside the GEM detector has three different regions: drift, amplification and induction region, as shown in Fig.~\ref{fig:gemOutline}.
+In the drift region, ionization occurs and electrons drift toward the GEM. 
+While passing through amplification region, where few hundred volts is applied across the two copper foils, electrons gain enough kinetic energy to produce secondary ionization in the gas and starts the avalanche multiplication, as shown in Fig.~\ref{fig:gem}(right).
+Finally, in the induction region, all the electrons from the amplification region reaches to the readout plane. 
+If there is more than one GEM foil then through transfer region takes almost all the electrons from one GEM foil to another.
+
+To avoid the problem of electrical breakdown a simple way is to cascade sveral GEM foils operating at lower voltages within drift cathode and the readout board.
 A set of arrangement where three GEM foils are cascade is commonly known as ``\textit{Triple-GEM detector}'', as shown in Fig.~\ref{fig:gemgaps}.
 \begin{figure}[!htbp]
     \begin{center}
@@ -41,8 +55,10 @@ A set of arrangement where three GEM foils are cascade is commonly known as ``\t
         \label{fig:gemgaps}
     \end{center}
 \end{figure} 
-Since the total gain is the product of the individual gain of each foil, so the gain up to $10^5$ can be achieved in this way.
-Also, in this configuration, it can reach maximum gain without any discharge or least probable. It is also shown in Fig.~\ref{fig:tripleGEM_discharge_gain}. 
+
+Also, the total gain is the product of the individual gain of each foil, so the gain up to $10^5$ can be achieved in this way.
+In this configuration, it can reach maximum gain without any discharge or least probable.
+In Fig.~\ref{fig:tripleGEM_discharge_gain} the gain and discharge probability was compared for single, double and triple GEM detectors. This shows that the triple GEM can go beyond $10^4$ gain without having any discharges.
 Also, the signal readout by the electrode is pretty fast as it uses only electrons to read the signal. 
 Also, using the multi-layered boards one can achieve the two-dimensional readout.
 \begin{figure}[!htbp]
@@ -52,16 +68,12 @@ Also, using the multi-layered boards one can achieve the two-dimensional readout
     \caption{Left: Comparison of total effective gain on anode as a function of applied voltage for single, double and triple GEM detectors. Right: Comparison of discharge probability as a function of applied voltage on anode for single, double and triple GEM detectors~\cite{Bachmann2002}.}
     \label{fig:tripleGEM_discharge_gain}
 \end{figure}
-% section introduction (end)
+% section design_and_working_principle_of_gem (end)
+
 
 \section{GEM For CMS Phase-II Upgrade} % (fold)
 \label{sec:gem_for_cms}
 As discussed in Sec.~\ref{sub:the_muon_system},  the CMS collaboration finalizes to install the GEM detector in region $1.6 < |\eta| < 2.2$ to support the CSC muon sub-system and improve the triggering and tracking capability of the muons in the forward region~\cite{Colaleo:2021453}. 
-%the system has limited redundancy and only CSC are installed. 
-%In the future running of LHC at full luminosity, the particle rate in the forward region is expected to reach several tens of kHz/$cm^2$ and the integrated charge will reach several $C/cm^2$, which make the use of the originally planned RPC technology questionable. 
-%To overcome these limitations, the CMS GEM collaboration proposed the GEM as a potential candidate to upgrade the high-$\eta$ region of the forward muon system \cite{Colaleo:2021453}. 
-%The CMS muon system was designed as a highly hermetic and redundant muon system, composed of three detection technologies. Precision measurements are provided by \gls{dt} in the barrel, covering acceptances up to $|\eta|<1.2$, and \gls{csc} in the endcaps covering $1.0 < |\eta|<2.4$. \gls{rpc} ensures adequate redundancy and triggering up to $\eta | > 1.6$ where the background particle rates are highest and the bending in the magnetic field is smallest.
-%The chosen technology are GEM, where amplification occurs in the narrow wholes of a thin kapton foil. Three subsequent stages/foils allow for a reasonable amplification at every stage/foil while providing a high total amplification. Two of such triple-GEM chambers are combined to a so called super chamber.
 The upgrade target for the proposed upgrade is:
     \begin{itemize}
         \item Re-establish the redundancy in the difficult region beyond $\eta = 1.6 $
@@ -69,8 +81,7 @@ The upgrade target for the proposed upgrade is:
         \item The combined operation of CSC and GEM detectors allows a measurement of the bending angle at the trigger level, thus strongly reducing the rate of mis-measured muons driving the triggers rate.
     \end{itemize}
 % \subsection{GE11 Details}
-The installation of GEM detectors, is proposed during the Long Shut-down 2(2019-2020).
-% The aim of the CMS GEM Collaboration is the development and the installation of triple-GEM detectors in the forward region of the CMS muon end-caps during the LS2 upgrade foreseen in 2018. 
+The installation of GEM detectors is proposed during the Long Shut-down 2(2019-2020).
 The project is named GE1/1, where ``G'' stands for GEM, ``E'' stands for End-cap, the first ``1'' corresponds to the first muon station and the second ``1'' the first ring of the station.
 Also, the GEM detector which is going to install in the CMS is named as a GE11 detector.
 The detectors will be inserted in front of the ME1/1 station in the slots originally foreseen for RPC detectors as shown in Fig.~\ref{fig:GE11pos}. 
@@ -80,13 +91,12 @@ The detectors will be inserted in front of the ME1/1 station in the slots origin
     \caption{A cross-sectional view of CMS quadrant showing the location of GEM detectors in red.}
     \label{fig:GE11pos}
 \end{figure}
-% The goal is to complement the CSC system to ensure the good reconstruction and selection efficiency after the high-luminosity upgrade of the LHC, while keeping the L1 trigger to an acceptable rate. 
+
 \subsection{CMS GE11 Detector Details} % (fold)
 \label{sub:ge11_detector_details}
-% A total of 144 large trapezoidal chambers will be organized by pair to form super-chambers that will cover the full $\phi$ coordinate and the pseudo-rapidity region 1.6$ < \eta < $2.2.
- A GE11 detector is trapezoidal in shape with an active area of $990\times (220-445)mm^2$.
-This size is imposed by the geometry of the vacant high-$\eta$ area in CMS muon endcap.
-GE1/1 chamber hosts a Triple-GEM detector with a $3/1/2/1~mm$ (drift/transfer 1/transfer 2/induction) electrode gap configuration, as shown in Fig. \ref{fig:tripple-gem}.
+A GE11 detector is trapezoidal in shape with an active area of $990\times (220-445)mm^2$.
+This size was imposed by the geometry of the vacant high-$\eta$ area in CMS muon endcap.
+GE11 chamber hosts a Triple-GEM detector with a $3/1/2/1~mm$ (drift/transfer 1/transfer 2/induction) electrode gap configuration, as shown in Fig. \ref{fig:tripple-gem}.
 \begin{figure}[!htbp]
     \begin{center}
         \includegraphics[width=0.45\textwidth]{figures/GEM/tripple-gem.png}
@@ -94,8 +104,7 @@ GE1/1 chamber hosts a Triple-GEM detector with a $3/1/2/1~mm$ (drift/transfer 1/
         \label{fig:tripple-gem}
     \end{center}
 \end{figure} 
-The GEM foil ($50~\mu m$ thick Kapton foil with $5\mu m$ copper on both sides) consists of a thin Kapton foil, metal-clad on both sides, with a high density of chemically pierced holes.
-By applying the suitable potential difference between two sides, this mesh can act as an amplifier for electrons released by ionization of the gas.
+The GEM foil ($50~\mu m$ thick Kapton foil with $5\mu m$ copper on both sides) consists of a thin Kapton foil, metal-clad on both sides.
 The detector readout board is divided into eight $\eta$-partitions with 384 strips each oriented radially along the long side of the detector with a pitch varying from $0.6mm$ (short side) to $1.2mm$ (long side).
 Each partition is subdivided along the $\phi$-coordinate into three readout sectors with 128 strips or channels each. The $\eta$ partition and $\phi$ portions are shown in Fig.~\ref{fig:gemTrapezoidal}.
 \begin{figure}[!htbp]
@@ -116,9 +125,8 @@ The main parts in a GEM detector are GEM foil, drift plane, readout board, shiel
         \label{fig:ge11}
     \end{center}
 \end{figure} 
-% During test beam we scanned three different sectors of GE1/1, i.e. $(i\eta,i\phi)~=~\{(1,2),(5,2),(8,2)\}$. In Fig. \ref{GE11} red and yellow color shows which sector of GE1/1's are exposed to the beam.
-% Red sectors are taken with gas $Ar/CO_2/CF_4~(45/15/40) $ while yellow sector is taken with gas $Ar/CO_2~(70/30)$.
-% The trapezoidal chambers are sectored in $\eta$ partitions to cover $10^0$ each in the azimuthal sector and provide radial readout strip with the strip pointing to the LHC beam pipe (Figure ). In this design, the strip pitch varies from 0.6 mm (lower side) to 1.2 mm (upper side) with 8-$\eta$ sectors. To improve tracking capabilities, two GEM chambers will be mounted face-to-face to form a double layer called ``Super-Chamber". Thus each Super-Chamber will provide two impact points for each muon track. The gas gap configuration is: 3 mm (drift), 1 mm (transfer1), 2 mm(transfer2), and 1 mm (induction) as shown in Figure \ref{fig:tripple-gem}, which proved to be optimal for timing purposes. The gas mixture is $Ar/CO_2/CF_4~45/15/40$.
+\todo[inline]{Add a para on fig~\ref{fig:ge11}}
+\todo[inline]{Add a para on GE11 fabrication}
 % \begin{figure}[!htbp]
 % \centering
 % \includegraphics[width=2.0in]{figures/GEM/GEMCascade.png}
@@ -126,32 +134,69 @@ The main parts in a GEM detector are GEM foil, drift plane, readout board, shiel
 % \label{GEM:cascade}
 % \end{figure}
 
-\subsection{GE11 Test Beam Motivation \& Goals}
-\textbf{Test Beam motivation....}\\
-In 2014, GE1/1 detector was tested using ~150 GeV muons and pion beams at the CERN SPS test beam during October-December 2014.
-The goal of the test beam is to measure the gain, noise, efficiency, space \& time resolution, and cluster size.
-A gas mixture used for the test beam campaign is $Ar:CO_{2}$ (70:30) and $Ar:CO_{2}:CF_{4}$ (40:15:45). Also, to scan each $(i\eta,i\phi)$ partition of the GE1/1 detector.
+\subsection{GE11 Test Beam}
+The GE11 detector was tested using 150 GeV muon and pion beams at CERN SPS test beam during October-December 2014. The goal of the test beam was to measure the gain, noise, efficiency, space \& time resolution, and cluster size. The detector that was tested are GE11\_IV\_CERN\_0001 and GE11\_IV\_CERN\_0002 (detectors naming convention and its details are mentioned in appendix~\ref{cha:ge11_detector_generations}). Also there was two test beam held in October-December 2014. These two held in H2 and H4 test beam area of CERN SPS. H2 test beam held from $6^{th}$ October 2014 to $27^{th}$ October 2014. And, H4 test beam was held from 26 November to 14 December 2014. The main goal of the H2 test beam was to test the two detectors mentioned above with $Ar:CO_2$ gas while in H4 test beam the same was test with gas mixture $Ar:CO_2:CF_4$. Initially, the plan was to scan the each sector of the GEM detectors while due to time and other constraints we were just able to scan sector $(i\eta, i\phi)=\{(5,2)\}$ but while H4 we scanned $(i\eta,i\phi)=\{(1,2),(5,2),(8,2)\}$.  
+
+Further mainly based on the electronics used we divided all the data taken in different run numbers. Out of them there are 4 golden run (i.e. of good quality that we analyzed for further studies). It is listed in table~\ref{tab:gemTBgoldenruns}.
+
+\begin{table}
+\begin{tabular}[!htbp]{l l}
+\hline
+\textbf{Run Name}   &   \textbf{Details}\\
+\hline
+2014H2C     & Run range: 306-407    \\
+            & Threshold for each VFAT strip = 15 VFAT units\footnote{1 VFAT unit = 0.08 fC} = 1.2fC\\
+            & Runs in async mode \\
+            & sector scanned $(i\eta, i\phi)=(5,2)$\\
+            & gas used: $Ar:CO_{2}$=(70:30)\\
+\hline
+2014H4A     & Run range: 1592-1646 \\
+            & Threshold for each VFAT strip = 15 VFAT units = 1.2fC\\
+            & Runs in async mode \\
+            & sector scanned $(i\eta, i\phi)=(5,2)$\\
+            & gas used: $Ar:CO_{2}:CF_4$=(40:15:45)\\
+\hline
+2014H4C     & Run range: 1868-1906 \\
+            & Threshold for each VFAT strip = 15 VFAT units = 1.2fC\\
+            & Runs in async mode \\
+            & sector scanned $(i\eta, i\phi)=(8,2)$\\
+            & gas used: $Ar:CO_{2}:CF_4$=(40:15:45)\\
+\hline
+2014H4D     & Run range: 2065-2123 \\
+            & Threshold for each VFAT strip = 15 VFAT units = 1.2fC\\
+            & Runs in async mode \\
+            & sector scanned $(i\eta, i\phi)=(1,2)$\\             
+            & gas used: $Ar:CO_{2}:CF_4$=(40:15:45)\\
+\hline
+\end{tabular}
+\caption{List of golden runs that are analyzed to extract the GEM properties.}
+\label{tab:gemTBgoldenruns}
+\end{table}
+
+
+
+A gas mixture used for the test beam campaign is $Ar:CO_{2}$ (70:30) and $Ar:CO_{2}:CF_{4}$ (40:15:45).
 % subsection ge11_detector_details (end)
 
 
 \subsection{Experimental Set-up}
-The GE1/1 detector was tested using $\sim$ 150 GeV muon and pion beams at the CERN SPS test beam facility during October-December 2014. 
 % A simple schematic diagram of the experimental setup is shown in Fig.~\ref{fig:tbsetup}.
-The set-up consists of three plastic organic scintillators, three trackers and a GE1/1 prototype, being flushed with an Ar/CO$_{2}$ (70:30) gas mixture. The trackers are triple-GEM detectors with a $10~cm\times10~cm$ active area. Each tracker has 256 strips in both horizontal (y-coordinate) and vertical (x-coordinate) directions transverse to the beam having the pitch of $0.4~mm$. Trackers constitute a muon tracking telescope which is used to reconstruct the beam trajectories and reduce background events. Figure~\ref{fig:tbs} shows the experimental set-up used to perform test beam studies.
-\begin{figure}[!htbp]
-    \begin{center}
-        \includegraphics[width=0.95\textwidth]{figures/GEM/tbsetup.png}
-        \caption{Schematic view of the test beam set-up with the three square GEM hodoscope and the trapezoidal CMS GEM chambers}
-        \label{fig:tbsetup}
-    \end{center}
-\end{figure} 
+The experimental set-up consists of three plastic organic scintillators, three trackers and a GE1/1 prototype, being flushed with an Ar/CO$_{2}$ (70:30) gas mixture. The trackers are triple-GEM detectors with a $10~cm\times10~cm$ active area. Each tracker has 256 strips in both horizontal (y-coordinate) and vertical (x-coordinate) directions transverse to the beam having the pitch of $0.4~mm$. Trackers constitute a muon tracking telescope which is used to reconstruct the beam trajectories and reduce background events. Figure~\ref{fig:tbs} shows the experimental set-up used to perform test beam studies.
+% \begin{figure}[!htbp]
+%     \begin{center}
+%         \includegraphics[width=0.95\textwidth]{figures/GEM/tbsetup.png}
+%         \caption{Schematic view of the test beam set-up with the three square GEM hodoscope and the trapezoidal CMS GEM chambers}
+%         \label{fig:tbsetup}
+%     \end{center}
+% \end{figure} 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/GEM/tb_exptsetup.png}
-\caption{Schematic view of the trigger generation and timing DAQ systems}\label{fig:daq}
+% \includegraphics[width=0.95\textwidth]{figures/GEM/tb_exptsetup.png}
+\includegraphics[width=0.95\textwidth]{figures/GEM/tb_exptsetup_copy.png}
+\caption{Schematic view of the test beam set-up with the three square GEM hodoscope and the trapezoidal CMS GEM chambers. Also, it shows the trigger generation and timing DAQ systems}\label{fig:daq}
 \end{figure}
-GEM Detector electronics can be classified into two components viz. ``On Detector'' and ``Off Detector''.
-On Detector electronics connect the inputs of the front-end ASIC (VFAT2) to the GEM readout board (GEB). The VFAT2 is connected to the hybrids which are plugged into the connectors on the readout board.  The communication to the Off Detector electronics is performed through optical links which is Opto-hybrid plugged into the GEB with FPGA, Gigabit Transceiver (GBT), and the optical connectors.
+On Detector electronics connect the inputs of the front-end ASIC (VFAT2) to the GEM readout board.
+The VFAT2 is connected to the hybrids which are plugged into the connectors on the readout board.
 %The trigger is generated using the coincidence of three photo-multiplier tubes with mounted scintillators. 
 The tracking telescope is equipped with the digital chips VFAT2~\cite{Aspell:2008zz}, which provides a binary output with a variable latency for the position information and a fixed latency output, called SBIT, for the timing information.
 The analog pulses from the three scintillators, named S1, S2 and S3, are converted into digital gates after discriminator units and put in coincidence (to generate event trigger) before being sent to the other DAQ systems (Figure.~\ref{fig:daq}).
@@ -160,16 +205,16 @@ The analog pulses from the three scintillators, named S1, S2 and S3, are convert
 \includegraphics[width=0.95\textwidth]{figures/GEM/daq.png}
 \caption{Perspective view of the typical experimental set-up for performance measurement in the test beam. The tracking telescope is made of three triple-GEM detectors with two orthogonal directions readout. The trigger system is ensured thanks to three scintillators connected in coincidence. The GE1/1 detectors under test are mounted onto a movable support to align various readout sectors with the beam line.}\label{fig:tbs}
 \end{figure}
-The active area of the GE1/1 detector is covered with readout strips located in the GEM Electronic Board or GEB. 
+The active area of the GE1/1 detector is covered with readout strips located in the GEM Electronic Board. 
 The readout strips are taken out in 24 readout sectors (in ($\eta$,$\phi$) phase space).
 The data of each sector is collected by a VFAT2 font-end chip. 
-An upgraded version of this chip is currently under development (\textbf{VFAT3}). 
-Each VFAT2 builds a data packet that is sent through an e-link to an on-detector component called opto-hybrid (OH). 
-The OH serializes the data and sends them to the off detector components via an optical link. 
-The OH also receives the triggering information sent by the off-detector components of the system. 
-The off-detector electronics, based in a $\mu$TCA crate technology, are the interface with CMS central systems: DAQ, trigger, etc. 
-The OH sends the data to an AMC (Advanced Mezzanine Card) type card CTP7. The CTP7 sends the data to an AMC13 card through the mTCA back-plane. 
-The AMC13 card communicates directly with the central CMS DAQ system.
+% An upgraded version of this chip is currently under development (\textbf{VFAT3}). 
+% Each VFAT2 builds a data packet that is sent through an e-link to an on-detector component called opto-hybrid (OH). 
+% The OH serializes the data and sends them to the off detector components via an optical link. 
+% The OH also receives the triggering information sent by the off-detector components of the system. 
+% The off-detector electronics, based in a $\mu$TCA crate technology, are the interface with CMS central systems: DAQ, trigger, etc. 
+% The OH sends the data to an AMC (Advanced Mezzanine Card) type card CTP7. The CTP7 sends the data to an AMC13 card through the mTCA back-plane. 
+% The AMC13 card communicates directly with the central CMS DAQ system.
 %The trigger is generated using the coincidence of three photo-multiplier tubes with mounted scintillators. 
 
 The GE1/1 prototypes are installed on a movable table to scan different detector sectors. At a time only one ($\eta$,$\phi$) sector of GEM detector is irradiated with the beam.
@@ -214,15 +259,20 @@ And Fig. \ref{HitPosXaxis} represents the tracker and GE1/1 hit positions along 
 In order to reconstruct an ionizing particle trajectory, it is needed to detect the positions of the incoming particles within the space. 
 The technique used for this purpose consists of the interposition along the trajectory of several detector planes where the particles pass through; from the interpolation of all these points can be reconstructed the trajectories followed by the particles.
 In these environments one of the most important merit figures of the detectors is the spatial resolution, that is the capability to reconstruct the crossing point of the particle.
-Basically, the evaluation of the spatial resolution of a particle detector consists on the irradiation of the detector under test with particles beam at high energy and on the measurement of the differences between the measured impact points with the real ones.
-It is clear that it is necessary to know the real impact points of the incoming particles, a solution of this problem is to use a known tracking system (usually called telescope) with which it is possible to measure this positions.
-
-Offline, track-based alignment is one of the fundamental reconstruction tasks which needs to be accomplished in order to fully exploit physics potential of high-resolution position-sensitive particle detectors.
-It is needed to assure high-quality reconstruction of charged particles, interaction vertices, resonance masses, etc.
-The large and accurate vertex detectors of present and future experiments have a potential measurement precision of a few $\mu$ m.
-If this is not satisfied particle trajectories are reconstructed with compromised resolution, often with reduced efficiency and subject to systematic biases.
-In addition to the initial optical survey and corrections for electronics and mechanical effects the use of tracks in a special software alignment is essential.
-A number of different software-based methods are in use, ranging from simple residual-based procedures to complex fitting systems with many thousands of parameters.
+% Basically, the evaluation of the spatial resolution of a particle detector consists on the irradiation of the detector under test with particles beam at high energy and on the measurement of the differences between the measured impact points with the real ones.
+% It is clear that it is necessary to know the real impact points of the incoming particles, a solution of this problem is to use a known tracking system (usually called telescope) with which it is possible to measure this positions.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/GEM/GEM_Alignment_FlowChart.png}
+    \caption{caption}
+    \label{fig:label}
+\end{figure}
+% Offline, track-based alignment is one of the fundamental reconstruction tasks which needs to be accomplished in order to fully exploit physics potential of high-resolution position-sensitive particle detectors.
+% It is needed to assure high-quality reconstruction of charged particles, interaction vertices, resonance masses, etc.
+% The large and accurate vertex detectors of present and future experiments have a potential measurement precision of a few $\mu$ m.
+% If this is not satisfied particle trajectories are reconstructed with compromised resolution, often with reduced efficiency and subject to systematic biases.
+% In addition to the initial optical survey and corrections for electronics and mechanical effects the use of tracks in a special software alignment is essential.
+% A number of different software-based methods are in use, ranging from simple residual-based procedures to complex fitting systems with many thousands of parameters.
 
 Alignment/calibration requires to understand the detector (functional relationship) and to optimize various detector  parameters.
 The goal is to reduce the $\chi^{2}$ of the track fits, in order to improve track and vertex recognition, and to increase the precision of reconstructed tracks and vertices, eliminating or reducing bias in detector data.
@@ -230,44 +280,44 @@ Current detector alignment studies are performed using the data collected during
 % The test-stand set-up used to take data consists of three small FIXME dims GEM trackers placed parallel to beam direction followed by CMS GEM detectors. 
 %%%FIXME describe the system
 %% Run1897_Muons_10k_MSPL4_Async_HVScan_770pt2_788pt8_0pt0_758pt4_769pt9_T15_Lat17
-Current studies are performed for a muon run taken during test beam with 10k events.
-Figure.~\ref{fig:t1bp}, Figure.~\ref{fig:t2bp} and Figure.\ref{fig:t3bp} show the beam profile recorded on Tracker 1, Tracker 2 and Tracker 3 respectively. 
+% Current studies are performed for a muon run taken during test beam with 10k events.
+% Figure.~\ref{fig:t1bp}, Figure.~\ref{fig:t2bp} and Figure.\ref{fig:t3bp} show the beam profile recorded on Tracker 1, Tracker 2 and Tracker 3 respectively. 
 % Red box at the center indicates the maximum hit positions on X and Y readouts.
-\begin{figure}[!htbp]
-    \centering
-    \begin{subfigure}[b]{0.46\textwidth}
-        \includegraphics[scale=0.35]{figures/GEM/profile_plots_for_Tracker1_Run1897.pdf}
-        \caption{ }
-        \label{fig:t1bp}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.46\textwidth}
-        \includegraphics[scale=0.35]{figures/GEM/profile_plots_for_Tracker2_Run1897.pdf}
-        \caption{ }
-        \label{fig:t2bp}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.46\textwidth}
-        \includegraphics[scale=0.35]{figures/GEM/profile_plots_for_Tracker3_Run1897.pdf}
-        \caption{ }
-        \label{fig:t3bp}
-    \end{subfigure}
-   \caption{(a) 10 cm $\times$ 10 cm GEM foil encapsulated in a frame and (b) Cross-sectional view of the foil showing the double cone structure of the engraved holes. } \label{fig:Foil_and_Cone}
-\end{figure}
-Fig.~\ref{fig:t1hit},~\ref{fig:t2hit}, and~\ref{fig:t3hit} show the hit positions for three trackers in X and Y direction. Clearly the maximum hit positions are not located at the centre of the trackers (before software alignment).
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=5.1in]{figures/GEM/Tracker1_Hit_position_Run1897.pdf}
-\caption{Tracker 1 hit positions in X direction(left) and Y direction(right)}\label{fig:t1hit}
-\end{figure}
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=5.1in]{figures/GEM/Tracker2_Hit_position_Run1897.pdf}
-\caption{Tracker 2 hit positions in X direction(left) and Y direction(right)}\label{fig:t2hit}
-\end{figure}
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=5.1in]{figures/GEM/Tracker3_Hit_position_Run1897.pdf}
-\caption{Tracker 3 hit positions in X direction(left) and Y direction(right)}\label{fig:t3hit}
-\end{figure}
+% \begin{figure}[!htbp]
+%     \centering
+%     \begin{subfigure}[b]{0.46\textwidth}
+%         \includegraphics[scale=0.35]{figures/GEM/profile_plots_for_Tracker1_Run1897.pdf}
+%         \caption{ }
+%         \label{fig:t1bp}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.46\textwidth}
+%         \includegraphics[scale=0.35]{figures/GEM/profile_plots_for_Tracker2_Run1897.pdf}
+%         \caption{ }
+%         \label{fig:t2bp}
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.46\textwidth}
+%         \includegraphics[scale=0.35]{figures/GEM/profile_plots_for_Tracker3_Run1897.pdf}
+%         \caption{ }
+%         \label{fig:t3bp}
+%     \end{subfigure}
+%    \caption{(a) 10 cm $\times$ 10 cm GEM foil encapsulated in a frame and (b) Cross-sectional view of the foil showing the double cone structure of the engraved holes. } \label{fig:Foil_and_Cone}
+% \end{figure}
+% Fig.~\ref{fig:t1hit},~\ref{fig:t2hit}, and~\ref{fig:t3hit} show the hit positions for three trackers in X and Y direction. Clearly the maximum hit positions are not located at the centre of the trackers (before software alignment).
+% \begin{figure}[!htbp]
+% \centering
+% \includegraphics[width=5.1in]{figures/GEM/Tracker1_Hit_position_Run1897.pdf}
+% \caption{Tracker 1 hit positions in X direction(left) and Y direction(right)}\label{fig:t1hit}
+% \end{figure}
+% \begin{figure}[!htbp]
+% \centering
+% \includegraphics[width=5.1in]{figures/GEM/Tracker2_Hit_position_Run1897.pdf}
+% \caption{Tracker 2 hit positions in X direction(left) and Y direction(right)}\label{fig:t2hit}
+% \end{figure}
+% \begin{figure}[!htbp]
+% \centering
+% \includegraphics[width=5.1in]{figures/GEM/Tracker3_Hit_position_Run1897.pdf}
+% \caption{Tracker 3 hit positions in X direction(left) and Y direction(right)}\label{fig:t3hit}
+% \end{figure}
 % \begin{figure}[!htbp]
 % \centering
 % \includegraphics[width=5.1in]{figures/GEM/Offset_1vs23_x_For_Run1897.pdf}
@@ -304,16 +354,16 @@ The first alignment step is to shift each of the four tracking detectors iterati
 The initial shift parameters are mean values from position distributions in X and Y coordinates. In each iteration, straight lines are fitted to the hits in X and Y.
 Residuals are histogrammed for each detector and the residual distributions are fitted with a double-Gaussian function.
 Ten percent of the residual mean value of each detector is taken as the shift parameter in the next iteration to avoid overcorrections.
-The resulting residual mean values converge quickly towards zero FIXME res vs Iterations.
+The resulting residual mean values converge quickly towards zero with iterations.
 This provides a first coarse alignment.
 In a second alignment step, we correct also for relative rotations of the tracking detectors around the beam in the XY-plane.
-We again fit straight lines to the hits in X and Y and iterate through a succession of offsets and rotations around the beam axis relative to the first tracking detector until the residual means from the track ts are very close 2 of the track fits are minimized.
+We again fit straight lines to the hits in X and Y and iterate through a succession of offsets and rotations around the beam axis relative to the first tracking detector until the residual means from the trackers are very close to zero and chi$^2$ of the track fits are minimized.
 In each iteration, the detectors are first shifted and then rotated; then new residuals and rotation angles are calculated.
-This process is repeated iteratively until the residual means from the track fits becomes less than 0.005.
+This process is repeated iteratively until the residual means from the track fits becomes less than 0.005 mm.
 Figure.~\ref{fig:resvsit} shows the variation of track residuals for three trackers w.r.t the iteration number, with residual converging to lower values with each iteration.
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=5.1in]{figures/GEM/Residual_Tracker_Run1897.pdf}
+\includegraphics[width=5.1in]{figures/GEM/Tracker_iterative_alignment.jpg}
 \caption{Variation of track residuals for three trackers  w.r.t the iteration number}\label{fig:resvsit}
 \end{figure}
 
