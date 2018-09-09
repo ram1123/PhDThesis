@@ -23,7 +23,7 @@ Because of their efficient detection qualities and high rate capabilities, GEM d
 \section{Design and working principle of GEM} % (fold)
 \label{sec:design_and_working_principle_of_gem}
 
-GEM is a relatively new concept introduced by Fabio Sauli at CERN~\cite{Sauli1997}, which consists of a thin plastic sheet (usually a thin Kapton foil with thickness 50 $\mu m$) coated with metal on its both sides. It is chemically pierced to a regular array of holes using the photolithography and acid etching processes, as shown in Fig.~\ref{fig:gem} (left).
+GEM is a relatively new concept introduced by Fabio Sauli at CERN~\cite{Sauli1997}, which consists of a thin polyimide sheet (usually a thin Kapton foil~\cite{Kapton-sheet} with thickness 50 $\mu m$) coated with metal on its both sides. It is chemically pierced to a regular array of holes using the photolithography and acid etching processes~\cite{Benlloch1998}, as shown in Fig.~\ref{fig:gem} (left).
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{figures/GEM/KEKDTP3.jpg}
@@ -193,7 +193,7 @@ Further mainly based on the electronics used we divided all the data taken in di
 \subsubsection{Information on GEM detectors used in the test beam} % (fold)
 \label{ssub:information_of_gem_detectors_used_in_test_beam}
 The two detectors used in the test beam was GE11\_IV\_CERN\_0001 and \\GE11\_IV\_CERN\_0002. 
-The detector GE11\_IV\_CERN\_0001 is simple generation IV GE1/1 detector while GE1/1\_IV\_CERN\_0002 is also a generation IV GE1/1 detector but it was irradiated in the CERN gamma-ray facility for 1 year using gamma ray to see how its performance varies with irradiation. 
+The detector GE11\_IV\_CERN\_0001 is simple generation IV GE1/1 detector while GE1/1\_IV\_CERN\_0002 is also a generation IV GE1/1 detector but it was irradiated in the CERN gamma-ray facility for 1 year using gamma ray to see how its performance varies with irradiation~\cite{Merlin2013}. 
 The high voltages configuration used was shown in fig.~\ref{fig:HV_configuration}. 
 Also, the voltage across GEM foils and  the electric field  with respect to the current in divider is shown in Fig.~\ref{fig:GEM_voltage_electricfield}. 
 The gain was measured in lab using an x-ray source for both detectors with gas $Ar:CO_2$ is shown in Fig.~\ref{fig:gain_GE1/1_IV} and with gas $Ar:CO_2:CF_4$ in Fig.~\ref{fig:gain_GE1/1_IV_GIF}. 
@@ -551,7 +551,7 @@ Study for the cluster size is done only for the three above mentioned golden run
    \caption{Cluster size distribution: Left - GE1/1-IV, Right - GE1/1-IV-GIF}
    \label{fig:CSDGE1/1}
 \end{figure}
-Final cluster size study distributions for the GE1/1-IV and GE1/1-IV-GIF (Detector irradiated with Gamma radiations) are plotted with respect to the current supplied to the high voltage divider and shown in Figure~\ref{fig:CSDGE1/1}.
+Final cluster size study distributions for the GE1/1-IV and GE1/1-IV-GIF\footnote{This is also a generation IV GE11 detector. But, for the ageing test this detector was placed at the Gamma Irradiation Facility (GIF) for twelve months. The GIF bunker contains a $^{137}Cs$ source of 566 GBq. This emits gamma rays of 662 keV. The detector was placed 30 cm from the source where the particle rate was of the order of 100 $kHz/cm^2$. This allowed to accumulate the charge in twelve month which will be equivalent to the 10 year operation of GEM detector in LHC environment~\cite{Merlin2013}.} are plotted with respect to the current supplied to the high voltage divider and shown in Figure~\ref{fig:CSDGE1/1}.
 Cluster size is taken with the Poisson fitting function. The cluster size is greater in ($\eta$, $\phi$) = (1,2) region for both the detectors due to the uniformity in readouts channels.
 % subsection results (end)
 
@@ -616,8 +616,14 @@ Using an optical test we will try to find out:
 The motivation for this is the following:
 \begin{itemize}
     \item The foil defects such as over-size hole, missing hole, excess etching, etc will degrade the performance of foil locally.
-    \item As the gain depends on the diameter of the hole and the thickness of foil~\todo[inline]{cite reference for gain vs hole size}. So, it will help us to understand the performance of GEM foil such as gain, etc at a later stage.
+    \item As the gain depends on the diameter of the hole and the thickness of foil (as shown in Fig.~\ref{fig:gain-vs-holediameter}). So, it will help us to understand the performance of GEM foil such as gain, etc at a later stage.
 \end{itemize}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.65\textwidth]{figures/GEM/Gain_Vs_Hole_Diameter.png}
+    \caption{Real gain and effective gain variation with GEM hole diameter~\cite{Bachmann1999} having foil thickness of 60 $\mu m$ (= 50 $\mu m$ + 5$ \mu m$ + 5 $\mu m$). As the hole diameter decreases the effective gain increases till 70 $\mu m$ after that it reaches saturation. This is due to loss of generated electrons in the avalanche to the bottom of GEM electrode, when hole diameter is reduced below the foil thickness.}
+    \label{fig:gain-vs-holediameter}
+\end{figure}
 To check the defects and to measure the hole-size and pitch several methods was developed using an automated 2D-CCD scanner~\cite{Posik2015, Becker2006}. 
 However we used a different technique.
 We divided the GEM foil into several sectors and captured a high-resolution picture using the AF-S Micro Nikon 40 mm 1:2.8G lens.
@@ -700,7 +706,7 @@ This is one of the most important test which can tell us about the short circuit
 The difference between QC-fast and QC-long in the two lies in the applying voltage for shorter or longer period of time respectively and monitor the current. Other difference is that QC-fast gives us quick result about the leakage current or electrical connectivity of the foil while QC long provides the behaviour of foil at high voltages and gives us the actual leakage current and the number of discharges, if any.
 \subsubsection{QC-fast} % (fold)
 \label{ssub:qc_fast}
-This is done using the insulation tester MIT Megger 420~\cite{twelve}. Using this it is established that the foil has good electrical connectivity. As the 600 V potential is applied across the GEM foil for about a minute and current did not exceed 10 $nA$.
+This is done using the insulation tester MIT Megger 420~\cite{twelve}. Using this it is established that the foil has good electrical connectivity. As the 600 V potential is applied across the GEM foil for about a minute and current did not exceed 10 $nA$ and the resistivity in air between the two foil exceeds 2 $G\Omega$.
 % \begin{figure}[!htbp]
 %     \centering
 %     \includegraphics[width=0.45\textwidth]{figures/GEM/megger.png}
@@ -743,3 +749,14 @@ For this the measurement set-up is shown in Fig.~\ref{fig:Cleaning_Measurement}.
 
 % subsection electrical_test (end)
 % section gem_foil_production_and_characterization (end)
+
+% \section{Summary} % (fold)
+% \label{sec:summary}
+% First time the GEM foils are produced in India using TOT agreement between CERN and Micropack Pvt. Ltd. Micropack 
+
+% Efficiency and time resolution are important parameters for a gaseous detectors. Efficiency is defined as the ratio of events reconstructed by tracker+GEM to the number of events reconstructed by tracker only. Experimentally, the time resolution is calculated using the root mean square of the Gaussian distribution of the time taken by a particle to reach the detector from the scintillator. Further, we applied a fast 40MHz clock pulse to cope up with the LHC bunch crossing. Thus, the detector's time response should be modelled as the Gaussian function convoluted with a square wave function having frequency 40MHz. To achieve the time resolution we fit the experimental data with the Gaussian function convoluted with the square wave and then using fit parameters we extracted the time resolution before convolution. Finally, we obtained the very good time resolution of ~7ns and efficiency ~98\% with both gas mixture Ar/CO$_2$ (70/30) and Ar/CO$_2$/CF$_4$ (45/15/40), as shown in Fig. \ref{Efficiency} and \ref{TimeResolution}.  At the end, by comparing the results of two different gas mixture  we can  conclude that GEM detectors can be operated without using CF$_4$, while maintaining its performance.
+
+
+% GEM foils were produced for the first time in India under the TOT agreement between Micropack Pvt. Ltd. and CERN. Micropack started the preparations for the GEM foil production in India. The first few attempts saw many deviations from the required quality. With further improvements in etching technology and several rounds of iterations, Micropack finally produced a batch of foils which appeared fine from visual inspection and preliminary checks. However, before these foils could be declared fit for applications and technology as reliable, we had to perform the desired quality assessment and characterization for these foils. For this purpose, we performed optical and electrical tests to check the reliability and usability of the foils. Optical tests reveal that the holes are quite uniform with inner and outer diameters of 49.9 $\pm$ 1.6 $\mu$m and 70.01 $\pm$ 2.02 $\mu$m respectively. Here, the quoted errors are the Gaussian one sigma uncertainty on diameter distributions. A current of less than 1 nA has been observed in dry nitrogen environment from electrical measurements and were in agreement with CERN foils. The measured optical and electrical properties of Micropack foils were found to reflect the desired parameters and are at par with the double mask foils produced at CERN. With the successful production of 10 cm $\times$ 10 cm double-mask GEM foils, Micropack has already extended their infrastructure to handle single-mask technology so that larger foils can be produced in order to ease the commercialization of large area GEM foils.
+
+% section summary (end)

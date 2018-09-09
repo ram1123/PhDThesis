@@ -1,8 +1,66 @@
 \chapter{Gaseous Detector Important Points} % (fold)
 \label{cha:gaseous_detector_important_points}
 
+\section{Transparancy} % (fold)
+\label{sec:transparancy}
+The fraction of ionization electrons transferred through the GEM foil is known as its \textit{transparancy}. 
+\begin{equation}
+	Transparancy~=~\frac{Ionized~electron~transfered~through~GEM~foil}{Total~number~of~ionized~electrons}
+\end{equation}
+This is important while finding out the energy resolution and directly effects the gain/efficiency of detection.
+% section transparancy (end)
+
+\section{Charge-up effect} % (fold)
+\label{sec:charge_up_effect}
+
+The effect caused by the the electrons or ions coming from the primary or secondary ionization from the amplification region sticks to the insulator surface inside the GEM holes, which lead to the modification of electric field in the holes, is known as the ``\textit{ \textbf{charge-up effect}}''.
+
+This effect has direct effect on the electron transparancy and the effective gain of the GEM detector.
+
+Also, the charge-up effect depends on the geometry of the holes. For the conical hole gain increases about 60\% then the cylindrical hole. And there is no effect of the charge-up for the cylindrical hole.
+
+
+% section charge_up_effect (end)
+
 \section{Townsend coefficient} % (fold)
 \label{sec:townsend_coefficient}
+The probability of ionization per unit path length is known as \textit{First Townsend Coefficient}. It is also defined as the inverse of mean free path.
+\begin{equation}
+	\alpha~=~\frac{1}{\lambda_{ion}}
+\end{equation}
 
+Also, number of secondary ionization created is given as:
+\begin{equation}
+	dn~=~n~.~\alpha~.~dx
+\end{equation}
+\begin{equation}
+	n=n_0 e^{\alpha.x}
+\end{equation}
+
+Thus, gain will be
+\begin{equation}
+	Gain~=~\frac{n}{n_0}~=~e^{\alpha.x}
+\end{equation}
 % section townsend_coefficient (end)
+
+\section{Raether Limit} % (fold)
+\label{sec:raether_limit}
+After a certain critical limit, $Q_{critical}$, of the electron amplification the discharge is very likely to occur. This critical limit is known as the ``\textit{ \textbf{Raether limit}}''.
+It is also given as:
+\begin{equation}
+	Q_{critical}~=~A_{max}~.~n_0
+\end{equation}
+where, $A_{max}$ is the maximum effective gain achieved by a gaseous detector and $n_0$ is the number of primary ionization electrons.
+% section raether_limit (end)
+
+\section{Collection efficiency} % (fold)
+\label{sec:collection_efficiency}
+Collection efficiency is the ratio of the total electrons released from the bottom of GEM foil (last GEM foil in case of multiple foil used) to the number of electrons reached the readout board. 
+\begin{equation}
+	\text{Collection efficiency}~=~\frac{\text{Number of electrons reached readout board}}{\text{Total number of released electron from bottom of GEM foil}}
+\end{equation}
+Also, it depends on the ratio of the conversion electric field to the collection electric field. Higher the conversion field lesser the collection efficiency. In general the conversion field should never be greater than the collection field. 
+% section collection_efficiency (end)
+
+
 % chapter gaseous_detector_important_points (end)
