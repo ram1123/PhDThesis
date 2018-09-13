@@ -6,6 +6,8 @@
 
 \usepackage{scrextend}  % for addmargin command
 \usepackage{graphicx}
+% subcaption package is for subfigure environment
+\usepackage{subcaption}
 \usepackage[usenames, dvipsnames]{color}
 
 % To add line number
@@ -67,6 +69,16 @@
 % Reference: https://tex.stackexchange.com/a/11144/41568
 \newcommand{\Lagr}{\mathcal{L}}
 
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
 \begin{document}
  \linenumbers
  \pagenumbering{roman}
@@ -90,18 +102,20 @@
    % \listoftables
   % Content =====================================================================
   \pagenumbering{arabic}
-  % \cleardoublepage
+  \cleardoublepage
   % \include{chapters/1_Introduction}
   % \include{chapters/1_Introduction2}
-  \include{chapters/2_LHC_CMS_OfflineRecon}
-  % \include{chapters/3_GEM_Detectors}
+  % \include{chapters/2_LHC_CMS_OfflineRecon}
+  \include{chapters/3_GEM_Detectors}
   % \include{chapters/3_GE11-TBA}
   % \include{chapters/Hardware_org}
   % \include{chapters/VBS}
   
   % \begin{appendices}
-     % \include{appendix/synchtron_radiation}
-     % \include{appendix/Electron_Working_points}
+  %    % \include{appendix/synchtron_radiation}
+  %    \include{appendix/GE11_generations}
+  %    \include{appendix/Gaseous_Detector_Important_Point}
+  %    \include{appendix/GEM_Efficiency_TimeRes_FitPars}
   % \end{appendices}
 
   % \newpage 
