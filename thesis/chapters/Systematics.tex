@@ -1,0 +1,130 @@
+In the following the systematic uncertainties which are taken into
+account in the fit to the $m_{WV}$ and $m_{ZV}$ shapes are listed.  
+Uncertainties which do not only influence the overall normalization
+(\eg the uncertainty in the luminosity measurement), but also the
+distribution of relevant kinematic observables (\eg the uncertainty in
+the jet energy scale), are treated as shape uncertainties. Their
+impact is evaluated by performing the full analysis not only for the
+central value of the relevant parameter, but also with its value
+shifted up and down by one standard deviation. For
+each source of uncertainty, the impact in different bins of the final 
+distribution is thus considered fully correlated, while
+independent sources of uncertainty are treated as uncorrelated. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Luminosity}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The assigned uncertainty to the integrated luminosity measurement for
+the data set used in this analysis is 2.5\%.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Trigger, lepton reconstruction and identification efficiencies}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Discrepancies in the lepton reconstruction and identification
+efficiencies between data and simulation are corrected by applying
+to all MC samples 
+data-to-simulation scale factors measured using $\dyll$ events in the $\cPZ$
+peak region~\cite{wzxs} that are recorded with unbiased triggers. These factors
+depend on the lepton \pt and $\eta$ and are within 1-2\% for electrons and muons.
+The uncertainty in the determination of the trigger efficiency leads to an uncertainty smaller than 1\% in the expected signal yield. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Lepton momentum scale}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The lepton momentum scale uncertainty is computed by varying the
+momentum of the leptons by their uncertainties. We have an 
+uncertainty in the muons and electrons of 1\%. We follow the recommendations of the Exotica group for the high $p_{T}$ muons~\cite{Twiki:EXO-MUODocumentationRun2}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Jet energy scale and resolution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The uncertainty in the calibration of the jet energy scale (JES) and resolution (JER) 
+directly affects the acceptance of the requirement $< 2$~jets, 
+the $\met$ computation, and all the cuts related to jets. 
+The estimate of the jet energy scale uncertainty is performed varying 
+the jet energy scale up and down by 1$\sigma$ as
+measured by the Jet/MET group~\cite{twiki:JES}. The variation
+corresponds to a simple re-scaling of the jet four-momentum as
+follows: $P\rightarrow P \cdot (1 \pm \delta\pt^{JES}/{\pt})$, where 
+$\delta\pt^{JES}$ is the absolute uncertainty on the jet energy scale
+which is parametrized as function of the $\pt$ and $\eta$ of the jet. 
+
+A similar strategy is performed to evaluate the systematic related to
+the jet energy resolution. In order to reproduce in MC the jet
+resolution measured in data the momentum of jets used in this 
+analysis is smeared as 
+%%
+\begin{equation}
+p_{\rm T} \rightarrow \max \left[0 , p_{T}^{\rm gen} + c_{\pm1\sigma}\cdot (p_{\rm T}-p_{\rm T}^{\rm gen}) \right]
+\end{equation}
+%%
+in which $c_{\pm1\sigma}$ are the data-to-MC scale factors 
+shifting the central value by $\pm$1$\sigma$. These values are taken 
+from the official CMS recommendations for 2016~\cite{twiki:JES}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{B-tagging efficiency}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In this analysis the b-tagging is used to reject events with real b-jets in the final state since the signal events have little b-jet content. The recipe provided by the BTV group using the recommended measurements has been used to both reweight the b-tagging (in)efficiencies of the selected jets and to estimate 
+the associated uncertainties.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Pileup}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+MC samples are re-weighted with 69.2 mb as MinBias cross section to reproduce the pileup conditions observed in data.
+To compute the uncertainty related to this re-weighting procedure, we
+shift the mean of the distribution of real interaction in MC by the
+suggested value~\cite{twiki:Pileup} of 5\%. 
+The variation of the final yields induced by
+this procedure is about 5\% in MC estimated processes. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{MC statistics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+For the processes estimated from simulation,,the
+available statistics of the MC sample limits the precision of the
+modeling, and is therefore taken as a systematic
+uncertainty. Similarly, the backgrounds estimated from data are
+limited by the available statistics in the corresponding control
+samples. Therefore, for these uncertainties, the same treatment is
+used as in the case of MC-driven backgrounds.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Summary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+All of the systematic uncertainties on normalizations are given a log-normal 
+distribution. A summary of the relative systematic uncertainties in the estimated signal and background
+yields is shown in Table~\ref{tab:HwzSystematics}.
+\begin{table*}[htbp]
+\topcaption{Relative systematic uncertainties in the estimated signal and background yields in units of percent.\label{tab:HwzSystematics}}
+  \centering
+\cmsTableResize{\begin{scotch}{lccccc}
+
+ Source & Signal & $W$+jet & $WV$  & top & $Z$+jet    \\
+
+        \hline
+Integrated luminosity      & 2.5 &  \NA  &  2.5  &   \NA  & \NA	 \\
+Lepton efficiency          & 1.0  &  \NA  & 1.0  &  1.0  & \NA  \\
+Jet momentum scale         & shape  & \NA &  shape  &  shape  & \NA 	 \\
+Lepton momentum scale      & shape  & \NA &  shape  &  shape  & \NA 	 \\
+b tagging                  & 2.0 & \NA &  2.0 &   3.0  & 2.0 	 \\
+$V$ tagging                & 8.0 & \NA &  8.0 &  8.0  & \NA 	 \\
+QCD scale                  & 22.0 &  \NA  &  38.0  &  \NA  & \NA 	 \\
+PDF unc.                   & 6.0 & \NA &  9.0  &   \NA  & \NA	 \\
+bkg. normalization         & \NA & 15.0 &  \NA  &  10.0  &  15.0 \\
+$W$+jet shape              & \NA & shape & \NA & \NA & \NA \\
+$Z$+jet shape              & \NA & \NA & \NA & \NA & shape \\
+Jet/MET resolution         & 4.0 & \NA &  3.0  & 2.0  & \\\
+Pileup modeling            & 5.0 & \NA & 4.0 & \NA & \NA \\
+Limited MC stat.           & shape & \NA & shape & shape & \NA \\
+      \end{scotch}}
+\end{table*}
