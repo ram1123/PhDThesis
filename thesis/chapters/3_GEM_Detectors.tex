@@ -54,8 +54,8 @@ where E is the electric field inside a hole in the GEM foil, V is the voltage ap
 \end{figure}
 
 To illustrate the working of a GEM detector, the active detector medium could be divided into three different regions: drift, amplification and induction regions, as shown in Fig.~\ref{fig:gemOutline}.
-The passage of a charged particle leads to ionization in the drift region, and the generated primary electrons drift towards the amplification region (i.e., GEM holes). 
-The electrons gain kinetic energy from the intense electric field inside the holes sufficient to produce secondary ionizations, eventually, leading to an avalanche multiplication, as shown in Fig.~\ref{fig:gem}(right).
+The passage of a charged particle leads to ionization in the drift region, and the generated primary electrons drift towards the amplification region (i.e., through GEM holes). 
+The electrons gain kinetic energy from the intense electric field inside the holes sufficient to produce secondary ionizations, eventually, leading to an avalanche multiplication.
 Finally, in the induction region, all the electrons from the amplification region are collected on the readout plane. 
 
 To avoid the problem of electrical breakdown, several GEM foils operating at lower voltages, are stacked together in between the drift cathode and the readout board.
@@ -77,7 +77,7 @@ Multi-layered boards could be used to achieve a two-dimensional readout from the
     \label{fig:tripleGEM_discharge_gain}
 \end{figure}
 
-A detector arrangement where three GEM foils are stacked together is known as a ``\textit{ \textbf{Triple-GEM detector}}'', as shown in Fig.~\ref{fig:gemgaps}. Such a detector configuration is proposed for the CMS Phase-II upgrade and is discussed in the following section.
+A detector arrangement where three GEM foils are stacked together is known as a ``\textit{\textbf{Triple-GEM detector}}'', as shown in Fig.~\ref{fig:gemgaps}. Such a detector configuration is proposed for the CMS Phase-II upgrade and is discussed in the following section.
 \begin{figure}[!htbp]
     \begin{center}
         \includegraphics[width=0.85\textwidth]{figures/GEM/triple_gem.png}
@@ -101,7 +101,7 @@ This CMS muon detector system upgrade is carried out to achieve the following go
     % \item The combined operation of CSC and GEM detectors allows a measurement of the bending angle at the trigger level, thus strongly reducing the rate of mis-measured muons driving the triggers rate.
 \end{itemize}
 % \subsection{GE1/1 Details}
-The installation of GEM detectors is proposed during the period of Long Shut down-2 (2019-2020).
+The installation of GEM detectors is proposed during the period of Long Shutdown-2 (2019-2020).
 The upgrade project is named as CMS GE1/1 upgrade, where the letter ``G'' stands for GEM, ``E'' stands for End-cap, the first ``1'' corresponds to the first muon station and the second ``1'' corresponds to the first ring of the station.
 Analogously, the GEM detectors to be installed in the CMS detector are referred to as GE1/1 detectors.
 The detectors will be inserted in front of the ME1/1 station and into the slots originally foreseen for the RPC detectors, as shown in Fig.~\ref{fig:GE1/1pos}. 
@@ -115,7 +115,7 @@ The detectors will be inserted in front of the ME1/1 station and into the slots 
 \subsection{CMS GE1/1 Detector Specification} % (fold)
 \label{sub:GE1/1_detector_details}
 A typical GE1/1 detector is trapezoidal in shape with an active area of $990~\times~(220-445)~mm^2$.
-The shape and size fo the detector was decided based on the geometry of vacant high-$\eta$ region in the CMS muon endcap regions.
+The shape and size of the detector was decided based on the geometry of vacant high-$\eta$ region in the CMS muon endcap regions.
 A GE1/1 chamber consists of a Triple-GEM detector having a $3/1/2/1~mm$ (drift/transfer 1/transfer 2/induction) electrode gap configuration, as shown in Fig. \ref{fig:tripple-gem}.
 \begin{figure}[!htbp]
     \begin{center}
@@ -158,15 +158,20 @@ The main parts in a GEM detector are GEM foil, drift plane, readout board, shiel
 
 \subsection{GE1/1 Beam Test Studies}
 The GE1/1 detector was tested using 150 GeV muon and pion beams at CERN SPS beam test facility during October-December 2014. 
+
 The goal of the beam test campaign was to measure the efficiency, space \& time resolution, and the cluster size of the CMS GEM detector. 
-The detectors that were tested includes GE11\_IV\_CERN\_0001 and GE11\_IV\_CERN\_0002 detectors(detectors naming convention and its details are mentioned in the appendix~\ref{cha:GE1/1_detector_generations}).
+The detectors that were tested includes GE11\_IV and GE11\_IV\_GIF detectors.
+% (detectors naming convention and its details are mentioned in the appendix~\ref{cha:GE1/1_detector_generations}).
+Both GE11\_IV and GE1/1\_IV\_GIF are generation IV GE1/1 detectors but GE1/1\_IV\_GIF was irradiated with the gamma-ray at the CERN gamma-ray irradiation facility\footnote{The GIF bunker contains a $^{137}Cs$ source of 566 GBq. This emits gamma rays of 662 keV. The detector was placed 30 cm from the source where the particle rate was of the order of 100 $kHz/cm^2$. This allowed accumulating the charge in twelve month which will be equivalent to the 10-year operation of GEM detector in LHC environment~\cite{Merlin2013}.} for 1 year to perform ageing studies~\cite{Merlin2013}. Also, several important parameters like electric field, voltage across each GEM foil and the rate and gain were measured and shown in appendix~\ref{cha:ge1_1_measured_parameters}.
+
+% This is also a generation IV GE11 detector. But, for the ageing test this detector was placed at the Gamma Irradiation Facility (GIF) for twelve months.
 Two beam test campaign was carried out during October-December 2014.
 These campaign held in H2 and H4 beam test area of CERN SPS.
 The H2 beam test was held from $6^{th}$ October 2014 to $27^{th}$ October 2014 while the H4 beam test was held from 26 November to 14 December 2014.
 The main goal of the H2 beam test was to test the two detectors mentioned above with an $Ar:CO_2$ gas mixture while in H4 beam test the same detector was tested with $Ar:CO_2:CF_4$ gas mixture.
 Initially, the plan was to scan each sector of the GEM detectors but due to timing constraints we were just able to scan sector $(i\eta, i\phi)=\{(5,2)\}$ and $(i\eta,i\phi)=\{(1,2),(5,2),(8,2)\}$ during H2 and H4 beam test respectively.  
 
-The data collected during these beam test campaigns were grouped into different run names, based on the electronic setup and gas mixtures used during the data taking. Out of these four set of run ranges were marked as ``\textit{good}'', based on certain data quality checks, for further analysis. These run ranges along with their specification are listed in Table~\ref{tab:gemTBgoldenruns}
+The data collected during these beam test campaigns were grouped into different run names, based on the electronic setup and gas mixtures used during the data taking. Out of these four set of run ranges were marked as ``\textit{good}'', based on certain data quality checks, for further analysis. These run ranges along with their specification are listed in Table~\ref{tab:gemTBgoldenruns}.
 
 \begin{table}
 \begin{tabular}[!htbp]{l l}
@@ -202,68 +207,22 @@ The data collected during these beam test campaigns were grouped into different 
 \label{tab:gemTBgoldenruns}
 \end{table}
 % subsection GE1/1_detector_details (end)
-\subsubsection{Information on GEM detectors used in the beam test} % (fold)
-\label{ssub:information_of_gem_detectors_used_in_test_beam}
-The two detectors used in the beam test are GE11\_IV\_CERN\_0001 and \\GE11\_IV\_CERN\_0002. 
-Both GE11\_IV\_CERN\_0001 and GE1/1\_IV\_CERN\_0002 are generation IV GE1/1 detectors but GE1/1\_IV\_CERN\_0002 was irradiated with the gamma-ray at the CERN gamma-ray irradiation facility for 1 year to perform ageing studies~\cite{Merlin2013}. 
-The high voltage configuration used during the beam test is shown in Fig.~\ref{fig:HV_configuration}. 
-Also, the voltage across the GEM foils and  the electric field  with respect to the current in the voltage divider is shown in Fig.~\ref{fig:GEM_voltage_electricfield}. 
-The gain of the detector was measured in the lab using an X-ray source for both $Ar:CO_2$ and
- % is shown in Fig.~\ref{fig:gain_GE1/1_IV} and with gas 
- $Ar:CO_2:CF_4$ gas mixture and is shown in Fig.~\ref{fig:gain_GE1/1_IV_GIF} and ~\ref{fig:gain_GE1/1_IV}. 
-The gain of a detector can be calculated using the ratio of output to the input value of current, like:
-\begin{equation}
-    Gain~=~\frac{I_{out}}{q~\times~f}
-\end{equation}
-where q is the charge collected at the first layer of GEM foil and is calculated as:
-\begin{equation}
-    q~= n~\times~e
-\end{equation}
-where e is the electron charge, n is the average number of electrons produced in the drift region by the incident particles and $f$ is the interaction rate of the incident particles in the gas. For the given X-ray source with a specific energy and the known ionization potential of the used gas mixture n can be calculated and is found to be $n \sim 290$.
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.40\textwidth]{figures/GEM/HV_divider_gem_testbeam_2014.jpeg}
-    \caption{High voltage divider configuration as used in the 2014 beam test campaign.}
-    \label{fig:HV_configuration}
-\end{figure}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figures/GEM/GE11_IV_ElectricField_detector.jpeg}%
-    \includegraphics[width=0.5\textwidth]{figures/GEM/GE11_IV_VoltageAcross_GEM.jpeg}
-    \caption{Electric field (left) and voltage across each GEM foil (right) for the tested GE1/1 detector.}
-    \label{fig:GEM_voltage_electricfield}
-\end{figure}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figures/GEM/Gain_curve_GE11_IV_Ar_CO2.jpeg}%
-    \includegraphics[width=0.5\textwidth]{figures/GEM/Gain_curve_GE11_IV_GIF_Ar_CO2.jpeg}
-    \caption{Gain and rate variation for $Ar:CO_2$ (70:30) with respect to the current supplied to the high voltage divider for GE1/1-IV (left) and GE1/1-IV-GIF (right).}
-    \label{fig:gain_GE1/1_IV}
-\end{figure}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\textwidth]{figures/GEM/Gain_curve_GE11_IV_Ar_CO2_CF4.jpeg}%
-    \includegraphics[width=0.5\textwidth]{figures/GEM/Gain_curve_GE11_IV_GIF_Ar_CO2_CF4.jpeg}
-    \caption{Gain and rate variation for $Ar:CO_2:CF_4$ (45:15:40) with respect to the current supplied to the high voltage divider for GE1/1-IV (left) and GE1/1-IV-GIF (right).}
-    \label{fig:gain_GE1/1_IV_GIF}
-\end{figure}
-% subsubsection _information_of_gem_detectors_used_in_test_beam (end)
 
 \subsubsection{Readout Electronics} % (fold)
 \label{ssub:readout_electronics}
 Front-end electronics used in the beam test was \textbf{\textit{VFAT2}} chips~\cite{Aspell2007,Berardi2004}.
-The upgraded version of the same chip, known as VFAT3, will be used with CMS GE1/1 detectors for Level-1 muon triggering~\cite{Licciulli2017}. Its block diagram is shown in Fig.~\ref{fig:VFAT2block}.
+The upgraded version of the same chip, known as VFAT3, will be used with GE1/1 detectors for Level-1 muon triggering~\cite{Licciulli2017}. Its block diagram is shown in Fig.~\ref{fig:VFAT2block}.
 
 VFAT is a front-end Application Specific Integrated Circuit (ASIC) chip was primarily designed for the readout of sensors in the TOTEM experiment at CERN. 
 VFAT chip is used for both triggering and tracking purpose.
 For triggering it uses the programmable ``\textit{fast OR}'' information based on a hit in the detector.
 It provides a monostable output for the programmed number of channels in a single clock cycle. 
-This is called an ``S-Bit''. While, for tracking it provides the spatial information strip-wise for every triggered event.
+This is called an ``\textit{S-Bit}''. While, for tracking it provides the spatial information strip-wise for every triggered event.
 
 VFAT2 has 128 analog input channels, very low noise pre-amplifier, shaper and comparator attached to it. 
 Signal discrimination is done based on the programmable threshold setting and then stored within SRAM\footnote{Static random-access memory (static RAM or SRAM) is a type of semiconductor memory that uses bistable latching circuitry (flip-flop) to store each bit. SRAM exhibits data remanence but it is still volatile in the conventional sense that data is eventually lost when the memory is not powered.} until the trigger information is received. 
 It can apply positive as well as negative threshold value to each channel independently. 
-This feature is named as ``\textit{TrimDAC}'' and the VFAT chip has two programmable voltages $V_{T1}$ and $V_{T2}$ and the threshold is defined as the difference between these two programmable voltages, i.e., $V_{TH} = V_{T2} - V_{T1}$.
+This feature is named as ``\textit{TrimDAC}'' and it has two programmable voltages $V_{T1}$ and $V_{T2}$ and the threshold is defined as the difference between these two programmable voltages, i.e., $V_{TH} = V_{T2} - V_{T1}$.
 
 This VFAT chip also provides the facility to mask individual noisy channel.
 
@@ -309,7 +268,7 @@ This program can perform standard calibration scans such as threshold and latenc
 
 \subsubsection{Measurement Mode} % (fold)
 \label{ssub:measurement_mode}
-Data can be collected in two different modes: synchronous mode and asynchronous mode. In the asynchronous mode, triggers are not correlated with the clock while in a synchronous mode triggers are correlated with the leading edge of the clock. Synchronous mode is used to collect data in sync with the LHC clock.
+Data can be collected in two different modes: synchronous mode and asynchronous mode. In the asynchronous mode, triggers are not correlated with the clock while in a synchronous mode triggers are correlated with the leading edge of the LHC 40 $MHz$ clock. Synchronous mode is used to collect data in sync with the LHC clock.
 % subsubsection measurement_mode (end)
 
 \subsection{Beam Test Experimental Set-up}
@@ -317,7 +276,7 @@ Data can be collected in two different modes: synchronous mode and asynchronous 
 The experimental set-up consists of three plastic organic scintillators, three trackers and a GE1/1 prototype, being flushed with an Ar/CO$_{2}$ (70:30) gas mixture.
 The trackers are triple-GEM detectors having an active area of $10~cm\times10~cm$ having 256 strips in both horizontal (y-coordinate) and vertical (x-coordinate) directions with respect to the beam and a pitch of $0.4~mm$.
 The three trackers constitute a muon tracking telescope which is used to reconstruct the beam trajectories and reduce background events.
-Figure~\ref{fig:tbs} shows the experimental set-up used to perform beam test studies.
+Figure~\ref{fig:daq} shows the experimental set-up used to perform beam test studies.
 The GE1/1 prototypes are installed on a movable table to scan different sectors. At a time only one (i$\eta$,i$\phi$) sector of GEM detector is irradiated with the beam.
 % The high voltage powering was realized using a ceramic high voltage divider. 
 The CMS test chamber was placed, close to the tracking hodoscope, on a vertically movable support to allow scanning. The scanned sectors of the GE1/1 detector are shown in Fig.~\ref{GE1/1}.
@@ -341,15 +300,15 @@ On detector electronics connects the output from the front-end ASIC (VFAT2) to t
 The VFAT2 chip is connected to the hybrids which are plugged into the connectors on the readout board.
 %The trigger is generated using the coincidence of three photo-multiplier tubes with mounted scintillators. 
 The analog pulses from the three scintillators, named S1, S2 and S3 are fed into discriminator for analog to digital conversion.
-The discriminator output was provided into the logic coincidence (to generate event trigger) before being sent to the other DAQ systems (Figure.~\ref{fig:daq}).
+The discriminator output was provided into the logic coincidence (to generate event trigger) before being sent to the other DAQ systems (Figure.~\ref{fig:tbs}).
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.95\textwidth]{figures/GEM/daq.png}
 \caption{Perspective view of the experimental set-up used for performance measurement in the beam test studies. The trigger system is generated using the signal collected from three scintillators connected in coincidence.}\label{fig:tbs}
 \end{figure}
-The active area of the GE1/1 detector is covered with readout strips located in the GEM Electronic Board. 
-The readout strips are taken out in 24 readout sectors (in ($\eta$,$\phi$) phase space).
-The data from each sector are collected using a VFAT2 front-end chip. 
+% The active area of the GE1/1 detector is covered with readout strips located in the GEM Electronic Board. 
+% The readout strips are taken out in 24 readout sectors (in ($\eta$,$\phi$) phase space).
+% The data from each sector are collected using a VFAT2 front-end chip. 
 
 
 %, with a tracker pitch of $0.4~mm$
@@ -362,7 +321,7 @@ The data from each sector are collected using a VFAT2 front-end chip.
 \end{figure}
 \subsection{Data Analysis} % (fold)
 \label{sub:test_beam_analysis}
-The raw data collected during these beam test campaign were in binary format. First, the raw data (binary information) is converted into the ROOT data format. ``\textit{\textbf{TURBO-SOFTWARE}}''~\cite{git-trubosoftware} package is used for data analysis framework, originally developed by TOTEM group, is used to perform this task. The output from TURBO-SOFTWARE data analysis consists of hit information from the detectors which are further used to reconstruct the particle tracks and clusters. 
+The raw data collected during these beam test campaign were in binary format. First, the raw data (binary information) is converted into the ROOT data format. ``\textit{\textbf{TURBO-SOFTWARE}}''~\cite{git-trubosoftware} package is used for data analysis framework, originally developed by TOTEM group, is used to perform this task. The output from TURBO-SOFTWARE data analysis consists of hit information for each strip from the detectors which are further used to reconstruct the particle tracks and clusters. 
 
 A \textbf{hit} is defined when one or more strip of the VFAT chips surpass the threshold set on the readout chip. 
 A \textbf{cluster} is defined as the number of adjacent fired strips along x or y-axis. The first step towards the track and cluster reconstruction is to discriminate the background tracks coming from detector noise (fake tracks) from the signal (muon) tracks. Once the fake tracks are removed from the collection, valid hits are used to generate tracks.
@@ -435,7 +394,7 @@ Twofold iteration loop is used, X offset is kept fixed and iterate over Y offset
 
 \subsubsection{Fiducial Area Selection} % (fold)
 \label{ssub:fiducial_area_selection}
-To have an efficient efficiency we should define a fiducial area in which we are going to calculate the efficiency. We define the fiducial area as:
+To have an efficient efficiency we should also define a fiducial area in which we are going to calculate the efficiency. We define the fiducial area as:
 
 \begin{itemize}
         \item For this only \textbf{valid tracks} are considered. Where the valid track is defined as the track that has hit in all three trackers.
@@ -444,6 +403,7 @@ To have an efficient efficiency we should define a fiducial area in which we are
         \item The ratio of the two histograms defined above is computed, which is shown in Fig.~\ref{fig:fiducial_area_sel} (bottom)
         \item Finally, the region in the ratio histogram where efficiency is maximum is considered as the fiducial region. This fiducial region is considered for the efficiency calculation.
 \end{itemize}
+Here, the calculated fiducial region is (0,80), which can be observed from Fig.~\ref{fig:fiducial_area_sel}(bottom).
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.45\textwidth]{figures/GEM/FiducialAreaCal_TrackerOnly.jpeg}%
@@ -459,7 +419,7 @@ Efficiency, $\epsilon$, is one of the most important parameters for the gaseous 
 \epsilon = \frac{N_{GE1/1+Trk}}{N_{Trk}}
 \end{equation}
 where $N_{Trk}$ is the number of reconstructed events by using a linear fit $y = mx + b$ fit to the tracker hit positions, in the tracker with normalized $\chi^2<10$.
-$N_{GE1/1+Trk}$ is the number of reconstructed events for which an actual hit is found in the GE1/1 within $5mm$ of an extra-plotted track.
+$N_{GE1/1+Trk}$ is the number of reconstructed events for which an actual hit is found in the GE1/1 within $5~mm$ of an extra-plotted track.
 The fiducial region in which efficiency was calculated is (0,80) as shown in the previous section.
 We are showing here the efficiency as a function of current supplied to high-voltage divider as well as $E_{gain}$, Fig. \ref{Efficiency}. 
 \begin{figure}[!htbp]
@@ -479,15 +439,15 @@ Here, the efficiency is fitted with function:
 \begin{equation}
     Efficiency = \frac{Eff_{max}}{1+e^{s(HV-HV_{50\%})}}
 \end{equation}
-Where, $Eff_{max}$ is the maximum obtained efficiency, $HV_{50\%}$ is the applied HV (or current or $E_{gain}$) when corresponding efficiency becomes 50\% and $s$ is just a scale factor.
+Where, $Eff_{max}$ is the maximum obtained efficiency, $HV_{50\%}$ is the applied HV (or current or $E_{gain}$) when corresponding efficiency becomes 50\% and $s$ is just a scale factor. The fit parameters are shown in appendix~\ref{cha:efficiency_and_time_resolution_fit_parameters}.
 
-Fig. \ref{Efficiency} is showing the efficiency with respect to two different gas mixtures $Ar/CO_2$ (70/30) at sector $(i\eta,i\phi)=(5,2)$ and $Ar/CO_2/CF_4$ (45/15/40) scanned at three different sectors $(i\eta,i\phi)=\{(1,2),(5,2),(8,2)\}$. We achieved very good efficiency of $\sim$ 98\% in all cases. While for gas mixture $Ar/CO_2$ the threshold is shifted as compared to the $Ar/CO_2/CF_4$ because at fixed high voltage operating point, the effective gain with $Ar/CO_2$  mixture is approximately one order of magnitude higher than $Ar/CO_2/CF_4$ mixture. Also, this shows that we can operate our detector without using the $CF_4$ gas, which is non-environment friendly, without compromising with the efficiency.
+Fig. \ref{Efficiency} is showing the efficiency with respect to two different gas mixtures $Ar/CO_2$ (70/30) at sector $(i\eta,i\phi)=(5,2)$ and $Ar/CO_2/CF_4$ (45/15/40) scanned at three different sectors $(i\eta,i\phi)=\{(1,2),(5,2),(8,2)\}$. We achieved very good efficiency of $\sim$ 98\% in all cases. While for gas mixture $Ar/CO_2$ the threshold is shifted as compared to the $Ar/CO_2/CF_4$ because at fixed high voltage operating point, the effective gain with $Ar/CO_2$  mixture is approximately one order of magnitude higher than $Ar/CO_2/CF_4$ mixture. Also, this shows that we can operate our detector without using the $CF_4$ gas, which is non-eco friendly, without compromising with the efficiency.
       
 
 \subsubsection{Timing Measurement}
 The time resolution of a detector is defined as the minimum gate width necessary on the detection electronics for full efficiency.
 Experimentally, the time resolution is the root-mean-square of the Gaussian distribution of the time taken by the particle to reach detector from the scintillator.
-Along with the fast 40MHz (25ns) clock pulse has been used to cope with the LHC bunch crossing. So, the detector time response is modelled as the Gaussian function, $f(t)$, convoluted with a square wave, $g(t)$, having pulse length $f_{clk}=25ns$ to represent discrete sampling. 
+Along with the fast 40MHz ($25~ns$) clock pulse has been used to cope with the LHC bunch crossing. So, the detector time response is modelled as the Gaussian function, $f(t)$, convoluted with a square wave, $g(t)$, having pulse length $f_{clk}=25ns$ to represent discrete sampling. 
 %The functions $f(t)$ is given by:
 %\begin{equation}
 %f(t) = Ae^{-\frac{1}{2}(\frac{t-t_0}{\sigma})^2}
@@ -506,9 +466,9 @@ The convolution of the two functions is
 (f*g)(t) = A \cdot \sigma \sqrt{\frac{\pi}{2}}\Big(erf\Big(\frac{u_{+}}{\sigma\sqrt{2}}\Big)-erf\Big(\frac{u_{-}}{\sigma\sqrt{2}}\Big)\Big)
 \end{equation}
 where $A$ is the amplitude of the Gaussian function, $\sigma$ is the standard deviation of Gaussian, and $u_{\pm}= t-t_0\pm\frac{f_{clk}}{2}$. 
-We fitted the experimental data with this convoluted function. From, the fit we extract the time resolution of the detector before the convolution. The time resolution as a function of $E_{drift}$ is shown in Fig. \ref{TimeResolution}. 
+We fitted the experimental data with this convoluted function. From, the fit we extract the time resolution of the detector before the convolution. The time resolution as a function of $E_{drift}$ and current supplied to high voltage divider as shown in Fig. \ref{TimeResolution}. 
 
-Here, the time resolution  with gas $Ar/CO_2$ is fitted with the polynomial of order 2, while with gas $Ar/CO_2/CF_4$ was fitted with the polynomial of order 6.
+Here, the time resolution  with gas $Ar/CO_2$ is fitted with the polynomial of order 2, while with gas $Ar/CO_2/CF_4$ was fitted with the polynomial of order 6. Also, the fit parameters for each fit is given in appendix~\ref{cha:efficiency_and_time_resolution_fit_parameters}.
 
 The time resolution with $Ar/CO_2$ (70/30) is higher for lower values of $E_{drift}$.
 However, for any given point on the $Ar/CO_2$ curve has a gain approximately one order of magnitude higher gain than the corresponding gain with $Ar/CO_2/CF_4$ (45/15/40).  We are able to reach faster timing at lower gains with the addition of the $CF_4$ and this is important from the point of view of detector safety because this will allow us to operate the detector at lower gains, hence reducing the discharge probability.
@@ -557,8 +517,8 @@ Study for the cluster size is done only for the three above mentioned golden run
    \caption{Cluster size distribution: Left - GE1/1-IV, Right - GE1/1-IV-GIF}
    \label{fig:CSDGE1/1}
 \end{figure}
-Final cluster size study distributions for the GE1/1-IV and GE1/1-IV-GIF\footnote{This is also a generation IV GE11 detector. But, for the ageing test this detector was placed at the Gamma Irradiation Facility (GIF) for twelve months. The GIF bunker contains a $^{137}Cs$ source of 566 GBq. This emits gamma rays of 662 keV. The detector was placed 30 cm from the source where the particle rate was of the order of 100 $kHz/cm^2$. This allowed accumulating the charge in twelve month which will be equivalent to the 10-year operation of GEM detector in LHC environment~\cite{Merlin2013}.} are plotted with respect to the current supplied to the high voltage divider and shown in Figure~\ref{fig:CSDGE1/1}.
-Cluster size is taken with the Poisson fitting function. The cluster size is greater in ($\eta$, $\phi$) = (1,2) region for both the detectors due to the uniformity in readouts channels.
+Final cluster size study distributions for the GE1/1-IV and GE1/1-IV-GIF are plotted with respect to the current supplied to the high voltage divider and shown in Figure~\ref{fig:CSDGE1/1}.
+Cluster size is taken with the Poisson fitting function. The cluster size is greater in ($\eta$, $\phi$) = (5,2) region for both the detectors due to the uniformity in readouts channels. As it is known that the GE1/1 $4^{th}$ generation prototype is suffered from the significant bending in the readout and drift PCB. This impacts GE1/1 properties like primary charge created, uniformity, transparency of bottom of third GEM foil, charge collection by the readout, etc. Thus, it is expected that that non-uniformity in the cluster size distrubution in ($\eta$, $\phi$) sector (1,2), (5,2), and (8,2) is because of this. This issue is improved in the next version of GE1/1 prototype, known as GE1/1-V.
 % subsection results (end)
 
 % section gem_for_cms (end)
@@ -566,7 +526,7 @@ Cluster size is taken with the Poisson fitting function. The cluster size is gre
 \section{GEM Foil Production and Characterization} % (fold)
 \label{sec:gem_foil_production_and_characterization}
 Through the Transfer of Technology (TOT) agreement with CERN, Micropack (a Banguluru based Pvt. Ltd. company) signed an agreement for the development of GEM foil in India in collaboration with the Indian Institution.
-Micropack started producing the $10~cm~\times~10~cm$ GEM foil using the single mask technique, as this is the one used in GE11 detectors which will be installed in the CMS.
+Micropack started producing the $10~cm~\times~10~cm$ GEM foil using the single mask technique, as this is the one used in GE1/1 detectors which will be installed in the CMS.
 But, after continuous effort and several trials they realized that single mask GEM foil production is the quite challenging method.
 Then they switched to the double mask technique and quickly they succeeded with this method. 
 They used the similar method used at CERN PCB workshop~\cite{DEOLIVEIRA2009}. 
@@ -590,11 +550,11 @@ Micropack used the Kapton foil having a thickness of 50 $\mu m$ with 5 $\mu m$ o
 To qualify the GEM foil commercially and scientifically reliable it has to pass some quality control test. For a GEM foil the general steps are listed below:
 \begin{enumerate}
     \item Visual inspection,
-    \item Capacitance and current test of the foil, and
-    \item Optical test
+    \item Optical test, and 
+    \item Electrical test of the foil
 \end{enumerate}
 
-Before describing these three inspections one of the important tasks is that one should open/expose the GEM foil only in the clean room\footnote{Clean room is a specially designed room, maintained at extremely low level of particles per cubic meters, for a specialized industrial production or scientific research. For example, a ``\textit{Class-100}'' clean room is designed to never allow more than 100 particles (0.5 microns or larger) per cubic foot of air. ``\textit{Class-1000}'' and ``\textit{Class-10000}'' clean rooms are designed to limit particles to 1000 and 10,000 respectively.} of at least class 100 or less.
+Before describing these three inspections one of the important tasks is that one should open/expose the GEM foil only in the clean room\footnote{Clean room is a specially designed room, maintained at extremely low level of particles per cubic meters, for a specialized industrial production or scientific research. For example, a ``\textit{Class-100}'' clean room is designed to never allow more than 100 particles (0.5 microns or larger) per cubic foot of air. ``\textit{Class-1000}'' and ``\textit{Class-10000}'' clean rooms are designed to limit particles to 1000 and 10,000 respectively.} of at least class 100 or better.
 As the typical size of GEM holes is 50 $\mu m$ and if it fills up with lots of dust then it will have a destructive discharge as soon as we connect it to the power.
 In Delhi University it was done in class 100 clean room installed with KANOMAX dust particle counter model 3887~\cite{KANOMAX-dust-particle-counter} which monitor particle count.
 Also, the clean room is equipped with the dehumidifier for humidity control.
