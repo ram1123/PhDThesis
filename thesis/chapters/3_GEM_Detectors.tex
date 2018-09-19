@@ -4,6 +4,9 @@
 {Freeman Dyson}
 ``New directions in science are launched by new tools much more often than by new concepts.''
 \end{chapquote}
+\todo[inline]{Add HV divider and circuit readout board}
+\todo[inline]{Why we need test beam studies}
+\todo[inline]{Add GE1/1 long and short detector description.}
 
 In this chapter, the GEM detector technology is introduced which are proposed for the CMS muons system upgrade during the long shutdown-2 period. 
 The properties of these GEM detectors were scrutinized during different beam test campaigns carried out at the CERN SPS beam test facility.
@@ -22,17 +25,17 @@ Also, it could sustain a particle flux greater than few $MHz/mm^2$. Although, th
 	\item Accumulation of the ions on the electrodes, which affects the gain and age of the detector.
 	\item In some cases, the passage of highly ionising particles could lead to a destructive discharge in the detector medium.
 \end{enumerate}
-These drawbacks of the MSGC lead to the development of Micro-Pattern Gaseous Detector (MPGD).
-This class of detector, specifically the Gas Electron Multiplier (GEM)~\cite{Sauli1997,Sauli1999,detector:1732870}, could provide an unprecedented spatial resolution, larger sensitive/detection area, with higher rate capability and good operational stability over the longer operating periods.
+These drawbacks of the MSGC lead to the development of Micro-Pattern Gaseous Detectors (MPGD).
+This class of detectors, specifically the Gas Electron Multiplier (GEM)~\cite{Sauli1997,Sauli1999,detector:1732870}, could provide an unprecedented spatial resolution, larger sensitive/detection area, with higher rate capability and good operational stability over the longer operating periods.
 Several new studies also revealed that under certain circumstances these detectors might be less vulnerable to the radiation-induced ageing than the standard silicon microstrip detectors~\cite{TITOV2004,Titov2002}.
 
-Because of their efficient detection qualities and high rate capabilities, GEM detectors have been already used in various experiments like COMPASS, TOTEM, LHCb. Recently, it is proposed for the CMS muon detector system upgrade. A brief description of the working and properties of GEM detectors is provided in the following sections.
+Because of their efficient detection qualities and high rate capabilities, GEM detectors have been already used in various experiments like COMPASS, TOTEM, LHCb. Recently, it was proposed for the CMS muon detector system upgrade. A brief description of the working and properties of GEM detectors is provided in the following sections.
 % section introduction (end)
 
 \section{Design and working principle of GEM detector} % (fold)
 \label{sec:design_and_working_principle_of_gem}
 
-GEM is a relatively new concept introduced by Fabio Sauli at CERN~\cite{Sauli1997}, which consists of a thin polyimide sheet (usually a thin Kapton foil~\cite{Kapton-sheet} with thickness 50 $\mu m$) coated with metal on its both sides. It is chemically pierced to a regular array of holes using the photolithography and acid etching processes~\cite{Benlloch1998}, as shown in Fig.~\ref{fig:gem} (left).
+GEM is a relatively new concept introduced by Fabio Sauli~\cite{Sauli1997} at CERN, which consists of a thin polyimide sheet (usually a thin Kapton foil~\cite{Kapton-sheet} with thickness 50 $\mu m$) coated with metal on its both sides. It is chemically pierced to a regular array of holes using the photolithography and acid etching processes~\cite{Benlloch1998}, as shown in Fig.~\ref{fig:gem} (left).
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{figures/GEM/KEKDTP3.jpg}
@@ -162,7 +165,7 @@ The GE1/1 detector was tested using 150 GeV muon and pion beams at CERN SPS beam
 The goal of the beam test campaign was to measure the efficiency, space \& time resolution, and the cluster size of the CMS GEM detector. 
 The detectors that were tested includes GE11\_IV and GE11\_IV\_GIF detectors.
 % (detectors naming convention and its details are mentioned in the appendix~\ref{cha:GE1/1_detector_generations}).
-Both GE11\_IV and GE1/1\_IV\_GIF are generation IV GE1/1 detectors but GE1/1\_IV\_GIF was irradiated with the gamma-ray at the CERN gamma-ray irradiation facility\footnote{The GIF bunker contains a $^{137}Cs$ source of 566 GBq. This emits gamma rays of 662 keV. The detector was placed 30 cm from the source where the particle rate was of the order of 100 $kHz/cm^2$. This allowed accumulating the charge in twelve month which will be equivalent to the 10-year operation of GEM detector in LHC environment~\cite{Merlin2013}.} for 1 year to perform ageing studies~\cite{Merlin2013}. Also, several important parameters like electric field, voltage across each GEM foil and the rate and gain were measured and shown in appendix~\ref{cha:ge1_1_measured_parameters}.
+Both GE11\_IV and GE1/1\_IV\_GIF are generation\footnote{The different generations of GE1/1 are described in appendix~\ref{cha:ge11_detector_generations}} IV GE1/1 detectors but GE1/1\_IV\_GIF was irradiated with the gamma-ray at the CERN gamma-ray irradiation facility\footnote{The GIF bunker contains a $^{137}Cs$ source of 566 GBq. This emits gamma rays of 662 keV. The detector was placed 30 cm from the source where the particle rate was of the order of 100 $kHz/cm^2$. This allowed accumulating the charge in twelve month which will be equivalent to the 10-year operation of GEM detector in LHC environment~\cite{Merlin2013}.} for 1 year to perform ageing studies~\cite{Merlin2013}. Also, several important parameters like electric field, voltage across each GEM foil and the rate and gain were measured and shown in appendix~\ref{cha:ge1_1_measured_parameters}.
 
 % This is also a generation IV GE11 detector. But, for the ageing test this detector was placed at the Gamma Irradiation Facility (GIF) for twelve months.
 Two beam test campaign was carried out during October-December 2014.
@@ -260,8 +263,8 @@ A systematic diagram of TURBO board is shown in Fig.~\ref{fig:turbo}.
 But, one can use more than 1 TURBO boards to accommodate more than 8 VFAT chips. 
 Out of them, one TURBO board will act as the master board that will take care of the clock for other TURBO boards, which act as slaves.
 
-A LabView program can be used to control TURBO boards remotely. 
-This program can perform standard calibration scans such as threshold and latency scans as well as can be used for data acquisition and quality control tests.
+A LabView program can be used to control TURBO boards remotely.
+This program can perform standard threshold and latency calibration scans. Further, it can be used for data acquisition and quality control tests.
 % subsubsection turbo_readout_board (end)
 
 % subsubsection readout_electronics (end)
@@ -274,7 +277,7 @@ Data can be collected in two different modes: synchronous mode and asynchronous 
 \subsection{Beam Test Experimental Set-up}
 % A simple schematic diagram of the experimental setup is shown in Fig.~\ref{fig:tbsetup}.
 The experimental set-up consists of three plastic organic scintillators, three trackers and a GE1/1 prototype, being flushed with an Ar/CO$_{2}$ (70:30) gas mixture.
-The trackers are triple-GEM detectors having an active area of $10~cm\times10~cm$ having 256 strips in both horizontal (y-coordinate) and vertical (x-coordinate) directions with respect to the beam and a pitch of $0.4~mm$.
+The trackers are triple-GEM detectors with an active area of $10~cm\times10~cm$ having 256 strips in both horizontal (y-coordinate) and vertical (x-coordinate) directions with respect to the beam and a pitch of $0.4~mm$.
 The three trackers constitute a muon tracking telescope which is used to reconstruct the beam trajectories and reduce background events.
 Figure~\ref{fig:daq} shows the experimental set-up used to perform beam test studies.
 The GE1/1 prototypes are installed on a movable table to scan different sectors. At a time only one (i$\eta$,i$\phi$) sector of GEM detector is irradiated with the beam.
@@ -329,7 +332,7 @@ A \textbf{cluster} is defined as the number of adjacent fired strips along x or 
 The hit profile and beam profile recorded in the tracker for one of the run are shown in Fig.~\ref{HitPosXaxis}~and~\ref{BeamProfile}.
 From both hit profile and beam profile, one can see that the beam is point beam like a beam having a Gaussian spread, centred around (50,50), i.e., at the centre of the tracker.
 
-This sorting is done by selecting events having only one cluster in each tracker. Then, the cluster positions are fitted using a polynomial fit of order one and $\chi^2$ of the fit is recorded.
+This sorting is done by selecting events having only one cluster in each tracker. The cluster positions are fitted using a polynomial fit of order one and $\chi^2$ of the fit is recorded.
 The event is discarded if the $\chi^2$ of the fit is greater than 10.
 \begin{figure}[!htbp]
 \centering
@@ -343,7 +346,7 @@ The event is discarded if the $\chi^2$ of the fit is greater than 10.
 \includegraphics[width=0.5\textwidth]{figures/GEM/Selection_027.png}%
 \includegraphics[width=0.5\textwidth]{figures/GEM/Selection_028.png}\\
 \includegraphics[width=0.5\textwidth]{figures/GEM/Selection_029.png}
-\caption{2D- beam profile plot for the first, second and third tracker. The x and y axis of the plots correspond to the distance (in mm) measured from the central position of the trackers in x and y direction, respectively. The different colors in the color palette correspond to the number of hits registered in the detector at a particular (x,y) position.}\label{BeamProfile}
+\caption{2D- beam profile plot for the first, second and third tracker. The X and Y axis of the plots correspond to the distance (in mm) measured from the central position of the trackers in X and Y direction, respectively. The different colors in the color palette correspond to the number of hits registered in the detector at a particular (x,y) position.}\label{BeamProfile}
 \end{figure}
 % subsubsection track_reconstruction (end)
 % subsection test_beam_analysis (end)
@@ -363,45 +366,57 @@ The goal is to reduce the $\chi^{2}$ of the track fits, in order to improve trac
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{figures/GEM/GEM_Alignment_FlowChart.jpeg}
-    \caption{Alignment algorithm flow chart.}
+    \caption{Flowchart illustrating the workflow of detector alignment algorithm.}
     \label{fig:alignment}
 \end{figure}
 
 \subsubsection{Linear and Rotational Alignment}
-To measure the spatial resolution of GEM detectors, these detectors are aligned with respect to the tracker system.
-% \subsubsection{Alignment of Reference Trackers}
-The first step in the resolution measurement is an alignment of the three small tracking detectors that have a Cartesian X-Y strip readout.
-The trackers are first aligned with respect to each other in Cartesian coordinates.
-The first alignment step is to shift each of the three tracking detectors iteratively in the XY-plane to make their origins match with each other in that plane.
-The initial shift parameters are mean values from position distributions in X and Y coordinates. In each iteration, straight lines are fitted to the hits in X and Y.
-In this measurement study, residuals are histogrammed for each detector and the residual distributions are fitted with a double-Gaussian function.
-Ten percent of the residual mean value of each detector is taken as the shift parameter in the next iteration to avoid overcorrections.
-The resulting residual mean values converge quickly towards zero with iterations and provide a first coarse alignment.
-In a second alignment step, we correct also for relative rotations of the tracking detectors around the beam in the XY-plane.
-We again fit straight lines to the hits in X and Y and iterate through a succession of offsets and rotations around the beam axis relative to the first tracking detector until the residual means from the trackers are very close to zero and $\chi^2$ of the track fits are minimized.
+To measure the spatial resolution of GE1/1 detectors, these detectors aligned with respect to the tracker system.
+This starts with the need to be mutual alignment of the three tracking detectors that have 2-D readout in the Cartesian coordinate system.
+% The first step in the resolution measurement is an alignment of the three small tracking detectors that have a Cartesian X-Y strip readout.
+% The trackers are first aligned with respect to each other in Cartesian coordinates.
+The first alignment step is to shift each of the three tracking detectors iteratively in the XY-plane to make their origins coincide in the same line of sight.
+% match with each other in that plane.
+The initial shift parameters are the mean values from the position distributions  of X and Y axis.
+During each iteration, a linear fit is performed to the hits position along X and Y direction from each tracker.
+ % lines are fitted to the hits in X and Y.
+% In this measurement study, residuals are histogrammed for each detector and the residual distributions are fitted with a double-Gaussian function.
+Residuals are histogrammed for every detector and their distributions are fitted with a double-Gaussian function.
+Ten percent of the residual mean value of each detector is taken as the shift parameter in the next iteration to avoid overcorrection.
+This step is repeated until the resulting residual mean value converge towards zero.
+% with iterations and provide a first coarse alignment.
+This method provides a first coarse alignment.
+In the second alignment step, we correct also for relative rotations of the tracking detectors around the beam axis in the XY-plane.
+We again fit straight lines to the hit in X and Y direction and iterate through a succession of offsets and rotations around the beam axis relative to the first tracking detector.
+Again this process is repeated until the residual means from the trackers are very close to zero and $\chi^2$ of the track fits is also observed at each iteration.
 In each iteration, the detectors are first shifted and then rotated; then new residuals and rotation angles are calculated.
-This process is repeated iteratively until the residual means from the track fits becomes less than 0.005 mm. Fig.~\ref{fig:alignment} shows the flow chart of the alignment algorithm.
-Figure.~\ref{fig:alignmentIteration} shows the variation of track residuals for three trackers with respect to the iteration number, with residual converging to lower values with each iteration.
+This process is repeated iteratively until the residual means from the track fits become less than 0.005 mm. Fig.~\ref{fig:alignment} shows the flow chart of the alignment algorithm.
+Figure.~\ref{fig:alignmentIteration} shows the variation of track residuals for three trackers as a function of iteration number, with residual shifting to lower values progressively through iterations.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.65\textwidth]{figures/GEM/Tracker_iterative_alignment.jpg}
 \caption{Variation of track residuals for three trackers with respect to the iteration number}\label{fig:alignmentIteration}
 \end{figure}
 
-\subsubsection{Alignment GEM detectors w.r.t Reference Tracker}
-After the tracker alignment, the next step is to align trapezoidal GEM detectors with respect to the centre of the aligned tracker system.
-Twofold iteration loop is used, X offset is kept fixed and iterate over Y offset values with a small fixed step, ranging in a practical phase space. Then X offset is iterated and corresponding iterations are performed with Y offset. For each value of (X offset, Y offset) pair, tracks are linearly fitted in the $\phi$ co-ordinate and the corresponding residuals are noted and used to align the detectors.
+\subsubsection{Alignment of GEM detectors w.r.t Reference Tracker}
+Once the tracker alignment, the next step is to align trapezoidal GEM detectors with respect to the centre of the aligned tracker system.
+A twofold iteration loop is used wherein the x-offset is kept fixed the y-offset is iterated over a set of values with a small iteration step.
+The x-offset is also iterated over and corresponding to every single value of x-offset, the y-offset are iterated.
+ % Y offset values with a small fixed step, ranging in a practical phase space.
+% Then X offset is iterated and corresponding iterations are performed with Y offset.
+For each value of (X offset, Y offset) pair, tracks are linearly fitted in the $\phi$ co-ordinate and the corresponding residuals are noted and used to align the detectors.
 
 \subsubsection{Fiducial Area Selection} % (fold)
 \label{ssub:fiducial_area_selection}
 To have an efficient efficiency we should also define a fiducial area in which we are going to calculate the efficiency. We define the fiducial area as:
 
 \begin{itemize}
-        \item For this only \textbf{valid tracks} are considered. Where the valid track is defined as the track that has hit in all three trackers.
-        \item Valid tracks are then extrapolated to GE1/1’s and accept that track as a hit in GE11’s if and only if the residual is less than 5 $mm$.
-        \item Now two different 2-D histogram is filled. The first histogram contains all those events that have a valid hit in tracker only, as shown in Fig.~\ref{fig:fiducial_area_sel} (left). Another 2-D histogram filled with all those events where there are valid hits in all three trackers as well as the GE11, as shown in Fig.~\ref{fig:fiducial_area_sel}(right).
-        \item The ratio of the two histograms defined above is computed, which is shown in Fig.~\ref{fig:fiducial_area_sel} (bottom)
-        \item Finally, the region in the ratio histogram where efficiency is maximum is considered as the fiducial region. This fiducial region is considered for the efficiency calculation.
+        \item Only valid tracks are considered during this procedure, which are defined as the tracks having hits registered in all the three trackers.
+        % \item For this only \textbf{valid tracks} are considered. Where the valid track is defined as the track that has hit in all three trackers.
+        \item These valid tracks are then extrapolated to GE1/1’s. Only those tracks are finally selected for which the corresponding hit position in the GE1/1 has a residual value less than 5mm.
+         % and accept that track as a hit in GE11’s if and only if the residual is less than 5 $mm$.
+        \item The selected events are used to fill 2D histogram for different cases. The first histogram contains all those events that have a valid hit in the trackers only, as shown in Fig.~\ref{fig:fiducial_area_sel} (left). Another 2D histogram is filled with all those events where there are valid hits in all three trackers as well as in the GE1/1, as shown in Fig.~\ref{fig:fiducial_area_sel}(right). The ratio of the two histograms defined above is computed and is shown in Fig.~\ref{fig:fiducial_area_sel} (bottom)
+        \item Finally, the region (0,80) in the ratio histogram where efficiency is maximum is considered as the fiducial region. This fiducial region is used for the efficiency calculation for GE1/1 detector.
 \end{itemize}
 Here, the calculated fiducial region is (0,80), which can be observed from Fig.~\ref{fig:fiducial_area_sel}(bottom).
 \begin{figure}[htbp]
@@ -409,19 +424,19 @@ Here, the calculated fiducial region is (0,80), which can be observed from Fig.~
     \includegraphics[width=0.45\textwidth]{figures/GEM/FiducialAreaCal_TrackerOnly.jpeg}%
     \includegraphics[width=0.45\textwidth]{figures/GEM/FiducialAreaCal_TrackerGE11.jpeg}\\
     \includegraphics[width=0.55\textwidth]{figures/GEM/FiducialAreaCal_Selection.jpeg}\\
-    \caption{Fiducial area selection.}
+    \caption{2D distributions showing events with hits registered in the trackers (top left), events registered in three trackers and GE1/1's (top right) and the division of the two histograms used to define the fiducial region for GE1/1 efficiency measurements (bottom).}
     \label{fig:fiducial_area_sel}
 \end{figure}
 % subsubsection fiducial_area_selection (end)
 \subsubsection{Efficiency Measurement}
-Efficiency, $\epsilon$, is one of the most important parameters for the gaseous detectors. Here it is defined as 
+Efficiency, $\epsilon$, for a GE1/1 detector for the current beam test set-up is defined as:
+% Efficiency, $\epsilon$, is one of the most important parameters for the gaseous detectors. Here it is defined as 
 \begin{equation}
 \epsilon = \frac{N_{GE1/1+Trk}}{N_{Trk}}
 \end{equation}
-where $N_{Trk}$ is the number of reconstructed events by using a linear fit $y = mx + b$ fit to the tracker hit positions, in the tracker with normalized $\chi^2<10$.
-$N_{GE1/1+Trk}$ is the number of reconstructed events for which an actual hit is found in the GE1/1 within $5~mm$ of an extra-plotted track.
-The fiducial region in which efficiency was calculated is (0,80) as shown in the previous section.
-We are showing here the efficiency as a function of current supplied to high-voltage divider as well as $E_{gain}$, Fig. \ref{Efficiency}. 
+where $N_{Trk}$ is the number of reconstructed events with hits reconstructed in the three trackers
+% by using a linear fit $y = mx + b$ fit to the tracker hit positions, in the tracker with normalized $\chi^2<10$.
+and $N_{GE1/1+Trk}$ is the number of reconstructed events for which an actual hit is also found in the GE1/1 detector.
 \begin{figure}[!htbp]
 \centering
 % \includegraphics[width=3.5in]{figures/GEM/EfficiencyPlot_wrt_EGain_wError4times_2gas.pdf}
@@ -430,83 +445,83 @@ We are showing here the efficiency as a function of current supplied to high-vol
 \caption{Efficiency with respect to $E_{gain}$ for two different gases and three different $(i\eta,i\phi)$ sectors.}
 \label{Efficiency}
 \end{figure}
-Where $E_{gain}$ is defined as
+% within $5~mm$ of an extra-plotted track.
+% The fiducial region in which efficiency was calculated is (0,80) as shown in the previous section.
+% We are showing here the efficiency as a function of current supplied to high-voltage divider as well as $E_{gain}$, Fig. \ref{Efficiency}. 
+Detector efficiency is calculated as a function of current supplied to the high-voltage divider as well as $E_{gain}$ is shown in Fig.~\ref{Efficiency} where $E_{gain}$ is defined as
 \begin{equation}
 E_{gain} = \frac{I\times R_{avg}^{gap}}{D}
 \end{equation}
-Where $I$ is current supplied to the HV divider, $R_{avg}^{gap}$ is the average gap resistance of GE1/1, and D is the thickness of GEM foil.
-Here, the efficiency is fitted with function:
+where $I$ is current supplied to the HV divider, $R_{avg}^{gap}$ is the average gap resistance of GE1/1, and D is thickness of the GEM foil.
+Here, the efficiency is fitted with the function defined as:
 \begin{equation}
-    Efficiency = \frac{Eff_{max}}{1+e^{s(HV-HV_{50\%})}}
+    \epsilon = \frac{\epsilon_{max}}{1+e^{s(HV-HV_{50\%})}}
 \end{equation}
-Where, $Eff_{max}$ is the maximum obtained efficiency, $HV_{50\%}$ is the applied HV (or current or $E_{gain}$) when corresponding efficiency becomes 50\% and $s$ is just a scale factor. The fit parameters are shown in appendix~\ref{cha:efficiency_and_time_resolution_fit_parameters}.
+Where, $\epsilon_{max}$ is the maximum obtained efficiency, $HV_{50\%}$ is the applied HV (or current or $E_{gain}$) at which the efficiency is 50\% and $s$ is just a scale factor left floating for fit to determine. The fit parameters are shown in appendix~\ref{cha:efficiency_and_time_resolution_fit_parameters}.
 
-Fig. \ref{Efficiency} is showing the efficiency with respect to two different gas mixtures $Ar/CO_2$ (70/30) at sector $(i\eta,i\phi)=(5,2)$ and $Ar/CO_2/CF_4$ (45/15/40) scanned at three different sectors $(i\eta,i\phi)=\{(1,2),(5,2),(8,2)\}$. We achieved very good efficiency of $\sim$ 98\% in all cases. While for gas mixture $Ar/CO_2$ the threshold is shifted as compared to the $Ar/CO_2/CF_4$ because at fixed high voltage operating point, the effective gain with $Ar/CO_2$  mixture is approximately one order of magnitude higher than $Ar/CO_2/CF_4$ mixture. Also, this shows that we can operate our detector without using the $CF_4$ gas, which is non-eco friendly, without compromising with the efficiency.
+Fig. \ref{Efficiency} shows the GE1/1 detection efficiency with two different gas mixtures $Ar/CO_2$ (70/30) calculated for sector $(i\eta,i\phi)=(5,2)$ and $Ar/CO_2/CF_4$ (45/15/40) for three different sectors $(i\eta,i\phi)=\{(1,2),(5,2),(8,2)\}$.
+We achieved a very good efficiency of $\sim$ 98\% in all cases.
+It should be noted that the efficiency curves for different gas mixture do not coincide because for a given high voltage operating point, the effective gain of detector with $Ar/CO_2$  mixture is approximately one order of magnitude higher than that for the $Ar/CO_2/CF_4$ mixture.
+This implies that we can operate our detector without using $CF_4$ gas, which is non-eco friendly, without compromising with the efficiency.
       
 
-\subsubsection{Timing Measurement}
-The time resolution of a detector is defined as the minimum gate width necessary on the detection electronics for full efficiency.
+\subsubsection{Time Resolution}
+The time resolution is defined as the time taken by detector to generate a signal on the readout electrode after the passage of particle through it.
+% The time resolution of a detector is defined as the minimum gate width necessary on the detection electronics for full efficiency.
 Experimentally, the time resolution is the root-mean-square of the Gaussian distribution of the time taken by the particle to reach detector from the scintillator.
-Along with the fast 40MHz ($25~ns$) clock pulse has been used to cope with the LHC bunch crossing. So, the detector time response is modelled as the Gaussian function, $f(t)$, convoluted with a square wave, $g(t)$, having pulse length $f_{clk}=25ns$ to represent discrete sampling. 
-%The functions $f(t)$ is given by:
-%\begin{equation}
-%f(t) = Ae^{-\frac{1}{2}(\frac{t-t_0}{\sigma})^2}
-%\end{equation}
-%where A is amplitude of Gaussian function, $t_0$  is the mean value of Gaussian, and $\sigma$ is the standard deviation of Gaussian. And, $g(t)$ is given by
-%\begin{equation}
-%g(t) =
-%       \begin{cases}
-%               0, & \text{else} \\
-%               1, & \text{$-\frac{f_{clk}}{2}<t<\frac{f_{clk}}{2}$}
-%       \end{cases}
-%\end{equation}
-%where, $f_{clk}$ is the length of created 40MHz window.
-The convolution of the two functions is
+% Along with the fast 40MHz ($25~ns$) clock pulse has been used to cope with the LHC bunch crossing.
+The detector time response is modelled as the Gaussian function, $f(t)$, convoluted with a square wave, $g(t)$, having a pulse length $f_{clk}=25ns$ (LHC clock frequency) to represent discrete sampling. 
+The functions $f(t)$ is given by:
+\begin{equation}
+f(t) = Ae^{-\frac{1}{2}(\frac{t-t_0}{\sigma})^2}
+\end{equation}
+where A is amplitude of Gaussian function, $t_0$  is the mean value of Gaussian, and $\sigma$ is the standard deviation of Gaussian. And, $g(t)$ is given by
+\begin{equation}
+g(t) =
+      \begin{cases}
+              0, & \text{else} \\
+              1, & \text{$-\frac{f_{clk}}{2}<t<\frac{f_{clk}}{2}$}
+      \end{cases}
+\end{equation}
+where, $f_{clk}$ is the length of created 40MHz window.
+The convolution of the two functions is given as
 \begin{equation}
 (f*g)(t) = A \cdot \sigma \sqrt{\frac{\pi}{2}}\Big(erf\Big(\frac{u_{+}}{\sigma\sqrt{2}}\Big)-erf\Big(\frac{u_{-}}{\sigma\sqrt{2}}\Big)\Big)
 \end{equation}
-where $A$ is the amplitude of the Gaussian function, $\sigma$ is the standard deviation of Gaussian, and $u_{\pm}= t-t_0\pm\frac{f_{clk}}{2}$. 
-We fitted the experimental data with this convoluted function. From, the fit we extract the time resolution of the detector before the convolution. The time resolution as a function of $E_{drift}$ and current supplied to high voltage divider as shown in Fig. \ref{TimeResolution}. 
+% where $A$ is the amplitude of the Gaussian function, $\sigma$ is the standard deviation of Gaussian, and 
+where, $u_{\pm}= t-t_0\pm\frac{f_{clk}}{2}$. 
+The the experimental data is fitted with this convoluted function.
+% From, the fit we extract the time resolution of the detector before the convolution.
+The extracted time resolution as a function of $E_{drift}$ and current supplied to high voltage divider as shown in Fig. \ref{TimeResolution}. 
 
-Here, the time resolution  with gas $Ar/CO_2$ is fitted with the polynomial of order 2, while with gas $Ar/CO_2/CF_4$ was fitted with the polynomial of order 6. Also, the fit parameters for each fit is given in appendix~\ref{cha:efficiency_and_time_resolution_fit_parameters}.
+Here, the time resolution for the detector operated using gas $Ar/CO_2$ gas mixture is fitted using a polynomial of degree 2, while the one with $Ar/CO_2/CF_4$ gas mixture was fitted using the polynomial of order 6. Also, the fit parameters for each fit is given in appendix~\ref{cha:efficiency_and_time_resolution_fit_parameters}.
 
 The time resolution with $Ar/CO_2$ (70/30) is higher for lower values of $E_{drift}$.
-However, for any given point on the $Ar/CO_2$ curve has a gain approximately one order of magnitude higher gain than the corresponding gain with $Ar/CO_2/CF_4$ (45/15/40).  We are able to reach faster timing at lower gains with the addition of the $CF_4$ and this is important from the point of view of detector safety because this will allow us to operate the detector at lower gains, hence reducing the discharge probability.
+% However, for any given point on the $Ar/CO_2$ curve has a gain approximately one order of magnitude higher gain than the corresponding gain with $Ar/CO_2/CF_4$ (45/15/40).
+This means that we are able to reach faster timing at lower gains with addition of $CF_4$ and it is important from the point of view of detector safety because this will allow us to operate the detector at lower gains, hence reducing the discharge probability.
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.75\textwidth]{figures/GEM/TimeResolution_Edrift.jpeg}\\
 \includegraphics[width=0.75\textwidth]{figures/GEM/TimeResolution_Current.jpeg}\\
-\caption{Time-resolution with respect to $E_{drift}$ for two different gases.}
+\caption{Time-resolution with respect to $E_{drift}$ (top) and current supplied to high voltage divider (bottom) for two different gas mixture.}
 \label{TimeResolution}
 \end{figure}
-
-
-
-\subsubsection{Cluster Size Study}
-
-Cluster size is defined as the average number of readout strips sharing charge from ionisation of single charged particles.
-To study the cluster size, clusterization algorithm is used. The basis of this algorithm is that we considered clusters if there are one or more continuous strips are fired.
-Three golden run ranges are studied with different eta sector are 2014H4A, 2014H4C and 2014H4D.
-The description of these runs are given in Table~\ref{tab:gemTBgoldenruns}.
-
-To fit the cluster size distribution, Poisson function is used that calculates the number of events in specified intervals. Figure~\ref{fig:CSDpoissonfunction} shows the cluster size distribution for different ($\eta$, $\phi$) sector fitted with the Poisson distribution function.
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.45\textwidth]{figures/GEM/Run1644.png}%
-    \includegraphics[width=0.45\textwidth]{figures/GEM/Run1869.png}\\
-    \includegraphics[width=0.45\textwidth]{figures/GEM/Run2066.png}
-    \caption{Left: Cluster size distribution for Run1644 in ($\eta$, $\phi$) = (5,2), Right: For Run1869 in ($\eta$, $\phi$) = (8,2), Bottom: For Run2066 in ($\eta$, $\phi$) = (1,2)}
+    \includegraphics[width=5.5cm,height=6cm]{figures/GEM/Run1644.png}%
+    \includegraphics[width=5.5cm,height=6cm]{figures/GEM/Run1869.png}%
+    \includegraphics[width=5.5cm,height=6cm]{figures/GEM/Run2066.png}
+    \caption{Cluster size distribution for GE1/1 detectors obtained during the beam test campaign: for run number 1644 in region ($\eta$, $\phi$) = (5,2) (left), for the Run number 1869 in region ($\eta$, $\phi$) = (8,2) (middle) and for Run number 2066 in region ($\eta$, $\phi$) = (1,2) (right).}
     \label{fig:CSDpoissonfunction}
 \end{figure}
-Study for the cluster size is done only for the three above mentioned golden run ranges. Distribution is studied with the different fiducial region (full exposed area of the detector). Figure~\ref{fig:CSDfiducialregion} shows that the cluster size is independent of the fiducial region.
 \begin{figure}[!htbp]
     \begin{center}
-      \includegraphics[width=6cm,height=6cm]{figures/GEM/CurrentvsClusterSizeR1592R1646.png}%
-      \includegraphics[width=6cm,height=6cm]{figures/GEM/CurrentvsClusterSizeR1869R1903.png}\\
-      \includegraphics[width=6cm,height=6cm]{figures/GEM/CurrentvsClusterSizeR2065R2123.png}
+      \includegraphics[width=5.5cm,height=6cm]{figures/GEM/CurrentvsClusterSizeR1592R1646.png}%
+      \includegraphics[width=5.5cm,height=6cm]{figures/GEM/CurrentvsClusterSizeR1869R1903.png}%
+      \includegraphics[width=5.5cm,height=6cm]{figures/GEM/CurrentvsClusterSizeR2065R2123.png}
     \end{center}
-    \caption{Cluster size distribution with different fiducial region: Left - Run1592\_R1646 in ($\eta$, $\phi$) = (5,2), Right - Run1869\_R1903 in ($\eta$, $\phi$) = (8,2), Bottom - Run2065\_R2123 in ($\eta$, $\phi$) = (1,2)}
+    \caption{Mean value of cluster size distribution at different current supplied to high voltage divider obtained during the beam test campaign: for 2014H4A which was taken for region ($\eta$, $\phi$) = (5,2) (left), for 2014H4C taken for region ($\eta$, $\phi$) = (8,2) (middle) and for 2014H4D taken for region ($\eta$, $\phi$) = (1,2).}
   \label{fig:CSDfiducialregion}
 \end{figure}
 \begin{figure}[!htbp]
@@ -517,21 +532,37 @@ Study for the cluster size is done only for the three above mentioned golden run
    \caption{Cluster size distribution: Left - GE1/1-IV, Right - GE1/1-IV-GIF}
    \label{fig:CSDGE1/1}
 \end{figure}
-Final cluster size study distributions for the GE1/1-IV and GE1/1-IV-GIF are plotted with respect to the current supplied to the high voltage divider and shown in Figure~\ref{fig:CSDGE1/1}.
-Cluster size is taken with the Poisson fitting function. The cluster size is greater in ($\eta$, $\phi$) = (5,2) region for both the detectors due to the uniformity in readouts channels. As it is known that the GE1/1 $4^{th}$ generation prototype is suffered from the significant bending in the readout and drift PCB. This impacts GE1/1 properties like primary charge created, uniformity, transparency of bottom of third GEM foil, charge collection by the readout, etc. Thus, it is expected that that non-uniformity in the cluster size distrubution in ($\eta$, $\phi$) sector (1,2), (5,2), and (8,2) is because of this. This issue is improved in the next version of GE1/1 prototype, known as GE1/1-V.
+
+
+\subsubsection{Cluster Size Measurement}
+To measure the cluster size of GE1/1, clusterization algorithm is used.
+The basis of this algorithm is that we considered clusters if one or more continuous strips in GE1/1 are fired.
+Three golden run ranges, with different eta sector, viz 2014H4A, 2014H4C and 2014H4D are studied.
+The description of these runs is given in Table~\ref{tab:gemTBgoldenruns}.
+
+To fit the cluster size distribution, Poisson function is used. Figure~\ref{fig:CSDpoissonfunction} shows the cluster size distribution for different ($\eta$, $\phi$) sector fitted using the Poisson distribution function.
+
+% Study for the cluster size is done only for the three above mentioned golden run ranges.
+Distribution is studied for different values of fiducial region and it is observed that the cluster size is independent of the fiducial region (Fig.~\ref{fig:CSDfiducialregion}).
+
+Cluster size study distributions for the GE1/1-IV and GE1/1-IV-GIF are plotted as a function of current supplied to the high voltage divider and are shown in Figure~\ref{fig:CSDGE1/1}.
+% Cluster size is taken with the Poisson fitting function. 
+The cluster size is greater in ($\eta$, $\phi$) = (5,2) region for both the detectors due to the uniformity in readouts channels. As it is known that the GE1/1 $4^{th}$ generation prototype is suffered from the significant bending in the readout and drift PCB. This impacts GE1/1 properties like primary charge created, uniformity, transparency of bottom of third GEM foil, charge collection by the readout, etc. Thus, it is expected that that non-uniformity in the cluster size distribution in ($\eta$, $\phi$) sector (1,2), (5,2), and (8,2) is because of this. This issue is improved in the next version of GE1/1 prototype, known as GE1/1-V.
 % subsection results (end)
 
 % section gem_for_cms (end)
 
-\section{GEM Foil Production and Characterization} % (fold)
-\label{sec:gem_foil_production_and_characterization}
-Through the Transfer of Technology (TOT) agreement with CERN, Micropack (a Banguluru based Pvt. Ltd. company) signed an agreement for the development of GEM foil in India in collaboration with the Indian Institution.
-Micropack started producing the $10~cm~\times~10~cm$ GEM foil using the single mask technique, as this is the one used in GE1/1 detectors which will be installed in the CMS.
-But, after continuous effort and several trials they realized that single mask GEM foil production is the quite challenging method.
-Then they switched to the double mask technique and quickly they succeeded with this method. 
-They used the similar method used at CERN PCB workshop~\cite{DEOLIVEIRA2009}. 
+\section{Characterization and Production of GEM Foil} % (fold)
+\label{sec:characterization_and_production_of_gem_foil}
+Through the Transfer of Technology (TOT) agreement with CERN, Micropack Pvt. Ltd. (a Banguluru based company) signed an agreement for the development of GEM foil in India in association with the Indian Institution.
+Micropack started producing the $10~cm~\times~10~cm$ GEM foils using the single mask technique, as  being used to produce GEM foils for GE1/1 detectors.
+% But, after continuous effort and several trials they realized that single mask GEM foil production is the quite challenging method.
+Soon it was realized that the production of GEM foil using the single mask technique is quite challenging and thus switched to the double mask production technique.
+% and quickly they succeeded with this method. 
+% They used the similar method used at CERN PCB workshop~\cite{DEOLIVEIRA2009}. 
+Same production technique were adopted for the foil production as being done at the CERN PCB workshop~\cite{DEOLIVEIRA2009}.
 
-Micropack used the Kapton foil having a thickness of 50 $\mu m$ with 5 $\mu m$ of copper coating on either side of Kapton foil. Fig.~\ref{fig:Foil_and_Cone_a} shows the $10~cm~\times~10~cm$ GEM foil produced by Micropack and the cross-sectional view of its double conical hole is shown in Fig.~\ref{fig:Foil_and_Cone_b}.
+Micropack used the Kapton foil having a thickness of 50 $\mu m$ with 5 $\mu m$ of copper coating on its either sides. Fig.~\ref{fig:Foil_and_Cone_a} shows the $10~cm\times10~cm$ GEM foil produced by Micropack and the cross-sectional view of its double conical hole is shown in Fig.~\ref{fig:Foil_and_Cone_b}.
 \begin{figure}[!htbp]
     \centering
     \begin{subfigure}[b]{0.46\textwidth}
@@ -544,45 +575,57 @@ Micropack used the Kapton foil having a thickness of 50 $\mu m$ with 5 $\mu m$ o
         \caption{ }
         \label{fig:Foil_and_Cone_b}
     \end{subfigure}
-   \caption{(a) 10 cm $\times$ 10 cm GEM foil encapsulated in a frame and (b) Cross-sectional view of the foil showing the double cone structure of the engraved holes. } \label{fig:Foil_and_Cone}
+   \caption{(a) 10 cm $\times$ 10 cm GEM foil encapsulated in a frame and (b) Cross-sectional view of the foil showing the double cone structure of the engraved holes, developed by Micropack.} \label{fig:Foil_and_Cone}
 \end{figure}
 
-To qualify the GEM foil commercially and scientifically reliable it has to pass some quality control test. For a GEM foil the general steps are listed below:
+% To qualify the GEM foil commercially and scientifically reliable it has to pass some quality control test. For a GEM foil the general steps are listed below:
+Before being used for the detector fabrication, the GEM foils required to pass certain quality control tests, which are listed below:
 \begin{enumerate}
-    \item Visual inspection,
+    \item Visual inspection
     \item Optical test, and 
-    \item Electrical test of the foil
+    \item Electrical test
 \end{enumerate}
 
-Before describing these three inspections one of the important tasks is that one should open/expose the GEM foil only in the clean room\footnote{Clean room is a specially designed room, maintained at extremely low level of particles per cubic meters, for a specialized industrial production or scientific research. For example, a ``\textit{Class-100}'' clean room is designed to never allow more than 100 particles (0.5 microns or larger) per cubic foot of air. ``\textit{Class-1000}'' and ``\textit{Class-10000}'' clean rooms are designed to limit particles to 1000 and 10,000 respectively.} of at least class 100 or better.
-As the typical size of GEM holes is 50 $\mu m$ and if it fills up with lots of dust then it will have a destructive discharge as soon as we connect it to the power.
-In Delhi University it was done in class 100 clean room installed with KANOMAX dust particle counter model 3887~\cite{KANOMAX-dust-particle-counter} which monitor particle count.
-Also, the clean room is equipped with the dehumidifier for humidity control.
+% Before describing these three inspections one of the important tasks is that one should open/expose the GEM foil only in the clean room\footnote{Clean room is a specially designed room, maintained at extremely low level of particles per cubic meters, for a specialized industrial production or scientific research. For example, a ``\textit{Class-100}'' clean room is designed to never allow more than 100 particles (0.5 microns or larger) per cubic foot of air. ``\textit{Class-1000}'' and ``\textit{Class-10000}'' clean rooms are designed to limit particles to 1000 and 10,000 respectively.} of at least class 100 or better.
+% As the typical size of GEM holes is 50 $\mu m$ and if it fills up with lots of dust then it will have a destructive discharge as soon as we connect it to the power.
+% In Delhi University it was done in class 100 clean room installed with KANOMAX dust particle counter model 3887~\cite{KANOMAX-dust-particle-counter} which monitor particle count.
+
+All these tests are required to be performed in the clean room\footnote{Clean room is a specially designed room, maintained at extremely low level of particles per cubic meters, for a specialized industrial production or scientific research. For example, a ``\textit{Class-100}'' clean room is designed to never allow more than 100 particles (0.5 microns or larger) per cubic foot of air. ``\textit{Class-1000}'' and ``\textit{Class-10000}'' clean rooms are designed to limit particles to 1000 and 10,000 respectively.} of at least class 1000 or better.
+This is done to avoid the filling up of GEM foils with dust particles.
+Even a small amount of dust inside the GEM holes could lead to a destructive discharge thereby destroys the whole foil.
+At Delhi University the GEM foils are handled in the clean room of class 100. It is installed with KANOMAX dust particle counter model 3887~\cite{KANOMAX-dust-particle-counter} which continuously monitors the particle count inside the clean room.
+Also, the clean room is equipped with a dehumidifier for humidity control.
 
 
 \subsection{Visual Inspection} % (fold)
 \label{sub:visual_inspection}
-At first one has to inspect visually for dust particles and major defects visible to the eye.
-If things seem fine then one has to clean it using the adhesive roller, as shown in Fig.~\ref{fig:adhesive_roller}.
+At first one has to inspect visually the GEM foil for any dust or defects visible to the naked eye.
+GEM foils are cleaned using the adhesive rolled as shown in Fig.~\ref{fig:adhesive_roller} to remove dust particles.
+% At first one has to inspect visually for dust particles and major defects visible to the eye.
+% If things seem fine then one has to clean it using the adhesive roller, as shown in Fig.~\ref{fig:adhesive_roller}.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.55\textwidth]{figures/GEM/Adhesive_roller.jpg}
-    \caption{Adhesive roller for cleaning GEM foil.}
+    \caption{Adhesive roller used for the cleaning of GEM foil.}
     \label{fig:adhesive_roller}
 \end{figure}
 % subsection visual_inspection (end)
 
 \subsection{Optical Test} % (fold)
 \label{sub:optical_test}
-Using an optical test we will try to find out:
+Optical test is carried out to check the GEM foil for any:
+% Using an optical test we will try to find out:
 \begin{itemize}
-    \item microscopic defects, which is not visible to the eyes.
-    \item Measure the inner and outer hole diameter and pitch size.
+    \item microscopic defects, not visible to the eyes and
+    \item to measure the inner and outer hole diameter and the pitch size.
 \end{itemize}
-The motivation for this is the following:
+The motivation to perform the optical test is following:
 \begin{itemize}
-    \item The foil defects such as the over-size hole, missing hole, excess etching, etc will degrade the performance of foil locally.
-    \item As the gain depends on the diameter of the hole and the thickness of foil (as shown in Fig.~\ref{fig:gain-vs-holediameter}). So, it will help us to understand the performance of GEM foil such as gain, etc at a later stage.
+    \item The foil defects such as the over-size hole, missing hole, excess etching, etc could degrade the performance of foil and thus the overall detector efficiency.
+    % will degrade the performance of foil locally.
+    \item As the gain of the detector depends on the diameter of the hole and thickness of the foil (as shown in Fig.~\ref{fig:gain-vs-holediameter}).
+    Thus, it is necessary to check their dimensions.
+    % So, it will help us to understand the performance of GEM foil such as gain, etc at a later stage.
 \end{itemize}
 \begin{figure}[htbp]
     \centering
@@ -590,10 +633,10 @@ The motivation for this is the following:
     \caption{Real gain and effective gain variation with GEM hole diameter~\cite{Bachmann1999} having a foil thickness of 60 $\mu m$ (= 50 $\mu m$ + 5$ \mu m$ + 5 $\mu m$). As the hole diameter decreases the effective gain increases till 70 $\mu m$ after that it reaches saturation. This is due to loss of generated electrons in the avalanche to the bottom of the GEM electrode when hole diameter is reduced below the foil thickness.}
     \label{fig:gain-vs-holediameter}
 \end{figure}
-To check the defects and to measure the hole-size and pitch several methods was developed using an automated 2D-CCD scanner~\cite{Posik2015, Becker2006}. 
+To check any defects and to measure the hole-size and pitch for a GEM foil several methods have been developed using an automated 2D-CCD scanner~\cite{Posik2015, Becker2006}. 
 However, we used a different technique.
 We divided the GEM foil into several sectors and captured a high-resolution picture using the AF-S Micro Nikon 40 mm 1:2.8G lens.
-We used a softbox ($1~m~\times~1~m$) light source for uniform illuminating the GEM foil.
+We used a softbox ($1~m~\times~1~m$) light source for uniformly illuminating the GEM foil.
 A sketch of the set-up is shown in Fig.~\ref{fig:Optical_Sketch}.
 \begin{figure}[!htbp]
     \centering
@@ -603,11 +646,16 @@ A sketch of the set-up is shown in Fig.~\ref{fig:Optical_Sketch}.
         %\includegraphics[width=9cm, height=8cm]{figures/GEM/figures/Optical_Sketch.png}
     %    \caption{ }
     %\end{subfigure}
-   \caption{Sketch of the set-up used for the optical measurements.}   \label{fig:Optical_Sketch}
+   \caption{Sketch of the set-up used for optical measurements of the GEM foil.}   \label{fig:Optical_Sketch}
 \end{figure}
-Fig~\ref{fig:Optical_01} shows the found defects in the considered GEM foil. Also, the measured number of defects is shown in Fig.~\ref{fig:Optical_04}. There is a total of 785 defects found in the GEM foil out of total 600,000 holes in one GEM foil.
-Thus there is approximately 0.13\% of defects are there.
-Also, a similar number of defects observed in the other two foils. Thus, the local effects in the GEM detector performance should be almost negligible due to the GEM foil defects.
+Fig~\ref{fig:Optical_01} shows the found defects in the considered GEM foil.
+Also, the observed number of defects are shown in Fig.~\ref{fig:Optical_04}.
+% A total of 785 defects were found in the GEM foil out of total 600,000 holes in one GEM foil.
+Out of 600,000 holes in the GEM foil, defects were found in 785 holes, i.e, 0.13\% of total holes are defected.
+% Thus there is approximately 0.13\% of defects are there.
+Also, similar number of defects were observed in other two GEM foils.
+% Thus, the local effects in the GEM detector performance should be almost negligible due to the GEM foil defects.
+The resulting local effects in the GEM foil due to these small fractions of defected holes are not expected to deteriorate the overall performance of the GEM detector.
 \begin{figure}[!htbp]
     \centering
     \begin{subfigure}[b]{0.29\textwidth}
@@ -644,7 +692,7 @@ Also, a similar number of defects observed in the other two foils. Thus, the loc
         \caption{ }
         \label{fig:O_5c}
     \end{subfigure}
-   \caption{Observed imperfections in the foils: (a) Un-etched area, (b) under-size hole, (c) over-size hole (d) missing hole, (e) excess etching and (f) burnt area.} \label{fig:Optical_01}
+   \caption{Observed imperfections in the GEM foils: (a) Un-etched area, (b) under-size hole, (c) over-size hole (d) missing hole, (e) excess etching and (f) burnt area.} \label{fig:Optical_01}
 \end{figure}
 \begin{figure}[!htbp]
     \centering
@@ -664,17 +712,24 @@ Also, a similar number of defects observed in the other two foils. Thus, the loc
 
 \subsection{Electrical Test} % (fold)
 \label{sub:electrical_test}
-This is one of the most important tests which can tell us about the short circuit of the two copper foil, using the leakage current measurement.
-Also, it helps us to clean the GEM foil for few dust that can be seen/hear as a spark.
-But, if there are the huge number of frequent spark happens then we should quickly stop the electricity and clean the foil properly. In order to qualify the foils the electrical test is divided into two steps as per the CERN standard~\cite{Abbaneo2015}:
+This is one of the most important test for the GEM foil, which deals with the measurement of leakage or dark current.
+Dark current exceeding the prescribed limits could lead to a short circuit in the foil thereby damaging the foil permanently.
+A spark can also be produced due to presence of dust particle on the GEM foil, hence, the cleanliness of GEM foils is also ensured during this test.
+% This is one of the most important tests which can tell us about the short circuit of the two copper foil, using the leakage current measurement.
+% Also, it helps us to clean the GEM foil for few dust that can be seen/hear as a spark.
+But, if there are the huge number of frequent spark happens then we should quickly stop the electricity and clean the foil properly.
+The electricity test are carried out for foils in two steps as per the CERN standards~\cite{Abbaneo2015}:
+% In order to qualify the foils the electrical test is divided into two steps as per the CERN standard~\cite{Abbaneo2015}:
 \begin{enumerate}
-    \item Quality control fast or QC-fast, and
+    \item Quality control fast or QC-fast and
     \item Quality control for long or QC-long.
 \end{enumerate}
-The difference between QC-fast and QC-long in the two lies in the applying voltage for shorter or longer period of time respectively and monitor the current. Other difference is that QC-fast gives us quick result about the leakage current or electrical connectivity of the foil while QC long provides the behaviour of foil at high voltages and gives us the actual leakage current and the number of discharges if any.
+QC-long and QC-short test differ in terms of the duration for which high voltage is applied to the detector to monitor its leakage current.
+% The difference between QC-fast and QC-long lies in the applying voltage for shorter or longer period of time respectively and monitor the current.
+Other difference is that QC-fast gives us a quick result about the leakage current or electrical connectivity of the foils while QC long provides the behaviour of foil at high voltages and gives us the actual leakage current and the number of discharges if present.
 \subsubsection{QC-fast} % (fold)
 \label{ssub:qc_fast}
-This is done using the insulation tester MIT Megger 420~\cite{twelve}. Using this it is established that the foil has good electrical connectivity. As the 600 V potential is applied across the GEM foil for about a minute and current did not exceed 10 $nA$ and the resistivity in the air between the two foil exceeds 2 $G\Omega$.
+This test is performed using the insulation tester MIT Megger 420~\cite{twelve}. This test confirms that the foil have good electrical connectivity. As the 550 V potential is applied across the GEM foil for about a minute and current did not exceed 10 $nA$ and the resistivity in the air between the two foil exceeds 2 $G\Omega$.
 % \begin{figure}[!htbp]
 %     \centering
 %     \includegraphics[width=0.45\textwidth]{figures/GEM/megger.png}
@@ -685,7 +740,7 @@ This is done using the insulation tester MIT Megger 420~\cite{twelve}. Using thi
 
 \subsubsection{QC-long} % (fold)
 \label{ssub:qc_long}
-For this, the measurement set-up is shown in Fig.~\ref{fig:Cleaning_Measurement}. It consists of GEM foil enclosed in a Plexiglass enclosure in which nitrogen gas was continuously floated. And the foil is connected with the Keithley 6517B picoammeter~\cite{Keithley-6517B-picoammeter} interfaced with a computer via a GPIB interface and the LabView program was used to record the measurement. The leakage current was measured as a function of applied voltage as shown in Fig.~\ref{fig:Indian_foils_H20}. Also, for the comparison of the same measurement was made with the $10~cm~\times~10~cm$ GEM foil produced at CERN. The results using the CERN foil is shown in Fig.~\ref{fig:CERN_foils}. Thus it is observed that the two foils one produced by Micropack, an Indian Pvt. company and another produced at CERN shows similar behaviour and the leakage current is under the defined limit of 10 $nA$.
+For this, the measurement the electronics set-up is shown in Fig.~\ref{fig:Cleaning_Measurement}. It consists of a GEM foil enclosed in a Plexiglass enclosure in which nitrogen gas is continuously floated. The foil is connected to a the Keithley 6517B picoammeter~\cite{Keithley-6517B-picoammeter} interfaced with a computer via a GPIB interface and the LabView program is used to record the measurements. The leakage current is measured as a function of applied voltage as shown in Fig.~\ref{fig:Indian_foils_H20}. Also, for the sake of comparison same measurement was made with $10~cm~\times~10~cm$ GEM foil produced at CERN. The results using the CERN foil is shown in Fig.~\ref{fig:CERN_foils}. It is observed that the two foils, one produced by Micropack and another produced at CERN, show similar behaviour and the leakage currents are well within the limit (10 $nA$), set by CERN QC criteria.
 % subsubsection qc_long (end)
 \begin{figure}[!htbp]
     \centering
@@ -712,11 +767,11 @@ For this, the measurement set-up is shown in Fig.~\ref{fig:Cleaning_Measurement}
         \caption{ }
         \label{fig:CERN_foils}
     \end{subfigure}
-   \caption{Leakage Current of (a) Micropack Foils and (b) CERN Foils, at an average temperature of T=27$^{\circ}$C and relative humidity equal to 20\%.} \label{fig:L_01}
+   \caption{Leakage Current for (a) Micropack Foils and (b) CERN Foils, at an average temperature of T=27$^{\circ}$ C and 20\% relative humidity.} \label{fig:L_01}
 \end{figure}
 
 % subsection electrical_test (end)
-% section gem_foil_production_and_characterization (end)
+% section characterization_and_production_of_gem_foil (end)
 
 % \section{Summary} % (fold)
 % \label{sec:summary}

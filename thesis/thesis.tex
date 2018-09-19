@@ -20,6 +20,9 @@
 % for <bra> <ket> notation 
 \usepackage{braket}
 
+
+\usepackage{textcomp}
+
 % for degree symbol (https://tex.stackexchange.com/questions/384873/what-is-the-degree-symbol)
 \usepackage{siunitx}
 
@@ -32,12 +35,14 @@
 \usepackage{footnote}
 \makesavenoteenv{tabular}
 \makesavenoteenv{table}
+\usepackage{multirow}
+
 
 % packages for todonotes
 \usepackage[colorlinks]{hyperref}
 \usepackage[table]{xcolor}
-% \usepackage[colorinlistoftodos]{todonotes}
-\usepackage[disable]{todonotes} % To hide uncomment this and comment upper line
+\usepackage[colorinlistoftodos]{todonotes}
+% \usepackage[disable]{todonotes} % To hide uncomment this and comment upper line
 % \usepackage{menukeys}
 
 \usepackage{url}
@@ -68,6 +73,24 @@
 % How to make curvy L
 % Reference: https://tex.stackexchange.com/a/11144/41568
 \newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\Et}{\ensuremath{E_\mathrm{T}}}
+\newcommand{\Pt}{\ensuremath{P_\mathrm{T}}}
+\newcommand{\pt}{\ensuremath{P_\mathrm{T}}}
+\newcommand{\met}{\ensuremath{\Et^{\mathrm{miss}}}}
+\newcommand{\ptmiss}{\ensuremath{\Pt^{\mathrm{miss}}}}
+\newcommand{\Ptmiss}{\ensuremath{\Pt^{\mathrm{miss}}}}
+\newcommand{\WW}{\ensuremath{\W^+\W^-}}
+\newcommand{\Wjets}{\ensuremath{\mathrm{W+jets}}}
+\newcommand{\Zjets}{\ensuremath{\mathrm{Z+jets}}}
+\newcommand{\GeV}{\ensuremath{\mathrm{GeV}}}
+\newcommand{\PW}{\ensuremath{\mathrm{W}}}
+\newcommand{\PZ}{\ensuremath{\mathrm{Z}}}
+\newcommand{\TeV}{\ensuremath{\mathrm{TeV}}}
+\newcommand{\ifb}{\ensuremath{\mathrm{fb^{-1}}}}
+\newcommand{\fbinv}{\ensuremath{\mathrm{fb^{-1}}}}
+\newcommand{\PHpm}{\ensuremath{\mathrm{H}^{\pm}}}
+\newcommand{\PH}{\ensuremath{\mathrm{H}}}
+\newcommand{\MADGRAPH}{\textsc{MadGraph}\xspace}
 
 \makeatletter
 \renewcommand{\@chapapp}{}% Not necessary...
@@ -107,13 +130,26 @@
   % \include{chapters/1_Introduction2}
   % \include{chapters/2_LHC_CMS_OfflineRecon}
   \include{chapters/3_GEM_Detectors}
-  % \include{chapters/3_GE11-TBA}
-  % \include{chapters/Hardware_org}
+  % \include{chapters/4_Object_Reconstruction}
+  % \include{chapters/Background-Estimation}
+  % \include{chapters/Event-Reconstruction}
+  % \include{chapters/MC_Generations}
+  % \include{chapters/Multivariate_Analysis}
+  % \include{chapters/ObjectReconstruction}
+  % \include{chapters/PhysicsAnalysis-ChargedHiggs}
+  % \include{chapters/PhysicsAnalysis-EFT}
+  % \include{chapters/PhysicsAnalysis-General}
+  % \include{chapters/Results}
+  % \include{chapters/Sample}
+  % \include{chapters/Statistics}
+  % \include{chapters/Systematics}
+  % \include{chapters/Variable}
   % \include{chapters/VBS}
   
   \begin{appendices}
-  %    % \include{appendix/synchtron_radiation}
-  %    \include{appendix/GE11_generations}
+    % \include{appendix/Physics_Intro_Important_Points}
+  %    \include{appendix/synchtron_radiation}
+     \include{appendix/GE11_generations}
      \include{appendix/Gaseous_Detector_Important_Point}
      \include{appendix/GE11_measured_parameters}
      \include{appendix/GEM_Efficiency_TimeRes_FitPars}
