@@ -1,15 +1,8 @@
 \chapter{Introduction}
-
 \begin{chapquote}
 {Edward Witten}
 ``Particle physics is a modern name for the centuries old effort to understand the basic laws of physics.''
 \end{chapquote}
-
-\begin{chapquote}
-{C.N. Yang}
-Now if we adopt the view that this arbitrary convention should be independently chosen at every space-time point, then we are naturally led to the concept of gauge fields.
-\end{chapquote}
-
 %
 % Mandatory citations: 
 % aQGC thesis by Carsten Bittrich ~\cite{Bittrich2012}
@@ -29,6 +22,62 @@ In this chapter, first a brief introduction to SM is given then a unique way to 
 
 \section{Brief Introduction of SM} % (fold)
 \label{sec:brief_introduction_of_sm}
+SM is the theory of elementary particles and their interactions. It is well tested and in good agreement with experimental results.
+
+Till now we know four fundamental interactions. Out of four, the gravitational interaction is not included in SM. The other three forces the strong force interaction is described by Quantum Chromodynamics (QCD), the electromagnetic interaction is described by Quantum Electrodynamics (QED) and the weak interaction are included in the SM. In 1979 Sheldon Glashow, Abdus Salam, and Steven Weinberg awarded Nobel prize for their effort to unify the theory of weak interaction and the quantum electrodynamics. This unified theory of weak interaction and quantum electrodynamics is known as electroweak theory.
+
+According to SM all the fundamental particles can be classified into two categories. They are fermions and bosons.
+
+Fermions are the particles that obey the Fermi-Dirac statistics with half-integer spin. In SM fermions are further classified into leptons and quarks, which are listed in Table~\ref{table:smfermions} . Till now we know the three generations of leptons as well as quarks. The different generations are differ only in the particle mass.
+\begin{table}
+% \vspace{-5.2em}
+\centering
+\begin{tabular}[!htbp]{l l l l l l}
+\hline
+{\textbf{Generation}} & {\textbf{Fermion}} & {\textbf{Electric}} & \multicolumn{2}{c}{\textbf{Weak isospin $|I_3|$}} & \textbf{Mass in MeV} \\
+    &           &    \textbf{Charge}  & \textbf{left-} & \textbf{right-} &     \\
+    &           &                     & \textbf{handed} & \textbf{handed} &    \\
+\hline
+\multirow{4}{*}{$1^{st}$} & electron ($e^-$)           &   -1 & 1/2 &  0    &   0.511 \\
+         & electron-neutrino ($\nu_e$)&   0  & 1/2 &  none &   $<2~.~10^{-6}$   \\
+         & up quark ($u$)             &  2/3 & 1/2 &  0    &   2.3  \\
+         & down quark ($d$)           & -1/3 & 1/2 &  0    &   4.8  \\
+\hline
+\multirow{4}{*}{$2^{nd}$} & muon ($\mu^-$)             &  -1  & 1/2 &  0    &   105.7 \\
+         & muon-neutrino ($\nu_{\mu}$)& 0    & 1/2 &  none &   $<2~.~10^{-6}$   \\
+         & charm quark ($c$)                & 2/3  & 1/2 &  0    &   1275     \\
+         & strange quark ($s$)              & -1/3 & 1/2 &  0    &   95       \\
+\hline
+\multirow{4}{*}{$3^{rd}$} & tau ($\tau^-$)             & -1   & 1/2 &  0    &    1177    \\
+         & tau-neutrino ($\tau_{\mu}$)& 0    & 1/2 &  none &   $<2~.~10^{-6}$   \\
+         & top quark ($t$)                  & 2/3  & 1/2 &  0    &   $1.735\times 10^5$\\
+         & bottom quark ($b$)               & -1/3 & 1/2 &  0    &   $4.18 \times 10^3$\\
+\hline
+\end{tabular}
+\caption{Fermions list in SM~\cite{Bittrich2012}.}
+\label{table:smfermions}
+\end{table}
+
+Bosons are the particles that obey the Bose-Einstein statistics with integer spin. In SM the bosons are the mediator of interactions between the particles, described by local gauge theory. Thus, these bosons are called gauge bosons. All the bosons in SM are listed in Table~\ref{table:smbosons}. The photon and gluons are massless carrying electromagnetic and strong force respectively. The $W^{\pm}$ and $Z$ bosons carry the weak force. These bosons are the spin 1 bosons and known as the vector-bosons. Whereas, the Higgs boson, H, is a scalar boson with spin 0.
+
+\begin{table}
+% \vspace{-5.2em}
+\centering
+\begin{tabular}[!htbp]{l l l l l l}
+\hline
+    & \textbf{Bosons} & \textbf{Electric Charge} & \textbf{Spin} & \textbf{Interaction} & \textbf{Mass in GeV} \\
+\hline
+$\gamma$  & photon   & 0      & 1 & electromagnetic   &   $<1~.~10^{-27}$ \\
+$W^{\pm}$ & W bosons & $\pm$1 & 1 & weak              &  80.385     \\
+$Z^0$     & Z boson  & 0      & 1 & weak              &  91.188     \\
+$g$       & gluons   & 0      & 1 & strong            &  0          \\
+\hline
+$H$       & Higgs    & 0      & 0 &                    & 125        \\
+\hline
+\end{tabular}
+\caption{Bosons list in SM~\cite{Bittrich2012}.}
+\label{table:smbosons}
+\end{table}
 
 \subsection{Standard Model as Gauge theory}
 % The concept of gauge invariance is fundamental in the construction of the Standard Model of strong, weak and electromagnetic interactions of elementary particles. The gauge principle prescribes that, given the gauge symmetry group and the transformations of the fields, the quantum field theory is uniquely defined [@book:CoughlanDodd].
@@ -60,16 +109,19 @@ With each of these gauge groups $(SU(3),SU(2)$ and $U(1))$ there is associated a
 
 These renormalizable gauge theories allow the presence of spin 0 (scalar) particles, too [article:higgs]. The usual formulation of the Standard Model requires at least one of these, the Higgs scalar boson, arising from the mechanism for spontaneously breaking the $SU(2)\times U(1)$ electroweak symmetry and giving masses to the weak gauge bosons and to the leptons and quarks. This mechanism is a vital part of the SM.
 
+\subsection{Brief Introduction to Higgs Mechanism} % (fold)
+\label{sub:brief_introduction_to_higgs_mechanism}\
+The one of main issue with the electroweak theory was that all the particles were assumed to be massless.
+The mass term was not invariant under the local gauge transformation under $SU(2)_L \times U(1)_Y$ and therefore breaks symmetry.
+This issue was solved by the Higgs mechanism.
+The Higgs mechanism predicts a symmetrical Higgs field having non-invariant lowest energy state. This gives mass to the fermions and boson by interacting with the Higgs field. The Higgs field can only be observed via its excitation known as the Higgs boson, H. In this section the Higgs mechanism is briefly described.
+% If the broken direction in symmetry space also corresponds to a gauge symmetry (i.e. a space-time dependent symmetry) then the associated Goldstone boson and the massless gauge boson combine to form a massive gauge boson -- \textbf{the Higgs mechanism}~\cite{Chanowitz1988}
 
-\subsection{Brief Introduction to Higgs mechanism}
-This is brief intro to Higgs.
-
-% Electroweak symmetry breaking and the Higgs mechanism: [@article:LEPtoLHC] [@article:abd][@article:tasi]
-The Higgs part
+The electroweak theory contains $SU(2)_L \times U(1)_Y$ symmetry and the Higgs part of full Lagrangian is given by
 \begin{equation}
     L_H=(D_{\mu}\Phi)^{\dagger}(D^{\mu}\Phi)-V(\Phi)
 \end{equation}
-of the SM lagrangian extends the experimentally well established particle content of the SM by the complex scalar SU(2) doublet $\Phi = (\phi^{+},\phi^0)^T$ of weak hypercharge $Y_{w,\Phi}=1$, so that $\phi^{+}$ carries charge +e and $\phi^0$ is neutral. In toal $\Phi$ involves four degree of freedom. The self-interaction of $\Phi$ is described by the potential
+of the SM Lagrangian extends the experimentally well established particle content of the SM by the complex scalar SU(2) doublet $\Phi = (\phi^{+},\phi^0)^T$ of weak hypercharge $Y_{w,\Phi}=1$, so that $\phi^{+}$ carries charge +e and $\phi^0$ is neutral. In total $\Phi$ involves four degree of freedom. The self-interaction of $\Phi$ is described by the potential
 \begin{equation}
     V(\Phi)=-\mu^2(\Phi^{\dagger}\Phi)+\frac{\lambda}{4}(\Phi^{\dagger}\Phi)^2,
 \end{equation}
@@ -86,7 +138,7 @@ Here, the term $\lambda > 0$ ensures that the potential is bounded form below. H
         \phi_3 + i\phi_4    \\
         \end{bmatrix}
 \end{equation}
-where $\phi_i$ are 4 real scalar fields (4 degree of freedom). The lagrangian is invariant under the local gauge transformations \footnote{The concept of gauge invariance is fundamental in the construction of the Standard Model of strong, weak and electromagnetic interactions of elementary particles. The gauge principle prescribes that, given the gauge symmetry group and the transformations of the fields, the quantum field theory is uniquely defined [@book:CoughlanDodd]}
+where $\phi_i$ are 4 real scalar fields (4 degree of freedom). The Lagrangian is invariant under the local gauge transformations \footnote{The concept of gauge invariance is fundamental in the construction of the Standard Model of strong, weak and electromagnetic interactions of elementary particles. The gauge principle prescribes that, given the gauge symmetry group and the transformations of the fields, the quantum field theory is uniquely defined~\cite{Coughlan2006}.}
 \begin{equation}
     \Phi (x) \rightarrow \Phi(x)`=e^{i\alpha_i(x)\tau_i /2}\Phi(x)
 \end{equation}
@@ -106,7 +158,7 @@ Now the product
     =\frac{1}{2}\phi_i \phi^i
 \end{equation}
     
-For $\mu^2<0$, the potential $V(\Phi)$ has a minimum at
+For $\mu^2<0$, corresponds to the ``\textit{Maxican Hat}'' potential shown in Fig.~\ref{fig:higgsPotential}, the potential $V(\Phi)$ has a minimum at
 \begin{equation}
     \Phi^{\dagger}\Phi = -\frac{\mu^2}{2\lambda}=\frac{v^2}{2}
 \end{equation}
@@ -118,6 +170,12 @@ from equation~\ref{eq:mat1}, we can know that there is an infinite number of pos
         \phi_3  \\
         \end{bmatrix}
 \end{equation}
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{figures/Intro/higgspotential.png}
+    \caption{Higgs potential}
+    \label{fig:higgsPotential}
+\end{figure}
 Therefore, the neutral component ($\phi_3$) of the doublet field $\Phi$ develops a nonzero vacuum expectation value
 \begin{equation}
     {\Braket\Phi}_0 = \Braket{0|\Phi|0}=\frac{1}{\sqrt{2}}
@@ -159,14 +217,21 @@ Then we noted that W and Z boson have acquired masses, while the photon is still
 \end{equation}
 So, by spontaneously breaking the symmetry, three Goldstone bosons have been absorbed by the $W^{\pm}$ and Z boson to form their longitudinal components and to get their masses. Since the U(1) symmetry is still unbroken, the photon which is its generator, remains massless.
 
-
-Now we established that the Higgs mechanism generates the mass for the vector boson. So, now it following the nature. But for the Higgs mechanism to be validated Higgs boson should be found experimentally. In July 2012, we found a higgs like boson. But, is it the Higgs of SM or someting else we can say now because of the uncertainty and statistical error involved in the present analysis. 
+Now we established that the Higgs mechanism generates the mass for the vector boson. So, now it following the nature. But for the Higgs mechanism to be validated Higgs boson should be found experimentally. In July 2012, we found a Higgs like boson. But, is it the Higgs of SM or something else we can say now because of the uncertainty and statistical error involved in the present analysis. 
 
 So, What are the possible ways to investigate it?
 
 Basically there are two possible ways to investigate it. First, we should try to study the coupling of the Higgs boson with different particle (top quark is the best candidate). Secondly, we should try to study the vector boson scattering.
 
+% subsection brief_introduction_to_higgs_mechanism (end)
+
 % section brief_introduction_of_sm (end)
+
+\section{Vector Boson Scattering} % (fold)
+\label{sec:vector_boson_scattering}
+To understand the structure of electroweak symmetry breaking, one of most important process is the study of vector boson scattering.
+
+% section vector_boson_scattering (end)
 
 \section{anomalous Quartic Gauge Coupling} % (fold)
 \label{sec:anomalous_quartic_gauge_coupling}
