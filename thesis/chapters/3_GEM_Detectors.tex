@@ -10,7 +10,8 @@
 
 In this chapter, the GEM detector technology is introduced which are proposed for the CMS muons system upgrade during the long shutdown-2 period. 
 The properties of these GEM detectors were scrutinized during different beam test campaigns carried out at the CERN SPS beam test facility.
-The first half of this chapter deals with the measurements performed on prototypes of CMS GEM detectors using the data collected during  different beam tests. 
+The first half of this chapter deals with the measurements performed on prototypes of CMS GEM detectors using the data collected during  different beam tests.
+University of Delhi in collaboration with other Indian institutes actively participated in these beam test campaigns and data analysis for GEM detectors.
 The characterisation of GEM foils developed in India for the CMS upgrade is described in the last part of the chapter.
 
 \section{Introduction} % (fold)
@@ -20,7 +21,7 @@ This invention also led to a Nobel prize for George Charpak in 1992.
 The design and performance of MWPC have improved progressively through all these years.
 However, because of our increasing demands with the acquired knowledge about particle detection, it has reached its limitation in terms of the maximum rate capability and detector granularity.
 In 1988, Anton Oed invented the Micro-Strip Gas Counter (MSGC) which had a position resolution of few tens of microns and could overcome the rate limitation arising due to positive-ion accumulation in the gas volume. 
-Also, it could sustain a particle flux greater than few $MHz/mm^2$. Although, these kinds of detectors were very impressive the long-term study revealed the following shortcomings:
+Also, it could sustain a particle flux greater than few $MHz/mm^2$. Although, these kinds of detectors performed efficiently, however, the long-term studies revealed following shortcomings:
 \begin{enumerate}
 	\item Accumulation of ions on the electrodes, which affects the gain and age of the detector.
 	\item In some cases, the passage of highly ionising particles could lead to a destructive discharge in the detector medium.
@@ -29,23 +30,25 @@ These drawbacks of the MSGC lead to the development of Micro-Pattern Gaseous Det
 This class of detectors, specifically the Gas Electron Multiplier (GEM)~\cite{Sauli1997,Sauli1999,detector:1732870}, could provide an unprecedented spatial resolution, larger sensitive/detection area, with higher rate capability and good operational stability over the longer operating periods.
 Several new studies also revealed that under certain circumstances these detectors might be less vulnerable to the radiation-induced ageing than the standard silicon microstrip detectors~\cite{TITOV2004,Titov2002}.
 
-Because of their efficient detection qualities and high rate capabilities, GEM detectors have already been used in various experiments like COMPASS, TOTEM, LHCb. Recently, it was proposed for the CMS muon detector system upgrade. A brief description of the working and properties of GEM detectors is provided in the following sections.
+Because of their efficient detection qualities and high rate capabilities, GEM detectors have already been used in various experiments like COMPASS~\cite{Abbon2007}, TOTEM~\cite{Berardi2004}, LHCb~\cite{Collaboration2008}.
+Recently, these detectors are also proposed for the CMS muon detector system upgrade.
+A brief description of the working principle and properties of the GEM detectors is provided in the following sections.
 % section introduction (end)
 
 \section{Design and working principle of GEM detector} % (fold)
 \label{sec:design_and_working_principle_of_gem}
-
-GEM is a relatively new concept introduced by Fabio Sauli~\cite{Sauli1997} at CERN, which consists of a thin polyimide sheet (usually a thin Kapton foil~\cite{Kapton-sheet} with thickness 50 $\mu m$) coated with metal on its both sides. It is chemically pierced to a regular array of holes using the photolithography and acid etching processes~\cite{Benlloch1998}, as shown in Fig.~\ref{fig:gem} (left).
+GEM is a relatively new concept introduced by Fabio Sauli~\cite{Sauli1997} at CERN, which consists of a thin polyimide sheet (usually a thin Kapton foil~\cite{Kapton-sheet} with thickness 50 $\mu m$) coated with metal on its both sides.
+It is chemically pierced with a uniform array of holes using the photolithography and acid etching processes~\cite{Benlloch1998}, as shown in Fig.~\ref{fig:gem} (left).
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{figures/GEM/KEKDTP3.jpg}
-    \caption{A cross-sectional view of a GEM foil etched with holes (left). The strong electric field generated in the vicinity and inside of the holes on the application of the potential across the foil (right).}
+    \caption{Cross-sectional view of a GEM foil etched with holes (left). The strong electric field generated in the vicinity and inside the holes after the application of potential difference across the GEM foil (right).}
     \label{fig:gem}
 \end{figure}
 
-A potential difference is applied between the two copper layers which create a high electric field inside the holes (Fig.~\ref{fig:gem}) and is given as
+A potential difference is applied between the two copper layers which create a high electric field inside the holes (Fig.~\ref{fig:gem}) and is given as:
 \begin{equation}
-    E = \frac{V}{d}
+    E = \frac{V}{d}~,
 \end{equation}
 where E is the electric field inside a hole in the GEM foil, V is the voltage applied between the two copper layers and d is the thickness of the GEM foil.
 % Since the Kapton\footnote{Kapton was chosen as the insulating layer as it has very good insulating power along with that it can sustain very high radiation along with that it works with wide range of temperature. It is a plastic polyamide created by DuPont.} foil is very thin, around 50 $\mu m$, so a high electric field density will be created in the hole which is shown in Fig.~\ref{fig:gem} (right).
@@ -58,20 +61,20 @@ where E is the electric field inside a hole in the GEM foil, V is the voltage ap
 
 To illustrate the working of a GEM detector, the active detector medium could be divided into three different regions: drift, amplification and induction regions, as shown in Fig.~\ref{fig:gemOutline}.
 The passage of a charged particle leads to ionization in the drift region, and the generated primary electrons drift towards the amplification region (i.e., through GEM holes). 
-The electrons gain kinetic energy from the intense electric field inside the holes sufficient to produce secondary ionizations, eventually, leading to an avalanche multiplication.
+The electrons gain kinetic energy from the intense electric field inside the holes which is sufficient to produce secondary ionizations, eventually, leading to an avalanche multiplication.
 Finally, in the induction region, all the electrons from the amplification regions are collected on the readout plane. 
 
-To avoid the problem of electrical breakdown, several GEM foils operating at lower voltages, are stacked together in between the drift cathode and the readout board.
+To avoid the problem of electrical breakdown, several GEM foils operating at lower voltages could be stacked together in between the drift cathode and the readout board.
 For such detector configurations, the transfer region takes almost all the electrons from one GEM foil to another.
 In view of the fact that the total gain of a detector is given as the product of the individual gain of each foil, gains up to an order of $10^5$ can be achieved in this way.
-In this configuration, the detector can reach its maximum gain without any or with the least probability of electric discharge.
+Besides, in this configuration, the detector can reach its maximum gain without any or with the least probability of electric discharge.
 
 % Also, the total gain is the product of the individual gain of each foil, so the gain up to $10^5$ can be achieved in this way.
 % In this configuration, it can reach maximum gain without any discharge or least probable.
 % In Fig.~\ref{fig:tripleGEM_discharge_gain}, 
 The gain and discharge probability are compared for the single, double and triple-layered GEM detectors as shown in Fig.~\ref{fig:tripleGEM_discharge_gain}, which clearly indicates that the triple GEM detectors can achieve a gain beyond $10^4$ without any electrical discharge.
-Also, the signal readout by the electrode is pretty fast as it uses only electrons to read the signal. 
-Multi-layered boards could be used to achieve a two-dimensional readout from these detectors.
+Also, the signal readout by the electrode is pretty fast as it uses only electrons to generate a signal. 
+Multi-layered boards could also be used to achieve a two-dimensional readout from these detectors.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.5\textwidth]{figures/GEM/Comp_threeGEMS_Gain.png}%
@@ -93,7 +96,7 @@ A detector arrangement where three GEM foils are stacked together is known as a 
 
 \section{GEM for the CMS Phase-II Upgrade} % (fold)
 \label{sec:gem_for_cms}
-As pointed out in Sec.~\ref{sub:the_muon_system},  the CMS Collaboration has finalised to install GEM detectors in the pseudo-rapidity region $1.6 < |\eta| < 2.2$.
+As pointed out in Sec.~\ref{sub:the_muon_system},  the CMS Collaboration has finalised to install GEM detectors in the pseudo-rapidity region $1.6 < |\eta| < 2.2$ of the CMS detector.
 These detectors will support the existing CSC muon sub-system to improve the muon triggering and tracking capabilities in the forward region~\cite{Colaleo:2021453}.
 The combined operation of CSC and GEM detectors will lead to a precise measurement of the muon bending angle at the trigger level, thus strongly reducing the rate of muon mis-reconstruction.
 
