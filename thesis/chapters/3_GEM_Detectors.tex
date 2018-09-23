@@ -98,7 +98,7 @@ A detector arrangement where three GEM foils are stacked together is known as a 
 \label{sec:gem_for_cms}
 As pointed out in Sec.~\ref{sub:the_muon_system},  the CMS Collaboration has finalised to install GEM detectors in the pseudo-rapidity region $1.6 < |\eta| < 2.2$ of the CMS detector.
 These detectors will support the existing CSC muon sub-system to improve the muon triggering and tracking capabilities in the forward region~\cite{Colaleo:2021453}.
-The combined operation of CSC and GEM detectors will lead to a precise measurement of the muon bending angle at the trigger level, thus strongly reducing the rate of muon mis-reconstruction.
+The combined operation of CSC and GEM detectors will lead to a precise measurement of the muon bending angle at the trigger level, thus strongly reducing muon mis-reconstruction rate.
 
 This CMS muon detector system upgrade is carried out to achieve the following goals:
 \begin{itemize}
@@ -110,18 +110,18 @@ This CMS muon detector system upgrade is carried out to achieve the following go
 The installation of GEM detectors is proposed during the period of Long Shutdown-2 (2019-2020).
 The upgrade project is named as CMS GE1/1 upgrade, where the letter ``G'' stands for GEM, ``E'' stands for End-cap, the first ``1'' corresponds to the first muon station and the second ``1'' corresponds to the first ring of the station.
 Analogously, the GEM detectors to be installed in the CMS detector are referred to as GE1/1 detectors.
-The detectors will be inserted in front of the ME1/1 station and into the slots originally foreseen for the RPC detectors, as shown in Fig.~\ref{fig:GE1/1pos}. 
+The detectors will be inserted in front of the ME1/1 station and into the slots originally foreseen for the RPC detectors, as shown in Fig.~\ref{fig:GE1/1pos}.The design and operational parameter of CMS GE1/1 detectors are described in the following subsections. 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{figures/GEM/cms_upg_o_g_b_ni_ge1_r_140227.pdf}
-    \caption{A cross-sectional view of the CMS quadrant highlighting the location of GEM detectors (red).}
+    \caption{Cross-sectional view of the CMS quadrant highlighting the proposed location of GEM detectors (red).}
     \label{fig:GE1/1pos}
 \end{figure}
 
 \subsection{CMS GE1/1 Detector Specification} % (fold)
 \label{sub:GE1/1_detector_details}
 A typical GE1/1 detector is trapezoidal in shape with an active area of $990~\times~(220-445)~mm^2$.
-The shape and size of the detector was decided based on the geometry of vacant high-$\eta$ region in the CMS muon endcap regions.
+The shape and size of the detector was decided based on the geometry of vacant high-$\eta$ region in the CMS muon endcaps.
 A GE1/1 chamber consists of a Triple-GEM detector having a $3/1/2/1~mm$ (drift/transfer 1/transfer 2/induction) electrode gap configuration, as shown in Fig. \ref{fig:tripple-gem}.
 \begin{figure}[!htbp]
     \begin{center}
@@ -131,7 +131,7 @@ A GE1/1 chamber consists of a Triple-GEM detector having a $3/1/2/1~mm$ (drift/t
     \end{center}
 \end{figure} 
 % ($50~\mu m$ thick Kapton foil with $5\mu m$ copper on both sides) 
-The GEM foil consists of a thin Kapton foil ($50~\mu m$ thick) with a copper clad ($5~\mu m$) on both sides.
+Each CMS GE1/1 detectors uses a thin Kapton foil ($50~\mu m$ thick) with a copper cladded ($5~\mu m$) on its both sides.
 The detector readout board is divided into eight $\eta$-partitions with 384 strips.
 Each strip is radially oriented along the long side of the detector with a pitch varying from $0.6~mm$ (short side) to $1.2~mm$ (long side).
 Each partition is subdivided along the $\phi$-coordinate into three readout sectors with 128 strips or channels per sector. The $\eta$ partition and $\phi$ portions of the GEM detector are shown in Fig.~\ref{fig:gemTrapezoidal}.
@@ -142,14 +142,15 @@ Each partition is subdivided along the $\phi$-coordinate into three readout sect
         \label{fig:gemTrapezoidal}
     \end{center}
 \end{figure} 
-To improve tracking capabilities, two GEM chambers will be mounted face-to-face to form a double layer called ``\textit{Super-Chamber}".
-Thus each Super-Chamber will provide two impact points for each muon track.
+To improve the muon tracking capabilities, two GEM chambers will be mounted face-to-face to form a double layer called ``\textit{Super-Chamber}".
+Thus each Super-Chamber will provide two impact points for each muon track which can be ORed together to generate the final muon hits.
 The full layer by layer mechanical design of a GEM chamber is shown in Fig.~\ref{fig:GE1/1}. 
-The main parts in a GEM detector are GEM foil, drift plane, readout board, shielding, high voltage divider, etc.
+The main parts of a GEM detector are its foil, drift plane, readout board, shielding and high voltage divider.Before being installed into the CMS detector,the working and various operational parameter of CMSge1/1 detectors were deeply scrutinized during several beam test compaigns.
+Adetailed study and results obtained during during two of such beam tests is given in the following section.
 \begin{figure}[!htbp]
     \begin{center}
         \includegraphics[width=0.95\textwidth]{figures/GEM/GE11cad.png}
-        \caption{Layer by layer view of GEM detector}
+        \caption{Layer by layer view of CMS GE1/1 detector}
         \label{fig:GE1/1}
     \end{center}
 \end{figure} 
@@ -168,12 +169,12 @@ The GE1/1 detector was tested using 150 GeV muon and pion beams at CERN SPS beam
 The goal of the beam test campaign was to measure the efficiency, space \& time resolution, and the cluster size of the CMS GEM detector. 
 The detectors that were tested included GE11\_IV and GE11\_IV\_GIF detectors.
 % (detectors naming convention and its details are mentioned in the appendix~\ref{cha:GE1/1_detector_generations}).
-Both GE11\_IV and GE1/1\_IV\_GIF are generation\footnote{The different generations of GE1/1 are described in appendix~\ref{cha:ge11_detector_generations}} IV GE1/1 detectors but GE1/1\_IV\_GIF was irradiated with the gamma-ray at the CERN gamma-ray irradiation facility\footnote{The GIF bunker contains a $^{137}Cs$ source of 566 GBq. This emits gamma rays of 662 keV. The detector was placed 30 cm from the source where the particle rate was of the order of 100 $kHz/cm^2$. This allowed accumulating the charge in twelve months which would be equivalent to the 10-year operation of GEM detector in LHC environment~\cite{Merlin2013}.} for 1 year to perform ageing studies~\cite{Merlin2013}. Also, several important parameters like electric field, voltage across each GEM foil and the rate and gain were measured and shown in appendix~\ref{cha:ge1_1_measured_parameters}.
+Both GE11\_IV and GE1/1\_IV\_GIF are generation\footnote{The different generations of GE1/1 are described in appendix~\ref{cha:ge11_detector_generations}} IV GE1/1 detectors but GE1/1\_IV\_GIF was irradiated with the $\gamma$-ray at the CERN gamma-ray irradiation facility\footnote{The GIF bunker contains a $^{137}Cs$ source of 566 GBq. This emits gamma rays of 662 keV. The detector was placed 30 cm from the source where the particle rate was of the order of 100 $kHz/cm^2$. This allowed accumulating the charge in twelve months which would be equivalent to the 10-year operation of GEM detector in LHC environment~\cite{Merlin2013}.} for an year to perform ageing studies~\cite{Merlin2013}. Also, several important parameters like electric field, voltage across each GEM foil,the rate and gain were measured and are discussed in appendix~\ref{cha:ge1_1_measured_parameters}.
 
 % This is also a generation IV GE11 detector. But, for the ageing test this detector was placed at the Gamma Irradiation Facility (GIF) for twelve months.
-Two beam test campaign was carried out during October-December 2014.
-These campaigns were held in H2 and H4 beam test area of CERN SPS.
-The H2 beam test was held from $6^{th}$ October 2014 to $27^{th}$ October 2014 while the H4 beam test was held from 26 November to 14 December 2014.
+Two beam test campaign were carried out during October-December 2014.
+These campaigns were held in H2 and H4 beam test area of the CERN SPS.
+The H2 beam test was carried out from $6^{th}$ October 2014 to $27^{th}$ October 2014 while the H4 beam test was held from 26 November to 14 December 2014.
 The main goal of the H2 beam test was to test the two detectors mentioned above with an $Ar:CO_2$ gas mixture while in H4 beam test the same detector was tested with $Ar:CO_2:CF_4$ gas mixture.
 Initially, the plan was to scan each sector of the GEM detectors but due to timing constraints we were just able to scan sector $(i\eta, i\phi)=\{(5,2)\}$ and $(i\eta,i\phi)=\{(1,2),(5,2),(8,2)\}$ during H2 and H4 beam test respectively.  
 
