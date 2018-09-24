@@ -10,8 +10,15 @@
 \usepackage{subcaption}
 \usepackage[usenames, dvipsnames]{color}
 
+% bold greek letter
+\usepackage{amsmath}
+\usepackage{bm}
+
 % To add line number
 \usepackage{lineno}
+
+% For feynman diagram
+
 
 \usepackage{comment}
 
@@ -72,25 +79,40 @@
 
 % How to make curvy L
 % Reference: https://tex.stackexchange.com/a/11144/41568
+\newcommand{\bT}{\boldsymbol{T}}
+\newcommand{\bt}{\boldsymbol{T}}
+\newcommand{\bw}{\boldsymbol{W}}
+\newcommand{\bW}{\boldsymbol{W}}
+\newcommand{\w}{\boldsymbol{W}}
+\newcommand{\W}{\boldsymbol{W}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}
 \newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\Oo}{\mathcal{O}}
 \newcommand{\Et}{\ensuremath{E_\mathrm{T}}}
 \newcommand{\Pt}{\ensuremath{P_\mathrm{T}}}
 \newcommand{\pt}{\ensuremath{P_\mathrm{T}}}
 \newcommand{\met}{\ensuremath{\Et^{\mathrm{miss}}}}
 \newcommand{\ptmiss}{\ensuremath{\Pt^{\mathrm{miss}}}}
 \newcommand{\Ptmiss}{\ensuremath{\Pt^{\mathrm{miss}}}}
-\newcommand{\WW}{\ensuremath{\W^+\W^-}}
+\newcommand{\WW}{\ensuremath{\bW^+\bW^-}}
+\newcommand{\ww}{\ensuremath{\bW^+\bW^-}}
+\newcommand{\WWj}{\ensuremath{\bW^+\bW^-jj}}
+\newcommand{\wwj}{\ensuremath{\bW^+\bW^-jj}}
 \newcommand{\Wjets}{\ensuremath{\mathrm{W+jets}}}
 \newcommand{\Zjets}{\ensuremath{\mathrm{Z+jets}}}
 \newcommand{\GeV}{\ensuremath{\mathrm{GeV}}}
 \newcommand{\PW}{\ensuremath{\mathrm{W}}}
 \newcommand{\PZ}{\ensuremath{\mathrm{Z}}}
 \newcommand{\TeV}{\ensuremath{\mathrm{TeV}}}
+\newcommand{\tev}{\ensuremath{\mathrm{TeV}}}
 \newcommand{\ifb}{\ensuremath{\mathrm{fb^{-1}}}}
 \newcommand{\fbinv}{\ensuremath{\mathrm{fb^{-1}}}}
 \newcommand{\PHpm}{\ensuremath{\mathrm{H}^{\pm}}}
 \newcommand{\PH}{\ensuremath{\mathrm{H}}}
-\newcommand{\MADGRAPH}{\textsc{MadGraph}\xspace}
+\newcommand{\MADGRAPH}{\textsc{MadGraph}}
+\newcommand{\balpha}{\boldsymbol{\alpha(x)}}
+
+
 
 \makeatletter
 \renewcommand{\@chapapp}{}% Not necessary...
@@ -103,7 +125,7 @@
 \makeatother
 
 \begin{document}
- \linenumbers
+ % \linenumbers
  \pagenumbering{roman}
  \pagestyle{plain}
 
@@ -118,18 +140,19 @@
   % \cleardoublepage \include{frontback/acknowledgement}
   % \cleardoublepage \include{frontback/abstract}
 
-  % \pagestyle{headings}
-  % \cleardoublepage%\include{frontback/toc}
+  \pagestyle{headings}
+  \cleardoublepage%\include{frontback/toc}
    \tableofcontents 
    % \listoffigures 
    % \listoftables
   % Content =====================================================================
-  \pagenumbering{arabic}
   \cleardoublepage
-  % \include{chapters/1_Introduction}
+  \pagenumbering{arabic}
+  \include{chapters/1_Introduction}
+  \include{chapters/1_StandardModel}
   % \include{chapters/1_Introduction2}
   % \include{chapters/2_LHC_CMS_OfflineRecon}
-  \include{chapters/3_GEM_Detectors}
+  % \include{chapters/3_GEM_Detectors}
   % \include{chapters/4_Object_Reconstruction}
   % \include{chapters/Background-Estimation}
   % \include{chapters/Event-Reconstruction}
@@ -148,11 +171,13 @@
   
   \begin{appendices}
     % \include{appendix/Physics_Intro_Important_Points}
-  %    \include{appendix/synchtron_radiation}
-     \include{appendix/GE11_generations}
-     \include{appendix/Gaseous_Detector_Important_Point}
-     \include{appendix/GE11_measured_parameters}
-     \include{appendix/GEM_Efficiency_TimeRes_FitPars}
+
+    %  \include{appendix/synchtron_radiation}
+
+    %  \include{appendix/GE11_generations}
+    %  \include{appendix/Gaseous_Detector_Important_Point}
+    %  \include{appendix/GE11_measured_parameters}
+    %  \include{appendix/GEM_Efficiency_TimeRes_FitPars}
   \end{appendices}
 
   % \newpage 
