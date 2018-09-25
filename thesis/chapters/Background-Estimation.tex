@@ -1,69 +1,69 @@
 \chapter{Background Estimation} % (fold)
 \label{cha:background_estimation}
 A combination of data-driven methods and detailed simulated studies to 
-estimate background contributions is used. In all cases where simulation is used, events are reweighted to correct for the pileup, lepton and trigger efficiencies to agree with the data distribution. The following background processes are considered: QCD initiated di-boson, top, $\PW+jets$, and Drell--Yan processes. 
+estimate background contributions is used. In all cases where simulation is used, events are reweighted to correct for the pileup, lepton and trigger efficiencies to agree with the data distribution. The following background processes are considered: QCD initiated di-boson, top, $W+jets$, and Drell--Yan processes. 
 
-\subsection{Diboson}
+\section{Diboson}
 Simulation is used for estimating this process, as described in Section~\ref{sec:samples}. The expected contribution of this process in the signal region is small. The theoretical uncertainties in the prediction from variation of the renormalization and factorization scales are $35\%$. The uncertainty from the PDFs is $7\%$.
 
-\subsection{Top}
+\section{Top}
 Simulation is used for estimating this process, as described in Section~\ref{sec:samples}. The top background prediction is verified in a top enriched control region where the full signal selection is applied, except the b-tagging requirements are reverted. Figure~\ref{fig:top_control} shows the distributions of few kinematic variables in this control region. Normalization uncertainty of $10\%$ is assigned to the top background as good agreement between data and predictions is observed. 
 
 \begin{figure*}[htb]
 \centering
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_TTBarControlRegion_CHS_lepton_pt.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_TTBarControlRegion_CHS_lepton_eta.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_TTBarControlRegion_CHS_pfMET_Corr.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_TTBarControlRegion_CHS_ungroomed_PuppiAK8_jet_pt.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_TTBarControlRegion_CHS_vbf_maxpt_jj_Deta.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_TTBarControlRegion_CHS_vbf_maxpt_jj_m.pdf}
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_TTBarControlRegion_CHS_lepton_pt.pdf}%
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_TTBarControlRegion_CHS_lepton_eta.pdf}\\
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_TTBarControlRegion_CHS_pfMET_Corr.pdf}%
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_TTBarControlRegion_CHS_ungroomed_PuppiAK8_jet_pt.pdf}\\
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_TTBarControlRegion_CHS_vbf_maxpt_jj_Deta.pdf}%
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_TTBarControlRegion_CHS_vbf_maxpt_jj_m.pdf}\\
 \caption{Kinematic distributions in the top background control region. The hatched bands include statistical uncertainties from the predicted yields.}
 \label{fig:top_control}
 \end{figure*}
 
 
-\subsection{$\PW+$jets}
-$\PW+$jets enriched control region is defined by selecting events with $40~\GeV < m_{V} < 65~\GeV$ or $105~\GeV < m_{V} < 150~\GeV$, where the full signal selection is applied. Figure~\ref{fig:wjet_control} shows the distributions of jet kinematic variables in this sideband region where $\PW+$jets predictions are taken from the simulation. Similarly, figure~\ref{fig:wjet_control2} shows the distributions of the lepton, $\ptmiss$, and $V$ jet kinematic distributions. 
+\section{$W+$jets}
+$W+$jets enriched control region is defined by selecting events with $40~GeV < m_{V} < 65~GeV$ or $105~GeV < m_{V} < 150~GeV$, where the full signal selection is applied. Figure~\ref{fig:wjet_control} shows the distributions of jet kinematic variables in this sideband region where $W+$jets predictions are taken from the simulation. Similarly, figure~\ref{fig:wjet_control2} shows the distributions of the lepton, $\ptmiss$, and $V$ jet kinematic distributions. 
 
 \begin{figure*}[htb]
 \centering
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_vbf_maxpt_jj_m.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_vbf_maxpt_jj_Deta.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_vbf_maxpt_j1_pt.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_vbf_maxpt_j2_pt.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_vbf_maxpt_j1_eta.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_vbf_maxpt_j2_eta.pdf}
-\caption{Kinematic distributions in the $\PW+$jets background sideband region. $\PW+$jets predictions are taken from the simulation. The hatched bands include statistical uncertainties from the predicted yields.}
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_vbf_maxpt_jj_m.pdf}%
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_vbf_maxpt_jj_Deta.pdf}\\
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_vbf_maxpt_j1_pt.pdf}%
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_vbf_maxpt_j2_pt.pdf}\\
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_vbf_maxpt_j1_eta.pdf}%
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_vbf_maxpt_j2_eta.pdf}\\
+\caption{Kinematic distributions in the $W+$jets background sideband region. $W+$jets predictions are taken from the simulation. The hatched bands include statistical uncertainties from the predicted yields.}
 \label{fig:wjet_control}
 \end{figure*}
  
 \begin{figure*}[htb]
 \centering
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_lepton_pt.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_lepton_eta.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_ungroomed_PuppiAK8_jet_pt.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_ungroomed_PuppiAK8_jet_eta.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_pfMET_Corr.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_mass_lvj_type0_PuppiAK8.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_ZeppenfeldWH_new.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_ZeppenfeldWL_type0_new.pdf}
-\includegraphics[width=\cmsFigWidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_BosonCentrality_type0.pdf}
-\caption{Kinematic distributions in the $\PW+$jets background sideband region. $\PW+$jets predictions are taken from the simulation. The hatched bands include statistical uncertainties from the predicted yields.}
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_lepton_pt.pdf}%
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_lepton_eta.pdf}\\
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_ungroomed_PuppiAK8_jet_pt.pdf}%
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_ungroomed_PuppiAK8_jet_eta.pdf}\\
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_pfMET_Corr.pdf}%
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_mass_lvj_type0_PuppiAK8.pdf}\\
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_ZeppenfeldWH_new.pdf}%
+\includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_ZeppenfeldWL_type0_new.pdf}\\
+% \includegraphics[width=0.45\textwidth]{Plots/plots/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_BosonCentrality_type0.pdf}
+\caption{Kinematic distributions in the $W+$jets background sideband region. $W+$jets predictions are taken from the simulation. The hatched bands include statistical uncertainties from the predicted yields.}
 \label{fig:wjet_control2}
 \end{figure*}
 
-The $\PW+$jet predictions from the simulation are not used in the statistical analysis of the event yields. The shape and normalization of this background are extracted from data in the sideband region given above. The background estimation described below closely follows the method used in previous inclusive searches in $\PW V$ final state~\cite{resonances,cmsnote}. More detailed description of the method can be found in the references. 
+The $W+$jet predictions from the simulation are not used in the statistical analysis of the event yields. The shape and normalization of this background are extracted from data in the sideband region given above. The background estimation described below closely follows the method used in previous inclusive searches in $W V$ final state~\cite{resonances,cmsnote}. More detailed description of the method can be found in the references. 
 
-The AQGC limits are extracted using a fit to the $m_{WV}$ distribution in the $\PW V$ final state. The prediction of the $\PW+$jets background is obtained by performing a fit to the $m_{WV}$ distribution in the sideband region. The extrapolation factors (denoted as alpha-ratio values) to the signal region are obtained from the $\PW+$jet simulation as a function of the $m_{WV}$ variable as described below.   
+The AQGC limits are extracted using a fit to the $m_{WV}$ distribution in the $W V$ final state. The prediction of the $W+$jets background is obtained by performing a fit to the $m_{WV}$ distribution in the sideband region. The extrapolation factors (denoted as alpha-ratio values) to the signal region are obtained from the $W+$jet simulation as a function of the $m_{WV}$ variable as described below.   
 
-The shapes of the $t\bar{t}$, single top, diboson, and $\PW+$jet processes are represented by parametric shapes extracted from simulation. The following parametric functions are used: 
+The shapes of the $t\bar{t}$, single top, diboson, and $W+$jet processes are represented by parametric shapes extracted from simulation. The following parametric functions are used: 
 
 \begin{description}
 	\item [Main function] $f_{ExpTail} = \exp(\frac{-x}{a+bx})$
 	\item [Alternate Function] $f_{Exp} = \exp(cx)$
 \end{description}
 
-The resulting shapes are shown in Figure~\ref{fig:mWW_1}. The shown error band is determined by evaluating the fitted functions many times for several points along the x axis with the fitted parameters randomized according to their resulting uncertainty. The extracted fit parameters are summarized in Table~\ref{Table:BackgroundEstimation_mWWFitPars}. These templates are then used to fit the $m_{WV}$ distribution in the sideband region. The normalization and shape of the  $\PW$+jets process is floated in the fit. The other background processes are fixed to the SM predictions. The resulting fit is shown in Figure~\ref{fig:DataMCForMWW}.
+The resulting shapes are shown in Figure~\ref{fig:mWW_1}. The shown error band is determined by evaluating the fitted functions many times for several points along the x axis with the fitted parameters randomized according to their resulting uncertainty. The extracted fit parameters are summarized in Table~\ref{Table:BackgroundEstimation_mWWFitPars}. These templates are then used to fit the $m_{WV}$ distribution in the sideband region. The normalization and shape of the  $W$+jets process is floated in the fit. The other background processes are fixed to the SM predictions. The resulting fit is shown in Figure~\ref{fig:DataMCForMWW}.
 
 \begin{figure}[htbp] 
 	 \centering 
@@ -77,7 +77,7 @@ The resulting shapes are shown in Figure~\ref{fig:mWW_1}. The shown error band i
 	 \includegraphics[width=0.48\textwidth]{Plots/BackgroundEstimation/WV/m_lvj_fitting/WWTree_VV_EWK_QCD_m_lvj_sb_loExpN_with_pull.pdf}
 	 \includegraphics[width=0.48\textwidth]{Plots/BackgroundEstimation/WV/m_lvj_fitting/WWTree_VV_EWK_QCD_m_lvj_signal_regionExpTail_with_pull.pdf}
 	 \end{tabular}
-	 \caption{MC-data and fit shape $m_{WV}$ distributions in the sideband (left) and signal regions (right). From top to bottom: single top, $t\bar{t}$, $\PW+$jets and dibosons.}
+	 \caption{MC-data and fit shape $m_{WV}$ distributions in the sideband (left) and signal regions (right). From top to bottom: single top, $t\bar{t}$, $W+$jets and dibosons.}
 	 \label{fig:mWW_1}
 \end{figure}
 
@@ -132,20 +132,20 @@ The resulting shapes are shown in Figure~\ref{fig:mWW_1}. The shown error band i
 	 \label{fig:DataMCForMWW}
 \end{figure}
 
- The contribution of the $\PW+$jet process in the signal region is obtained using the alpha-ratio-method~\cite{resonances,cmsnote}. The alpha-ratio values extrapolate the $\PW+$jet contribution from the sideband region to the signal region as a function of $m_{WV}$ using simulation. The resulting distribution is shown in Figure~\ref{fig:AlphaDis}. The statistical uncertainties are propagated to the result. The final $\PW+$jet prediction in the signal region is shown in Figure~\ref{fig:signal}. 
+ The contribution of the $W+$jet process in the signal region is obtained using the alpha-ratio-method~\cite{resonances,cmsnote}. The alpha-ratio values extrapolate the $W+$jet contribution from the sideband region to the signal region as a function of $m_{WV}$ using simulation. The resulting distribution is shown in Figure~\ref{fig:AlphaDis}. The statistical uncertainties are propagated to the result. The final $W+$jet prediction in the signal region is shown in Figure~\ref{fig:signal}. 
 
-\begin{figure}[htbp] 
+\begin{figure}[!htbp] 
 	 \centering 
 	 \includegraphics[width=0.48\textwidth]{Plots/BackgroundEstimation/WV/WVchannel_AlphaDistribution_AfterFit.pdf}
-	 \caption{Alpha-ratio value (ratios of the $\PW+$jet MC contribution in the signal region to the sideband region) distribution. Red line is the fitted function used in the result.}
+	 \caption{Alpha-ratio value (ratios of the $W+$jet MC contribution in the signal region to the sideband region) distribution. Red line is the fitted function used in the result.}
 	 \label{fig:AlphaDis}
 \end{figure}
 
 \begin{figure}[h!] 
 	 \centering 
-	 \subfigure[]{\includegraphics[width=0.48\textwidth]{Plots/BackgroundEstimation/WV/WVchannel_SideBandRegionComparison_VjetShape_MC_CorrShapeFromData.pdf}}
-	 \subfigure[]{\includegraphics[width=0.48\textwidth]{Plots/BackgroundEstimation/WV/WVchannel_SignalRegionComparison_VjetShape_MC_CorrShapeFromData_38bin.pdf}}
-	 \caption{Comparison of the $\PW+$jet predictions using simulation (red) and the data-driven estimation in the sideband (left) and signal regions (right). The uncertainty band shows the fit uncertainty.}
+	 \includegraphics[width=0.48\textwidth]{Plots/BackgroundEstimation/WV/WVchannel_SideBandRegionComparison_VjetShape_MC_CorrShapeFromData.pdf}%
+	 \includegraphics[width=0.48\textwidth]{Plots/BackgroundEstimation/WV/WVchannel_SignalRegionComparison_VjetShape_MC_CorrShapeFromData_38bin.pdf}
+	 \caption{Comparison of the $W+$jet predictions using simulation (red) and the data-driven estimation in the sideband (left) and signal regions (right). The uncertainty band shows the fit uncertainty.}
 	 \label{fig:signal}
 \end{figure}
 % \begin{figure}[h!]\ContinuedFloat
@@ -167,9 +167,9 @@ The resulting shapes are shown in Figure~\ref{fig:mWW_1}. The shown error band i
 %	 \label{fig:DataMCForMWW}
 %\end{figure}
 
-The statistical uncertainties from the fits in the sideband region are propagated to the final prediction. The statistical uncertainty in the alpha-ratio values due to limited number of simulated events are also propagated to the result. The $\PW+$jet prediction is also performed with an alternative function as shown above (Figure~\ref{fig:DataMCForMWW}) and the difference from the nominal prediction is taken as a systematic uncertainty.    
+The statistical uncertainties from the fits in the sideband region are propagated to the final prediction. The statistical uncertainty in the alpha-ratio values due to limited number of simulated events are also propagated to the result. The $W+$jet prediction is also performed with an alternative function as shown above (Figure~\ref{fig:DataMCForMWW}) and the difference from the nominal prediction is taken as a systematic uncertainty.    
 
-The normalization of the $\PW+$jet background in the sideband region is cross-checked by performing a fit to the $m_{V}$ distribution, excluding the signal region. The following parametric functions are used: 
+The normalization of the $W+$jet background in the sideband region is cross-checked by performing a fit to the $m_{V}$ distribution, excluding the signal region. The following parametric functions are used: 
 
 \begin{description}
 	\item [V+jets] $f_{User1} = \Big(1-\frac{x}{500}\Big)^p_0/\Big(\frac{x}{500}\Big)^p_1$ 
@@ -178,7 +178,7 @@ The normalization of the $\PW+$jet background in the sideband region is cross-ch
 	\item [Single Top, Diboson] $f_{ExpGaus} = f_1 \times e^{(cx)} + Gaus(x,\mu,\sigma) $
 \end{description}
 
-The resulting shapes are shown in Figure~\ref{fig:mW_1}. The shown error band is determined by evaluating the fitted functions many times for several points along the x axis with the fitted parameters randomized according to their resulting uncertainty. The extracted fit parameters are summarized in Table~\ref{Table:BackgroundEst_fitPars}. These templates are then used to fit the $m_{V}$ distribution, excluding the signal region. The normalization and shape of the  $\PW$+jets process is floated in the fit. The other background processes are fixed to the SM predictions. The resulting fit is shown in Figure~\ref{fig:Wjet_SR_SBR_Comp}. The resulting normalization of the $\PW+$jet distribution agrees with the normalization obtained from the $m_{WV}$ fit.
+The resulting shapes are shown in Figure~\ref{fig:mW_1}. The shown error band is determined by evaluating the fitted functions many times for several points along the x axis with the fitted parameters randomized according to their resulting uncertainty. The extracted fit parameters are summarized in Table~\ref{Table:BackgroundEst_fitPars}. These templates are then used to fit the $m_{V}$ distribution, excluding the signal region. The normalization and shape of the  $W$+jets process is floated in the fit. The other background processes are fixed to the SM predictions. The resulting fit is shown in Figure~\ref{fig:Wjet_SR_SBR_Comp}. The resulting normalization of the $W+$jet distribution agrees with the normalization obtained from the $m_{WV}$ fit.
 
 % 1) 0xfc21990 RooRealVar::
 \begin{table}[h!]
@@ -200,7 +200,7 @@ The resulting shapes are shown in Figure~\ref{fig:mW_1}. The shown error band is
 	 width 		&	13.7415 $\pm$ 3.89626\\
 	 $N$		&	460.073 $\pm$ 34.2282\\
 	 \hline \hline
-	 \multicolumn{2}{|c|}{Diboson, $\f_{ExpGaus}$}\\
+	 \multicolumn{2}{|c|}{Diboson, $f_{ExpGaus}$}\\
 	 \hline 
 	 $f_1$		&	0.452621 $\pm$ 0.0175585\\
 	 c 			&	-0.00625601 $\pm$ 0.00115951 \\
@@ -222,7 +222,7 @@ The resulting shapes are shown in Figure~\ref{fig:mW_1}. The shown error band is
 	 $\sigma_2$	&	$\sigma_1$ + 3.6819\\
 	 $N$		&	152.598 $\pm$ 4.8036\\
 	 \hline \hline
-	 \multicolumn{2}{|c|}{Single-Top, $\f_{ExpGaus}$}\\
+	 \multicolumn{2}{|c|}{Single-Top, $f_{ExpGaus}$}\\
 	 \hline 
 	 $f_1$		&	0.471434 $\pm$ 0.080531\\
 	 c 			&	-0.00367233 $\pm$ 0.00476394 \\
@@ -243,8 +243,8 @@ The resulting shapes are shown in Figure~\ref{fig:mW_1}. The shown error band is
 	 \includegraphics[width=0.45\textwidth]{Plots/BackgroundEstimation/WV/m_j_fitting/_TTbar_xwwWWTree_TTbar_2Gaus_ErfExp_with_pull.pdf}\\
 	 \includegraphics[width=0.45\textwidth]{Plots/BackgroundEstimation/WV/m_j_fitting/_WJets01_xwwWWTree_VJets_ErfExp_with_pull.pdf}
 	 \includegraphics[width=0.45\textwidth]{Plots/BackgroundEstimation/WV/m_j_fitting/_WJets0_xwwWWTree_VJets_User1_with_pull.pdf}\\
-	 \includegraphics[width=0.45\textwidth]{Plots/BackgroundEstimation/WV/m_j_fitting/_VV_xwwWWTree_VV_EWK_QCD_ExpGaus_with_pull.pdf}\\
-	 %\includegraphics[width=0.45\textwidth]{Plots/BackgroundEstimation/m_j_fitting/m_j_sideband_WJets01_xww__with_pull.png}
+	 \includegraphics[width=0.45\textwidth]{Plots/BackgroundEstimation/WV/m_j_fitting/_VV_xwwWWTree_VV_EWK_QCD_ExpGaus_with_pull.pdf}
+	 \includegraphics[width=0.45\textwidth]{Plots/BackgroundEstimation/WV/m_j_fitting/m_j_sideband_WJets01_xww__with_pull.png}\\
 	 \end{tabular}
 	 \caption{MC fit distribution for $m_{V}$. Top Left: Single top, Top right: TTbar, Middle left: Wjets with $f_{ErfExp}$, Middle right: Wjets with $f_{User1}$, Bottom: Diboson distribution }
 	 \label{fig:mW_1}
@@ -261,8 +261,8 @@ The resulting shapes are shown in Figure~\ref{fig:mW_1}. The shown error band is
 \end{figure}
 
 
-\subsubsection{Closure Test}
-The closure of the background estimation method is checked. The contribution of the $\PW+jet$ process is estimated in $105~\GeV<~m_{WV}<125~\GeV$ sideband region by repeating the background estimation above using a reduced sideband region given by requiring $40~\GeV < m_{V} < 65~\GeV$ or $125~\GeV < m_{V} < 150~\GeV$. Figure~\ref{fig:closure} shows (left) that the prediction of the background processes in $105~\GeV<~m_{WV}<125~\GeV$ sideband region is in good agreement with the data. For comparison, the predictions taken from simulation are also shown (right). 
+\subsection{Closure Test}
+The closure of the background estimation method is checked. The contribution of the $W+jet$ process is estimated in $105~GeV<~m_{WV}<125~GeV$ sideband region by repeating the background estimation above using a reduced sideband region given by requiring $40~GeV < m_{V} < 65~GeV$ or $125~GeV < m_{V} < 150~GeV$. Figure~\ref{fig:closure} shows (left) that the prediction of the background processes in $105~GeV<~m_{WV}<125~GeV$ sideband region is in good agreement with the data. For comparison, the predictions taken from simulation are also shown (right). 
 
 \begin{figure}[htbp] 
 	 \centering 
@@ -275,8 +275,8 @@ The closure of the background estimation method is checked. The contribution of 
 \end{figure}
 
 
-\subsection{$\PZ+$jets}
-The $\PZ+$jet background process prediction in the $\PZ V$ final state is performed using the alpha-ratio method descriped above. The methods to obtain the prediction and the corresponding systematic uncertainties are identical to what was done for the $\PW+$jet prediction in the $\PW V$ final state. Figure~\ref{fig:zvfits} shows the corresponding fit of the $m_{ZV}$ distribution in the sideband region in the $\PZ V$ final state.  
+\section{$Z+$jets}
+The $Z+$jet background process prediction in the $Z V$ final state is performed using the alpha-ratio method descriped above. The methods to obtain the prediction and the corresponding systematic uncertainties are identical to what was done for the $W+$jet prediction in the $W V$ final state. Figure~\ref{fig:zvfits} shows the corresponding fit of the $m_{ZV}$ distribution in the sideband region in the $Z V$ final state.  
 
 \begin{figure}[htbp] 
 	 \centering 
@@ -287,4 +287,4 @@ The $\PZ+$jet background process prediction in the $\PZ V$ final state is perfor
 	 \caption{The data distribution and the corresponding fit of the $m_{ZV}$ distribution in the sideband region (left).Alpha-ratio value distribution (right).}
 	 \label{fig:zvfits}
 \end{figure}
-% chapter background_estimation (end)
+% % chapter background_estimation (end)

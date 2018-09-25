@@ -62,7 +62,7 @@ their uncertainty prescriptions are provided by the EGamma POG~\cite{Twiki:EGamm
 \subsection{Muon selection}
 The muons are selected using standard identification criteria, suggested by the Muon POG~\cite{Twiki:MuonRun2}. Selected muon candidates correspond to the so-called {\em``Tight''} muon identification. Additionally, like in the electron case, a third muon veto is also applied to reject events with more than two genuine leptons using the so-called {\em``Loose''} identification~\cite{Twiki:MuonRun2}. 
 For the muon isolation, in the same manner as for electrons, a cone of $\Delta R = 0.4$ is built to compute the flux of particle flow candidates,
-the ``delta-beta'' correction is applied to correct for pileup contamination. This correction is achieved by subtracting half the sum of the \pt of the charged particles in the cone of interest but with particles not originating from the primary vertex.
+the ``delta-beta'' correction is applied to correct for pileup contamination. This correction is achieved by subtracting half the sum of the $\pt$ of the charged particles in the cone of interest but with particles not originating from the primary vertex.
 
 The muon isolation is therefore defined as:
 \begin{equation}
@@ -76,14 +76,14 @@ Scale factors are used to correct for differences in the reconstruction, identif
 %%%%%%%%%%%%%%%%%%%
 \subsection{Jets}
 \label{subsec:jets}
-Jets are reconstructed using the anti-\kt clustering algorithm~\cite{antikt}  with a distance parameter $R=0.4$, as implemented in the \textsc{fastjet}  package~\cite{Cacciari:fastjet1,Cacciari:fastjet2}. The energy of the reconstructed jets is corrected in 3 steps: L1FastJet (for pileup/underlying event subtraction), L2 (for relative corrections) and L3 for absolute scale corrections. For data an extra residual correction is included in the absolute scale correction.
+Jets are reconstructed using the anti-Kt clustering algorithm~\cite{antikt}  with a distance parameter $R=0.4$, as implemented in the \textsc{fastjet}  package~\cite{Cacciari:fastjet1,Cacciari:fastjet2}. The energy of the reconstructed jets is corrected in 3 steps: L1FastJet (for pileup/underlying event subtraction), L2 (for relative corrections) and L3 for absolute scale corrections. For data an extra residual correction is included in the absolute scale correction.
 The used jet energy correction version provided by the jetMET group is Summer16\_23Sep2016BCDV4\_DATA 
 (Summer16\_23Sep2016V4\_MC) for data (simulation).
 
-Jets with \pt$>$30~GeV and $\abs{\eta}<5$ and passing the so called PF-loose requirements are selected. Jets that are within $\Delta R < 0.3$ of one of the identified leptons are excluded from the jet sample. 
+Jets with \pt$>$30~GeV and $\mathopen|\eta\mathclose|<5$ and passing the so called PF-loose requirements are selected. Jets that are within $\Delta R < 0.3$ of one of the identified leptons are excluded from the jet sample. 
 
 \subsection{V-tag jets}
-Hadronically decaying gauge boson candidates are reconstructed using the anti-\kt clustering algorithm~\cite{antikt} with a distance parameter $R=0.8$ using the Puppi algorithm~\cite{Bertolini:2014bba}. The $V$-jets that are within $\Delta R < 1.0$ of one of the identified leptons are excluded. The $V$-tag jet mass is computed after employing the modified mass drop tagger algorithm to remove soft, wide-angle radiation from the jets~\cite{Dasgupta:2013ihk,Larkoski:2014wba}. The $N$-subjettiness variable $\tau_N$~\cite{Thaler:2010tr} is also employed to further isolate jets arising from hadronic decays of $\PW$ or $\PZ$ bosons.   
+Hadronically decaying gauge boson candidates are reconstructed using the anti-Kt clustering algorithm~\cite{antikt} with a distance parameter $R=0.8$ using the Puppi algorithm~\cite{Bertolini:2014bba}. The $V$-jets that are within $\Delta R < 1.0$ of one of the identified leptons are excluded. The $V$-tag jet mass is computed after employing the modified mass drop tagger algorithm to remove soft, wide-angle radiation from the jets~\cite{Dasgupta:2013ihk,Larkoski:2014wba}. The $N$-subjettiness variable $\tau_N$~\cite{Thaler:2010tr} is also employed to further isolate jets arising from hadronic decays of $W$ or $Z$ bosons.   
 
 The soft-drop mass ($m_{V}$) is corrected following the recommendation in~\cite{jettagging}. The signal region is defined by requiring $\tau_{21}<0.55$ and $ 65 ~\GeV < m_{V} < 105 ~\GeV$. Scale factors are used to correct for differences in selection efficiencies between data and simulation~\cite{jettagging}. Recommended systematic uncertainties in the reference~\cite{jettagging} are propagated in the analysis. 
 
