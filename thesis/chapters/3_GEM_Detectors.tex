@@ -175,8 +175,8 @@ Both GE11\_IV and GE1/1\_IV\_GIF are generation\footnote{The different generatio
 Two beam test campaign were carried out during October-December 2014.
 These campaigns were held in H2 and H4 beam test area of the CERN SPS.
 The H2 beam test was carried out from $6^{th}$ October 2014 to $27^{th}$ October 2014 while the H4 beam test was held from 26 November to 14 December 2014.
-The main goal of the H2 beam test was to test the two detectors mentioned above with an $Ar:CO_2$ gas mixture while in H4 beam test the same detector was tested with $Ar:CO_2:CF_4$ gas mixture.
-Initially, the plan was to scan each sector of the GEM detectors but due to timing constraints we were just able to scan sector $(i\eta, i\phi)=\{(5,2)\}$ and $(i\eta,i\phi)=\{(1,2),(5,2),(8,2)\}$ during H2 and H4 beam test respectively.  
+The main goal of the H2 beam test was to test the two detectors mentioned above with $Ar:CO_2$ gas mixture while in H4 beam test the same detectors were tested with $Ar:CO_2:CF_4$ gas mixture.
+Initially, the plan was to scan each sector of the GEM detector but due to timing constraints we were just able to scan sector $(i\eta, i\phi)=\{(5,2)\}$ and $(i\eta,i\phi)=\{(1,2),(5,2),(8,2)\}$ during H2 and H4 beam tests respectively.  
 
 The data collected during these beam test campaigns were grouped into different run names, based on the electronic setup and gas mixtures used during the data taking.
 Out of these four sets of run ranges were marked as ``\textit{good}'', based on certain data quality checks, for further analysis. These run ranges along with their specification are listed in Table~\ref{tab:gemTBgoldenruns}.
@@ -211,7 +211,7 @@ Out of these four sets of run ranges were marked as ``\textit{good}'', based on 
             & Gas mixture used: $Ar:CO_{2}:CF_4$=(40:15:45)\\
 \hline
 \end{tabular}
-\caption{List of golden runs used to measure the GE1/1 properties.}
+\caption{List of golden runs selected to measure the GE1/1 properties.}
 \label{tab:gemTBgoldenruns}
 \end{table}
 % subsection GE1/1_detector_details (end)
@@ -219,22 +219,16 @@ Out of these four sets of run ranges were marked as ``\textit{good}'', based on 
 \subsubsection{Readout Electronics} % (fold)
 \label{ssub:readout_electronics}
 Front-end electronics used in the beam test was \textbf{\textit{VFAT2}} chips~\cite{Aspell2007,Berardi2004}.
-The upgraded version of the same chip, known as VFAT3, will be used with GE1/1 detectors for Level-1 muon triggering~\cite{Licciulli2017}. Its block diagram is shown in Fig.~\ref{fig:VFAT2block}.
-
-VFAT is a front-end Application Specific Integrated Circuit (ASIC) chip. It was primarily designed for the readout of sensors in the TOTEM experiment at CERN. 
+The upgraded version of the same chip, known as VFAT3, will be used with GE1/1 detectors for Level-1 muon triggering~\cite{Licciulli2017}. Its block diagram is shown in Fig.~\ref{fig:VFAT2block}.VFAT is a front-end Application Specific Integrated Circuit (ASIC) chip. It was primarily designed for the sensors readout in the TOTEM experiment at CERN. 
 VFAT chip is used for both triggering and tracking purpose.
 For triggering it uses the programmable ``\textit{fast OR}'' information based on a hit in the detector.
-It provides a monostable output for the programmed number of channels in a single clock cycle. 
-This is called an ``\textit{S-Bit}''. While, for tracking it provides the spatial information strip-wise for every triggered event.
+It provides a monostable output for the programmed number of channels in a single clock cycle which is refered to as 
+ ``\textit{S-Bit}''. While, for tracking it provides the  step-wise spatial information strip-wise for every triggered event.
 
 VFAT2 has 128 analog input channels, very low noise pre-amplifier, shaper and comparator attached to it. 
 Signal discrimination is done based on the programmable threshold setting and then stored within SRAM\footnote{Static random-access memory (static RAM or SRAM) is a type of semiconductor memory that uses bistable latching circuitry (flip-flop) to store each bit. SRAM exhibits data remembrance but it is still volatile in the conventional sense that data is eventually lost when the memory is not powered.} until the trigger information is received. 
-It can apply positive as well as negative threshold value to each channel independently. 
-This feature is named as ``\textit{TrimDAC}'' and it has two programmable voltages $V_{T1}$ and $V_{T2}$ and the threshold is defined as the difference between these two programmable voltages, i.e., $V_{TH} = V_{T2} - V_{T1}$.
-
-This VFAT chip also provides the facility to mask individual noisy channel.
-
-To synchronize the output of the comparator the monostable block provides 1 clock pulse for each threshold-crossing signal.
+It can apply positive as well as a negative threshold value to each channel independently. 
+This feature is named as ``\textit{TrimDAC}'' and it has two programmable voltages $V_{T1}$ and $V_{T2}$ and the threshold is defined as the difference between these two programmable voltages, i.e., $V_{TH} = V_{T2} - V_{T1}$. VFAT chip also provides the facility to mask individual noisy channels.To synchronize the output of the comparator the monostable block provides 1 clock pulse for each threshold-crossing signal.
 
 \begin{figure}[htbp]
     \centering
@@ -245,13 +239,13 @@ To synchronize the output of the comparator the monostable block provides 1 cloc
 
 
 
-\textbf{Latency} defines the correct moment of time at which VFAT2 will read the signal. Technically, for a given trigger, it is defined as the number of SRAM locations the chip has to go back in order to read the digital output of the event corresponding to that trigger. It is measured in clock periods. 
+\textbf{Latency} is a measure of time at which VFAT2 will read the signal. Technically, for a given trigger, it is defined as the number of SRAM locations the chip has to go back in order to read the digital output of the event corresponding to that trigger. It is measured in terms of clock cycles. 
 
 % \textbf{Monostable settings}
 
 \subsubsection{TURBO Readout Board} % (fold)
 \label{ssub:turbo_readout_board}
-TURBO is a standalone DAQ system for the VFAT front-end ASIC~\cite{Paschalis2011}. It was developed for testing TOTEM hybrid equipped with VFAT chips, with following goals:
+Once the data is recorded by the VFAT chips, it has to be extracted for further analysis.This is done by using TURBO which is a standalone DAQ system for the VFAT front-end ASIC~\cite{Paschalis2011}. \textbf{ It was developed for testing TOTEM hybrid equipped with VFAT chips.TURBO board is portable and capable to provide a real time response for small and medium-sized experiment.}
 \begin{itemize}
     \item portable,
     \item real-time response,
@@ -269,7 +263,7 @@ But, one can use more than 1 TURBO boards to accommodate more than 8 VFAT chips.
 Out of them, one TURBO board will act as the master board that will take care of the clock for other TURBO boards, which act as slaves.
 
 A LabView program can be used to control TURBO boards remotely.
-This program can perform standard threshold and latency calibration scans. Further, it can also be used for data acquisition and quality control tests.
+This program can perform standard threshold and latency calibration scans. Further, it can also be used for data acquisition and to perform  quality control tests.
 % subsubsection turbo_readout_board (end)
 
 % subsubsection readout_electronics (end)
@@ -287,9 +281,9 @@ The three trackers constitute a muon tracking telescope which is used to reconst
 Figure~\ref{fig:daq} shows the experimental set-up used to perform beam test studies.
 The GE1/1 prototypes are installed on a movable table to scan different sectors. At a time only one (i$\eta$,i$\phi$) sector of GEM detector is irradiated with the beam.
 % The high voltage powering was realized using a ceramic high voltage divider. 
-The CMS test chamber was placed, close to the tracking hodoscope, on a vertically movable support to allow scanning. The scanned sectors of the GE1/1 detector are shown in Fig.~\ref{GE1/1}.
+The CMS GE1/1 prototype test chamber was placed, close to the tracking hodoscope, on a vertically movable support to allow scanning. The scanned sectors of the GE1/1 detector are shown in Fig.~\ref{GE1/1}.
 
-The tracking telescope is equipped with the digital chips VFAT2~\cite{Aspell:2008zz}, which provides a binary output with a variable latency for the position information and a fixed latency output, called SBIT, for the timing information.
+The tracking telescope is equipped with the digital chips VFAT2~\cite{Aspell:2008zz}, which provides a binary output with a variable latency for the position information and a fixed latency output for the timing information.
 
 % \begin{figure}[!htbp]
 %     \begin{center}
@@ -308,11 +302,11 @@ On detector electronics connects the output from the front-end ASIC (VFAT2) to t
 The VFAT2 chip is connected to the hybrids which are plugged into the connectors on the readout board.
 %The trigger is generated using the coincidence of three photo-multiplier tubes with mounted scintillators. 
 The analog pulses from the three scintillators, named S1, S2 and S3 are fed into discriminator for analog to digital conversion.
-The discriminator output was provided into the logic coincidence (to generate event trigger) before being sent to the other DAQ systems (Figure.~\ref{fig:tbs}).
+The discriminator output was provided into the logic and coincidence (to generate event trigger) before being sent to the other DAQ systems (Figure.~\ref{fig:tbs}).
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.95\textwidth]{figures/GEM/daq.png}
-\caption{Perspective view of the experimental set-up used for performance measurement in the beam test studies. The trigger system is generated using the signal collected from three scintillators connected in coincidence.}\label{fig:tbs}
+\caption{Perspective view of the experimental set-up used for performance measurement in the beam test studies. The trigger system is generated using the signal collected from three scintillators connected in coincidence unit.}\label{fig:tbs}
 \end{figure}
 % The active area of the GE1/1 detector is covered with readout strips located in the GEM Electronic Board. 
 % The readout strips are taken out in 24 readout sectors (in ($\eta$,$\phi$) phase space).
@@ -329,10 +323,7 @@ The discriminator output was provided into the logic coincidence (to generate ev
 \end{figure}
 \subsection{Data Analysis} % (fold)
 \label{sub:test_beam_analysis}
-The raw data collected during these beam test campaigns were in binary format. First, the raw data (binary information) is converted into the ROOT data format. ``\textit{\textbf{TURBO-SOFTWARE}}''~\cite{git-trubosoftware} package is used for data analysis framework. Originally developed by TOTEM group, it is used to perform this task. The output from TURBO-SOFTWARE data analysis consists of hit information for each strip from the detectors which are further used to reconstruct the particle tracks and clusters. 
-
-A \textbf{hit} is defined when one or more strip of the VFAT chips surpass the threshold set on the readout chip. 
-A \textbf{cluster} is defined as the number of adjacent fired strips along x or y-axis. The first step towards the track and cluster reconstruction is to discriminate the background tracks coming from detector noise (fake tracks) from the signal (muon) tracks. Once the fake tracks are removed from the collection, valid hits are used to generate tracks.
+The raw data collected during these beam test campaigns were in the binary format. First, the raw data (binary information) are converted into the standard ROOT data format,which areanalyzed using the ``\textit{\textbf{TURBO-SOFTWARE}}''~\cite{git-trubosoftware} package. The output from the TURBO-SOFTWARE data analysis consists of hit informations for every strip from the detector, which are further used to reconstruct the particle tracks and clusters. A valid\textbf{hit} is defined when one or more strip of the VFAT chips surpass the threshold set on the readout chip. A \textbf{cluster} is defined as the number of adjacent fired strips along x or y-axis. The first step towards the track and cluster reconstruction is to discriminate the background tracks coming from detector noise (fake tracks) from the signal (muon) tracks. Once the fake tracks are removed from the collection, valid hits are used to generate tracks.
 
 The hit profile and beam profile recorded in the tracker for one of the runs are shown in Fig.~\ref{HitPosXaxis}~and~\ref{BeamProfile}.
 From both hit profile and beam profile, one can see that the beam is point beam like a beam having a Gaussian spread, centred around (50,50), i.e., at the centre of the tracker.
@@ -377,22 +368,22 @@ The goal is to reduce the $\chi^{2}$ of the track fits in order to improve track
 
 \subsubsection{Linear and Rotational Alignment}
 To measure the spatial resolution of GE1/1 detectors, these detectors aligned with respect to the tracker system.
-This starts with the need to be mutual alignment of the three tracking detectors that have 2-D readout in the Cartesian coordinate system.
+This starts with the need to be mutual alignment of the three tracking detectors that have 2D readout in the Cartesian coordinate system.
 % The first step in the resolution measurement is an alignment of the three small tracking detectors that have a Cartesian X-Y strip readout.
 % The trackers are first aligned with respect to each other in Cartesian coordinates.
-The first alignment step is to shift each of the three tracking detectors iteratively in the XY-plane to make their origins coincide in the same line of sight.
+The first alignment step is to shift each of the three tracking detectors iteratively in the xy-plane to make their origins coincide in the same line of sight.
 % match with each other in that plane.
-The initial shift parameters are the mean values from the position distributions  of X and Y axis.
-During each iteration, a linear fit is performed to the hits position along X and Y direction from each tracker.
- % lines are fitted to the hits in X and Y.
+The initial shift parameters are the mean values from the position distributions  of x and y axis.
+During each iteration, a linear fit is performed to the hits position along x and y direction from each tracker.
+ % lines are fitted to the hits in x and y.
 % In this measurement study, residuals are histogrammed for each detector and the residual distributions are fitted with a double-Gaussian function.
 Residuals are histogrammed for every detector and their distributions are fitted with a double-Gaussian function.
 Ten percent of the residual mean value of each detector is taken as the shift parameter in the next iteration to avoid overcorrection.
 This step is repeated until the resulting residual mean value converge towards zero.
 % with iterations and provide a first coarse alignment.
 This method provides a first coarse alignment.
-In the second alignment step, we correct also for relative rotations of the tracking detectors around the beam axis in the XY-plane.
-We again fit straight lines to the hit in X and Y direction and iterate through a succession of offsets and rotations around the beam axis relative to the first tracking detector.
+In the second alignment step, we correct also for relative rotations of the tracking detectors around the beam axis in the xy-plane.
+We again fit straight lines to the hits in x and y direction and iterate through a succession of offsets and rotations around the beam axis relative to the first tracking detector.
 Again this process is repeated until the residual means from the trackers are very close to zero and $\chi^2$ of the track fits is also observed at each iteration.
 In each iteration, the detectors are first shifted and then rotated; then new residuals and rotation angles are calculated.
 This process is repeated iteratively until the residual means from the track fits become less than 0.005 mm. Fig.~\ref{fig:alignment} shows the flow chart of the alignment algorithm.
@@ -400,11 +391,11 @@ Figure.~\ref{fig:alignmentIteration} shows the variation of track residuals for 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.65\textwidth]{figures/GEM/Tracker_iterative_alignment.jpg}
-\caption{Variation of track residuals for three trackers with respect to the iteration number}\label{fig:alignmentIteration}
+\caption{Variation of track residuals for three trackers with respect to the iteration number along different directions}\label{fig:alignmentIteration}
 \end{figure}
 
-\subsubsection{Alignment of GEM detectors w.r.t Reference Tracker}
-Once the tracker alignment, the next step is to align trapezoidal GEM detectors with respect to the centre of the aligned tracker system.
+\subsubsection{Alignment of GEM detectors w.r.t reference Tracker}
+Once the tracker alignment is complete, the next step is to align trapezoidal GEM detectors with respect to the centre of the aligned tracker system.
 A twofold iteration loop is used wherein the x-offset is kept fixed the y-offset is iterated over a set of values with a small iteration step.
 The x-offset is also iterated over and corresponding to every single value of x-offset, the y-offset are iterated.
  % Y offset values with a small fixed step, ranging in a practical phase space.
@@ -420,7 +411,7 @@ To have an efficient efficiency we should also define a fiducial area in which w
         % \item For this only \textbf{valid tracks} are considered. Where the valid track is defined as the track that has hit in all three trackers.
         \item These valid tracks are then extrapolated to GE1/1’s. Only those tracks are finally selected for which the corresponding hit position in the GE1/1 has a residual value less than 5mm.
          % and accept that track as a hit in GE11’s if and only if the residual is less than 5 $mm$.
-        \item The selected events are used to fill 2D histogram for different cases. The first histogram contains all those events that have a valid hit in the trackers only, as shown in Fig.~\ref{fig:fiducial_area_sel} (left). Another 2D histogram is filled with all those events where there are valid hits in all three trackers as well as in the GE1/1, as shown in Fig.~\ref{fig:fiducial_area_sel}(right). The ratio of the two histograms defined above is computed and is shown in Fig.~\ref{fig:fiducial_area_sel} (bottom)
+        \item The selected events are used to fill 2D histogram for different cases. The first histogram contains all those events that have a valid hit in the trackers only, as shown in Fig.~\ref{fig:fiducial_area_sel} (left). Another 2D histogram is filled with all those events where there are valid hits in all three trackers as well as in the GE1/1, as shown in Fig.~\ref{fig:fiducial_area_sel} (right). The ratio of the two histograms defined above is computed and is shown in Fig.~\ref{fig:fiducial_area_sel} (bottom)
         \item Finally, the region (0,80) in the ratio histogram where efficiency is maximum is considered as the fiducial region. This fiducial region is used for the efficiency calculation for GE1/1 detector.
 \end{itemize}
 Here, the calculated fiducial region is (0,80), which can be observed from Fig.~\ref{fig:fiducial_area_sel}(bottom).
@@ -437,7 +428,7 @@ Here, the calculated fiducial region is (0,80), which can be observed from Fig.~
 Efficiency, $\epsilon$, for a GE1/1 detector for the current beam test set-up is defined as:
 % Efficiency, $\epsilon$, is one of the most important parameters for the gaseous detectors. Here it is defined as 
 \begin{equation}
-\epsilon = \frac{N_{GE1/1+Trk}}{N_{Trk}}
+\epsilon = \frac{N_{GE1/1+Trk}}{N_{Trk}},
 \end{equation}
 where $N_{Trk}$ is the number of reconstructed events with hits reconstructed in the three trackers
 % by using a linear fit $y = mx + b$ fit to the tracker hit positions, in the tracker with normalized $\chi^2<10$.
@@ -455,12 +446,12 @@ and $N_{GE1/1+Trk}$ is the number of reconstructed events for which an actual hi
 % We are showing here the efficiency as a function of current supplied to high-voltage divider as well as $E_{gain}$, Fig. \ref{Efficiency}. 
 Detector efficiency is calculated as a function of current supplied to the high-voltage divider as well as $E_{gain}$ is shown in Fig.~\ref{Efficiency} where $E_{gain}$ is defined as
 \begin{equation}
-E_{gain} = \frac{I\times R_{avg}^{gap}}{D}
+E_{gain} = \frac{I\times R_{avg}^{gap}}{D},
 \end{equation}
 where $I$ is current supplied to the HV divider, $R_{avg}^{gap}$ is the average gap resistance of GE1/1, and D is thickness of the GEM foil.
 Here, the efficiency is fitted with the function defined as:
 \begin{equation}
-    \epsilon = \frac{\epsilon_{max}}{1+e^{s(HV-HV_{50\%})}}
+    \epsilon = \frac{\epsilon_{max}}{1+e^{s(HV-HV_{50\%})}},
 \end{equation}
 Where, $\epsilon_{max}$ is the maximum obtained efficiency, $HV_{50\%}$ is the applied HV (or current or $E_{gain}$) at which the efficiency is 50\% and $s$ is just a scale factor left floating for fit to determine. The fit parameters are shown in appendix~\ref{cha:efficiency_and_time_resolution_fit_parameters}.
 
@@ -471,39 +462,39 @@ This implies that we can operate our detector without using $CF_4$ gas, which is
       
 
 \subsubsection{Time Resolution}
-The time resolution is defined as the time taken by detector to generate a signal on the readout electrode after the passage of particle through it.
+The time resolution for a detector is defined as the time taken by detector to generate a signal on the readout electrode after the passage of particle through it.
 % The time resolution of a detector is defined as the minimum gate width necessary on the detection electronics for full efficiency.
 Experimentally, the time resolution is the root-mean-square of the Gaussian distribution of the time taken by the particle to reach detector from the scintillator.
 % Along with the fast 40MHz ($25~ns$) clock pulse has been used to cope with the LHC bunch crossing.
 The detector time response is modelled as the Gaussian function, $f(t)$, convoluted with a square wave, $g(t)$, having a pulse length $f_{clk}=25ns$ (LHC clock frequency) to represent discrete sampling. 
-The functions $f(t)$ is given by:
+The functions $f(t)$ is given as:
 \begin{equation}
-f(t) = Ae^{-\frac{1}{2}(\frac{t-t_0}{\sigma})^2}
+f(t) = Ae^{-\frac{1}{2}(\frac{t-t_0}{\sigma})^2},
 \end{equation}
-where A is amplitude of Gaussian function, $t_0$  is the mean value of Gaussian, and $\sigma$ is the standard deviation of Gaussian. And, $g(t)$ is given by
+where A is amplitude of Gaussian function, $t_0$  is the mean value of Gaussian distribution, and $\sigma$ is the standard deviation. And, $g(t)$ is given by
 \begin{equation}
 g(t) =
       \begin{cases}
               0, & \text{else} \\
               1, & \text{$-\frac{f_{clk}}{2}<t<\frac{f_{clk}}{2}$}
-      \end{cases}
+      \end{cases},
 \end{equation}
-where, $f_{clk}$ is the length of created 40MHz window.
+where $f_{clk}$ is the length of created 40 MHz window.
 The convolution of the two functions is given as
 \begin{equation}
-(f*g)(t) = A \cdot \sigma \sqrt{\frac{\pi}{2}}\Big(erf\Big(\frac{u_{+}}{\sigma\sqrt{2}}\Big)-erf\Big(\frac{u_{-}}{\sigma\sqrt{2}}\Big)\Big)
+(f*g)(t) = A \cdot \sigma \sqrt{\frac{\pi}{2}}\Big(erf\Big(\frac{u_{+}}{\sigma\sqrt{2}}\Big)-erf\Big(\frac{u_{-}}{\sigma\sqrt{2}}\Big)\Big),
 \end{equation}
 % where $A$ is the amplitude of the Gaussian function, $\sigma$ is the standard deviation of Gaussian, and 
-where, $u_{\pm}= t-t_0\pm\frac{f_{clk}}{2}$. 
-The the experimental data is fitted with this convoluted function.
+where $u_{\pm}= t-t_0\pm\frac{f_{clk}}{2}$. 
+The the experimental data are fitted with this convoluted function.
 % From, the fit we extract the time resolution of the detector before the convolution.
 The extracted time resolution as a function of $E_{drift}$ and current supplied to high voltage divider are shown in Fig. \ref{TimeResolution}. 
 
-Here, the time resolution for the detector operated using gas $Ar/CO_2$ gas mixture is fitted using a polynomial of degree 2, while the one with $Ar/CO_2/CF_4$ gas mixture was fitted using the polynomial of order 6. Also, the fit parameters for each fit is given in appendix~\ref{cha:efficiency_and_time_resolution_fit_parameters}.
+Here, the time resolution for the detector operated using $Ar/CO_2$ gas mixture is fitted using a polynomial of degree 2, while the one with $Ar/CO_2/CF_4$ gas mixture,fitted using a polynomial of order 6.The fit parameters for each fit is given in Appendix~\ref{cha:efficiency_and_time_resolution_fit_parameters}.
 
-The time resolution with $Ar/CO_2$ (70/30) is higher for lower values of $E_{drift}$.
+The time resolution with $Ar/CO_2$ (70/30) gas mixture is higher even for lower values of $E_{drift}$.
 % However, for any given point on the $Ar/CO_2$ curve has a gain approximately one order of magnitude higher gain than the corresponding gain with $Ar/CO_2/CF_4$ (45/15/40).
-This means that we are able to reach faster timing at lower gains with addition of $CF_4$ and it is important from the point of view of detector safety because this will allow us to operate the detector at lower gains, hence reducing the discharge probability.
+This means that we are able to reach faster timing at lower gains with addition of $CF_4$.This is important from the detector safety view point because this will allow us to operate the detector at lower gains,there by reducing the discharge probability.
 
 \begin{figure}[!htbp]
 \centering
@@ -545,14 +536,16 @@ The basis of this algorithm is that we consider clusters if one or more continuo
 Three golden run ranges, with different pseudo-rapidity sectors, viz 2014H4A, 2014H4C and 2014H4D are studied.
 The description of these runs is given in Table~\ref{tab:gemTBgoldenruns}.
 
-To fit the cluster size distribution, Poisson function is used. Figure~\ref{fig:CSDpoissonfunction} shows the cluster size distribution for different ($\eta$, $\phi$) sector fitted using the Poisson distribution function.
+To fit the cluster size distribution,a Poisson distribution function is used. Figure~\ref{fig:CSDpoissonfunction} shows the cluster size distribution for different ($\eta$, $\phi$) sector fitted using the Poisson distribution function.
 
 % Study for the cluster size is done only for the three above mentioned golden run ranges.
-Distribution is studied for different values of fiducial region and it is observed that the cluster size is independent of the fiducial region (Fig.~\ref{fig:CSDfiducialregion}).
+ The distribution is studied for different values of fiducial regions and it is observed that the cluster size is independent of the dimensions of the fiducial region (Fig.~\ref{fig:CSDfiducialregion}).
 
 Cluster size study distributions for the GE1/1-IV and GE1/1-IV-GIF are plotted as a function of current supplied to the high voltage divider and are shown in Figure~\ref{fig:CSDGE1/1}.
 % Cluster size is taken with the Poisson fitting function. 
-The cluster size is greater in ($\eta$, $\phi$) = (5,2) region for both the detectors due to the uniformity in readouts channels. As it is known that the GE1/1 $4^{th}$ generation prototype is suffered from the significant bending in the readout and drift PCB. This impacts GE1/1 properties like primary charge created, uniformity, transparency of bottom of third GEM foil, charge collection by the readout, etc. Thus, it is expected that that non-uniformity in the cluster size distribution in ($\eta$, $\phi$) sector (1,2), (5,2), and (8,2) is because of this. This issue is improved in the next version of GE1/1 prototype, known as GE1/1-V.
+The cluster size is greater in ($\eta$, $\phi$) = (5,2) region for both the detectors due to the uniformity in readouts channels.The GE1/1 $4^{th}$ generation prototype used suffered from the significant bending in the readout and drift PCB. This affects GE1/1 properties like primary charge created, uniformity, transparency of bottom of third GEM foil, charge collection by the readout, etc. Thus, it is expected that non-uniformity in the cluster size distribution in ($\eta$, $\phi$) sector (1,2), (5,2), and (8,2) is a consequence of this. This issue is improved in the next version of GE1/1 prototype known as GE1/1-V.
+
+To conclude,these beam test compaign ensured the good detection efficiencyand fine spatial and letency resolutionof GE1/1 detector.In the following section,the characterization studies performed during the development phase of GEM foils in India are reported. 
 % subsection results (end)
 
 % section gem_for_cms (end)
