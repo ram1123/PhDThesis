@@ -393,7 +393,7 @@ The new effective lagrangian using the EFT is
 \begin{equation}
     \Lagr_{eff} = \Lagr_{SM} + \sum_{i=www,w,B, \phi W, \phi B} \frac{c_i}{\Lambda^2} {\Oo}_i + \sum_{j=0,1}\frac{f_{S,j}}{\Lambda^4} \Oo_{S,j} + \sum_{j=0,...,9}\frac{f_{T,j}}{\Lambda^4} \Oo_{T,j}  + \sum_{j=0,...,7}\frac{f_{M,j}}{\Lambda^4} \Oo_{M,j} ,
 \end{equation}
-here, $\Lambda$ is the new physics scale, the parameter $c_i$, is the dimensionless coupling-strength coefficient of order $\Oo(1)$ and $f_{s,j}$, $f_{T,j}$ and $f_{M,j}$ are for the dimensionless coupling-strength coefficient for the quartic gauge couplings.
+here, $\Lambda$ is the new physics scale, the parameter $c_i$, is the dimensionless coupling-strength coefficient of order $\Oo(1)$ and $f_{s,j}$, $f_{T,j}$ and $f_{M,j}$ are for the dimensionless coupling-strength coefficient for the quartic gauge couplings. Also, in EFT at $\Lambda \rightarrow \inf$ the effective Lagrangian should reduce to the SM one.
 
 Due to the higher dimension these operators $\mathcal{O}$ have coefficients of inverse power of mass so the operators with the lowest dimension are dominant. Most of the SM operators are of dimension four and since only operators with even dimension satisfy conservation of lepton and baryon number the new operators have to be at least dimension six operators~\cite{Degrande2013a}. 
 These new operators effect also double and triple gauge boson couplings; these can be studied more easily in other processes. \todo[inline]{Rewrite this para...}.
@@ -565,7 +565,6 @@ Also, a constraint from the electroweak parameter, $\rho$, also known as ``\text
     \rho = \frac{M_W}{M_Z ~ cos(\theta)} = 1,
 \end{equation}
 where, $\theta$ is the weak mixing angle.
-
 A isospin doublet of the $SU(2)_L \times SU(2)_R$ is given as
 \begin{equation}
     \Phi = 
@@ -576,13 +575,105 @@ A isospin doublet of the $SU(2)_L \times SU(2)_R$ is given as
 \end{equation}
 and the triplet  Higgs field is given as
 \begin{equation}
-    \Delta = (\epsilon_3 \chi*,~\zeta,~\chi) = 
+    X = (\epsilon_3 \chi*,~\zeta,~\chi) = 
     \begin{bmatrix}
         (\chi^0)^*     &   \zeta^+     &   \chi^{++} \\
         -(\chi^{+})^*    &   \zeta^0     &   \chi^+    \\
         (\chi^{++})^*  &   (-\zeta^+)^*   &   \chi^0    \\
     \end{bmatrix}
 \end{equation}
+The vacum expectation values (vev) for the $\Phi$
+\begin{equation}
+    \Braket{\Phi} = \frac{V_\phi}{\sqrt{2}} \mathbb{1}_{2\times 2}
+\end{equation}
+and for the field $X$ is 
+\begin{equation}
+    \Braket{X}  = v_x \mathbb{1}_{3\times 3}
+\end{equation}
+where, $\mathbb{1}$ is the unit matrix and the W and Z boson to be massless provides a condition that
+
+\begin{equation}
+    v_\phi^2 + 8v_{\chi}^2 = v = \frac{1}{\sqrt{2}G_F} \approx (246~GeV)^2
+\end{equation}
+
+The most general gauge invariant potential involving these fields that preserve the custodial symmetry is given as
+\begin{eqnarray}
+    V{\Phi,X} & = & \frac{\mu_2^2}{2}Tr(\Phi^{\dagger}\Phi) + \frac{\mu_3^2}{2}Tr(X^{\dagger}X)  \nonumber \\
+            & & + \lambda_1\Big[ Tr(\phi^\dagger \phi)\Big] + \lambda_2 Tr\Big[ (\phi^{\dagger} \phi) Tr(X^{\dagger}X) \Big] \nonumber \\
+            & & + \lambda_3 Tr(X^{\dagger}XX^{\dagger}X) + \lambda_4 \Big[ Tr(X^{\dagger}X) \Big]^2  \nonumber \\
+            & & -\lambda_5 Tr(\phi^{\dagger} \tau^a \phi \tau^b) Tr(X^{\dagger} t^a X t^b)   \nonumber \\
+            & & -M_1 Tr(\phi^{\dagger} \tau^a \phi \tau^b) (UXU^{\dagger})_{ab} \nonumber \\
+            & & -M_2 Tr(X^{\dagger} t^a X t^b)(UXU^{\dagger})_{ab}
+\end{eqnarray}
+where $\tau^a = \frac{\sigma^a}{2}$,
+\begin{equation}
+    t^1=\frac{1}{\sqrt{2}}
+        \begin{bmatrix}
+        0   &   1 & 0 \\
+        1   &   0 & 1 \\
+        0   &   1 & 0   \\
+        \end{bmatrix},~~
+    t^2 = \frac{1}{\sqrt{2}}
+        \begin{bmatrix}
+        0   &   -i & 0 \\
+        i   &   0 & -i \\
+        0   &   i & 0   \\
+        \end{bmatrix},~~
+    t^3 = 
+        \begin{bmatrix}
+        1   &   0 & 0 \\
+        0   &   0 & 0 \\
+        0   &   0 & -1   \\
+        \end{bmatrix},
+\end{equation}\
+
+The physical fields generated can be organized by the transformation properties under the custodial SU(2) symmetry into pentaplet and a triplet and two singlets. They are:
+\begin{eqnarray}
+    \mathbf{Pentaplet}~:&   & H^{++}_5 = \chi^{++} \\
+                        &   & H^+_5 = \frac{\chi^+ - \zeta^+}{\sqrt{2}} \\
+                        &   & H^0_5 = \sqrt{\frac{2}{3}}\zeta^{0,r} - \sqrt{\frac{1}{3}}\chi^{0,r} \\
+                        &   & \\
+    \mathbf{Triplet}~:  &   & H^+_3 = -S_H \phi^+ + C_H \frac{\chi^++X^+}{\sqrt{2}} \\
+                        &   & H^0_3 = -S_H \phi^{0,i} + C_H \chi^{0,i} \\
+                        &   & \\
+    \mathbf{Singlet}~:  &   & H^0_1 = \phi^{0,r}\\
+                        &   & H^{0'}_1 = \sqrt{\frac{1}{3}}\zeta^{0,r} + \sqrt{\frac{2}{3}} \chi^{0,r},
+\end{eqnarray}
+where,
+\begin{eqnarray}
+    S_H = sin(\theta_H) = \frac{2\sqrt{2} v_\chi}{v} \\
+    C_H = cos(\theta_H) = \frac{v_\phi}{v}
+\end{eqnarray}
+Here, within the pentaplets and the triplets, the masses are degenerated at the tree level and are given in terms of the parameters of scalar potential by
+\begin{eqnarray}
+    m_5^2 & = & \frac{M_1}{4v_\chi} v_{\phi}^2 + 12 M_2 v_{\chi} + \frac{3}{2}\lambda_5 v^2_{\phi} + 8 \lambda_3 v_{\chi}^2 \\
+    m_3^2 & = & \frac{M_1}{4v_\chi} v^2 + \frac{\lambda_5}{2} v^2 
+\end{eqnarray}
+The two custodial singlets will  mix by an angle $\alpha$ to give the two mass egien state $h$ and $H$,
+\begin{eqnarray}
+    h & = & C_{\alpha} H^0_1 - S_{\alpha} H^{0'}_1 \\
+    H & = & S_{\alpha} H^0_1 + C_{\alpha} H^{0'}_1
+\end{eqnarray}
+where, $C_{\alpha} = cos(\alpha)$ and $S_{\alpha} = sin(\alpha)$. The mixing is controlled by the mass matrix
+\begin{equation}
+    M^2 = 
+        \begin{bmatrix}
+            M_{11}^2 & M^2_{12} \\
+            M_{12}^2 & M^2_{22} \\
+        \end{bmatrix}
+\end{equation}
+where,
+\begin{eqnarray}
+    M^2_{11} & = & 8 \lambda_1 v^2_{\phi} \\
+    M^2_{12} & = & \frac{\sqrt{2}}{2} v_{\phi} \Big[-M_1 + 4(2\lambda_2 - \lambda_5) v_x \Big] \\
+    M^2_{22} & = & \frac{M_1}{4 v_{\chi}}v^2_{\phi} - 6 M_2 v_{\chi} + 8(\lambda_3 + 3\lambda_4) v^2_{\chi}
+\end{eqnarray}
+
+Some remarkable feature of the GM model is that the $HWW$ and $HZZ$ coupling may be larger than in the SM. 
+The pentaplet Higgs bosons have coupling with the weak bosons while the triplet do not. Thus, the triplet Higgs bosons are said to be gauge-phobic while the pentaplets are known as fermi-phobic.
+% The custodial pentaplets have no doublet component and hence they are fermifobic at the tree level.
+But these pentaplets can couples to the massive vector boson where the coupling strenght is proportional to the parameter $S_H$.
+
 % section georgi_machacek_model (end)
 
 % \section{Experimental Status} % (fold)
