@@ -1,4 +1,4 @@
-\chapter{The LHC and its CMS Detector} % (fold)
+\chapter{The LHC and CMS Detector} % (fold)
 \label{cha:the_lhc_and_cms_machine}
 
 In this chapter, the working and the design parameters of the Large Hadron Collider (LHC) and one of its general purpose detector, Compact Muon Solenoid (CMS), are briefly described.
@@ -13,7 +13,7 @@ The starting point of experimental particle physics was the Rutherford $\alpha$-
 In this experiment, a beam of $\alpha$-particles was fired at a thin gold foil and its scattering was observed on the photographic screen. 
 Based on their experimental findings, they suggested the structure of the atom as we know it today, in which most of the mass is centred at the core of the atom known as the nucleus, and electrons  revolve around it. 
 One hundred years after this classic experiment, the same techniques are employed today to explore the most basic constituents of the matter. 
-Only the technique changed from ``{\textit{natural accelerator}}"\footnote{radioactivity and cosmic rays} to the ``{\textit{man-made}}" accelerator.
+Only, the technique changed from ``{\textit{natural accelerator}}"\footnote{radioactivity and cosmic rays} to the ``{\textit{man-made}}" accelerator.
 The man made accelerator, also known as particle accelerator, can accelerate particles with speed close to the speed of light. 
 The design and working of the particle accelerator has changed a lot over the period of time in going from eV to GeV and now to TeV range. 
 Nowadays, accelerators are not only used in HEP experiments, but also extend their arenas to medical sciences such as production of radioisotopes for cancer treatments, 3-D X-rays, etc. and to the industrial applications involving material processing, sterilization, security scan, water treatment, and many more~\cite{Demarteau2016}. 
@@ -44,7 +44,12 @@ At the LHC, there are two beam pipes - each having a diameter of $\approx$ 6.3 c
 \subsection{Accelerating Structure} % (fold)
 \label{sub:accelerating_structure}
 
-Another main part of any particle accelerator is its accelerating structure. An accelerator in the TeV range cannot accelerate particles at rest to the energies of the order of TeV in a single go.  It should go into several stages depending on the energy. At LHC, the journey of a proton starts with pulling the proton out from the Hydrogen gas and subsequently going into five different acceleration stages. The number of acceleration stages can be decreased but not to one because of hardware restrictions. At LHC, there are five different stages before reaching to maximum energy and at each stage, it serves several other experiments which are shown pictorially in Figure~\ref{fig:OtherExpAtAccStructure}. The stages for proton acceleration are:
+Another main part of any particle accelerator is its accelerating structure.
+An accelerator in the TeV range cannot accelerate particles at rest to the energies of the order of TeV in a single go.
+It should go into several stages depending on the energy.
+At LHC, the journey of a proton starts with pulling the proton out from the Hydrogen gas and subsequently going into five different acceleration stages.
+The number of acceleration stages can be decreased but not to one because of hardware restrictions.
+At LHC, there are five different stages before reaching to maximum energy and at each stage, it serves several other experiments which are shown pictorially in Figure~\ref{fig:OtherExpAtAccStructure}. The stages for proton acceleration are:
 \begin{itemize}
     \item {\textit {\textbf {Grab proton source}}}: The Duoplasmatron~\cite{LHC-tdr-vol3} strips electron from the hydrogen gas and creates a plasma of protons, electrons and molecular ions. This plasma expands towards the extraction electrodes and a proton beam is formed. This feeds protons to the Linear accelerator-2 (LINAC2).
     \item {\textit {\textbf {LINAC2}}}: It is the starting point of proton's journey in the LHC accelerator complex. Here, proton beams are accelerated to an energy of 50 $MeV$ using the radio-frequency (RF) cavities\footnote{An RF cavity is a metallic cavity that accelerates the charged particles using the electromagnetic field.}. LINAC2 further feeds to the Proton Synchrotron Booster (PSB).
@@ -182,23 +187,19 @@ The unit of luminosity is $cm^{-2}s^{-1}$.
 
 \subsubsection{Luminosity calculation} % (fold)
 \label{ssub:luminosity_calculation}
-
-
-\begin{figure}[!htbp]
-	\centering
-	\includegraphics[width=0.95\textwidth]{figures/LHC/Luminosity_calculation.jpg}
-	\caption{Layout decribing the bunch parameters and interaction area.}
-	\label{fig:lumi}
-\end{figure}
-
-% The luminosity is proportional to the number of events per second so it should be maximised. Luminosity is the 
-
 Luminosity is defined as:
 \begin{equation}
     \Lagr = \frac{k_bN_1N_2f_{rev}\gamma}{A_{eff}}
     % L = \frac{k_bN_1N_2f_{rev}\gamma}{4 \pi \epsilon_n \beta^*}
 \end{equation}
 Where, $k_b$ is the number of bunches per beam, $N_1 and N_2$ are the number of protons in the two bunches, $f_{rev}$ the revolution frequency of proton beams, and $A_{eff}$ is the effective transverse area of the beam. The different parameters of the beam as showing in the Fig.~\ref{fig:lumi}.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/LHC/Luminosity_calculation.jpg}
+	\caption{Layout decribing the bunch parameters and interaction area.}
+	\label{fig:lumi}
+\end{figure}
+% The luminosity is proportional to the number of events per second so it should be maximised. Luminosity is the 
 % \hspace{2 cm}$\epsilon_n$ is the normalised RMS transverse beam emittance (same in both )\\
 % \hspace{2 cm}$\beta^*$ is the beta-function at the interaction point\\
 For a Gaussian beam with spread $\sigma_x$ and $\sigma_y$ in x and y direction respectively, the effective area will be $4\pi \sigma_x \sigma_y$, so that
@@ -297,7 +298,7 @@ The design and components of any HEP detector depend upon its physics goals and 
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.60\textwidth]{figures/LHC/pileup.jpg}
-	\caption{Mean number of interactions per bunch crossing in p-p collision.}
+	\caption{Mean number of interactions per bunch crossing in p-p collision~\cite{Apyan2017}.}
 	\label{fig:pile-up}
 \end{figure}
 Restrictions imposed on detector from the physics goals of the LHC:
@@ -307,11 +308,20 @@ Restrictions imposed on detector from the physics goals of the LHC:
 	\item Highly efficient and granular electromagnetic calorimeter to detect and measure energies of electrons and photons.
 	\item Good missing transverse energy resolution and di-jet mass resolution require a ``hermetic'' hadron calorimeter with full geometric coverage and fine lateral segmentation.
 \end{enumerate}
-
 % When the two beam of proton collides then thousands of particles are produced and out of them only 9 particles are of interest from detector construction point of view. They are photons ($\gamma$), electrons ($e$), muons ($\mu$), pions ($\pi^{\pm}$), kaon ($K^{\pm},~K_L,~K_S$), protons ($p$), and neutrons ($n$). Out of rest there are three neutrinos which interacts only weakly that do not interact in light mass HEP detectors and others are short lived particles. So, 
 Based on the above conditions the CMS detector is designed in a cylindrical shape such that each sub-detector component is on top of the other, with the beam pipe at the centre. 
 To have a full geometric coverage, it is designed with a barrel region and two endcap regions. The main part of the CMS detector is its superconducting magnet system, capable of producing a highly uniform magnetic field of 4T to accurately measure the high momentum particles. 
-While the muon detector system is kept outside the magnet but sandwiched in its return yoke, the tracking system, the calorimeters Electromagnetic CALorimeter (ECAL) and Hadronic CALorimeter (HCAL) are placed inside the magnet. The CMS detector design is shown in Figure~\ref{fig:CMS-detector}.This shape was inspired by all the known particles that will reach the CMS detector.The known particle that will reach CMS detector are $e^{\pm}$,$\mu^{\pm}$,$\gamma$,$\pi^{\pm}$,$k^{\pm}$,p,n,$k_{l}$ and $k_{s}$.These can be grouped in two categories based on electromagnetic and strong interactions.All the strongly interacting particles will be detected by HCAL while all the electromagnetic interacting particles should be detected by ECAL.But only electrons and photons are detected by ECAL not muons.As it will not beam because it is too heavy than electrons (as beam is inversaly proportional to mass) since muons can not interact via strong force it will pass through ECAL as well as HCAL.Thus CMS is installed in a seperate muon system outside ECAL and HCAL.
+While the muon detector system is kept outside the magnet but sandwiched in its return yoke, the tracking system, the calorimeters Electromagnetic CALorimeter (ECAL) and Hadronic CALorimeter (HCAL) are placed inside the magnet.
+The CMS detector design is shown in Figure~\ref{fig:CMS-detector}.
+
+The above mentioned shape of CMS was inspired by all the known particles that will reach to the CMS detector.
+The known particle that will reach CMS detector are $e^{\pm}$, $\mu^{\pm}$, $\gamma$, $\pi^{\pm}$, $k^{\pm}$, p, n, $k_{L}$ and $k_{S}$.
+These can be grouped in two categories based on electromagnetic and strong interactions.
+All the strongly interacting particles will be detected by HCAL while all the electromagnetic interacting particles should be detected by ECAL.
+But only electrons and photons are detected by ECAL not muons.
+As it will not bremsstrahlung because it is too heavy than electrons (as bremsstrahlung is inversaly proportional to $mass^4$).
+Since muons can not interact via strong force it will pass through ECAL as well as HCAL.
+Thus CMS is installed in a seperate muon system outside ECAL and HCAL.
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=1.1\textwidth]{figures/LHC/cms_120918_03.png}
@@ -391,7 +401,9 @@ It is evident  from the name of the CMS detector that a precise detection of muo
 	\caption{A muon leaves curved trajectory in LHC and the bending changes as the magnetic field direction of solenoid inside and outside are opposite.}
 	\label{fig:muon-system-cross}
 \end{figure}
-The layout of the CMS muon detector system is shown in Figure~\ref{fig:muon-system-layout}. Three different types of gaseous detectors used for the muon system  were chosen based on the background level, muon rate, uniformity and magnitude of magnetic field. Drift tubes (DT) are used as tracking detector in the barrel region with relatively lower magnetic field intensity and have lower background rates as compared to the endcaps. 
+The layout of the CMS muon detector system is shown in Figure~\ref{fig:muon-system-layout}.
+Three different types of gaseous detectors used for the muon system  were chosen based on the background level, muon rate, uniformity and magnitude of magnetic field.
+Drift tubes (DT) are used as tracking detector in the barrel region with relatively lower magnetic field intensity and have lower background rates as compared to the endcaps. 
 For the endcap regions, Cathode Strip Chambers (CSC) are employed as they provide precise information about muons momentum and timing information even under high radiation environment.
 The pseudo-rapidity coverage of DTs is $|\eta|<1.2$ and for CSCs is $0.9<|\eta|<2.4$. Along with DTs and CSCs, Resistive Plate Chamber (RPC) detectors are also installed to have a fast dedicated  muon triggering system in both barrel and endcap region up to $|\eta|<1.6$~\cite{muon-tdr}. The CMS muon detector system covers the geometric region up to $|\eta|<2.4$ but RPCs are deployed up-to $|\eta|<1.6$ as RPCs cannot withstand the radiation level after pseudo-rapidity region of 1.6. Thus to reconstruct muons in pseudo-rapidity region higher than 1.6 during Long Shutdown-2 (LS2, 2019-2020), CMS collaboration decided to employ Gas Electron Multiplier (GEM) detectors in region  $1.6<|\eta|<2.2$, which is able to provide good space resolution and time resolution even in high environment radiation. The pseudo-rapidity range is limited to $|\eta|<2.2$ because of space constrains. GEM  detectors are described in details in Chapter~\ref{cha:gas_electron_multiplier}.
 \begin{figure}[!htbp]
@@ -441,7 +453,21 @@ Muon system & Gaseous & efficiency $\epsilon \sim 98\%$ \\
 % % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{CMS Trigger and Data Acquisition system} % (fold)
 \label{sub:cms_trigger_and_data_acquisition_system}
-The LHC produces about 1 billion of p-p collisions every second. During each collision thousands of particles are produced that cross the CMS detector. Reconstruction of all these particles generate several Terabytes of data. However, till date we neither have a switch with the required bandwidth that can transfer this enormous data for further processing nor the disk space to store all of them. Though if we have one, only a few fractions of data that are interesting for new physics or help us to understand the existing one as most of the collisions are the low-energy glancing collisions instead of head-on interaction. The maximum amount of data that can be stored every day is of the order of few Terabytes that decide the rate at which we can accept the events ($\sim$ 100 Hz). Thus, the concept of the trigger, method to select events of interest, was first introduced by ZEUS experiment~\cite{ZEUSCollaboration1993}, that handles data in real time, coupled with complex data acquisition (DAQ) system. While designing the trigger one has to keep in mind that trigger should efficiently accept the interesting physics\todo[inline]{define ``interesting physics''}  while rejecting the non-interesting ones as whatever information is lost at this level can not be recovered.
+The LHC produces about 1 billion of p-p collisions every second.
+During each collision thousands of particles are produced that cross the CMS detector.
+Reconstruction of all these particles generate several Terabytes of data.
+However, till date we neither have a switch with the required bandwidth that can transfer this enormous data for further processing nor the disk space to store all of them.
+Though if we have one, only a few fractions of data that are interesting for new physics or help us to understand the existing one as most of the collisions are the low-energy glancing collisions instead of head-on interaction.
+Also, this can be understood from the SM cross-section of pp as compared to the other process shown in Fig.~\ref{fig:SM-cross-section}.
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.55\textwidth]{figures/LHC/crosssections2012_v5.pdf}
+	\caption{Standard Model cross sections as a function of collider energy~\cite{Stirling2012}. The total hadronic cross-section is based on parametrisation of the Particle Data Group~\cite{PDG2018}. Other cross-sections are calculated at NLO or NNLO perturbative QCD, using MSTW2008 parton distributions~\cite{Martin2009}.}
+	\label{fig:SM-cross-section}
+\end{figure}
+The maximum amount of data that can be stored every day is of the order of few Terabytes that decide the rate at which we can accept the events ($\sim$ 100 Hz).
+Thus, the concept of the trigger, method to select events of interest, was first introduced by ZEUS experiment~\cite{ZEUSCollaboration1993}, that handles data in real time, coupled with complex data acquisition (DAQ) system.
+While designing the trigger one has to keep in mind that trigger should efficiently accept the interesting physics\todo[inline]{define ``interesting physics''}  while rejecting the non-interesting ones as whatever information is lost at this level can not be recovered.
 
 
 The CMS trigger system is divided into two steps - Level-1 trigger which is a custom hardware running synchronously with the LHC bunch crossing frequency of 40 MHz and the High-Level Trigger (HLT)~\cite{paper:JINST:CMSCollaboration,Cittolin:578006,Khachatryan2017}. The CMS trigger flow diagram is shown in Fig.~\ref{fig:cms-trigger}. 
@@ -543,10 +569,3 @@ Once the events are selected by the trigger system and data are stored to disk, 
 To perform all these steps CMS collaboration had developed its software which is known as CMSSW. This software is based on Event Data Model (EDM) centred around the concept of an  event. Here, an event is a C++ object container for all raw and reconstructed data related to a particular collision. Finally, these events are stored in ROOT files~\cite{Root1996}. The CMSSW event processing model consists of one executable called cmsRun, and many plug-in modules. These modules contain all the necessary programs needed for event processing such as detector calibration and reconstruction algorithms~\cite{Bayatyan2005}.
 To analyse data, we also need MC simulations which are carried out based on the predictions of SM and various new physics models. MC events are generated at parton level using various monte-carlo generators like MadGraph or Pythia followed by showering and hadronization. These events are then passed through the GEANT4~\cite{Agostinelli2003} for CMS detector simulation. The resultant data is similar to what one obtains from the actual detector.
 % section cms_offline_computing (end)
-% The sm cross-section shown in fig~\ref{fig:SM-cross-section}.
-% \begin{figure}[!htbp]
-% 	\centering
-% 	\includegraphics[width=0.55\textwidth]{figures/LHC/crosssections2012_v5.pdf}
-% 	\caption{Standard Model cross sections as a function of collider energy~\cite{Stirling2012}. The total hadronic cross-section is based on parametrisation of the Particle Data Group~\cite{PDG2018}. Other cross-sections are calculated at NLO or NNLO perturbative QCD, using MSTW2008 parton distributions~\cite{Martin2009}.}
-% 	\label{fig:SM-cross-section}
-% \end{figure}
