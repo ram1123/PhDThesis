@@ -95,8 +95,9 @@ The details of the different types of magnets used in LHC are listed here \cite{
 Besides, there are eight sets of ``\textit{inner triplets}" used at the four interaction points (IPs) to focus the beams during the collisions to increase the luminosity. The size of the bunch goes from 0.2 mm to 17 $\mu m$ and 71 $\mu m$ at the interaction point of ATLAS (A Toroidal LHC Apparatus) \& CMS (Compact Muon Solenoid) and ALICE (A Large Ion Collider Experiment) \& LHCb (Large Hadron Collider beauty), respectively. A list of important parameters of the LHC is given in Table~\ref{table:LHC-parameters}.
 
 \begin{table}
-\vspace{-5.2em}
+% \vspace{-5.2em}
 \centering
+{\small
 \begin{tabular}[!htbp]{l c}
 \hline
 {\textbf{Parameters}} & {\textbf{Value}} \\
@@ -160,10 +161,12 @@ Average mean pile-up (2016) &    27 \\
 \hline
 Energy loss per turn at 14 TeV              &   7 keV   \\
 Energy loss per turn for electrons at 104.6 GeV          &  40,000 keV     \\
+\hline
 % synchtron radiation for electrons: Reference: Particle Physics Experiments at high energy colliders by John Hauptman
 \end{tabular}
 \caption{LHC technical parameters for proton-proton collisions: nominal, 2012 and 2016 values.\cite{Bruce2016, Schoerner-Sadenius2015, LHC-parameters-2016, LHC-tdr-vol1, cms-lumi-public-results}.}
 \label{table:LHC-parameters}
+}
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -175,7 +178,7 @@ The HEP collider is characterised on the basis of two parameters - the centre of
 The production rate of heavier particles like Higgs increases with the centre of mass energy. 
 Luminosity ({$\Lagr$}) measures the ability of a collider to produce the required number of interactions. It is the proportionality factor between the number of events per second $dR/dt$ and the cross-section $\sigma_p$~\cite{Muratori2006}.
 \begin{equation}
-	\frac{dR}{dt} = \Lagr ~~.~~ \sigma_p
+	\frac{dR}{dt} = \Lagr ~~.~~ \sigma_p~,
 \end{equation}
 The unit of luminosity is $cm^{-2}s^{-1}$.
 
@@ -183,7 +186,7 @@ The unit of luminosity is $cm^{-2}s^{-1}$.
 \label{ssub:luminosity_calculation}
 Luminosity is defined as:
 \begin{equation}
-    \Lagr = \frac{k_bN_1N_2f_{rev}\gamma}{A_{eff}}
+    \Lagr = \frac{k_bN_1N_2f_{rev}\gamma}{A_{eff}}~,
 \end{equation}
 Where, $k_b$ is the number of bunches per beam, $N_1 and N_2$ are the number of protons in the two bunches, $f_{rev}$ the revolution frequency of proton beams, and $A_{eff}$ is the effective transverse area of the beam. The different parameters of the beam as showing in the Fig.~\ref{fig:lumi}.
 \begin{figure}[!htbp]
@@ -197,16 +200,15 @@ Where, $k_b$ is the number of bunches per beam, $N_1 and N_2$ are the number of 
 % \hspace{2 cm}$\beta^*$ is the beta-function at the interaction point\\
 For a Gaussian beam with spread $\sigma_x$ and $\sigma_y$ in x and y direction respectively, the effective area will be $4\pi \sigma_x \sigma_y$, so that
 \begin{equation}\label{eq:luminosity}
-    \Lagr = \frac{k_bN_1N_2f_{rev}\gamma}{4 \pi \sigma_x \sigma_y}
-    % L = \frac{k_bN_1N_2f_{rev}\gamma}{4 \pi \epsilon_n \beta^*}
+    \Lagr = \frac{k_bN_1N_2f_{rev}\gamma}{4 \pi \sigma_x \sigma_y}~,
 \end{equation}
 The beam size, $\sigma_x~.~\sigma_y$, can be expressed in terms of transverse beam emittance\footnote{The transverse emittance is a beam quality concept reflecting the process of bunch preparation (the injector chain), extending all the way back to the source for hadrons. A low emittance particle beam is a beam where the particles are confined to a small distance and have nearly the same momentum. In a colliding beam accelerator, keeping the emittance small means that the likelihood of particle interactions will be greater resulting in higher luminosity. The emittance changes as a function of the beam momentum; increasing the energy of the beam reduces the emittance.} ($\epsilon_n$) and the amplitude function\footnote{The amplitude function, $\beta^*$ , is determined by the accelerator magnet configuration (basically, the quadrupole magnet arrangement) and powering. } ($\beta^*$, also known as beta-function). The amplitude function can be expressed in terms of cross-sectional size of the bunch ($\sigma_x~.~\sigma_y$) and  the transverse emittance ($\epsilon_n$). The amplitude function $\beta$  becomes 
 \begin{equation}\label{eq:beta_function}
-	\beta^* = \frac{\pi.\sigma_x.\sigma_y}{\epsilon_n}
+	\beta^* = \frac{\pi.\sigma_x.\sigma_y}{\epsilon_n}~,
 \end{equation}. 
 If the amplitude function is small, the beam will be narrower and squeezed. If it is high, the beam will be wide and straight. It has unit of length. Thus, we can express luminosity in terms of transverse emittance and the amplitude function as
 \begin{equation}\label{eq:luminosity2}
-    \Lagr = \frac{k_bN_1N_2f_{rev}\gamma}{4 \pi \epsilon_n \beta^*}
+    \Lagr = \frac{k_bN_1N_2f_{rev}\gamma}{4 \pi \epsilon_n \beta^*}~,
 \end{equation}
 Based on the definition of luminosity, we can maximise it by following ways:
 \begin{itemize}
@@ -221,11 +223,11 @@ Based on the definition of luminosity, we can maximise it by following ways:
 \label{ssub:integrated_luminosity}
 The maximum luminosity or the instantaneous luminosity is an important quantity but the final figure of merit is the \textbf{integrated luminosity} as it directly gives us the total number of observed events over a period of time:
 \begin{equation}
-	\Lagr_{int}~.~\sigma_p = number~of~events~of~interest
+	\Lagr_{int}~.~\sigma_p = number~of~events~of~interest~,
 \end{equation}
 where, $L_{int}$ is defined as the integral of the delivered luminosity over time. It is the measurement of the collected data size.
 \begin{equation}
-	\Lagr_{int} = \int_0^T L(t')dt'
+	\Lagr_{int} = \int_0^T L(t')dt'~,
 \end{equation}
 Its unit is $barn^{-1}$. Figure~\ref{fig:lumi-proj-2016-final-v2} shows the integrated luminosity of 2016 as compared to the previous years.
 \begin{figure}[!htbp]
@@ -279,7 +281,7 @@ CMS uses the first point, i.e., to increase the magnetic field with compact desi
 The design and components of any HEP detector depend upon its physics goals and operational parameters of the particle accelerator where it is installed. In case of the CMS detector, following challenges are imposed by the LHC accelerator:
 \begin{enumerate}
 	\item \textbf{ \textit{High luminosity}}: A high delivered luminosity implies that whenever two proton bunches cross each other there will be more than one p-p interactions also known as ``\textit{pile-up}''\footnote{Pile-up can be theoretically estimated as the product of inelastic p-p cross-section ($\sigma_{inel}$), instantaneous luminosity ($\Lagr$) and the mean time interval between two collisions, ($< t >$). \begin{equation}
-		mean~pile-up = \sigma_{inel} \times \Lagr \times <t>
+		mean~pile-up = \sigma_{inel} \times \Lagr \times <t>~,
 	\end{equation}}. Figure~\ref{fig:pile-up} shows the mean number of interactions for year 2016 and previous years. Given this, there will be more than $\mathcal{O}(1000)$ particles passing through detector during every p-p collision.\todo[inline]{update previous line} Thus, the detector should be highly granular which means an increased number of readout channels, synchronised with LHC clock.
 	\item \textbf{\textit{Response time}}: At LHC, the two proton beams cross each other at every 25 ns. So, the response time of all the sub-detector systems should be less than 25 ns.
 	\item \textbf{\textit{Radiation hardness}}: At every 25 ns, the detector is bombarded with more than 1000 particles so all the sub-detectors should be radiation hard including its electronics, cables, glue, screws, and so on.
@@ -322,7 +324,7 @@ Thus CMS is installed in a seperate muon system outside ECAL and HCAL.
 \label{sub:coordinate_system}
 The right handed coordinate system is used in the CMS detector having origin at the nominal IP (Figure~\ref{fig:cms-coordinate-system}). The z-axis is considered along the beam direction in a way that x-axis and y-axis point radially to the centre of the LHC ring and in upward direction, respectively. The azimuthal angle, $\phi$, is measured in the x-y plane from x-axis and the polar angle, $\theta$, is measured from the z-axis. Instead of describing a particle at some polar angle, we prefer to use the variable pseudo-rapidity. It is defined as 
 \begin{equation}
-	\eta = -ln\bigg[tan\Big(\frac{\theta}{2}\Big)\bigg]
+	\eta = -ln\bigg[tan\Big(\frac{\theta}{2}\Big)\bigg]~,
 \end{equation}
 In the hadron collider, the use of pseudo-rapidity was motivated from the invariance of its difference, $\Delta \eta$, with respect to the particle boost direction. Also, the particle density remains constant in the barrel region of the detector, measured in equal rapidity intervals.
 
@@ -527,7 +529,7 @@ The HLT menu is made up of many HLT paths. There are around 400 different HLT pa
 % Reference: https://tex.stackexchange.com/a/245384/41568
 \begin{table}
 {\small
-\begin{tabular}[!htbp]{l p{0.6\linewidth}}
+\begin{tabular}[!htbp]{l p{0.55\linewidth}}
 \hline
 {\textbf{Trigger Path}} & {\textbf{Explanation}} \\
 \hline
