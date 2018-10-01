@@ -70,162 +70,18 @@
 %
 %	define all acronyms
 %
-\newacronym{sm}{SM}{Standard Model}
-\newacronym{lhc}{LHC}{Large Hadron Collider}
-\newacronym{hep}{HEP}{High Energy Physics}
+% \newacronym{sm}{SM}{Standard Model}
+% \newacronym{lhc}{LHC}{Large Hadron Collider}
+% \newacronym{hep}{HEP}{High Energy Physics}
 
 \usepackage{setspace}
- 
-% \onehalfspacing
-\doublespacing
+\onehalfspacing
+% \doublespacing
 
-% How to make curvy L
-% Reference: https://tex.stackexchange.com/a/11144/41568
-% arrow
-\newcommand{\To}{\ensuremath{\rightarrow}}
-% \newcommand{\to}{\ensuremath{\rightarrow}}
-
-\newcommand{\bT}{\boldsymbol{T}}
-\newcommand{\bt}{\boldsymbol{T}}
-\newcommand{\bw}{\boldsymbol{W}}
-\newcommand{\bW}{\boldsymbol{W}}
-\newcommand{\w}{\boldsymbol{W}}
-\newcommand{\z}{\boldsymbol{Z}}
-\newcommand{\Z}{\boldsymbol{Z}}
-% \newcommand{\W}{\boldsymbol{W}}
-\newcommand{\bsigma}{\boldsymbol{\sigma}}
-\newcommand{\Lagr}{\mathcal{L}}
-\newcommand{\Oo}{\mathcal{O}}
-\newcommand{\Et}{\ensuremath{E_\mathrm{T}}}
-\newcommand{\Pt}{\ensuremath{P_\mathrm{T}}}
-\newcommand{\pt}{\ensuremath{P_\mathrm{T}}}
-\newcommand{\met}{\ensuremath{\Et^{\mathrm{miss}}}}
-\newcommand{\ptmiss}{\ensuremath{\Pt^{\mathrm{miss}}}}
-\newcommand{\Ptmiss}{\ensuremath{\Pt^{\mathrm{miss}}}}
-% \newcommand{\WW}{\ensuremath{\bW^+\bW^-}}
-\newcommand{\ww}{\ensuremath{\bW^+\bW^-}}
-% \newcommand{\zz}{\ensuremath{\Z \Z}}
-\newcommand{\WWj}{\ensuremath{\bW^+\bW^-jj}}
-\newcommand{\wwj}{\ensuremath{\bW^+\bW^-jj}}
-% \newcommand{\Wjets}{\ensuremath{\mathrm{W+jets}}}
-% \newcommand{\Zjets}{\ensuremath{\mathrm{Z+jets}}}
-\newcommand{\GeV}{\ensuremath{\mathrm{GeV}}}
-\newcommand{\PV}{\ensuremath{\mathrm{V}}}
-\newcommand{\PW}{\ensuremath{\mathrm{W}}}
-\newcommand{\PZ}{\ensuremath{\mathrm{Z}}}
-\newcommand{\TeV}{\ensuremath{\mathrm{TeV}}}
-\newcommand{\tev}{\ensuremath{\mathrm{TeV}}}
-\newcommand{\ifb}{\ensuremath{\mathrm{fb^{-1}}}}
-\newcommand{\fbinv}{\ensuremath{\mathrm{fb^{-1}}}}
-\newcommand{\PHpm}{\ensuremath{\mathrm{H}^{\pm}}}
-\newcommand{\PH}{\ensuremath{\mathrm{H}}}
-\newcommand{\MADGRAPH}{\textsc{MadGraph}}
-\newcommand{\MCATNLO}{\textsc{mc}\ensuremath{@}\textsc{nlo}}
-\newcommand{\balpha}{\boldsymbol{\alpha(x)}}
-\newcommand{\ttbar}{\ensuremath{t\bar{t}}}
-\newcommand{\PYTHIA}{\textsc{pythiya}}
-\newcommand{\kt}{\ensuremath{k_\mathrm{T}}}
-% Some shorthand
-% turn off italics
-\newcommand{\etal}{\mbox{et al.}\xspace} %et al. - no preceding comma
-\newcommand{\ie}{\mbox{i.e.}\xspace}     %i.e.
-\newcommand{\eg}{\mbox{e.g.}\xspace}     %e.g.
-\newcommand{\etc}{\mbox{etc.}\xspace}     %etc.
-\newcommand{\vs}{\mbox{\sl vs.}\xspace}      %vs.
-\newcommand{\mdash}{\ensuremath{\mathrm{-}}} % for use within formulas
-\providecommand {\NA}{\ensuremath{\text{---}}}    % for Not applicable (or available). Needs to be renewcommanded for APS to \cdots
-
-% some terms whose definition we may change
-\newcommand{\Lone}{Level-1\xspace} % Level-1 or L1 ?
-\newcommand{\Ltwo}{Level-2\xspace}
-\newcommand{\Lthree}{Level-3\xspace}
-
-% processes
-\newcommand{\dyee}{\ensuremath{Z/\gamma^*\to e^+e^-}}
-\newcommand{\dymm}{\ensuremath{Z/\gamma^*\to\mu^+\mu^-}}
-\newcommand{\dytt}{\ensuremath{Z/\gamma^*\to\tau^+\tau^-}}
-\newcommand{\dyll}{\ensuremath{Z/\gamma^*\to\ell^+\ell^-}}
-\newcommand{\zee}{\ensuremath{Z\to e^+e^-}}
-\newcommand{\zmm}{\ensuremath{Z\to\mu^+\mu^-}}
-\newcommand{\ztt}{\ensuremath{Z\to\tau^+\tau^-}}
-\newcommand{\zll}{\ensuremath{Z\to\ell^+\ell^-}}
-%\newcommand{\ttbar}{\ensuremath{t\bar{t}}}
-\newcommand{\ppww}{\ensuremath{pp \to W^+W^-}}
-\newcommand{\wwll}{\ensuremath{WW\to \ell^+\ell^-}}
-\newcommand{\wwlnln}{\ensuremath{W^+W^-\to \ell^+\nu \ell^-\bar{\nu}}}
-\newcommand{\hww}{\ensuremath{\Hi \to \WW}}
-\newcommand{\wz}{\ensuremath{WZ}}
-\newcommand{\zz}{\ensuremath{ZZ}}
-\newcommand{\wgamma}{\ensuremath{W\gamma}}
-\newcommand{\wjets}{\ensuremath{W+}jets} 
-\newcommand{\tw}{\ensuremath{tW}} 
-\newcommand{\singletopt}{\ensuremath{t} ($t$-chan)} 
-\newcommand{\singletops}{\ensuremath{t} ($s$-chan)} 
-\newcommand{\cPZ}{\PZ} % plain Z (no superscript 0)
-
-% particles
-
-\newcommand{\pipm}{\ensuremath{\pi^{\pm}}}
-\newcommand{\pizero}{\ensuremath{\pi^{0}}}
-\newcommand{\Hi}{\ensuremath{\mathrm{H}}}
-\newcommand{\V}{\ensuremath{\mathrm{V}}}
-\newcommand{\W}{\ensuremath{\mathrm{W}}}
-\newcommand{\Wjets}{\ensuremath{\mathrm{W+jets}}}
-\newcommand{\Zjets}{\ensuremath{\mathrm{Z+jets}}}
-\newcommand{\Wt}{\ensuremath{\mathrm{Wt}}}
-\newcommand{\Wstar}{\ensuremath{\mathrm{W}^{*}}}
-\newcommand{\Wparenthesisstar}{\ensuremath{\mathrm{W}^{(*)}}}
-\newcommand{\WW}{\ensuremath{\W^+\W^-}}
-\newcommand{\PHpmpm}{\ensuremath{\mathrm{H^{\pm\pm}}}}
-%\newcommand{\Z}{\ensuremath{\mathrm{Z}}}
-\newcommand{\Zstar}{\ensuremath{\mathrm{Z}^{*}}}
-\newcommand{\ZZ}{\ensuremath{\Z\Z}}
-\newcommand{\WZ}{\ensuremath{\W\Z}}
-\newcommand{\El}{\ensuremath{\mathrm{e}}}
-\newcommand{\Elp}{\ensuremath{\mathrm{e}^{+}}}
-\newcommand{\Elm}{\ensuremath{\mathrm{e}^{-}}}
-\newcommand{\Elpm}{\ensuremath{\mathrm{e}^{\pm}}}
-\newcommand{\Elmp}{\ensuremath{\mathrm{e}^{\mp}}}
-\newcommand{\M}{\ensuremath{\mu}}
-\newcommand{\Mp}{\ensuremath{\mu^{+}}}
-\newcommand{\Mm}{\ensuremath{\mu^{-}}}
-\newcommand{\Mpm}{\ensuremath{\mu^{\pm}}}
-\newcommand{\Mmp}{\ensuremath{\mu^{\mp}}}
-\newcommand{\Tau}{\ensuremath{\tau}}
-\newcommand{\Nu}{\ensuremath{\nu}}
-\newcommand{\Nubar}{\ensuremath{\bar{\nu}}}
-\newcommand{\Lep}{\ensuremath{\ell}}
-\newcommand{\Lepp}{\ensuremath{\ell^{+}}}
-\newcommand{\Lepm}{\ensuremath{\ell^{-}}}
-\newcommand{\Lprime}{\ensuremath{\Lep^{\prime}}}
-\newcommand{\Prot}{\ensuremath{\mathrm{p}}}
-\newcommand{\Pbar}{\ensuremath{\bar{\mathrm{p}}}}
-\newcommand{\PP}{\Prot\Prot}
-\newcommand{\PPbar}{\Prot\Pbar}
-%\newcommand{\ttbar}{\ensuremath{\mathrm{t}\bar{\mathrm{t}}}}
-\newcommand{\qq}{\ensuremath{\mathrm{q}\mathrm{q}}}
-%\newcommand{\bbbar}{\ensuremath{\mathrm{b}\bar{\mathrm{b}}}}
-\newcommand{\Wtb}{\ensuremath{\W\mathrm{t}\mathrm{b}}}
-\newcommand{\Top}{\ensuremath{\mathrm{t}}}
-\newcommand{\Bot}{\ensuremath{\mathrm{b}}}
-\newcommand{\Atop}{\ensuremath{\bar{\mathrm{t}}}}
-\newcommand{\Abot}{\ensuremath{\bar{\mathrm{b}}}}
-\newcommand{\WH}{\ensuremath{\W\Hi}}
-\newcommand{\ZH}{\ensuremath{\Z\Hi}}
+%%%%% Definitions for new commmands, mostly symbols
+\usepackage{symbol_definitions}
 
 
-% \newenvironment{scotch}[1]{\protect\centering\ruledtabular\tabular{#1}}{\endtabular\endruledtabular}
-\newenvironment{scotch}[1]{\protect\centering\tabular{#1}\hline\hline}{\hline\endtabular}
-
-\makeatletter
-\renewcommand{\@chapapp}{}% Not necessary...
-\newenvironment{chapquote}[2][2em]
-  {\setlength{\@tempdima}{#1}%
-   \def\chapquote@author{#2}%
-   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
-   \itshape}
-  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
-\makeatother
 
 \begin{document}
  % \linenumbers
@@ -233,7 +89,7 @@
  \pagestyle{plain}
 
 % Front pages =================================================================
- % \include{frontback/titlepage}
+ \include{frontback/titlepage}
  \listoftodos
   % \cleardoublepage \include{frontback/declare}
   % \cleardoublepage \include{frontback/originality}
@@ -246,23 +102,22 @@
   \pagestyle{headings}
   \cleardoublepage%\include{frontback/toc}
    \tableofcontents 
-   % \listoffigures 
-   % \listoftables
+   \listoffigures 
+   \listoftables
   % Content =====================================================================
   \cleardoublepage
   \pagenumbering{arabic}
   % \include{chapters/1_Introduction}
   % \include{chapters/1_StandardModel}
   % \include{chapters/1_Introduction2}
-  % \include{chapters/2_LHC_CMS_OfflineRecon}
+  \include{chapters/2_LHC_CMS_OfflineRecon}
   % \include{chapters/3_GEM_Detectors}
   % \include{chapters/4_PhysicsAnalysis_Final}
+  % \include{chapters/VBS}
   % \include{chapters/5_summary}
-  \include{chapters/MC_Generations}
   % \include{chapters/Multivariate_Analysis}
   % \include{chapters/Statistics}
-  \include{chapters/Variable}
-  \include{chapters/VBS}
+  % \include{chapters/Variable}
   
   % \begin{appendices}
     % \include{appendix/Physics_Intro_Important_Points}
