@@ -4,6 +4,12 @@
 
 \usepackage[left=1.5in, right=1in, top=1.25in, bottom=1.25in]{geometry}
 
+\usepackage{datetime}
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+
+
 \usepackage{scrextend}  % for addmargin command
 \usepackage{graphicx}
 % subcaption package is for subfigure environment
@@ -80,6 +86,7 @@
 
 %%%%% Definitions for new commmands, mostly symbols
 \usepackage{symbol_definitions}
+\newcommand{\HRule}{\rule{.9\linewidth}{.6pt}} % New command to make the lines in the title page
 
 
 \begin{document}
@@ -88,32 +95,33 @@
  \pagestyle{plain}
 
 % Front pages =================================================================
- \include{frontback/titlepage}
+ % \include{frontback/titlepage}
+ % \include{frontback/title_1}
  \listoftodos
   % \cleardoublepage \include{frontback/declare}
   % \cleardoublepage \include{frontback/originality}
   % \cleardoublepage \include{frontback/saf1}
   % \cleardoublepage \include{frontback/saf2}
   % \cleardoublepage \include{frontback/dedicate}
-  \cleardoublepage \include{frontback/acknowledgement}
+  % \cleardoublepage \include{frontback/acknowledgement}
   \cleardoublepage \include{frontback/abstract}
 
   \pagestyle{headings}
   \cleardoublepage%\include{frontback/toc}
-   \tableofcontents 
-   \listoffigures 
-   \listoftables
+   % \tableofcontents 
+   % \listoffigures 
+   % \listoftables
   % Content =====================================================================
   \cleardoublepage
   \pagenumbering{arabic}
-  \include{chapters/1_Introduction}
-  \include{chapters/1_StandardModel}
+  % \include{chapters/1_Introduction}
+  % \include{chapters/1_StandardModel}
   % \include{chapters/1_Introduction2}
-  \include{chapters/2_LHC_CMS_OfflineRecon}
-  \include{chapters/3_GEM_Detectors}
-  \include{chapters/4_PhysicsAnalysis_Final}
+  % \include{chapters/2_LHC_CMS_OfflineRecon}
+  % \include{chapters/3_GEM_Detectors}
+  % \include{chapters/4_PhysicsAnalysis_Final}
   % \include{chapters/VBS}
-  \include{chapters/5_summary}
+  % \include{chapters/5_summary}
   % \include{chapters/Multivariate_Analysis}
   % \include{chapters/Statistics}
   % \include{chapters/Variable}
