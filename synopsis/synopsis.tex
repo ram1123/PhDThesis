@@ -4,6 +4,11 @@
 
 \usepackage[left=1.5in, right=1in, top=1.25in, bottom=1.25in]{geometry}
 
+\usepackage{datetime}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+
+
 \usepackage{scrextend}  % for addmargin command
 \usepackage{graphicx}
 % subcaption package is for subfigure environment
@@ -76,8 +81,10 @@
 
 \usepackage{setspace}
  
-% \onehalfspacing
-\doublespacing
+\onehalfspacing
+% \doublespacing
+
+\newcommand{\HRule}{\rule{.9\linewidth}{.6pt}} % New command to make the lines in the title page
 
 % How to make curvy L
 % Reference: https://tex.stackexchange.com/a/11144/41568
