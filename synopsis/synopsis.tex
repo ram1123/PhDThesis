@@ -222,39 +222,28 @@
 
 
 % \newenvironment{scotch}[1]{\protect\centering\ruledtabular\tabular{#1}}{\endtabular\endruledtabular}
-\newenvironment{scotch}[1]{\protect\centering\tabular{#1}\hline\hline}{\hline\endtabular}
-
-\makeatletter
-\renewcommand{\@chapapp}{}% Not necessary...
-\newenvironment{chapquote}[2][2em]
-  {\setlength{\@tempdima}{#1}%
-   \def\chapquote@author{#2}%
-   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
-   \itshape}
-  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
-\makeatother
 
 \begin{document}
-\include{titlepage}
+% \include{titlepage}
 %\cleardoublepage 
-\include{abstract}
+% \include{abstract}
 \include{synopsis_main}
-\include{publications}
+% \include{publications}
 
-\pagebreak
-\begin{center}
-  \textbf{\large{Registration Details}}
-  \begin{itemize}
-  \item \textbf{Thesis title:} Search for Anomalous Gauge Coupling through Vector Boson Scattering and Development of the GEM Detectors at the CMS Experiment.
-  \item \textbf{Research Scholar:} Ram Krishna Sharma
-  \item \textbf{Thesis Supervisor:} Dr. Md. Naimuddin
-  \item \textbf{Department of Affiliation:} Department of Physics $\&$ Astrophysics
-  \item \textbf{Ph.D. Registration No:} SF-I/Ph.D./2574
-   \item \textbf{Date of Registration:} October 25, 2012
-  \end{itemize}
-\end{center}
+% % \pagebreak
+% \begin{center}
+%   \textbf{\large{Registration Details}}
+%   \begin{itemize}
+%   \item \textbf{Thesis title:} Search for Anomalous Gauge Coupling through Vector Boson Scattering and Development of the GEM Detectors at the CMS Experiment.
+%   \item \textbf{Research Scholar:} Ram Krishna Sharma
+%   \item \textbf{Thesis Supervisor:} Dr. Md. Naimuddin
+%   \item \textbf{Department of Affiliation:} Department of Physics $\&$ Astrophysics
+%   \item \textbf{Ph.D. Registration No:} SF-I/Ph.D./2574
+%    \item \textbf{Date of Registration:} October 25, 2012
+%   \end{itemize}
+% \end{center}
 
-  \printbibliography
+  % \printbibliography
 
 
 \end{document}
