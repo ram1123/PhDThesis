@@ -62,7 +62,7 @@
 \usepackage{url}
 
 \usepackage[backend=bibtex,style=numeric,sorting=none]{biblatex}
-\addbibresource{ThesisBibliography.bib}
+\addbibresource{SynopsisBibliography.bib}
 
 
 \usepackage{imakeidx}
@@ -224,26 +224,27 @@
 % \newenvironment{scotch}[1]{\protect\centering\ruledtabular\tabular{#1}}{\endtabular\endruledtabular}
 
 \begin{document}
-% \include{titlepage}
-%\cleardoublepage 
-% \include{abstract}
+\include{titlepage}
+\cleardoublepage 
+\include{abstract}
 \include{synopsis_main}
-% \include{publications}
+  \printbibliography
+\include{publications}
 
-% % \pagebreak
-% \begin{center}
-%   \textbf{\large{Registration Details}}
-%   \begin{itemize}
-%   \item \textbf{Thesis title:} Search for Anomalous Gauge Coupling through Vector Boson Scattering and Development of the GEM Detectors at the CMS Experiment.
-%   \item \textbf{Research Scholar:} Ram Krishna Sharma
-%   \item \textbf{Thesis Supervisor:} Dr. Md. Naimuddin
-%   \item \textbf{Department of Affiliation:} Department of Physics $\&$ Astrophysics
-%   \item \textbf{Ph.D. Registration No:} SF-I/Ph.D./2574
-%    \item \textbf{Date of Registration:} October 25, 2012
-%   \end{itemize}
-% \end{center}
+% \pagebreak
+\newpage
+\begin{center}
+  \textbf{\large{Registration Details}}
+  \begin{itemize}
+  \item \textbf{Thesis title:} Search for Anomalous Gauge Coupling through Vector Boson Scattering and Development of the GEM Detectors at the CMS Experiment.
+  \item \textbf{Research Scholar:} Ram Krishna Sharma
+  \item \textbf{Thesis Supervisor:} Dr. Md. Naimuddin
+  \item \textbf{Department:} Department of Physics $\&$ Astrophysics
+  \item \textbf{Ph.D. Registration No:} SF-I/Ph.D./2574
+   \item \textbf{Date of Registration:} October 25, 2012
+  \end{itemize}
+\end{center}
 
-  % \printbibliography
 
 
 \end{document}
