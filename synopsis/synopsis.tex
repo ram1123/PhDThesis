@@ -1,6 +1,6 @@
 \documentclass[twoside,openright,titlepage,numbers=noenddot,headinclude,%
                footinclude=true,cleardoublepage=empty,abstractoff,BCOR=5mm,%
-               paper=a4,fontsize=12pt]{book}
+               paper=a4,fontsize=12pt]{report}
 
 \usepackage[left=1.5in, right=1in, top=1.25in, bottom=1.25in]{geometry}
 
@@ -35,7 +35,7 @@
 \usepackage{braket}
 
 
-\usepackage{textcomp}
+% \usepackage{textcomp}
 
 % for degree symbol (https://tex.stackexchange.com/questions/384873/what-is-the-degree-symbol)
 \usepackage{siunitx}
@@ -64,23 +64,8 @@
 \usepackage[backend=bibtex,style=numeric,sorting=none]{biblatex}
 \addbibresource{SynopsisBibliography.bib}
 
-
-\usepackage{imakeidx}
-\makeindex
-
-\usepackage[acronym,toc,nomain,nonumberlist]{glossaries}
-\makeglossaries
-
 \usepackage[toc,page]{appendix}
-%
-%	define all acronyms
-%
-\newacronym{sm}{SM}{Standard Model}
-\newacronym{lhc}{LHC}{Large Hadron Collider}
-\newacronym{hep}{HEP}{High Energy Physics}
-
 \usepackage{setspace}
- 
 \onehalfspacing
 % \doublespacing
 
@@ -228,7 +213,7 @@
 \cleardoublepage 
 \include{abstract}
 \include{synopsis_main}
-  \printbibliography
+\printbibliography
 \include{publications}
 
 % \pagebreak
@@ -236,15 +221,13 @@
 \begin{center}
   \textbf{\large{Registration Details}}
   \begin{itemize}
-  \item \textbf{Thesis title:} Search for Anomalous Gauge Coupling through Vector Boson Scattering and Development of the GEM Detectors at the CMS Experiment.
-  \item \textbf{Research Scholar:} Ram Krishna Sharma
-  \item \textbf{Thesis Supervisor:} Dr. Md. Naimuddin
-  \item \textbf{Department:} Department of Physics $\&$ Astrophysics
-  \item \textbf{Ph.D. Registration No:} SF-I/Ph.D./2574
-   \item \textbf{Date of Registration:} October 25, 2012
+    \item \textbf{Thesis title:} Search for Anomalous Gauge Coupling through Vector Boson Scattering and Development of the GEM Detectors at the CMS Experiment.
+    \item \textbf{Research Scholar:} Ram Krishna Sharma
+    \item \textbf{Thesis Supervisor:} Dr. Md. Naimuddin
+    \item \textbf{Department:} Department of Physics $\&$ Astrophysics
+    \item \textbf{Ph.D. Registration No:} SF-I/Ph.D./2574
+    \item \textbf{Date of Registration:} October 25, 2012
   \end{itemize}
 \end{center}
-
-
 
 \end{document}

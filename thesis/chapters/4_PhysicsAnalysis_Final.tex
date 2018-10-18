@@ -10,117 +10,113 @@ At the LHC, VBS is characterized by presence of two gauge bosons in association 
 \label{fig:feynman}
 \end{figure*}
 
-The main goal of this analysis is to search for the presence of aQGCs in candidate events containing a hadronically decaying gauge boson ($V$) produced with large transverse momentum $\pt$, a $\PW$ or $\PZ$ boson decaying to leptons (electrons or muons), and two forward jets. This final state benefits from a higher branching ratio of the $V$ decay compared to previous searches at the LHC for aQGCs in VBS involving only leptonic boson decays~\cite{Sirunyan:2017ret, ATLAS_ssWW, CMS_ssWW, Aaboud:2016ffv,Aad:2016ett, Sirunyan:2017fvv, Khachatryan:2016mud, Khachatryan:2017jub, Khachatryan:2016vif,Aaboud:2017pds}. The ATLAS collaboration reported limits on aQGCs in VBS using the $\PW V$ final state, where $\PW$ decays to leptons, in proton-proton (pp) collisions at $\sqrt{s}=8\TeV$. 
+The main goal of this analysis is to search for the presence of aQGCs in candidate events containing a hadronically decaying gauge boson ($V$) produced with large transverse momentum $\pt$, a $\PW$ or $\PZ$ boson decaying to leptons (electrons or muons), and two forward jets. This final state benefits from a higher branching ratio of the $V$ decay compared to previous searches at the LHC for aQGCs in VBS involving only leptonic boson decays~\cite{Sirunyan:2017ret, ATLAS_ssWW, CMS_ssWW, Aaboud:2016ffv,Aad:2016ett, Sirunyan:2017fvv, Khachatryan:2016mud, Khachatryan:2017jub, Khachatryan:2016vif,Aaboud:2017pds}. The ATLAS collaboration reported limits on aQGCs in VBS using the $\PW V$ final state, where $\PW$ decays to leptons, in proton-proton (pp) collisions at $\sqrt{s}=8\TeV$~\cite{Aaboud2017}. 
 
 Extended Higgs sectors with additional SU(2) isotriplet scalar give rise to charged Higgs bosons with couplings to $\PW$ and $\PZ$ bosons at the tree level~\cite{CE1,CE2}. In particular, the Georgi-Machacek (GM)~\cite{GEORGI1985463} model, with both real and complex triplets,  preserves the tree level custodial symmetry. In this model, singly and doubly charged Higgs bosons are produced via vector boson fusion (VBF) and decay to $\PW$ and $\PZ$ bosons, and same-sign $\PW$ boson pairs, respectively. The ATLAS and CMS Collaborations performed searches for charged Higgs bosons in these topologies and set constraints on the GM model~\cite{Sirunyan:2017ret,Sirunyan:2017sbn,PhysRevLett.114.231801}.
 
-This note presents a study of VBS in $\PW\PW$, $\PW\PZ$, and $\PZ\PZ$ final states using pp collisions at $\sqrt{s}=13\TeV$. The data sample corresponds to an integrated luminosity of $35.9 \pm 0.9\fbinv$ collected with the CMS detector~\cite{Chatrchyan:2008zzk} at the CERN LHC in 2016. 
+This chapter presents a study of VBS in $\PW\PW$, $\PW\PZ$, and $\PZ\PZ$ final states using pp collisions at $\sqrt{s}=13\TeV$. The data sample corresponds to an integrated luminosity of $35.9 \pm 0.9\fbinv$ collected with the CMS detector~\cite{Chatrchyan:2008zzk} at the CERN LHC in 2016. 
 
-\section{Generation Details of Signal Sample}
-\label{sec:MCsampleGeneration}
-\subsection{Madgraph setup and parameters}
+% \section{Generation Details of Signal Sample}
+% \label{sec:MCsampleGeneration}
+% \subsection{Madgraph setup and parameters}
 
-\begin{sloppypar}
-Madgraph cards are located here: \url{https://github.com/cms-sw/genproductions/tree/pre2017/bin/MadGraph5_aMCatNLO/cards/production/13TeV/VBS/VVjj_semileptonic}
-\end{sloppypar}
+% \begin{sloppypar}
+% Madgraph cards are located here: \url{https://github.com/cms-sw/genproductions/tree/pre2017/bin/MadGraph5_aMCatNLO/cards/production/13TeV/VBS/VVjj_semileptonic}
+% \end{sloppypar}
 
-The gridpacks for signal can be found here:
+% The gridpacks for signal can be found here:
 
-\begin{sloppypar}
-\url{/cvmfs/cms.cern.ch/phys\_generator/gridpacks/slc6\_amd64\_gcc481/13TeV/madgraph/V5\_2.4.2/AnomalousCouplingsSMP}
-\end{sloppypar}
+% \begin{sloppypar}
+% \url{/cvmfs/cms.cern.ch/phys\_generator/gridpacks/slc6\_amd64\_gcc481/13TeV/madgraph/V5\_2.4.2/AnomalousCouplingsSMP}
+% \end{sloppypar}
 
-\subsection{How samples are generated?}
-We generated our signal using Madgraph version V5\_2.4.2. The main setting used different from default run card are 
-\begin{itemize}
-  \item maxjetflavor = 5
-  \item mjj = 100
-\end{itemize}
+% \subsection{How samples are generated?}
+% We generated our signal using Madgraph version V5\_2.4.2. The main setting used different from default run card are 
+% \begin{itemize}
+%   \item maxjetflavor = 5
+%   \item mjj = 100
+% \end{itemize}
 
-\subsubsection{SM signal sample generation}
-Signal sample was generated with pure electroweak vertex with option "QED=4 and QCD=0". Below you can see the proc card information. 
+% \subsubsection{SM signal sample generation}
+% Signal sample was generated with pure electroweak vertex with option "QED=4 and QCD=0". Below you can see the proc card information. 
 
-\begin{verbatim}
-set group_subprocesses Auto
-set ignore_six_quark_processes False
-set loop_optimized_output True
-set complex_mass_scheme False
-import model sm-ckm_no_b_mass
-define p = g u c d s b u~ c~ d~ s~ b~
-define j = p 
-define l+ = e+ mu+ ta+
-define l- = e- mu- ta-
-define vl = ve vm vt
-define vl~ = ve~ vm~ vt~
-generate p p > w+ w- j j QED=4 QCD=0 
-output WPlepWMhadJJ_EWK_LO_SM_mjj100_pTj10 --nojpeg
-\end{verbatim}
+% \begin{verbatim}
+% set group_subprocesses Auto
+% set ignore_six_quark_processes False
+% set loop_optimized_output True
+% set complex_mass_scheme False
+% import model sm-ckm_no_b_mass
+% define p = g u c d s b u~ c~ d~ s~ b~
+% define j = p 
+% define l+ = e+ mu+ ta+
+% define l- = e- mu- ta-
+% define vl = ve vm vt
+% define vl~ = ve~ vm~ vt~
+% generate p p > w+ w- j j QED=4 QCD=0 
+% output WPlepWMhadJJ_EWK_LO_SM_mjj100_pTj10 --nojpeg
+% \end{verbatim}
 
-\subsubsection{aQGC signal sample generation}
-aQGC sample generated with effective field theory with dimension eight effective operators assuming that the recently observed Higgs boson belongs to a SU(2)$_{L}$ doublet, with the method proposed by Eboli~\cite{Belyaev:1998ih,aqgc_operators,Eboli:2000ad,Eboli:2003nq}
-\begin{verbatim}
-set group_subprocesses Auto
-set ignore_six_quark_processes False
-set complex_mass_scheme False
-import model SM_LS_LM_LT_UFO
-define p = g u c d s u~ c~ d~ s~ 
-define j = g u c d s u~ c~ d~ s~ b b~
-define l+ = e+ mu+ ta+
-define l- = e- mu- ta-
-define vl = ve vm vt
-define vl~ = ve~ vm~ vt~
-generate p p > w- w+ j j QED=4 QCD=0 NP=1
-output aQGC_WMhadWPlepJJ_EWK_LO_NPle1_mjj100pt10 --nojpeg
-\end{verbatim}
-To generate aQGC sample we used option {\bf NP=1}. This option forces madgraph to generate sample having SM, aQGC, and interference diagrams.
-Also, we can not decay w-boson here with madgraph because of the limitation of the Madgraph. The issue is that madgraph uses only final state in order to identify which matrix-element to use but it can not able to distinguish which of the jets are coming from the $W^+$. This is the source of error. Here, you can follow the discussion with authors:
-\begin{sloppypar}
-  \url{https://bugs.launchpad.net/mg5amcnlo/+bug/1633803}
-\end{sloppypar}
-Used model can be found at generator repository of models: 
-\begin{sloppypar}
-https://cms-project-generators.web.cern.ch/cms-project-generators/ 
-\end{sloppypar}
+% \subsubsection{aQGC signal sample generation}
+% aQGC sample generated with effective field theory with dimension eight effective operators assuming that the recently observed Higgs boson belongs to a SU(2)$_{L}$ doublet, with the method proposed by Eboli~\cite{Belyaev:1998ih,aqgc_operators,Eboli:2000ad,Eboli:2003nq}
+% \begin{verbatim}
+% set group_subprocesses Auto
+% set ignore_six_quark_processes False
+% set complex_mass_scheme False
+% import model SM_LS_LM_LT_UFO
+% define p = g u c d s u~ c~ d~ s~ 
+% define j = g u c d s u~ c~ d~ s~ b b~
+% define l+ = e+ mu+ ta+
+% define l- = e- mu- ta-
+% define vl = ve vm vt
+% define vl~ = ve~ vm~ vt~
+% generate p p > w- w+ j j QED=4 QCD=0 NP=1
+% output aQGC_WMhadWPlepJJ_EWK_LO_NPle1_mjj100pt10 --nojpeg
+% \end{verbatim}
+% To generate aQGC sample we used option {\bf NP=1}. This option forces madgraph to generate sample having SM, aQGC, and interference diagrams.
+% Also, we can not decay w-boson here with madgraph because of the limitation of the Madgraph. The issue is that madgraph uses only final state in order to identify which matrix-element to use but it can not able to distinguish which of the jets are coming from the $W^+$. This is the source of error. Here, you can follow the discussion with authors:
+% \begin{sloppypar}
+%   \url{https://bugs.launchpad.net/mg5amcnlo/+bug/1633803}
+% \end{sloppypar}
+% Used model can be found at generator repository of models: 
+% \begin{sloppypar}
+% https://cms-project-generators.web.cern.ch/cms-project-generators/ 
+% \end{sloppypar}
 
 % \subsection{Comparison of SM and aQGC distribution}
 
-% \begin{figure}[htb]
-%   \begin{center}
-%     \begin{tabular}{c}
-%     \includegraphics[width=1.00\textwidth]{Plots/GenLevelStudy/pic1.png}    \end{tabular}
-%     \caption{VBF jets distribution}
-%     \label{fig:gen1}
-%   \end{center}
+% \begin{figure}[!htbp]
+%   \centering
+%   \includegraphics[width=0.45\textwidth]{Plots/aQGC_kinematics/vbf_maxpt_jj_m_FT0.pdf}%
+%   \includegraphics[width=0.45\textwidth]{Plots/aQGC_kinematics/vbf_maxpt_jj_m_FS0.pdf}\\
+%   \includegraphics[width=0.45\textwidth]{Plots/aQGC_kinematics/vbf_maxpt_jj_Deta_FT0.pdf}%
+%   \includegraphics[width=0.45\textwidth]{Plots/aQGC_kinematics/vbf_maxpt_jj_Deta_FS0.pdf}
+%   \caption{Top: VBF di-jet invariant mass distribution for aQGC parameter FT0 (left) and FS0 (right). Bottom: VBF di-jet pseudorapidity gap for aQGC parameter FT0 (left) and FS0 (right).}
+%   \label{fig:vbf_sm_aqgc}
 % \end{figure}
-% \begin{figure}[htb]
-%   \begin{center}
-%     \begin{tabular}{c}
-%     \includegraphics[width=1.00\textwidth]{Plots/GenLevelStudy/pic3.png}\\
-%     \includegraphics[width=1.00\textwidth]{Plots/GenLevelStudy/pic4.png}    \end{tabular}
-%     \caption{Top: VBF jets distribution. Bottom: VBS centrality}
-%     \label{fig:gen2}
-%   \end{center}
+
+% \begin{figure}[!htbp]
+%   % \vspace{-2cm}
+%   \centering
+%   \includegraphics[width=0.40\textwidth]{Plots/aQGC_kinematics/ungroomed_PuppiAK8_jet_eta_FS0.pdf}%
+%   \includegraphics[width=0.40\textwidth]{Plots/aQGC_kinematics/ungroomed_PuppiAK8_jet_eta_FT0.pdf}\\
+%   \includegraphics[width=0.40\textwidth]{Plots/aQGC_kinematics/ungroomed_PuppiAK8_jet_pt_FS0.pdf}%
+%   \includegraphics[width=0.40\textwidth]{Plots/aQGC_kinematics/ungroomed_PuppiAK8_jet_pt_FT0.pdf}\\
+%   \caption{Top: Fat jet with large radius parameter's pseudo-rapidity  for aQGC parameter FS0 (left) and FT0 (right). Bottom: Fat jet with large radius parameter's transverse momentum distribution shown for aQGC parameter FS0 (left) and FT0 (right).}
+%   \label{fig:wjet_sm_aqgc}
 % \end{figure}
-% \begin{figure}[htb]
-%   \begin{center}
-%     \begin{tabular}{c}
-%     \includegraphics[width=0.90\textwidth]{Plots/GenLevelStudy/pic5.png}\\
-%     \includegraphics[width=0.90\textwidth]{Plots/GenLevelStudy/pic6.png}    \end{tabular}
-%     \caption{Top: W-jets distribution. Bottom: WW system invariant mass}
-%     \label{fig:gen3}
-%   \end{center}
+
+% \begin{figure}[!htbp]
+%   \centering
+%   \includegraphics[width=0.40\textwidth]{Plots/aQGC_kinematics/mass_lvj_type0_PuppiAK8_8bin_FS0.pdf}%
+%   \includegraphics[width=0.40\textwidth]{Plots/aQGC_kinematics/mass_lvj_type0_PuppiAK8_8bin_FT0.pdf}\\
+%   \includegraphics[width=0.40\textwidth]{Plots/aQGC_kinematics/lepton_pt_FS0.pdf}%
+%   \includegraphics[width=0.40\textwidth]{Plots/aQGC_kinematics/lepton_pt_FT0.pdf}
+%   \caption{Top: 4-body invariant mass showing for aQGC parameter FS0 (left) and FT0 (right). Bottom: lepton transverse momentum showing for aQGC parameter FS0 (left) and FT0 (right).}
+%   \label{fig:mass_pt_sm_aqgc}
 % \end{figure}
-% \begin{figure}[htb]
-%   \begin{center}
-%     \begin{tabular}{c}
-%     \includegraphics[width=1.00\textwidth]{Plots/GenLevelStudy/pic7.png}
-%     %\includegraphics[width=1.00\textwidth]{Plots/GenLevelStudy/pic7.png}    
-%     \end{tabular}
-%     \caption{Angular variables}
-%     \label{fig:gen4}
-%   \end{center}
-% \end{figure}
-%\subsubsection{Comparison of MadSpin and Decay Package of MadGraph for Polarized Sample Generation}
+
+
+% \subsection{Comparison of MadSpin and Decay Package of MadGraph for Polarized Sample Generation}
 
 
 
@@ -137,12 +133,12 @@ the same algorithms as used for data. Proton-proton interactions occuring in the
 
 \subsection{Data samples}
 
-This analysis uses a sample of pp collisions collected in 2016 with the CMS experiment at the LHC at $\sqrt{s} = 13~\rm{TeV}$.
-Only data that passed the quality certification by all detector subsystems is used in the analysis using the golden JSON in order to select good data:
+This analysis uses a sample of proton-proton collisions collected in 2016 with the CMS experiment at the LHC at $\sqrt{s} = 13~\rm{TeV}$.
+Only data that passed the quality certification by all detector subsystems is used in the analysis using the golden JSON\footnote{In CMS, the information for the proton-proton collision runs which are considered as good and should be processed are kept in a file in JSON format (JSON stands for Java Script Object Notation.) using the information of luminosity sections. The JSON file that was used for 2016 run is
 \\
-\centerline{\small Cert\_271036-284044\_13TeV\_23Sep2016ReReco\_Collisions16\_JSON.txt}
-\\
-corresponding to an integrated luminosity of $35.9 \pm 0.9\fbinv$. {\it SingleMuon}  and {\it SingleElectron} primary datasets are used. The names of data samples used in the analysis are listed in Table~\ref{tab:datasample} 
+\centerline{\small Cert\_271036-284044\_13TeV\_23Sep2016ReReco\_Collisions16\_JSON.txt}\\
+This corresponding to an integrated luminosity of $35.9 \pm 0.9\fbinv$
+} in order to select good data. {\it SingleMuon}  and {\it SingleElectron} primary datasets are used, which corresponds to the trigger that demands that there should be at least one muon and electrons, respectively in the collected data. The names of data samples used in the analysis are listed in Table~\ref{tab:datasample} 
 
 \begin{table}[!htbp]
   \begin{center}
@@ -150,27 +146,64 @@ corresponding to an integrated luminosity of $35.9 \pm 0.9\fbinv$. {\it SingleMu
   \begin{tabular}{l l}
 \hline \textbf{Data stream} &  \textbf{Run and reconstruction version}  \\
 \hline
-SingleMuon      &       Run2016B-03Feb2017-v2   \\
+SingleMuon      &       Run2016B-03Feb2017-v2       \\
 SingleElectron  &       Run2016C-03Feb2017           \\
                 &       Run2016D-03Feb2017           \\
-		&       Run2016E-03Feb2017   \\
+		            &       Run2016E-03Feb2017          \\
                 &       Run2016F-03Feb2017           \\
-		&       Run2016G-03Feb2017\\
-                &       Run2016H-03Feb2017-v1  \\
-		&       Run2016H-03Feb2017-v2 \\
-                &       Run2016H-03Feb2017-v3\\
+		            &       Run2016G-03Feb2017          \\
+                &       Run2016H-03Feb2017-v1       \\
+		            &       Run2016H-03Feb2017-v2       \\
+                &       Run2016H-03Feb2017-v3       \\
 \hline
   \end{tabular}
 %}
-  \caption{List of data samples used in the analysis.\label{tab:datasample}}
+  \caption{List of data samples used in the analysis.}
+  \label{tab:datasample}
   \end{center}
 \end{table}
  
  
 \subsection{Simulated Samples}
-The EW  processes with two final state quarks are simulated using \newline $\MADGRAPH{}5\_a\MCATNLO~2.3.3$~\cite{Alwall:2014} at leading-order (LO) with six EW and zero quantum chromodynamics (QCD) vertices. $\PW^{\pm}\PW^{\pm}$, $\PW^{\pm}\PW^{\mp}$,$\PW^{\pm}\PZ$, and $\PZ\PZ$ processes are produced separately. The complete list of the SM background samples can be found in Table~\ref{tab:signalSamples}.
-
-The QCD initiated production of two gauge bosons with two final state quarks (which we refer to as diboson process) and at least one QCD vertex is considered as background. \MADGRAPH{}5\_a\MCATNLO at LO is used to simulate this sample. The interference between the EW and QCD diagrams is evaluated using dedicated samples produced with the \textsc{Phantom}~1.2.8~\cite{Ballestrero:2007xq} generator and is found to be negligible compared to the theoretical uncertainties. Figure~\ref{fig:interference} shows the level of the interference contribution. 
+The EW  processes with two final state quarks are simulated using \newline $\MADGRAPH{}5\_a\MCATNLO~2.3.3$~\cite{Alwall:2014} at leading-order (LO) with six electroweak (EWK) and zero quantum chromodynamics (QCD) vertices. The $\PW^{\pm}\PW^{\pm}$, $\PW^{\pm}\PW^{\mp}$,$\PW^{\pm}\PZ$, and $\PZ\PZ$ processes are produced separately. The complete list of the SM background samples can be found in Table~\ref{tab:signalSamples}.
+%
+\begin{table}[!htbp]
+\footnotesize
+\centering
+\begin{tabular}{lrr}
+\textbf{Sample name} & \textbf{Total events} & \textbf{Cross section[pb]} \\
+\hline
+/WplusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}* & 1,991,279 & 0.9114\\
+/WplusTo2JWminusToLNuJJ\_{}EWK\_{}LO\_{}SM\_{}* & 1,994,040 & 0.9107\\
+/WplusToLNuWplusTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*  & 198,858   & 0.0879\\
+/WminusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*  & 199,535   & 0.0326\\
+/WplusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*    & 393,190   & 0.1825\\
+/WplusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}SM\_{}*     & 198,932   & 0.0540\\
+/WminusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*   & 199,547   & 0.1000\\
+/WminusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}SM\_{}*    & 198,910   & 0.0298\\
+/ZTo2LZTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*       & 100,000   & 0.0159\\
+\hline
+\hline
+/WplusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}* & 1,981,940 & 17.940\\
+/WplusTo2JWminusToLNuJJ\_{}EWK\_{}LO\_{}aQGC\_{}* & 1,994,595 & 17.920\\
+/WplusToLNuWplusTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*  & 200,000   & 3.451\\
+/WminusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*& 200,000   & 0.507\\
+/WplusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*    & 399,232   & 1.895\\
+/WplusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}aQGC\_{}*   & 199,238   & 0.569\\
+/WminusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*   & 200,000   & 0.741\\
+/WminusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}aQGC\_{}*    & 198,620   & 0.222\\
+/ZTo2LZTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*     & 99,532    & 3.361\\
+\hline
+* = MJJ100PTJ10\_{}TuneCUETP8M1\_{}13TeV-madgraph-pythia8/ \\
+    RunIISummer16MiniAODv2-PUMoriond17\_{}80X\_{}mcRun2\_{}\\
+    asymptotic\_{}2016\_{}TrancheIV\_{}v6-v1/MINIAODSIM\\
+\hline
+\end{tabular}
+\caption{Signal sample names and cross sections of simulated samples used in the analysis}
+\label{tab:signalSamples}
+\end{table}
+%
+The QCD initiated production of two gauge bosons with two final state quarks (which we refer to as diboson process) and at least one QCD vertex is considered as background. \MADGRAPH{}5\_a\MCATNLO at LO is used to simulate this sample. The interference between the EWK and QCD diagrams is evaluated using dedicated samples produced with the \textsc{Phantom}~1.2.8~\cite{Ballestrero:2007xq}\todo[inline]{Add details of Phantom generator.} generator and is found to be negligible compared to the theoretical uncertainties. Figure~\ref{fig:interference} shows the level of the interference contribution. 
 
 \begin{figure*}[!htbp]
 \centering
@@ -180,7 +213,7 @@ The QCD initiated production of two gauge bosons with two final state quarks (wh
 \label{fig:interference}
 \end{figure*}
 
-The aQGC signal samples are produced using \MADGRAPH{}5\_a\MCATNLO at LO accuracy. The default coupling for the event generation is set to $f_{T0} / \Lambda^{4} = -12.5 [\mathrm{TeV}]^{-4}$. Other coupling strengths are obtained by means of the reweighting method in \MADGRAPH{}5\_a\MCATNLO. Figure~\ref{fig:aqgc_signal} shows the mass distributions of the  $\PW \PW$ system for few aQGC parameters for the operators $S0$ (left) and $T2$ (right). The expected enhancement of the production cross section at large masses for nonzero aQGC is clearly seen.      
+The aQGC signal samples are produced using \MADGRAPH{}5\_a\MCATNLO at LO accuracy. The default coupling for the event generation is set to $f_{T0} / \Lambda^{4} = -12.5 [\mathrm{TeV}]^{-4}$. Other coupling strengths are obtained by means of the reweighting method in \MADGRAPH{}5\_a\MCATNLO~\cite{Mattelaer2016,Mattelaer-reweight}. Figure~\ref{fig:aqgc_signal} shows the mass distributions of the  $\PW \PW$ system for few aQGC parameters for the operators $S0$ (left) and $T2$ (right). The expected enhancement of the production cross section at large masses for nonzero aQGC is clearly seen.      
   
 \begin{figure*}[!htbp]
 \centering
@@ -191,43 +224,8 @@ The aQGC signal samples are produced using \MADGRAPH{}5\_a\MCATNLO at LO accurac
 \end{figure*}
 
 
-\begin{table}[!htbp]
-\footnotesize
-\centering
-\begin{tabular}{lrr}
-\textbf{Sample name} & \textbf{Total events} & \textbf{Cross section[pb]} \\
-\hline
-/WplusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*	&	1,991,279	&	0.9114\\
-/WplusTo2JWminusToLNuJJ\_{}EWK\_{}LO\_{}SM\_{}*	&	1,994,040	&	0.9107\\
-/WplusToLNuWplusTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*	&	198,858		&	0.0879\\
-/WminusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*	&	199,535		&	0.0326\\
-/WplusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*		&	393,190		&	0.1825\\
-/WplusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}SM\_{}*			&	198,932		&	0.0540\\
-/WminusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*		&	199,547		&	0.1000\\
-/WminusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}SM\_{}*		&	198,910		&	0.0298\\
-/ZTo2LZTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*				&	100,000		&	0.0159\\
-\hline
-\hline
-/WplusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*	&	1,981,940	&	17.940\\
-/WplusTo2JWminusToLNuJJ\_{}EWK\_{}LO\_{}aQGC\_{}*	&	1,994,595	&	17.920\\
-/WplusToLNuWplusTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*	&	200,000		&	3.451\\
-/WminusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*&	200,000		&	0.507\\
-/WplusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*		&	399,232		&	1.895\\
-/WplusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}aQGC\_{}*		&	199,238		&	0.569\\
-/WminusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*		&	200,000		&	0.741\\
-/WminusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}aQGC\_{}*		&	198,620		&	0.222\\
-/ZTo2LZTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*			&	99,532		&	3.361\\
-\hline
-* = MJJ100PTJ10\_{}TuneCUETP8M1\_{}13TeV-madgraph-pythia8/ \\
-    RunIISummer16MiniAODv2-PUMoriond17\_{}80X\_{}mcRun2\_{}\\
-    asymptotic\_{}2016\_{}TrancheIV\_{}v6-v1/MINIAODSIM\\
-\hline
-\end{tabular}
-\caption{Signal sample names and cross sections of simulated samples used in the analysis}
-\label{tab:signalSamples}
-\end{table}
 
-The Drell--Yan process is simulated with one, two, three, and four outgoing partons at Born level at LO using \MADGRAPH{}5\_a\MCATNLO. $\PW+$jet process is simulated at LO in $\mathrm{H_{T}}$ bins using \MADGRAPH{}5\_a\MCATNLO. $\ttbar$, $\ttbar \PW$, $\ttbar \PZ$, and single top processes are generated at next-to-leading order (NLO) using \textsc{POWHEG2.0}~\cite{Alioli:2008gx,Nason:2004rx,Frixione:2007vw,powheg:2010}. The simulated samples of background processes are normalized to the best theoretical prediction. The complete list of background samples can be found in Table~\ref{tab:bkgSamples}.
+The Drell--Yan process is simulated with one, two, three, and four outgoing partons at Born level at LO using \MADGRAPH{}5\_a\MCATNLO. The $\PW+$jets process is simulated at LO in $\mathrm{H_{T}}$\footnote{$\mathrm{H_T}$ is defined as the sum of transverser momentum of all jets in an event.} bins using \MADGRAPH{}5\_a\MCATNLO. $\ttbar$, $\ttbar \PW$, $\ttbar \PZ$, and single top processes are generated at next-to-leading order (NLO) using \textsc{POWHEG2.0}~\cite{Alioli:2008gx,Nason:2004rx,Frixione:2007vw,powheg:2010}. The simulated samples of background processes are normalized to the best theoretical prediction. The complete list of background samples can be found in Table~\ref{tab:bkgSamples}.
 
 The \PYTHIA~8.205~\cite{Sjostrand:2015} package is used  for parton showering, hadronization, and the underlying event simulation, with tune CUETP8M1~\cite{Skands:2014pea,Khachatryan:2015pea}. The NNPDF~3.0~\cite{nnpdf} set is used as the default set of parton distribution functions (PDFs). The PDFs are calculated to the same order in QCD as the hard process. 
 
@@ -322,14 +320,22 @@ The data samples used in the analysis were taken with the following triggers:
 \item HLT\_Ele27\_WPTight\_Gsf\_v* (electron channel)
 \item HLT\_IsoTkMu24\_v* or  HLT\_IsoMu24\_v* (muon channel)
 \end{itemize}
-The trigger efficiencies in data and simulation are measured using tag-and-probe. The ratio of data and simulation efficiencies is found to be consistent with unity within 1\%.
+The explanation of these triggers are given in Table~\ref{tab:trigger-path}. The trigger efficiencies in data and simulation are measured using tag-and-probe~\cite{Tag_probe}. In tag-and-probe method the correction factors  for the values extracted from the simulation are determined using $Z \rightarrow l^+ l^-$ sample in both data and simulation. This removes any systematic uncertainty coming from imperfections in the simulation. For the measurement for a given efficiency contains events selected with two lepton candidates. The first lepton, known as ``\textit{tag}'', was choosen based on the tight identification and isolation requirements. The other leptons, known as ``\textit{probe}'', is selected based on the criteria which depends on the efficiency being measured. The invariant mass of the choosen tag and probe lepton candidate should fall in the range of 60-120 \GeV. The signal yield are obtained for two exclusive subsamples of events in which the probe lepton passes or fails the selection criteria considered. Fits are performed to the invariant-mass distribution of the pass and fail subsamples, including a term that accounts for the background. The measured efficiency is deduced from the relative level of signal in the pass and fail subsamples; its uncertainty includes a systematic contribution from the fitting procedure. The correction factors are obtained as ratios of tag-and-probe efficiencies for the data and for the simulation. The ratio of data and simulation efficiencies is found to be consistent with unity within 1\%.
 
 
 %%%%%%%%%%%
 %%%%%%%%%%%
 \subsection{Electron selection}
 \label{subsec:electrons}
-Electrons are selected using the so-called {\em ``Tight''} ID, a full description is available in~\cite{Twiki:EleID}. It consists of a series of requirements on the supercluster shape, impact parameter and geometric distance between the electron track and the supercluster. In addition, an electron veto is applied with the so-called {\em ``Loose''} ID, to reject events with more than two genuine leptons. 
+Electron selection variables are categorized into three groups: identification (ID) variables, isolation variables and conversion rejection variables~\cite{ElectronReconstruction_8TeV_cms,Novakova2013}.
+
+The most powerful ID variables for the electron identification are:
+\begin{enumerate}
+  \item the energy-momentum match between the seed cluster and the track, $E_{seed}/p_{in}$,
+  \item the variables measuring spatial matching between the track and the supercluster, $\Delta \eta_{in}$ and $\Delta \phi_{in}$,
+  \item the supercluster $\eta$ width, $\sigma_{i\eta i\eta}$, taken from the covariance matrix using the logarithmic weights, and
+  \item the hadronic leakage variable $H/E$.
+\end{enumerate}
 
 The isolation of the electron candidates is computed from the flux of PF candidates found within a cone of $\Delta R = 0.4$ built around the lepton direction.
 The flux of particles is computed independently for the charged hadrons, neutral hadrons and photon candidates. When dealing with electron candidates, the neutral flux is corrected by using the average energy density due to
@@ -342,18 +348,76 @@ I^{e}_{\rm rel}=\frac{1}{p_{\rm T}}  \left[ I_{\rm ch}+\max(I_{\rm nh}+I_{\rm g}
 \label{eq:eleisol}
 \end{equation}
 
-Scale factors are used to correct for differences in the reconstruction, 
-identification and isolation efficiencies between data and simulation. They 
-are evaluated using the tag and probe technique, and both the scale factors and 
-their uncertainty prescriptions are provided by the EGamma POG~\cite{Twiki:EGammaSF2016}.
+Now for the conversion rejection three sets of variables are used. The transverse impact parameter is used to discriminate electrons from conversion as they will have, on average, a greater distance to the beam position. We also expect an electron from a conversion to have missing hits in the innermost tracker layer.
+
+Finally based on the above explanation the electrons identification variables are divided into the three categories based on the cuts with increasing background rejection power and decreasing signal efficiency: tight, medium, loose, veto and also in the endcap and barrel. All these parameters are summarized in Table~\ref{table:electron-identification} and Table~\ref{table:electron-identification-2}.
+
+\begin{table}
+\centering
+\begin{tabular}[!htbp]{l c c c c}
+\hline
+{\textbf{Variables}} & {\textbf{Veto}} & \textbf{Loose} & \textbf{Medium} &  \textbf{Tight} \\
+\hline
+$\sigma_{i\eta i\eta} < $ & 0.0115  & 0.011   & 0.00998 & 0.00998 \\
+$|\Delta \eta_{in}| < $   & 0.00749 & 0.00477 & 0.00311 & 0.00308 \\
+$\Delta \phi_{in} < $     & 0.228   & 0.222   & 0.103   & 0.0816  \\
+$H/E < $                  & 0.356   & 0.298   & 0.253   & 0.0414  \\
+$I^{e}_{\rm rel} < $      & 0.175   & 0.0994  & 0.0695  & 0.0588  \\
+$|1/E - 1/p| < $          & 0.299   & 0.241   & 0.134   & 0.0129  \\
+expected missing inner hits $<=$ & 2  & 1   &   1   &   1 \\
+pass conversion veto      & yes   & yes & yes & yes \\
+\hline
+\end{tabular}
+\caption{The cut based electron identification working points for $|\eta \text{ supercluster}| <= 1.479$ .}
+\label{table:electron-identification}
+\end{table}
+\begin{table}
+\centering
+\begin{tabular}[!htbp]{l c c c c}
+\hline
+{\textbf{Variables}} & {\textbf{Veto}} & \textbf{Loose} & \textbf{Medium} &  \textbf{Tight} \\
+\hline
+$\sigma_{i\eta i\eta} < $ & 0.037   & 0.0314 & 0.0298 & 0.0292    \\
+$|\Delta \eta_{in}| < $   & 0.00895 & 0.00868& 0.00609& 0.00609   \\
+$\Delta \phi_{in} < $     & 0.213   & 0.213  & 0.045  & 0.0394    \\
+$H/E < $                  & 0.211   & 0.101  & 0.0878 & 0.0641    \\
+$I^{e}_{\rm rel} < $      & 0.159   & 0.107  & 0.0821 & 0.0571   \\
+$|1/E - 1/p| < $          & 0.15    & 0.14   & 0.13   & 0.0129    \\
+expected missing inner hits $<=$ & 3& 1   &   1   &   1 \\
+pass conversion veto      & yes     & yes & yes & yes \\
+\hline
+\end{tabular}
+\caption{The cut based electron identification working points for $|\eta \text{ supercluster}| > 1.479$ .}
+\label{table:electron-identification-2}
+\end{table}
+
+For this analysis the electrons are selected using the {\em ``Tight''} ID. In addition, an electron veto is applied with the {\em ``Loose''} ID, to reject events with more than two genuine leptons. 
+
+Furthermore, the scale factors are used to correct for differences in the reconstruction, identification and isolation efficiencies between data and simulation. They are evaluated using the tag and probe technique, considering the scale factors and their uncertainty both.
  
 
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 \subsection{Muon selection}
-The muons are selected using standard identification criteria, suggested by the Muon POG~\cite{Twiki:MuonRun2}. Selected muon candidates correspond to the so-called {\em``Tight''} muon identification. Additionally, like in the electron case, a third muon veto is also applied to reject events with more than two genuine leptons using the so-called {\em``Loose''} identification~\cite{Twiki:MuonRun2}. 
-For the muon isolation, in the same manner as for electrons, a cone of $\Delta R = 0.4$ is built to compute the flux of particle flow candidates,
-the ``delta-beta'' correction is applied to correct for pileup contamination. This correction is achieved by subtracting half the sum of the \pt of the charged particles in the cone of interest but with particles not originating from the primary vertex.
+For muons reconstruction two approaches are used:
+\begin{enumerate}
+  \item \textbf{the global muon reconstruction (outside-in)}: In this case, a tracker-track is found for each standalone-muon track and a combined fit of the tracker and muon-detector hits is performed, using the Kalman-filter technique~\cite{Kalman1960,Fruehwirth1987}.
+  \item \textbf{the tracker muon reconstruction (inside-out)}: Here, the tracker-track is extrapolated and matched to segments reconstructed in the muon detector and it is said to be matched if the distance between them is less than 3 cm or if the value of the pull is less than 4, where the pull is defined as the difference between the position of the matched segment and the position of the extrapolated track, divided by their combined uncertainties.
+\end{enumerate}
+
+At low momenta, $p \leq 5 ~GeV$, the tracker muon reconstruction is more efficient than the global muon reconstruction, as it requires only a single muon segment in the muon system, whereas the global muon reconstruction is designed to have high efficiency for muons penetrating through more than one muon station and typically requires segments in at least two muon stations.
+
+For muon identification there are six different algorithms are commonly used in CMS. They are Loose Muons, Medium Muons, Tight Muons, Soft Muons, High $p_T$ Muons, and High $p_T$ Tracker Muons. Here only Loose and Tight muon selections are described which are used in the analysis~\cite{Kraetschmer2016}.
+\begin{enumerate}
+  \item \textbf{Loose muon selection:} This requires a candidate to be reconstructed by the particle-flow algorithm~\cite{Particle_flow_2010} and a global or a tracker-muon.
+  % \item \textbf{Soft muon selection:} This requires a tracker-muon having tight requirements on the matched muon segment, on the number of hits, the track $\chi^2$, and the impact parameters;
+  \item \textbf{Tight muon selection:} This requires the particle to be identified as muons by the particle flow event reconstruction and as global as well as the tracker muon with requirements on the hits, global track $\chi^2$, and the impact parameters.
+\end{enumerate}
+
+The muons are selected using the {\em``Tight''} muon identification mentioned above.
+Additionally, like in the electron case, a third muon veto is also applied to reject events with more than two genuine leptons using the {\em``Loose''} identification. 
+For the muon isolation, in the same manner as for electrons, a cone of $\Delta R = 0.4$ is built to compute the flux of particle flow candidates, the ``delta-beta'' correction is applied to correct for pileup contamination.
+This correction is achieved by subtracting half the sum of the \pt of the charged particles in the cone of interest but with particles not originating from the primary vertex.
 
 The muon isolation is therefore defined as:
 \begin{equation}
@@ -361,29 +425,53 @@ I^{\mu}_{\rm rel}=\frac{1}{p_{\rm T}}  \left[ I_{\rm ch}+\max(I_{\rm nh}+I_{\rm 
 \label{eq:muisol}
 \end{equation}
  
-Scale factors are used to correct for differences in the reconstruction, identification and isolation efficiencies between data and simulation. They are evaluated using the tag and probe technique, and both the scale factors and their uncertainty prescriptions are provided by the Muon POG~\cite{Twiki:MuonSF2016}.
+Scale factors are used to correct for differences in the reconstruction, identification and isolation efficiencies between data and simulation. They are evaluated using the tag and probe technique, using both the scale factors and their uncertainty.
 
 %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%
 \subsection{Jets}
 \label{subsec:jets}
 Jets are reconstructed using the anti-\kt clustering algorithm~\cite{antikt}  with a distance parameter $R=0.4$, as implemented in the \textsc{fastjet}  package~\cite{Cacciari:fastjet1,Cacciari:fastjet2}. The energy of the reconstructed jets is corrected in 3 steps: L1FastJet (for pileup/underlying event subtraction), L2 (for relative corrections) and L3 for absolute scale corrections. For data an extra residual correction is included in the absolute scale correction.
-The used jet energy correction version provided by the jetMET group is Summer16\_23Sep2016BCDV4\_DATA 
-(Summer16\_23Sep2016V4\_MC) for data (simulation).
+% The used jet energy correction version provided by the jetMET group is Summer16\_23Sep2016BCDV4\_DATA 
+% (Summer16\_23Sep2016V4\_MC) for data (simulation).
 
-Jets with \pt$>$30~GeV and $|\eta|<5$ and passing the so called PF-loose requirements are selected. Jets that are within $\Delta R < 0.3$ of one of the identified leptons are excluded from the jet sample. 
+Jets with \pt$>$30~GeV and $|\eta|<5$ and passing the so called PF-loose requirements are selected. PF-loose requirements are sets of certain conditons that are listed in Table~\ref{Table:pf-jet-loose-id}. Jets that are within $\Delta R < 0.3$ of one of the identified leptons are excluded from the jet sample. 
+%
+\begin{table}
+\centering
+\begin{tabular}[!htbp]{l c c c c}
+\hline
+{\textbf{Variables}}      &   $|\eta|<2.7$ & $|\eta|<2.4$  & $2.7 < |\eta| \leq 3.0$  & $|\eta| > 3.0$    \\
+\hline
+Neutral Hadron Fraction   &$   <$ 0.99  & -       & -       & -     \\
+Neutral EM Fraction       &   $< $0.99  & -       & $< $0.90  & $< $0.90\\
+Number of Constituents    &$   >$ 1     & -       & -       & -     \\
+Number of Neutral Particles & -       & -       & $> $2     &$ >$ 10  \\
+% Muon Fraction             &   -       & -       & -       & -     \\
+Charged Hadron Fraction   &   -       & $> $0     & -       & -     \\
+Charged Multiplicity      &   -       &$ >$ 0     & -       & -     \\
+Charged EM Fraction       &   -       & $< $0.99  & -       & -     \\
+\hline
+\end{tabular}
+\caption{PF-loose Jet ID requirements based on the content of jets.}
+\label{Table:pf-jet-loose-id}
+\end{table}
+%
 
 \subsection{V-tag jets}
 Hadronically decaying gauge boson candidates are reconstructed using the anti-\kt clustering algorithm~\cite{antikt} with a distance parameter $R=0.8$ using the Puppi algorithm~\cite{Bertolini:2014bba}. The $V$-jets that are within $\Delta R < 1.0$ of one of the identified leptons are excluded. The $V$-tag jet mass is computed after employing the modified mass drop tagger algorithm to remove soft, wide-angle radiation from the jets~\cite{Dasgupta:2013ihk,Larkoski:2014wba}. The $N$-subjettiness variable $\tau_N$~\cite{Thaler:2010tr} is also employed to further isolate jets arising from hadronic decays of $\PW$ or $\PZ$ bosons.   
 
-The soft-drop mass ($m_{V}$) is corrected following the recommendation in~\cite{jettagging}. The signal region is defined by requiring $\tau_{21}<0.55$ and $ 65 ~\GeV < m_{V} < 105 ~\GeV$. Scale factors are used to correct for differences in selection efficiencies between data and simulation~\cite{jettagging}. Recommended systematic uncertainties in the reference~\cite{jettagging} are propagated in the analysis. 
+% The soft-drop mass ($m_{V}$) is corrected following the recommendation in~\cite{jettagging}.
+The signal region is defined by requiring $\tau_{21}<0.55$ and $ 65 ~\GeV < m_{V} < 105 ~\GeV$.
+% Scale factors are used to correct for differences in selection efficiencies between data and simulation~\cite{jettagging}. Recommended systematic uncertainties in the reference~\cite{jettagging} are propagated in the analysis. 
 
 \subsection{B-tagging}
 
 The selected jets are expected to be mostly coming from gluons or light-quarks
 due to initial state radiation. Thus, in order to suppress backgrounds coming from top quarks, events are vetoed if a $b$-tagged jet is found.
 Jets with $\pt$ greater than 30 $\GeV$ and lying within the tracker fiducial region ($\left|\eta\right|<2.4$) are considered as $b$-taggable.
-A jet is tagged as a $b$-jet candidate if its Combined Secondary Vertex (CSVv2) discriminator is greater than 0.5426~\cite{Twiki:BtagRecommendation80X} (medium working point). To define the top control region, the tight working point (CSVv2 $>$ 0.9535) is used. The recipe provided by the BTV group~\cite{Twiki:BTAGPOGSF} using the recommended measurements has been used to reweight the b-tagging (in)efficiencies of the selected jets.
+A jet is tagged as a $b$-jet candidate if its Combined Secondary Vertex (CSV) discriminator is greater than 0.5426. To define the top control region, the tight working point (CSV $>$ 0.9535) is used.
+% The recipe provided by the BTV group~\cite{Twiki:BTAGPOGSF} using the recommended measurements has been used to reweight the b-tagging (in)efficiencies of the selected jets.
 
 
 %%%%%%%%%%%%%%%
@@ -757,7 +845,7 @@ Discrepancies in the lepton reconstruction and identification
 efficiencies between data and simulation are corrected by applying
 to all MC samples 
 data-to-simulation scale factors measured using $\dyll$ events in the $\cPZ$
-peak region~\cite{wzxs} that are recorded with unbiased triggers. These factors
+peak region~\cite{Tag_probe} that are recorded with unbiased triggers. These factors
 depend on the lepton \pt and $\eta$ and are within 1-2\% for electrons and muons.
 The uncertainty in the determination of the trigger efficiency leads to an uncertainty smaller than 1\% in the expected signal yield. 
 
@@ -928,7 +1016,7 @@ Limited MC stat.           & shape & \NA & shape & shape & shape \\
 \end{table*}
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.8\textwidth]{Plots/plots/impacts_datacard.pdf}
+\includegraphics[width=0.7\textwidth]{Plots/plots/impacts_datacard.pdf}
 \caption{Impacts and pulls of the systematic uncertainties for the Asimov dataset in the $\PW V$ final state. The impacts are shown for a doubly charged Higgs with a mass of $2000\GeV$.  
 }
 \label{fig:pulls}
@@ -944,7 +1032,7 @@ The pulls and impacts of the sysematic uncertainties for the Asimov dataset are 
 \label{sec:results}
 The events in the signal region are used to constrain aQGCs in the effective field theory framework. Nine independent charge conjugate and parity-conserving dimension-8 effective operators are considered~\cite{aqgc_operators}. The dimensionn-8 operators are the following: 
 %
-\begin{align*}[!htbp]
+\begin{align*}
 L_{S,0} &= \left[\left(D_{\mu} \Phi\right)^{\dagger} D_{\nu} \Phi \right] \times \left[\left(D_{\mu} \Phi\right)^{\dagger} D_{\nu} \Phi \right] \\
 L_{S,1} &= \left[\left(D_{\mu} \Phi\right)^{\dagger} D^{\mu} \Phi \right] \times \left[\left(D_{\nu} \Phi\right)^{\dagger} D_{\nu} \Phi \right] \\
 L_{M,0} &= Tr[\hat{W}_{\mu \nu} \hat{W}^{\mu \nu}] \times \left[ \left(D_{\beta} \Phi\right)^{\dagger} D^{\beta} \Phi \right] \\

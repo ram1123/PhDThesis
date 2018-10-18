@@ -87,6 +87,7 @@
 %%%%% Definitions for new commmands, mostly symbols
 \usepackage{symbol_definitions}
 
+\allowdisplaybreaks
 
 \begin{document}
  % \linenumbers
@@ -103,11 +104,11 @@
   % \cleardoublepage \include{frontback/saf2}
   % \cleardoublepage \include{frontback/dedicate}
   % \cleardoublepage \include{frontback/acknowledgement}
-  \cleardoublepage \include{frontback/abstract}
+  % \cleardoublepage \include{frontback/abstract}
 
   \pagestyle{headings}
   \cleardoublepage%\include{frontback/toc}
-   % \tableofcontents 
+   \tableofcontents 
    % \listoffigures 
    % \listoftables
   % Content =====================================================================
@@ -118,7 +119,7 @@
   % \include{chapters/1_Introduction2}
   % \include{chapters/2_LHC_CMS_OfflineRecon}
   % \include{chapters/3_GEM_Detectors}
-  % \include{chapters/4_PhysicsAnalysis_Final}
+  \include{chapters/4_PhysicsAnalysis_Final}
   % \include{chapters/VBS}
   % \include{chapters/5_summary}
   % \include{chapters/Multivariate_Analysis}
