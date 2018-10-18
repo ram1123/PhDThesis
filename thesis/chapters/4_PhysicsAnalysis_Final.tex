@@ -158,50 +158,94 @@ SingleElectron  &       Run2016C-03Feb2017           \\
 \hline
   \end{tabular}
 %}
-  \caption{List of data samples used in the analysis.}
+  \caption{List of data samples used in the analysis. Here different run names corresponds to the different time stamp during which data was collected, and the date in the data sample name corresponds to the time stamp at wich it was converted to the physics objects, i.e, electrons, muons, jets, etc from the hit and energy deposit information.}
   \label{tab:datasample}
   \end{center}
 \end{table}
  
  
 \subsection{Simulated Samples}
-The EW  processes with two final state quarks are simulated using \newline $\MADGRAPH{}5\_a\MCATNLO~2.3.3$~\cite{Alwall:2014} at leading-order (LO) with six electroweak (EWK) and zero quantum chromodynamics (QCD) vertices. The $\PW^{\pm}\PW^{\pm}$, $\PW^{\pm}\PW^{\mp}$,$\PW^{\pm}\PZ$, and $\PZ\PZ$ processes are produced separately. The complete list of the SM background samples can be found in Table~\ref{tab:signalSamples}.
+The EW  processes with two final state quarks are simulated using \newline $\MADGRAPH{}5\_a\MCATNLO~2.3.3$~\cite{Alwall:2014} at leading-order (LO) with six electroweak (EWK) and zero quantum chromodynamics (QCD) vertices. The $\PW^{\pm}\PW^{\pm}$, $\PW^{\pm}\PW^{\mp}$,$\PW^{\pm}\PZ$, and $\PZ\PZ$ processes are produced separately. The complete list of the SM background samples can be found in Table~\ref{tab:signalSamples_sm} and Table~\ref{tab:signalSamples_aQGC}.
 %
+% \begin{table}[!htbp]
+% \footnotesize
+% \centering
+% \begin{tabular}{lrr}
+% \textbf{Sample name} & \textbf{Total events} & \textbf{Cross section[pb]} \\
+% \hline
+% /WplusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}* & 1,991,279 & 0.9114\\
+% /WplusTo2JWminusToLNuJJ\_{}EWK\_{}LO\_{}SM\_{}* & 1,994,040 & 0.9107\\
+% /WplusToLNuWplusTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*  & 198,858   & 0.0879\\
+% /WminusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*  & 199,535   & 0.0326\\
+% /WplusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*    & 393,190   & 0.1825\\
+% /WplusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}SM\_{}*     & 198,932   & 0.0540\\
+% /WminusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*   & 199,547   & 0.1000\\
+% /WminusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}SM\_{}*    & 198,910   & 0.0298\\
+% /ZTo2LZTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*       & 100,000   & 0.0159\\
+% \hline
+% \hline
+% /WplusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}* & 1,981,940 & 17.940\\
+% /WplusTo2JWminusToLNuJJ\_{}EWK\_{}LO\_{}aQGC\_{}* & 1,994,595 & 17.920\\
+% /WplusToLNuWplusTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*  & 200,000   & 3.451\\
+% /WminusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*& 200,000   & 0.507\\
+% /WplusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*    & 399,232   & 1.895\\
+% /WplusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}aQGC\_{}*   & 199,238   & 0.569\\
+% /WminusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*   & 200,000   & 0.741\\
+% /WminusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}aQGC\_{}*    & 198,620   & 0.222\\
+% /ZTo2LZTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*     & 99,532    & 3.361\\
+% \hline
+% * = MJJ100PTJ10\_{}TuneCUETP8M1\_{}13TeV-madgraph-pythia8/ \\
+%     RunIISummer16MiniAODv2-PUMoriond17\_{}80X\_{}mcRun2\_{}\\
+%     asymptotic\_{}2016\_{}TrancheIV\_{}v6-v1/MINIAODSIM\\
+% \hline
+% \end{tabular}
+% \caption{Signal sample names and cross sections of simulated samples used in the analysis}
+% \label{tab:signalSamples}
+% \end{table}
 \begin{table}[!htbp]
-\footnotesize
 \centering
-\begin{tabular}{lrr}
-\textbf{Sample name} & \textbf{Total events} & \textbf{Cross section[pb]} \\
+{\scriptsize
+\begin{tabular}{llrr}
+\textbf{Process} &\textbf{Sample name} & \textbf{Total events} & \textbf{Cross section[pb]} \\
 \hline
-/WplusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}* & 1,991,279 & 0.9114\\
-/WplusTo2JWminusToLNuJJ\_{}EWK\_{}LO\_{}SM\_{}* & 1,994,040 & 0.9107\\
-/WplusToLNuWplusTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*  & 198,858   & 0.0879\\
-/WminusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*  & 199,535   & 0.0326\\
-/WplusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*    & 393,190   & 0.1825\\
-/WplusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}SM\_{}*     & 198,932   & 0.0540\\
-/WminusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*   & 199,547   & 0.1000\\
-/WminusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}SM\_{}*    & 198,910   & 0.0298\\
-/ZTo2LZTo2JJJ\_{}EWK\_{}LO\_{}SM\_{}*       & 100,000   & 0.0159\\
-\hline
-\hline
-/WplusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}* & 1,981,940 & 17.940\\
-/WplusTo2JWminusToLNuJJ\_{}EWK\_{}LO\_{}aQGC\_{}* & 1,994,595 & 17.920\\
-/WplusToLNuWplusTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*  & 200,000   & 3.451\\
-/WminusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*& 200,000   & 0.507\\
-/WplusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*    & 399,232   & 1.895\\
-/WplusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}aQGC\_{}*   & 199,238   & 0.569\\
-/WminusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*   & 200,000   & 0.741\\
-/WminusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}aQGC\_{}*    & 198,620   & 0.222\\
-/ZTo2LZTo2JJJ\_{}EWK\_{}LO\_{}aQGC\_{}*     & 99,532    & 3.361\\
-\hline
-* = MJJ100PTJ10\_{}TuneCUETP8M1\_{}13TeV-madgraph-pythia8/ \\
-    RunIISummer16MiniAODv2-PUMoriond17\_{}80X\_{}mcRun2\_{}\\
-    asymptotic\_{}2016\_{}TrancheIV\_{}v6-v1/MINIAODSIM\\
+$pp \rightarrow W^+W^- JJ \rightarrow l^+ \nu JJ JJ$  & WplusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}aQGC & 1,981,940 & 17.940\\
+$pp \rightarrow W^+W^- JJ \rightarrow l^- \nu JJ JJ$  & WplusTo2JWminusToLNuJJ\_{}EWK\_{}LO\_{}aQGC & 1,994,595 & 17.920\\
+$pp \rightarrow W^+W^+ JJ \rightarrow l^+ \nu JJ JJ$  & WplusToLNuWplusTo2JJJ\_{}EWK\_{}LO\_{}aQGC & 200,000   & 3.451\\
+$pp \rightarrow W^-W^- JJ \rightarrow l^- \nu JJ JJ$  & WminusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}aQGC & 200,000   & 0.507\\
+$pp \rightarrow W^+Z JJ \rightarrow l^+ \nu JJ JJ$  & WplusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}aQGC & 399,232   & 1.895\\
+$pp \rightarrow W^+Z JJ \rightarrow l^+ l^- JJ JJ$  & WplusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}aQGC  & 199,238   & 0.569\\
+$pp \rightarrow W^-Z JJ \rightarrow l^- \nu JJ JJ$  & WminusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}aQGC & 200,000   & 0.741\\
+$pp \rightarrow W^-Z JJ \rightarrow l^+ l^- JJ JJ$  & WminusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}aQGC & 198,620   & 0.222\\
+$pp \rightarrow ZZ JJ \rightarrow l^+ l^- JJ JJ$  & ZTo2LZTo2JJJ\_{}EWK\_{}LO\_{}aQGC & 99,532    & 3.361\\
 \hline
 \end{tabular}
-\caption{Signal sample names and cross sections of simulated samples used in the analysis}
-\label{tab:signalSamples}
+\caption{aQGC signal sample names and cross sections of simulated samples used in the analysis}
+\label{tab:signalSamples_aQGC}
+}
 \end{table}
+%
+\begin{table}[!htbp]
+\centering
+{\scriptsize
+\begin{tabular}{llrr}
+\textbf{Process} &\textbf{Sample name} & \textbf{Total events} & \textbf{Cross section[pb]} \\
+\hline
+$pp \rightarrow W^+W^- JJ \rightarrow l^+ \nu JJ JJ$  & WplusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}aQGC & 1,991,279 & 0.9114\\
+$pp \rightarrow W^+W^- JJ \rightarrow l^- \nu JJ JJ$  & WplusTo2JWminusToLNuJJ\_{}EWK\_{}LO\_{}aQGC & 1,994,040 & 0.9107\\
+$pp \rightarrow W^+W^+ JJ \rightarrow l^+ \nu JJ JJ$  & WplusToLNuWplusTo2JJJ\_{}EWK\_{}LO\_{}aQGC & 198,858   & 0.0879\\
+$pp \rightarrow W^-W^- JJ \rightarrow l^- \nu JJ JJ$  & WminusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}aQGC & 199,535   & 0.0326\\
+$pp \rightarrow W^+Z JJ \rightarrow l^+ \nu JJ JJ$  & WplusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}aQGC & 393,190   & 0.1825\\
+$pp \rightarrow W^+Z JJ \rightarrow l^+ l^- JJ JJ$  & WplusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}aQGC  & 198,932   & 0.0540\\
+$pp \rightarrow W^-Z JJ \rightarrow l^- \nu JJ JJ$  & WminusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}aQGC & 199,547   & 0.1000\\
+$pp \rightarrow W^-Z JJ \rightarrow l^+ l^- JJ JJ$  & WminusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}aQGC & 198,910   & 0.0298\\
+$pp \rightarrow ZZ JJ \rightarrow l^+ l^- JJ JJ$  & ZTo2LZTo2JJJ\_{}EWK\_{}LO\_{}aQGC & 100,000   & 0.0159\\
+\hline
+\end{tabular}
+\caption{SM EWK signal sample names and cross sections of simulated samples used in the analysis}
+\label{tab:signalSamples_sm}
+}
+\end{table}
+%
 %
 The QCD initiated production of two gauge bosons with two final state quarks (which we refer to as diboson process) and at least one QCD vertex is considered as background. \MADGRAPH{}5\_a\MCATNLO at LO is used to simulate this sample. The interference between the EWK and QCD diagrams is evaluated using dedicated samples produced with the \textsc{Phantom}~1.2.8~\cite{Ballestrero:2007xq}\todo[inline]{Add details of Phantom generator.} generator and is found to be negligible compared to the theoretical uncertainties. Figure~\ref{fig:interference} shows the level of the interference contribution. 
 
@@ -228,7 +272,61 @@ The aQGC signal samples are produced using \MADGRAPH{}5\_a\MCATNLO at LO accurac
 The Drell--Yan process is simulated with one, two, three, and four outgoing partons at Born level at LO using \MADGRAPH{}5\_a\MCATNLO. The $\PW+$jets process is simulated at LO in $\mathrm{H_{T}}$\footnote{$\mathrm{H_T}$ is defined as the sum of transverser momentum of all jets in an event.} bins using \MADGRAPH{}5\_a\MCATNLO. $\ttbar$, $\ttbar \PW$, $\ttbar \PZ$, and single top processes are generated at next-to-leading order (NLO) using \textsc{POWHEG2.0}~\cite{Alioli:2008gx,Nason:2004rx,Frixione:2007vw,powheg:2010}. The simulated samples of background processes are normalized to the best theoretical prediction. The complete list of background samples can be found in Table~\ref{tab:bkgSamples}.
 
 The \PYTHIA~8.205~\cite{Sjostrand:2015} package is used  for parton showering, hadronization, and the underlying event simulation, with tune CUETP8M1~\cite{Skands:2014pea,Khachatryan:2015pea}. The NNPDF~3.0~\cite{nnpdf} set is used as the default set of parton distribution functions (PDFs). The PDFs are calculated to the same order in QCD as the hard process. 
+% %
+% \begin{table}[!htbp]
+% \footnotesize
+% \centering
+% % \topcaption{Sample names and cross sections of simulated samples used in the analysis.}
+%  {\scriptsize
+% % \begin{tabular}{p{9cm}r}
+% \begin{tabular}{lr}
+% \textbf{Sample name} & \textbf{Cross section[pb]} \\
+% \hline
+% WJetsToLNu\_{}HT-100To200\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8  & 1345*1.21 \\
+% WJetsToLNu\_{}HT-200To400\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8 & 359.7*1.21 \\
+% WJetsToLNu\_{}HT-400To600\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8 & 48.91*1.21 \\
+% WJetsToLNu\_{}HT-600To800\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8 & 12.05*1.21 \\
+% WJetsToLNu\_{}HT-800To1200\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8 & 5.501*1.21 \\
+% WJetsToLNu\_{}HT-1200To2500\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8 & 1.329*1.21 \\
+% WJetsToLNu\_{}HT-2500ToInf\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8 & 0.03216*1.21 \\
+% \hline
+% WplusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}QCD\_{}*	&	5.544\\
+% WplusTo2JWminusToLNuJJ\_{}EWK\_{}LO\_{}QCD\_{}*	&	5.561\\
+% WplusToLNuWplusTo2JJJ\_{}EWK\_{}LO\_{}QCD\_{}*	        &	0.08642\\
+% WminusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}QCD\_{}*       &	0.03774\\
+% WplusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}QCD\_{}*		&	2.162\\
+% WplusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}QCD\_{}*		&	0.6409\\
+% WminusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}QCD\_{}*		&	1.302\\
+% WminusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}QCD\_{}*		&	0.3862\\
+% ZTo2LZTo2JJJ\_{}EWK\_{}LO\_{}QCD\_{}*			&	0.3756\\
+% \hline
+% TT\_{}TuneCUETP8M1\_{}13TeV-powheg-pythia8 & 831.76 \\
+% \hline
+% ST\_{}s-channel\_{}4f\_{}leptonDecays\_{}13TeV-amcatnlo-pythia8\_{}TuneCUETP8M1 & 3.68 \\
+% ST\_{}t-channel\_{}top\_{}4f\_{}inclusiveDecays\_{}13TeV-powhegV2-madspin-pythia8\_{}TuneCUETP8M1 & 136.02 \\
+% ST\_{}t-channel\_{}antitop\_{}4f\_{}inclusiveDecays\_{}13TeV-powhegV2-madspin-pythia8\_{}TuneCUETP8M1 & 80.95 \\
+% ST\_{}tW\_{}antitop\_{}5f\_{}inclusiveDecays\_{}13TeV-powheg-pythia8\_{}TuneCUETP8M1 & 35.6 \\
+% ST\_{}tW\_{}top\_{}5f\_{}inclusiveDecays\_{}13TeV-powheg-pythia8\_{}TuneCUETP8M1 & 35.6 \\
+% \hline
+% DY1JetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1012 \\
+% DY2JetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 335 \\
+% DY3JetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 102 \\
+% DY4JetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 54 \\
+% %QCD\_HT200to300\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1717000 \\
+% %QCD\_HT300to500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 351300 \\
+% %QCD\_HT500to700\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 31630 \\
+% %QCD\_HT700to1000\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6802 \\
+% %QCD\_HT1000to1500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1206 \\
+% %QCD\_HT1500to2000\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 120.4 \\
+% %QCD\_HT2000toInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 25.25 \\
+% %\hline
+% \end{tabular}
+% }
+% \caption{Background sample names and cross sections of simulated samples used in the analysis. The naming }
+% \label{tab:bkgSamples}
+% \end{table}
 
+%
 \begin{table}[!htbp]
 \footnotesize
 \centering
@@ -238,49 +336,34 @@ The \PYTHIA~8.205~\cite{Sjostrand:2015} package is used  for parton showering, h
 \begin{tabular}{lr}
 \textbf{Sample name} & \textbf{Cross section[pb]} \\
 \hline
-WJetsToLNu\_{}HT-100To200\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8  & 1345*1.21 \\
-WJetsToLNu\_{}HT-200To400\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8 & 359.7*1.21 \\
-WJetsToLNu\_{}HT-400To600\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8 & 48.91*1.21 \\
-WJetsToLNu\_{}HT-600To800\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8 & 12.05*1.21 \\
-WJetsToLNu\_{}HT-800To1200\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8 & 5.501*1.21 \\
-WJetsToLNu\_{}HT-1200To2500\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8 & 1.329*1.21 \\
-WJetsToLNu\_{}HT-2500ToInf\_{}TuneCUETP8M1\_{}13TeV-madgraphMLM-pythia8 & 0.03216*1.21 \\
+WJetsToLNu HT bins 100 to 200 GeV & 1345*1.21 \\
+WJetsToLNu HT bins 200 to 400 GeV  & 359.7*1.21 \\
+WJetsToLNu HT bins 400 to 600 GeV & 48.91*1.21 \\
+WJetsToLNu HT bins 600 to 800 GeV & 12.05*1.21 \\
+WJetsToLNu HT bins 800 to 1200 GeV & 5.501*1.21 \\
+WJetsToLNu HT bins 1200 to 2500 GeV & 1.329*1.21 \\
+WJetsToLNu HT bins 2500 GeV to Inf  & 0.03216*1.21 \\
 \hline
-WplusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}QCD\_{}*	&	5.544\\
-WplusTo2JWminusToLNuJJ\_{}EWK\_{}LO\_{}QCD\_{}*	&	5.561\\
-WplusToLNuWplusTo2JJJ\_{}EWK\_{}LO\_{}QCD\_{}*	        &	0.08642\\
-WminusToLNuWminusTo2JJJ\_{}EWK\_{}LO\_{}QCD\_{}*       &	0.03774\\
-WplusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}QCD\_{}*		&	2.162\\
-WplusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}QCD\_{}*		&	0.6409\\
-WminusToLNuZTo2JJJ\_{}EWK\_{}LO\_{}QCD\_{}*		&	1.302\\
-WminusTo2JZTo2LJJ\_{}EWK\_{}LO\_{}QCD\_{}*		&	0.3862\\
-ZTo2LZTo2JJJ\_{}EWK\_{}LO\_{}QCD\_{}*			&	0.3756\\
+TTbar & 831.76 \\
 \hline
-TT\_{}TuneCUETP8M1\_{}13TeV-powheg-pythia8 & 831.76 \\
+Single Top production s-channel & 3.68 \\
+Single Top production t-channel & 136.02 \\
+Single Anti-Top production t-channel & 80.95 \\
+Single Anti-Top production tW-channel & 35.6 \\
+Single Top production tW-channel & 35.6 \\
 \hline
-ST\_{}s-channel\_{}4f\_{}leptonDecays\_{}13TeV-amcatnlo-pythia8\_{}TuneCUETP8M1 & 3.68 \\
-ST\_{}t-channel\_{}top\_{}4f\_{}inclusiveDecays\_{}13TeV-powhegV2-madspin-pythia8\_{}TuneCUETP8M1 & 136.02 \\
-ST\_{}t-channel\_{}antitop\_{}4f\_{}inclusiveDecays\_{}13TeV-powhegV2-madspin-pythia8\_{}TuneCUETP8M1 & 80.95 \\
-ST\_{}tW\_{}antitop\_{}5f\_{}inclusiveDecays\_{}13TeV-powheg-pythia8\_{}TuneCUETP8M1 & 35.6 \\
-ST\_{}tW\_{}top\_{}5f\_{}inclusiveDecays\_{}13TeV-powheg-pythia8\_{}TuneCUETP8M1 & 35.6 \\
-\hline
-DY1JetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1012 \\
-DY2JetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 335 \\
-DY3JetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 102 \\
-DY4JetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 54 \\
-%QCD\_HT200to300\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1717000 \\
-%QCD\_HT300to500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 351300 \\
-%QCD\_HT500to700\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 31630 \\
-%QCD\_HT700to1000\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 6802 \\
-%QCD\_HT1000to1500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 1206 \\
-%QCD\_HT1500to2000\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 120.4 \\
-%QCD\_HT2000toInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8 & 25.25 \\
-%\hline
+Drell-Yan + 1 jet  & 1012 \\
+ Drell-Yan + 2 jet & 335 \\
+ Drell-Yan + 3 jet & 102 \\
+ Drell-Yan + 4 jet & 54 \\
+ \hline
 \end{tabular}
 }
-\caption{Sample names and cross sections of simulated samples used in the analysis.}
+\caption{Background sample names and cross sections of simulated samples used in the analysis. The naming }
 \label{tab:bkgSamples}
 \end{table}
+
+
 
 % section sample_used (end)
 
@@ -477,7 +560,7 @@ A jet is tagged as a $b$-jet candidate if its Combined Secondary Vertex (CSV) di
 %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%
 \subsection{Missing transverse energy}
-Missing transverse energy is estimated from the imbalance of the transverse momentum of all the reconstructed PF candidates. The standard PF $\ptmiss$ using the Type-1 corrections is used. 
+Missing transverse energy is estimated from the imbalance of the transverse momentum of all the reconstructed PF candidates. The standard PF $\ptmiss$ using the Type-1 corrections~\cite{cms-met-analysis-twiki} is used. 
 
 % section object_selection (end)
 
@@ -496,7 +579,7 @@ The longitudinal component of the neutrino momentum in $\PW V \rightarrow \ell \
 Additional selection criteria are then used to enhance the sensitivity to aQGCs. Candidate events are required to have  $z_{V}^{*} < 0.3$ and $z_{W}^{*} < 0.3$, where $z_{V}^{*} = |\eta_{V}-(\eta_{j1}+\eta_{j2})/2|/|\Delta \eta_{jj}|$ is the Zeppenfeld variable~\cite{Rainwater:1996ud}, $\eta_{V}$ is the
 pseudorapidity of a gauge boson, and $\eta_{j1}$ and $\eta_{j2}$ are the pseudorapidities of the leading and subleading jet, respectively. In addition, events are required to have $\vartheta>1.0$ where $\vartheta = \mathrm{min}(\mathrm{min}(\eta_{W},\eta_{V})-\mathrm{min}(\eta_{j1},\eta_{j2}),\mathrm{min}(\eta_{j1},\eta_{j2})-\mathrm{min}(\eta_{W},\eta_{V}))$ is the so called boson centrality. 
 
-Statistical analysis of the event yields is performed with a fit to the mass distribution of the $\PW V$ or $\PZ V$ system. The mass distributions are binned as follows: $m_{\PW V}$ = [$600$,$700$,$800$,$900$,$1000$,$1200$,$1500$,$2000$,$\infty$]. The distributions of $m_{\PW V}$ and $m_{\PZ V}$ in the signal region are shown in Figure~\ref{fig:signal2}. The data yield together with the SM expectation for the different processes is given in Table~\ref{tab:sel_yields15}. The expected yields of the background processes are obtained from the fit to the Asimov datet for the SM only hypothesis. 
+Statistical analysis of the event yields is performed with a fit to the mass distribution of the $\PW V$ or $\PZ V$ system. The mass distributions are binned as follows: $m_{\PW V}$ = [$600$,$700$,$800$,$900$,$1000$,$1200$,$1500$,$2000$,$\infty$]. The distributions of $m_{\PW V}$ and $m_{\PZ V}$ in the signal region are shown in Figure~\ref{fig:signal2}. The data yield together with the SM expectation for the different processes is given in Table~\ref{tab:sel_yields15}. The expected yields of the background processes are obtained from the fit to the Asimov dataset for the SM only hypothesis. 
 
 
 \begin{figure*}[!htbp]
@@ -515,14 +598,14 @@ Statistical analysis of the event yields is performed with a fit to the mass dis
   \hline
   Final state 	& $\PW V$ &	& $\PZ V$ 	\\
   \cline{2-2} \cline{4-4}
-  Data 	& \multicolumn{1}{c}{\NA} && \NA \\
+  Data 	& 347 $\pm$ 16 && 47 $\pm$ 7 \\
   \hline
-  $V+$jets    	      &   199 $\pm$ 12  &&    53.1 $\pm$ 4.5    \\
-  top       	      &   120 $\pm$  10  &&    0.16 $\pm$  0.03    \\
-  SM QCD VV  	      &   34 $\pm$  6  &&    6.4 $\pm$  1.3      \\
-  SM EW VV  	      &   18 $\pm$  1  &&    2.4 $\pm$  0.2      \\
+  $V+$jets    	      &   187 $\pm$ 21  &&    41.2 $\pm$ 6.1    \\
+  top       	      &   120 $\pm$  18  &&    0.16 $\pm$  0.04    \\
+  SM QCD VV  	      &   28 $\pm$  10  &&    6.4 $\pm$  2.2      \\
+  SM EW VV  	      &   17 $\pm$  2  &&    2.4 $\pm$  0.4      \\
   \hline
-  Total bkg.            &   372 $\pm$  13   &&    62 $\pm$  5   \\[1ex]
+  Total bkg.            &   352 $\pm$  21   &&    50.1 $\pm$  5.9   \\[1ex]
   $f_{T2}/ \Lambda^{4} = -0.5,-2.5~\TeV^{-4}$    &   22 $\pm$ 1 && 7.6 $\pm$ 0.6\\
   $m_{H}=500~\GeV$, $s_{h}=0.5$      &   40 $\pm$ 1 && 4.3 $\pm$ 0.1\\
   \hline
@@ -667,7 +750,7 @@ The fits to the corresponding MC predictions are shown in Figure~\ref{fig:mWW_1}
 
 \begin{figure}[!htbp] 
 	 \centering 
-	 \includegraphics[width=0.68\textwidth]{Plots/BackgroundEstimation/WV/WVchannel_AlphaDistribution_AfterFit_New.pdf}
+	 \includegraphics[width=0.68\textwidth]{Plots/BackgroundEstimation/WV/WVchannel_AlphaDistribution_AfterFit_New2.pdf}
 	 \caption{Alpha-ratio value (ratios of the $\PW+$jets MC contribution in the signal region to the sideband region) distribution. Red line is the fitted function used in the result.}
 	 \label{fig:AlphaDis}
 \end{figure}
@@ -680,9 +763,9 @@ The fits to the corresponding MC predictions are shown in Figure~\ref{fig:mWW_1}
         \label{fig:Foil_and_Cone_a}
     \end{subfigure}
 	 \begin{subfigure}[b]{0.46\textwidth}
-	 	\includegraphics[width=0.9\textwidth]{Plots/BackgroundEstimation/WV/WVchannel_SignalRegionComparison_VjetShape_MC_CorrShapeFromData_38bin.pdf}\qquad
+	 	\includegraphics[width=0.9\textwidth]{Plots/BackgroundEstimation/WV/WVchannel_SignalRegionComparison_VjetShape_MC_CorrShapeFromData.pdf}\qquad
         \caption{ }
-        \label{fig:Foil_and_Cone_a}
+        \label{fig:Foil_and_Cone_a1}
     \end{subfigure}
 	 \caption{Comparison of the $\PW+$jets predictions using simulation (red) and the data-driven estimation in the sideband (left) and signal regions (right). The uncertainty band shows the fit uncertainty.}
 	 \label{fig:signal}
@@ -799,7 +882,7 @@ The background estimation is validated using a reduced sideband region and then 
 \begin{figure}[!htbp] 
 	 \centering 
 	 \begin{tabular}{cc}
-	 \includegraphics[width=0.48\textwidth]{Plots/BackgroundEstimation/WV/signal_region_Closure_test_AfterCorrShape_38bins.png}
+	 \includegraphics[width=0.48\textwidth]{Plots/BackgroundEstimation/WV/signal_region_Closure_test_AfterCorrShape_38bins.pdf}
          \includegraphics[width=0.48\textwidth]{Plots/BackgroundEstimation/WV/DibosonBoostedElMuCuts13TeV_WjetControlRegion_Tighter_CHS_mass_lvj_type0_PuppiAK8_ClosureTest_SignalRegion.png}  
 	 \end{tabular}
 	 \caption{The data and predicted $m_{WV}$ distribution obtained from the alpha-ratio method (left) and simulation (right).}
@@ -814,7 +897,7 @@ The $\PZ+$jets background process prediction in the $\PZ V$ final state is perfo
 	 \centering 
 	 \begin{tabular}{cc}
 	 \includegraphics[width=0.48\textwidth]{Plots/BackgroundEstimation/ZV/m_lvj_fitting/m_lvj_sb_lo_WJets0_xww__with_pull.pdf}
-	 \includegraphics[width=0.48\textwidth,height=5.5cm]{Plots/BackgroundEstimation/ZV/ZVchannel_AlphaDistribution_AfterFit_New.pdf}
+	 \includegraphics[width=0.48\textwidth,height=5.5cm]{Plots/BackgroundEstimation/ZV/ZVchannel_AlphaDistribution_AfterFit_New2.pdf}
 	 \end{tabular}
 	 \caption{The data distribution and the corresponding fit of the $m_{ZV}$ distribution in the sideband region (left) and alpha-ratio value distribution (right).}
 	 \label{fig:zvfits}
@@ -849,24 +932,24 @@ peak region~\cite{Tag_probe} that are recorded with unbiased triggers. These fac
 depend on the lepton \pt and $\eta$ and are within 1-2\% for electrons and muons.
 The uncertainty in the determination of the trigger efficiency leads to an uncertainty smaller than 1\% in the expected signal yield. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Lepton momentum scale}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Lepton momentum scale}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The lepton momentum scale uncertainty is computed by varying the
-momentum of the leptons by their uncertainties. We have an 
-uncertainty in the muons and electrons of 1\%. We follow the recommendations of the Exotica group for the high $p_{T}$ muons~\cite{Twiki:EXO-MUODocumentationRun2}.
+% The lepton momentum scale uncertainty is computed by varying the
+% momentum of the leptons by their uncertainties. We have an 
+% uncertainty in the muons and electrons of 1\%. 
+% We follow the recommendations of the Exotica group for the high $p_{T}$ muons~\cite{Twiki:EXO-MUODocumentationRun2}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Jet energy scale and resolution}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The uncertainty in the calibration of the jet energy scale (JES) and resolution (JER) 
+The uncertainty in the calibration of the jet energy scale (JES) and resolution (JER)~\cite{Collaboration2011} 
 directly affects the acceptance of the requirement $< 2$~jets, 
 the $\met$ computation, and all the cuts related to jets. 
 The estimate of the jet energy scale uncertainty is performed varying 
-the jet energy scale up and down by 1$\sigma$ as
-measured by the Jet/MET group~\cite{twiki:JES}. The variation
+the jet energy scale up and down by 1$\sigma$~\cite{twiki:JES}. The variation
 corresponds to a simple re-scaling of the jet four-momentum as
 follows: $P\rightarrow P \cdot (1 \pm \delta\pt^{JES}/{\pt})$, where 
 $\delta\pt^{JES}$ is the absolute uncertainty on the jet energy scale
@@ -882,15 +965,17 @@ p_{\rm T} \rightarrow \max \left[0 , p_{T}^{\rm gen} + c_{\pm1\sigma}\cdot (p_{\
 \end{equation}
 %%
 in which $c_{\pm1\sigma}$ are the data-to-MC scale factors 
-shifting the central value by $\pm$1$\sigma$. These values are taken 
-from the official CMS recommendations for 2016~\cite{twiki:JES}.
+shifting the central value by $\pm$1$\sigma$~\cite{twiki:JES}. 
+% These values are taken 
+% from the official CMS recommendations for 2016~\cite{twiki:JES}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{B-tagging efficiency}
+% \subsection{B-tagging efficiency}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this analysis the b-tagging is used to reject events with real b-jets in the final state since the signal events have little b-jet content. The recipe provided by the BTV group using the recommended measurements has been used to both reweight the b-tagging (in)efficiencies of the selected jets and to estimate 
-the associated uncertainties.
+% In this analysis the b-tagging is used to reject events with real b-jets in the final state since the signal events have little b-jet content.
+% The recipe provided by the BTV group using the recommended measurements has been used to both reweight the b-tagging (in)efficiencies of the selected jets and to estimate 
+% the associated uncertainties.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{V tagging efficiency}
@@ -927,9 +1012,10 @@ used as in the case of MC-driven backgrounds.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The predictions of the SM EW and QCD diboson background, and aQGC/Higgs signal processes are taken from simulation. The theoretical Uncertainties in the normalization are derived from variations of the QCD scale, $\alpha_{s}$
 and parton distribution functions (PDFs) variations~\cite{Botje:2011sn,Alekhin:2011sk,Lai:2010vv,Martin2009,Ball:2011mu}.
-The PDF and $\alpha_s$ uncertainties for signal and background processes are estimated from the standard deviation of weights from the replicas provided in the NNPDF3.0 parton distribution set~\cite{nnpdf}. The procedure for estimating uncertainties arising from Parton Distribution Functions (PDF uncertainties) follows the recommendations issued by the PDF4LHC group \cite{Butterworth2015}.
+The PDF and $\alpha_s$ uncertainties for signal and background processes are estimated from the standard deviation of weights from the replicas provided in the NNPDF3.0 parton distribution set~\cite{nnpdf}. The procedure for estimating uncertainties arising from Parton Distribution Functions (PDF uncertainties) follows the recommendations as described in paper \textit{``PDF4LHC recommendations for LHC Run II''}~\cite{Butterworth2015}.
 
 Figure~\ref{fig:theory} shows the nominal and the up/down one standard deviation predictions for the QCD scale (left) and PDF uncertainties (right) for the SM EW (top) and SM QCD (bottom) diboson background predictions. The QCD scale uncertainties are  up to ~20\% for the signal normalization (depending on the kinematic region) and 40\% for the QCD initiated diboson background normalization. The uncertainty in the PDF results in up to 10\% variation for the signal and background normalization.
+%
 \begin{figure}[!htbp]
   \begin{center}
     \includegraphics[width=0.45\textwidth]{Plots/systematic/diboson_QCDScale.pdf}
@@ -945,7 +1031,7 @@ Figure~\ref{fig:theory} shows the nominal and the up/down one standard deviation
 \subsection{$V+$jets}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The statistical uncertainties from the fit in the sideband region are propagated to the final prediction. The fit normalization uncertainty is $15\%$. The fit function is modeled using a functional shape of form $f=\exp\left[-m/(c_{0}+c_1\cdot m)\right]$ in the control region fit. The uncertainties in the fit parameters $c_{0}$ and $c_{1}$ are treated as nuisance parameters in the combine fit and affect the shape of the background prediction. Figure~\ref{fig:wjet} shows the nominal and the up/down one standard deviation predictions. The statistical uncertainty in the alpha-ratio values due to limited number of simulated events are also propagated to the result. 
-
+%
 \begin{figure}[!htbp]
   \begin{center}
     \begin{tabular}{c}
@@ -1066,15 +1152,15 @@ Table~\ref{tab:VBS_aQGC} shows the individual lower and upper limits obtained by
 & Observed limits  & Expected limits  \\
 & (\TeV$^{-4}$)   & (\TeV$^{-4}$)   \\
 \hline
-$\mathrm{f_{S0}} / \Lambda^4$  & $[ -X, X]$ & $[ -4.0, 4.0]$ \\
-$\mathrm{f_{S1}} / \Lambda^4$  & $[-X, X]$ & $[-4.9, 4.9]$ \\
-$\mathrm{f_{M0}} / \Lambda^4$  & $[-X, X]$ & $[-0.95, 0.95]$ \\
-$\mathrm{f_{M1}} / \Lambda^4$  & $[ -X, X]$ & $[ -2.8, 2.8]$ \\
-$\mathrm{f_{M6}} / \Lambda^4$  & $[-X, X]$ & $[-1.9, 1.9]$ \\
-$\mathrm{f_{M7}} / \Lambda^4$  & $[-X, X]$ & $[-4.8, 4.8]$ \\
-$\mathrm{f_{T0}} / \Lambda^4$  & $[-X, X]$ & $[-0.16, 0.15]$ \\
-$\mathrm{f_{T1}} / \Lambda^4$  & $[-X, X]$ & $[-0.17, 0.17]$ \\
-$\mathrm{f_{T2}} / \Lambda^4$  & $[-X, X]$ & $[-0.38, 0.38]$ \\
+$\mathrm{f_{S0}} / \Lambda^4$  & $[ -2.6, 2.7]$ & $[ -4.0, 4.0]$ \\
+$\mathrm{f_{S1}} / \Lambda^4$  & $[-3.2, 3.3]$ & $[-4.9, 4.9]$ \\
+$\mathrm{f_{M0}} / \Lambda^4$  & $[-0.66, 0.66]$ & $[-0.95, 0.95]$ \\
+$\mathrm{f_{M1}} / \Lambda^4$  & $[ -1.9, 2.0]$ & $[ -2.8, 2.8]$ \\
+$\mathrm{f_{M6}} / \Lambda^4$  & $[-1.3, 1.3]$ & $[-1.9, 1.9]$ \\
+$\mathrm{f_{M7}} / \Lambda^4$  & $[-3.3, 3.2]$ & $[-4.8, 4.8]$ \\
+$\mathrm{f_{T0}} / \Lambda^4$  & $[-0.11, 0.10]$ & $[-0.16, 0.15]$ \\
+$\mathrm{f_{T1}} / \Lambda^4$  & $[-0.11, 0.12]$ & $[-0.17, 0.17]$ \\
+$\mathrm{f_{T2}} / \Lambda^4$  & $[-0.27, 0.27]$ & $[-0.38, 0.38]$ \\
 \hline
 \end{tabular}
 \caption{
@@ -1094,15 +1180,15 @@ field theory Lagrangian in $\PW V$ final state.
 & Observed limits  & Expected limits  \\
 & (\TeV$^{-4}$)   & (\TeV$^{-4}$)   \\
 \hline
-$\mathrm{f_{S0}} / \Lambda^4$  & $[ -X, X]$ & $[ -29, 29]$ \\
-$\mathrm{f_{S1}} / \Lambda^4$  & $[-X, X]$ & $[-23, 23]$ \\
-$\mathrm{f_{M0}} / \Lambda^4$  & $[-X, X]$ & $[-5.1, 5.1]$ \\
-$\mathrm{f_{M1}} / \Lambda^4$  & $[ -X, X]$ & $[-15, 15]$ \\
-$\mathrm{f_{M6}} / \Lambda^4$  & $[-X, X]$ & $[-10, 10]$ \\
-$\mathrm{f_{M7}} / \Lambda^4$  & $[-X, X]$ & $[-24, 24]$ \\
-$\mathrm{f_{T0}} / \Lambda^4$  & $[-X, X]$ & $[-0.95, 0.95]$ \\
-$\mathrm{f_{T1}} / \Lambda^4$  & $[-X, X]$ & $[-0.98, 0.99]$ \\
-$\mathrm{f_{T2}} / \Lambda^4$  & $[-X, X]$ & $[-2.3, 2.3]$ \\
+$\mathrm{f_{S0}} / \Lambda^4$  & $[ -37, 37]$ & $[ -29, 29]$ \\
+$\mathrm{f_{S1}} / \Lambda^4$  & $[-30, 30]$ & $[-23, 23]$ \\
+$\mathrm{f_{M0}} / \Lambda^4$  & $[-6.9, 6.9]$ & $[-5.1, 5.1]$ \\
+$\mathrm{f_{M1}} / \Lambda^4$  & $[ -21, 21]$ & $[-15, 15]$ \\
+$\mathrm{f_{M6}} / \Lambda^4$  & $[-14, 14]$ & $[-10, 10]$ \\
+$\mathrm{f_{M7}} / \Lambda^4$  & $[-33, 33]$ & $[-24, 24]$ \\
+$\mathrm{f_{T0}} / \Lambda^4$  & $[-1.3, 1.3]$ & $[-0.95, 0.95]$ \\
+$\mathrm{f_{T1}} / \Lambda^4$  & $[-1.4, 1.4]$ & $[-0.98, 0.99]$ \\
+$\mathrm{f_{T2}} / \Lambda^4$  & $[-3.1, 3.2]$ & $[-2.3, 2.3]$ \\
 \end{tabular}
 \caption{
 Observed and expected 95\% C.L. limits on the coefficients
@@ -1120,15 +1206,15 @@ field theory Lagrangian in $\PZ V$ final state.
 & Observed limits  & Expected limits  \\
 & (\TeV$^{-4}$)   & (\TeV$^{-4}$)   \\
 \hline
-$\mathrm{f_{S0}} / \Lambda^4$  & $[ -X, X]$ & $[ -4.0, 4.0]$ \\
-$\mathrm{f_{S1}} / \Lambda^4$  & $[-X, X]$ & $[-4.9, 4.9]$ \\
-$\mathrm{f_{M0}} / \Lambda^4$  & $[-X, X]$ & $[-0.95, 0.95]$ \\
-$\mathrm{f_{M1}} / \Lambda^4$  & $[ -X, X]$ & $[ -2.8, 2.8]$ \\
-$\mathrm{f_{M6}} / \Lambda^4$  & $[-X, X]$ & $[-1.9, 1.9]$ \\
-$\mathrm{f_{M7}} / \Lambda^4$  & $[-X, X]$ & $[-4.8, 4.8]$ \\
-$\mathrm{f_{T0}} / \Lambda^4$  & $[-X, X]$ & $[-0.16, 0.15]$ \\
-$\mathrm{f_{T1}} / \Lambda^4$  & $[-X, X]$ & $[-0.17, 0.17]$ \\
-$\mathrm{f_{T2}} / \Lambda^4$  & $[-X, X]$ & $[-0.38, 0.38]$ \\
+$\mathrm{f_{S0}} / \Lambda^4$  & $[ -2.6, 2.7]$ & $[ -4.0, 4.0]$ \\
+$\mathrm{f_{S1}} / \Lambda^4$  & $[-3.2, 3.3]$ & $[-4.9, 4.9]$ \\
+$\mathrm{f_{M0}} / \Lambda^4$  & $[-0.66, 0.66]$ & $[-0.95, 0.95]$ \\
+$\mathrm{f_{M1}} / \Lambda^4$  & $[ -1.9, 2.0]$ & $[ -2.8, 2.8]$ \\
+$\mathrm{f_{M6}} / \Lambda^4$  & $[-1.3, 1.3]$ & $[-1.9, 1.9]$ \\
+$\mathrm{f_{M7}} / \Lambda^4$  & $[-3.3, 3.2]$ & $[-4.8, 4.8]$ \\
+$\mathrm{f_{T0}} / \Lambda^4$  & $[-0.11, 0.10]$ & $[-0.16, 0.15]$ \\
+$\mathrm{f_{T1}} / \Lambda^4$  & $[-0.11, 0.12]$ & $[-0.17, 0.17]$ \\
+$\mathrm{f_{T2}} / \Lambda^4$  & $[-0.27, 0.27]$ & $[-0.38, 0.38]$ \\
 \end{tabular}
 \caption{
 Observed and expected 95\% C.L. combined limits on the coefficients
