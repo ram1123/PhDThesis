@@ -514,7 +514,7 @@ Scale factors are used to correct for differences in the reconstruction, identif
 %%%%%%%%%%%%%%%%%%%
 \subsection{Jets}
 \label{subsec:jets}
-Jets are reconstructed using the anti-\kt clustering algorithm~\cite{antikt}  with a distance parameter $R=0.4$, as implemented in the \textsc{fastjet}  package~\cite{Cacciari:fastjet1,Cacciari:fastjet2}. The energy of the reconstructed jets is corrected in 3 steps: L1FastJet (for pileup/underlying event subtraction), L2 (for relative corrections) and L3 for absolute scale corrections. For data an extra residual correction is included in the absolute scale correction.
+Jets are reconstructed using the anti-\kt~clustering algorithm~\cite{antikt}  with a distance parameter $R=0.4$, as implemented in the \textsc{fastjet}  package~\cite{Cacciari:fastjet1,Cacciari:fastjet2}. The energy of the reconstructed jets is corrected in 3 steps: L1FastJet (for pileup/underlying event subtraction), L2 (for relative corrections) and L3 for absolute scale corrections. For data an extra residual correction is included in the absolute scale correction.
 % The used jet energy correction version provided by the jetMET group is Summer16\_23Sep2016BCDV4\_DATA 
 % (Summer16\_23Sep2016V4\_MC) for data (simulation).
 
@@ -542,7 +542,7 @@ Charged EM Fraction       &   -       & $< $0.99  & -       & -     \\
 %
 
 \subsection{V-tag jets}
-Hadronically decaying gauge boson candidates are reconstructed using the anti-\kt clustering algorithm~\cite{antikt} with a distance parameter $R=0.8$ using the Puppi algorithm~\cite{Bertolini:2014bba}. The $V$-jets that are within $\Delta R < 1.0$ of one of the identified leptons are excluded. The $V$-tag jet mass is computed after employing the modified mass drop tagger algorithm to remove soft, wide-angle radiation from the jets~\cite{Dasgupta:2013ihk,Larkoski:2014wba}. The $N$-subjettiness variable $\tau_N$~\cite{Thaler:2010tr} is also employed to further isolate jets arising from hadronic decays of $\PW$ or $\PZ$ bosons.   
+Hadronically decaying gauge boson candidates are reconstructed using the anti-\kt~clustering algorithm~\cite{antikt} with a distance parameter $R=0.8$ using the Puppi algorithm~\cite{Bertolini:2014bba}. The $V$-jets that are within $\Delta R < 1.0$ of one of the identified leptons are excluded. The $V$-tag jet mass is computed after employing the modified mass drop tagger algorithm to remove soft, wide-angle radiation from the jets~\cite{Dasgupta:2013ihk,Larkoski:2014wba}. The $N$-subjettiness variable $\tau_N$~\cite{Thaler:2010tr} is also employed to further isolate jets arising from hadronic decays of $\PW$ or $\PZ$ bosons.   
 
 % The soft-drop mass ($m_{V}$) is corrected following the recommendation in~\cite{jettagging}.
 The signal region is defined by requiring $\tau_{21}<0.55$ and $ 65 ~\GeV < m_{V} < 105 ~\GeV$.
@@ -672,7 +672,7 @@ The $\PW+$jet background contribution is estimated from data using a $\PW+$jets 
 \label{fig:wjet_control2}
 \end{figure*}
 
-The background estimation described below closely follows the method used in previous inclusive searches in $\PW V$ final state~\cite{Gunion1986,resonances,cmsnote}. More detailed description of the method can be found in the references. The shape and normalization of the $\PW+$jets background prediction are estimated from data in the sideband region defined above. The aQGC and charged Higgs limits are extracted from a fit (using the CMS Higgs combination tools) to the $m_{WV}$ distribution in the $\PW V$ final state as shown in Figure~\ref{fig:signal2}. The prediction of the $\PW+$jets background used in the signal extraction is obtained by performing a separate fit to the $m_{WV}$ distribution in the sideband region. The extrapolation factors (denoted as alpha-ratio values) to the signal region are obtained from the $\PW+$jets simulation as a function of the $m_{WV}$ variable as described below. The shapes of the $t\bar{t}$, single top, diboson, and $\PW+$jets processes are represented by parametric shapes extracted from simulation. The following parametric functions are used: 
+The background estimation described below closely follows the method used in previous inclusive searches in $\PW V$ final state~\cite{VV_resonance_2016,WVaTGC2016}. More detailed description of the method can be found in the references. The shape and normalization of the $\PW+$jets background prediction are estimated from data in the sideband region defined above. The aQGC and charged Higgs limits are extracted from a fit (using the CMS Higgs combination tools) to the $m_{WV}$ distribution in the $\PW V$ final state as shown in Figure~\ref{fig:signal2}. The prediction of the $\PW+$jets background used in the signal extraction is obtained by performing a separate fit to the $m_{WV}$ distribution in the sideband region. The extrapolation factors (denoted as alpha-ratio values) to the signal region are obtained from the $\PW+$jets simulation as a function of the $m_{WV}$ variable as described below. The shapes of the $t\bar{t}$, single top, diboson, and $\PW+$jets processes are represented by parametric shapes extracted from simulation. The following parametric functions are used: 
 
 \begin{description}
 	\item [Main function] $f_{ExpTail} = \exp(\frac{-x}{a+bx})$
@@ -746,7 +746,7 @@ The fits to the corresponding MC predictions are shown in Figure~\ref{fig:mWW_1}
 	 \label{fig:DataMCForMWW}
 \end{figure}
 
- The contribution of the $\PW+$jets process in the signal region is obtained using the alpha-ratio-method~\cite{Gunion1986,resonances,cmsnote}. The alpha-ratio values extrapolate the $\PW+$jets contribution from the sideband region to the signal region as a function of $m_{WV}$ using simulation. The resulting distribution is shown in Figure~\ref{fig:AlphaDis}. The statistical uncertainties are propagated to the result. The final $\PW+$jets prediction in the signal region is shown in Figure~\ref{fig:signal}. 
+ The contribution of the $\PW+$jets process in the signal region is obtained using the alpha-ratio-method~\cite{VV_resonance_2016,WVaTGC2016}. The alpha-ratio values extrapolate the $\PW+$jets contribution from the sideband region to the signal region as a function of $m_{WV}$ using simulation. The resulting distribution is shown in Figure~\ref{fig:AlphaDis}. The statistical uncertainties are propagated to the result. The final $\PW+$jets prediction in the signal region is shown in Figure~\ref{fig:signal}. 
 
 \begin{figure}[!htbp] 
 	 \centering 
