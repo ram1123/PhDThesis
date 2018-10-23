@@ -1,145 +1,83 @@
 \chapter{Introduction}
-
-An understanding of how the world is put together requires a theory of how the elementary particles of matter interact with one another[@paper:ScientificAmericantHooft]. There are many theories to explain this interaction but the theory that explains best is the sm. This is called as Model because it is based on some of experimental inputs. An important problem in physics is to understand the ultimate constituents of matter and the fundamental interactions that occur amongst them; it is of equal importance to establish whether these interactions are, in reality, different manifestations of a single underlying (or unified) interaction which is yet to be discovered. The weak and electromagnetic interactions are unified in the electroweak theory of the SM at an energy scale already attained at particle accelerators around the world. The electroweak SM and the QCD, describing the strong interaction together forms the complete SM of the electroweak and strong interactions. However, there are strong reasons which suggest that the SM is not the ultimate theory and there must exist some phenomena beyond SM \cite{paper:ScientificAmericanChrisQuiggEPF} \cite{article:PAdventure}
-
-\section{Standard Model as Gauge theory}
-% The concept of gauge invariance is fundamental in the construction of the Standard Model of strong, weak and electromagnetic interactions of elementary particles. The gauge principle prescribes that, given the gauge symmetry group and the transformations of the fields, the quantum field theory is uniquely defined [@book:CoughlanDodd].
-
-QED is a local gauge theory because the Lagrangian function that describes it remains unchanged by the following local gauge transformation of the electron field $\psi(x)$ and the photon field $A_\mu(x)$ at all space-time point x:
-    \begin{eqnarray}
-    \psi(x) & \rightarrow & e^{ie\Lambda(x)}\psi(x), \nonumber \\
-    A_\mu(x) & \rightarrow & A_\mu(x) + \frac{\partial \Lambda(x)}{\partial x_\mu}, \nonumber
-    \end{eqnarray}
-with arbitrary $\Lambda(x)$, where e is the electron-photon coupling (other charged spin-$\frac{1}{2}$ fields transform similarly to $\psi$). The photon field plays an intrinsic part; there could be no local gauge invariance without it. Hence if we take the postulate of this local gauge invariance for spin-$\frac{1}{2}$ particles as a starting point, the existence of gauge boson is required and in fact their coupling to fermions is specified, too. For exact gauge invariance the gauge bosons must be massless.
-
-The phase factor $e^{i\Lambda(x)}$ belong to the symmetry group $U(1)$ of unitarity transformations in one dimension. The generalization of {qed} to other forces is made by looking for other possible symmetry groups and using them as the basis of more general gauge transformations. 
-        
-For example, we may choose to regard the electron and neutrino as a doublet $(\nu_e,e)$, i.e. as two members of the same family, since both are light spin-$\frac{1}{2}$ particles. We can then describe this doublet by a two component field $\psi = (\psi_\nu,\psi_e)$ and introduce gauge transformations where $\Lambda$ is a $2\times 2$ hermitian matrix operating on $\psi$.  We can put the other leptons and the quarks, too, in doublets $(\nu_\mu,\mu),(\nu_\tau,\tau),(u,d),etc.$ and subject them to similar gauge transformations. These transformations are much more than phase factors, since the off-diagonal elements of $\Lambda$ can change one member of a doublet into the other; they belong to the symmetry group SU(2) of unitary unimodular transformations in two dimensions. Local gauge invariance in this case requires the introduction of three massless spin-1 gauge bosons $W^+,W^-$ and $W^0$. If this is combined with a simultaneous U(1) symmetry (bringing one more gauge boson $B^0$), we get the $SU(2)_L\times U(1)$ Glashow-Salam-Weinberg theory of electroweak interactions [article:weinberg]. The gauge bosons can not all be massless, experiment excludes this, so the symmetry can not be exact. The symmetry is broken spontaneously, in a way that retains renormalizability; the result is one massless gauge boson $\gamma$ (made from a linear combination $W^0sin\theta_w +B^0cos\theta_w$) plus three massive gauge bosons $W^+, W^-$ and $Z^0$ (the orthogonal combination $W^0cos\theta_w - B^0sin\theta_w$). The angle $\theta_w$ is a parameter of this unified electroweak theory.
-
-The subscript L on $SU(2)_L$ above indicates that the $SU(2)$ gauge transformations operate only on left-handed particles. This is because processes like beta-decay are observed to involve quarks and leptons with left-handed spins relative to their motions. The remaining right-handed spins relative to their motions singlets that do not change under $SU(2)_L$ gauge transformations; for anti-quark and anti-leptons, interchange L and R. The first-generation spin-$\frac{1}{2}$ particles can be classified in doublet and singlet representations of $SU(2)_L$ as follows:
-    \begin{eqnarray}
-    (u_L,d_L),(\nu_{eL},e_L),\bar{u}_L,\bar{d}_L,\bar{e}_L, \nonumber \\
-    (\bar{d}_R,\bar{u}_R),(\bar{e}_R,\bar{\nu}_{eR}),u_R,d_R,e_R.   \nonumber
-    \end{eqnarray}
-There is no right-handed neutrino state here; there is no need for such states to exist if the neutrino is massless. Thus we have 15 left-handed (and 15 right-handed) fermion states in each generation counting three colors for each quark flavor, in this gauge theory of electroweak interactions.
-
-% <!-- %In chiral theories, where gauge bosons have different couplings to left and right handed fermion states a new problem arises- typically for the interaction of three gauge bosons via a closed loop of fermions as shown in figure
-% %add figure
-% %When the L and R fermion couplings are unequal at one (or three) of the vertices, as is the case in the standard electroweak theory -->
-
-In strong interactions since each quark has three possible colors, we can describe any particular quark flavor by a three-component field $\psi(x)=[\psi(red,x),\psi(blue,x),\psi(green,x)]$ and can consider local gauge transformations where $\Lambda(x)$ is a $3\times 3$ hermitian matrix operating on $\psi$. The transformation can change the color; they belong to the symmetry group SU(3). To achieve local gauge invariance in this case requires the introduction of eight massless gauge bosons which carry pairs of color labels and are known as gluons. This gauge theory is known as {qcd}. Combining with the electroweak interaction gives an $SU(3)\times SU(2) \times U(1)$ gauge invariant theory of the strong and electroweak forces, commonly called the Standard Model.
-
-With each of these gauge groups $(SU(3),SU(2)$ and $U(1))$ there is associated a characteristic coupling strength $\alpha_3,~\alpha_2,~\alpha_1$ analogous to the fine-structure constant $\alpha$ of electrodynamics. They are generally called the running couplings because their numerical values change logarithmically with the energy scale of the interaction due to renormalization.
-
-These renormalizable gauge theories allow the presence of spin 0 (scalar) particles, too [article:higgs]. The usual formulation of the Standard Model requires at least one of these, the Higgs scalar boson, arising from the mechanism for spontaneously breaking the $SU(2)\times U(1)$ electroweak symmetry and giving masses to the weak gauge bosons and to the leptons and quarks. This mechanism is a vital part of the SM [@book:barger] [@book:Braibant] [@book:FrankClose] [@book:Griffiths].
+An understanding of how the world is put together requires a theory of how the elementary particles of matter interact with one another~\cite{Hooft1980}. There are many theories to explain this interaction but the theory that explains best is the SM. This is called as Model because it is based on some of experimental inputs. An important problem in physics is to understand the ultimate constituents of matter and the fundamental interactions that occur amongst them; it is of equal importance to establish whether these interactions are, in reality, different manifestations of a single underlying (or unified) interaction which is yet to be discovered. The weak and electromagnetic interactions are unified in the electroweak theory of the SM at an energy scale already attained at particle accelerators around the world. The electroweak SM and the QCD, describing the strong interaction together forms the complete SM of the electroweak and strong interactions. However, there are strong reasons which suggest that the SM is not the ultimate theory and there must exist some phenomena beyond SM \cite{Quigg1985,article:PAdventure}
 
 
-\section{Introduction2}
-An understanding [@Chatrchyan:2012xdj] of how the world is put together requires a theory of how the elementary particles of matter interact with one another [@paper:ScientificAmericantHooft]. There are many theories to explain this interaction but the theory that explains best is the SM. This is called as Model because it is based on some of experimental inputs. An important problem in physics is to understand the ultimate constituents of matter and the fundamental interactions that occur amongst them; it is of equal importance to establish whether these interactions are, in reality, different manifestations of a single underlying (or unified) interaction which is yet to be discovered. The weak and electromagnetic interactions are unified in the electroweak theory of the SM at an energy scale already attained at particle accelerators around the world. The electroweak SM and the QCD, describing the strong interaction together forms the complete SM of the electroweak and strong interactions. However, there are strong reasons which suggest that the SM is not the ultimate theory and there must exist some phenomena beyond SM [@paper:ScientificAmericanChrisQuiggEPF] [@article:PAdventure].  
-
-Presently, the most profound problem of the standard model is to find out the reason behing the spontaneous symmetry breaking\footnote{The spontaneous symmetry breaking takes place when a system, that is symmetric with respect to some symmetry group, goes into a vacuum state that is not symmetric. At this point the system no longer appears to behave in a symmetric manner}. This leads to solution of many problem that we are facing like the it gives the ideas about the mass generation, it solves the problem of unitarity in vector-boson scattering, etc. If we do not break the symmetry of system then all the force carrieres for all interaction should be massless but it is not observed in the nature. Thus, nature suggest that symmetry should be broken spontaneously. So, In next section I am going to describe brefily that how the spontaneous symmetry breaking solves the problem of mass generation. This is known as the Higgs mechanism [@article:higgs] [@article:Englert] [@article:kibble].
-
-\section{Brief Introduction to Higgs mechanism}
-This is brief intro to higgs.
-
-Electroweak symmetry breaking and the Higgs mechanism: [@article:LEPtoLHC] [@article:abd][@article:tasi]
-The Higgs part
-    \begin{equation}
-    L_H=(D_{\mu}\Phi)^{\dagger}(D^{\mu}\Phi)-V(\Phi)
-    \end{equation}
-of the SM lagrangian extends the experimentally well established particle content of the SM by the complex scalar SU(2) doublet $\Phi = (\phi^{+},\phi^0)^T$ of weak hypercharge $Y_{w,\Phi}=1$, so that $\phi^{+}$ carries charge +e and $\phi^0$ is neutral. In toal $\Phi$ involves four degree of freedom. The self-interaction of $\Phi$ is described by the potential
-    \begin{equation}
-    V(\Phi)=-\mu^2(\Phi^{\dagger}\Phi)+\frac{\lambda}{4}(\Phi^{\dagger}\Phi)^2,
-    \end{equation}
-Here, the term $\lambda > 0$ ensures that the potential is bounded form below. Here we need to generate masses for the three gauge bosons $W^{\pm}$ and Z but the photon should remain massless. Therefore, we needs at least 3 degree of freedom for the scalar fields. The simplest choice is a complex SU(2) doublet of scalar field $\phi$
-    \begin{equation}\label{mat2}
-    \Phi=
-        \begin{bmatrix}
-        \phi^+  \\
-        \phi^0  \\
-        \end{bmatrix}
-    =\frac{1}{\sqrt{2}}
-        \begin{bmatrix}
-        \phi_1 + i\phi_2    \\
-        \phi_3 + i\phi_4    \\
-        \end{bmatrix}
-    \end{equation}
-where $\phi_i$ are 4 real scalar fields (4 degree of freedom). The lagrangian is invariant under the local gauge transformations \footnote{The concept of gauge invariance is fundamental in the construction of the Standard Model of strong, weak and electromagnetic interactions of elementary particles. The gauge principle prescribes that, given the gauge symmetry group and the transformations of the fields, the quantum field theory is uniquely defined [@book:CoughlanDodd]}
-    \begin{equation}
-    \Phi (x) \rightarrow \Phi(x)`=e^{i\alpha_i(x)\tau_i /2}\Phi(x)
-    \end{equation}
-where $\tau_i$ are Pauli matrices and $\alpha_i(x)$ are transformation parameters.
-Now the product
-    \begin{equation}\label{mat1}
-    \Phi{\dagger}\Phi=
-        \begin{bmatrix}
-        \phi^{+*}   &   \phi^{0*} \\
-        \end{bmatrix}
-        \begin{bmatrix}
-        \phi^+  \\
-        \phi^0  \\
-        \end{bmatrix}
-    =\phi^{+*} \phi^+ + \phi^{0*}\phi^0
-    =\frac{1}{2}(\phi^2_1+\phi^2_2+\phi^2_3+\phi^2_4)
-    =\frac{1}{2}\phi_i \phi^i
-    \end{equation}
-    
-For $\mu^2<0$, the potential $V(\Phi)$ has a minimum at
-    \begin{equation}
-    \Phi^{\dagger}\Phi = -\frac{\mu^2}{2\lambda}=\frac{v^2}{2}
-    \end{equation}
-from equation (\ref{mat1}) we can know that there is an infinite number of possible solutions of this equation. To preserve electric charge conservation ($U(1)_{QED}$ symmetry), this non zero vacuum expectation value should not be reached in the charged direction. A conveninent choice of the neutral direction is $\phi_1 = \phi_2 = \phi_4 = 0$. So, the equation (\ref{mat2})
-    \begin{equation}
-    \Phi=\frac{1}{\sqrt{2}}
-        \begin{bmatrix}
-        0   \\
-        \phi_3  \\
-        \end{bmatrix}
-    \end{equation}
-Therefore, the neutral component ($\phi_3$) of the doublet field $\Phi$ develops a nonzero vacuum expectation value
-\begin{equation}
-{\Braket\Phi}_0 = \Braket{0|\Phi|0}=\frac{1}{\sqrt{2}}
-        \begin{bmatrix}
-        0   \\
-        v   \\
-        \end{bmatrix}
-        with~
-        v=-
-        \begin{bmatrix}
-        \frac{\mu^2}{\lambda}
-        \end{bmatrix}
-        ^{1/2}
-\end{equation}
-Now by using the unitarity gauge\footnote{It removes the unphysical degree of freedom} means of proper gauge transformation of the field we get
-    \begin{equation}
-    \Phi (x)=\frac{1}{\sqrt{2}}
-        \begin{bmatrix}
-        0   \\
-        v+h(x)  \\
-        \end{bmatrix}
-    \end{equation}
-With $\Phi(x)$ we can expand kinetic term $D_\mu \Phi)^{\dagger} (D_\mu \Phi)=|D_\mu \Phi|^2$ of lagrangian
-    \begin{eqnarray}\label{mat3}
-    |D_{\mu} \Phi|^2 & = & |(\partial_{\mu}-ig_2\frac{\tau_a}{2}W^a_{\mu}-ig_1 \frac{Y_H}{2}B_{\mu})\Phi|^2 \nonumber \\
-            & = & \frac{1}{2}(\partial_\mu H)^2+\frac{1}{8}g^2_2(v+H)^2|W^1_{\mu}+iW^2_\mu|^2+\frac{1}{8}|g_2W^3_\mu-g_1B_\mu|^2
-    \end{eqnarray}
-Lets define the new fields $W^{\pm}_\mu$ and $Z_\mu$ [$A_\mu$ is the field orthogonal to $Z_\mu$]:
-\begin{equation}
-    W^{\pm}=\frac{1}{\sqrt{2}}(W^1_\mu \mp iW^2_\mu),~Z_\mu=\frac{g_2W^3_\mu-g_1B_\mu}{\sqrt{g^2_2+g^2_1}},~A_\mu=\frac{g_2W^3_\mu+g_1B_\mu}{\sqrt{g^2_2+g^2_1}}
-\end{equation}
-Now pic the term from equation (\ref{mat3}) which are bilinear in the fields $W^\pm,Z,A$:
-    \begin{equation}
-    M^2_wW^+_\mu W^{-\mu},~\frac{1}{2}M^2_z Z_\mu Z^\mu,~and~\frac{1}{2}M^2_AA_\mu A^\mu
-    \end{equation}
-Then we noted that W and Z boson have acquired masses, while the photon is still massless
-    \begin{equation}
-    M_w=\frac{1}{2}vg_2,~M_z=\frac{1}{2}v\sqrt{g^2_2+g^2_1},~M_A=0
-    \end{equation}
-So, by spontaneously breaking the symmetry, three Goldstone bosons have been absorbed by the $W^\pm$ and Z boson to form their longitudinal components and to get their masses. Since the U(1) symmetry is still unbroken, the photon which is its generator, remains massless.
+Presently, the most profound problem of the standard model is to find out the reason behind the spontaneous symmetry breaking\footnote{The spontaneous symmetry breaking takes place when a system, that is symmetric with respect to some symmetry group, goes into a vacuum state that is not symmetric. At this point the system no longer appears to behave in a symmetric manner}. This leads to solution of many problem that we are facing like the it gives the ideas about the mass generation, it solves the problem of unitarity in vector-boson scattering, etc. If we do not break the symmetry of system then all the force carrieres for all interaction should be massless but it is not observed in the nature. Thus, nature suggest that symmetry should be broken spontaneously. So, In next section I am going to describe brefily that how the spontaneous symmetry breaking solves the problem of mass generation. This is known as the Higgs mechanism [@article:higgs] [@article:Englert] [@article:kibble].
 
 
-Now we established that the Higgs mechanism generates the mass for the vector boson. So, now it following the nature. But for the Higgs mechanism to be validated Higgs boson should be found experimentally. In July 2012, we found a higgs like boson. But, is it the Higgs of SM or someting else we can say now because of the uncertainty \& statistical error involved in the present analysis. 
 
-So, What are the possible ways to investigate it?
 
-Basically there are two possible ways to investigate it. First, we should try to study the coupling of the Higgs boson with different particle (top quark is the best candidate). Secondly, we should try to study the vector boson scattering.
+
+
+% However, the question is that how these fundamental particles will give insight into our universe?
+% The answer is that in early universe there are only particles and if we go near the event horizon, then there was only quark gluons plasma.
+% To verify these things, we cannot go back to the early universe, but we can probe them using the high energy colliders to know their behaviour.
+
+% One of best model that explains the world around us at very fundamental level is the Standard Model (SM). With the discovery of the Higgs boson \cite{Chatrchyan:2012xdj} in 2012 it was complete. However, even now many questions remain unanswered by the SM. List of few questions are:
+
+% \begin{itemize}
+% \item How neutrino get its mass and what is its mass hierarchy? 
+% \item Why there are only three generations of leptons and quarks? 
+% \item Why the third generation is too much heavy as compared to other two generations?
+% \end{itemize}
+
+% And, a lot more questions whose answers we are trying to find out. There are two ways to answer these questions. First is to go for another new theory or a model like SUSY, string theory, and start to see if they explains the experimental data/information or not. Another way is to understand the SM profoundly and look for the possible extensions of SM. One of the possible ways is to look for WW scattering. As the Higgs boson unitrize the WW scattering amplitude, so its one of the best path to look for SM deviation.
+
+% \begin{itemize}
+% \item Non-abelian nature $\rightarrow$ QGC in addition of trilinear gauge coupling.
+% \item SM includes three types of GGC.
+%   \begin{itemize}
+%     \item $W^+W^-W^+W^-$
+%     \item $W^+W^-ZZ$
+%     \item $W^+W^-\gamma \gamma$
+%     \end{itemize}
+% \item ZZZZ vertex is not persent in SM but it is present at tree level via exchange of Higgs boson.
+% \item $\gamma \gamma ZZ$ vertex is only produced at loop level in SM.
+% \item Trilinear and quartic couplings probe different aspect of the weak interactions.
+%   \begin{itemize}
+%     \item Trilinear coupling test the non-abelian nature of SM
+%     \item Quartic coupling probe the EWSB.
+%     \end{itemize}
+% \end{itemize}
+
+% \begin{itemize}
+% \item Heavy vector boson $W^{\pm}$ and $Z$ acquire there mass and longitudinal polarization state through spontaneous EWSB.
+% \item The mechanism for EWSB must regulate $\sigma(V_LV_L \rightarrow V_LV_L )$ to restore unitarity above $\approx$ 1-2 TeV.
+%   \begin{itemize}
+%     \item cross-section attenuated to a linear growth by the quartic gauge by the quartic gauge self coupling.
+%     \item a light SM higgs boson exactly cancels increase for large s (for HWW coupling).
+%     \end{itemize}
+% \end{itemize}
+
+% \section{Outline and Contributions}
+
+
+% Part-1 of this thesis is dedicated to the CMS detector.
+
+% Part-2 consists of my GEM work.
+
+% Part-3 consists of physics analysis.
+
+% \begin{itemize}
+% \item Introduction and motivation     
+% \item What is particle physics?     
+% \item Introduction to particle physics?
+% \item Introduction to GEM detectors 
+% \item Motivation for HEP detectors
+% \item LHC and CMS 
+% \item GEM detectors 
+% \item GEM Hardware work
+% \item GEM test beam work
+% \item Physics of WW scattering  
+% \item Physics Analysis details     
+% \item Basic experimental techniques     
+% \item MC generation and study     
+% \item Data/MC comparison study    
+% \item Background estimation     * TMVA     * Limits for aQGC and Charged Higgs *
+% \item Summary and outlook
+% \end{itemize}
+
+% \section{Summary of chapters}
+
+% This is an outline of what went into each chapter. **Chapter 1** gives a
+% background on

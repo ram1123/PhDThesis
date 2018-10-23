@@ -1,0 +1,234 @@
+\documentclass[twoside,titlepage,numbers=noenddot,headinclude,%
+               footinclude=true,cleardoublepage=empty,abstractoff,BCOR=5mm,%
+               paper=a4,fontsize=12pt]{report}
+
+\usepackage[left=1.5in, right=1in, top=1.25in, bottom=1.25in]{geometry}
+
+\usepackage{datetime}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+
+
+\usepackage{scrextend}  % for addmargin command
+\usepackage{graphicx}
+% subcaption package is for subfigure environment
+\usepackage{subcaption}
+\usepackage[usenames, dvipsnames]{color}
+
+% bold greek letter
+\usepackage{amsmath}
+\usepackage{xspace}
+\usepackage{bm}
+\usepackage{bbold}
+
+% To add line number
+\usepackage{lineno}
+
+% For feynman diagram
+
+
+\usepackage{comment}
+
+\usepackage{epigraph}
+
+% for <bra> <ket> notation 
+\usepackage{braket}
+
+
+% \usepackage{textcomp}
+
+% for degree symbol (https://tex.stackexchange.com/questions/384873/what-is-the-degree-symbol)
+\usepackage{siunitx}
+
+% for highligted tables
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{hhline}
+
+% Below 3 lines are added to behave footnote command as its normal form inside table environment.  Reference: https://tex.stackexchange.com/a/109471/41568
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+\makesavenoteenv{table}
+\usepackage{multirow}
+
+
+% packages for todonotes
+% \usepackage[colorlinks]{hyperref}
+\usepackage{hyperref}
+\usepackage[table]{xcolor}
+% \usepackage[colorinlistoftodos]{todonotes}
+\usepackage[disable]{todonotes} % To hide uncomment this and comment upper line
+% \usepackage{menukeys}
+
+\usepackage{url}
+
+\usepackage[backend=bibtex,style=numeric,sorting=none]{biblatex}
+\addbibresource{SynopsisBibliography.bib}
+
+\usepackage[toc,page]{appendix}
+\usepackage{setspace}
+\onehalfspacing
+% \doublespacing
+
+\newcommand{\HRule}{\rule{.9\linewidth}{.6pt}} % New command to make the lines in the title page
+
+% How to make curvy L
+% Reference: https://tex.stackexchange.com/a/11144/41568
+% arrow
+\newcommand{\To}{\ensuremath{\rightarrow}}
+% \newcommand{\to}{\ensuremath{\rightarrow}}
+
+\newcommand{\bT}{\boldsymbol{T}}
+\newcommand{\bt}{\boldsymbol{T}}
+\newcommand{\bw}{\boldsymbol{W}}
+\newcommand{\bW}{\boldsymbol{W}}
+\newcommand{\w}{\boldsymbol{W}}
+\newcommand{\z}{\boldsymbol{Z}}
+\newcommand{\Z}{\boldsymbol{Z}}
+% \newcommand{\W}{\boldsymbol{W}}
+\newcommand{\bsigma}{\boldsymbol{\sigma}}
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\Oo}{\mathcal{O}}
+\newcommand{\Et}{\ensuremath{E_\mathrm{T}}}
+\newcommand{\Pt}{\ensuremath{P_\mathrm{T}}}
+\newcommand{\pt}{\ensuremath{P_\mathrm{T}}}
+\newcommand{\met}{\ensuremath{\Et^{\mathrm{miss}}}}
+\newcommand{\ptmiss}{\ensuremath{\Pt^{\mathrm{miss}}}}
+\newcommand{\Ptmiss}{\ensuremath{\Pt^{\mathrm{miss}}}}
+% \newcommand{\WW}{\ensuremath{\bW^+\bW^-}}
+\newcommand{\ww}{\ensuremath{\bW^+\bW^-}}
+% \newcommand{\zz}{\ensuremath{\Z \Z}}
+\newcommand{\WWj}{\ensuremath{\bW^+\bW^-jj}}
+\newcommand{\wwj}{\ensuremath{\bW^+\bW^-jj}}
+% \newcommand{\Wjets}{\ensuremath{\mathrm{W+jets}}}
+% \newcommand{\Zjets}{\ensuremath{\mathrm{Z+jets}}}
+\newcommand{\GeV}{\ensuremath{\mathrm{GeV}}}
+\newcommand{\PV}{\ensuremath{\mathrm{V}}}
+\newcommand{\PW}{\ensuremath{\mathrm{W}}}
+\newcommand{\PZ}{\ensuremath{\mathrm{Z}}}
+\newcommand{\TeV}{\ensuremath{\mathrm{TeV}}}
+\newcommand{\tev}{\ensuremath{\mathrm{TeV}}}
+\newcommand{\ifb}{\ensuremath{\mathrm{fb^{-1}}}}
+\newcommand{\fbinv}{\ensuremath{\mathrm{fb^{-1}}}}
+\newcommand{\PHpm}{\ensuremath{\mathrm{H}^{\pm}}}
+\newcommand{\PH}{\ensuremath{\mathrm{H}}}
+\newcommand{\MADGRAPH}{\textsc{MadGraph}}
+\newcommand{\MCATNLO}{\textsc{mc}\ensuremath{@}\textsc{nlo}}
+\newcommand{\balpha}{\boldsymbol{\alpha(x)}}
+\newcommand{\ttbar}{\ensuremath{t\bar{t}}}
+\newcommand{\PYTHIA}{\textsc{pythiya}}
+\newcommand{\kt}{\ensuremath{k_\mathrm{T}}}
+% Some shorthand
+% turn off italics
+\newcommand{\etal}{\mbox{et al.}\xspace} %et al. - no preceding comma
+\newcommand{\ie}{\mbox{i.e.}\xspace}     %i.e.
+\newcommand{\eg}{\mbox{e.g.}\xspace}     %e.g.
+\newcommand{\etc}{\mbox{etc.}\xspace}     %etc.
+\newcommand{\vs}{\mbox{\sl vs.}\xspace}      %vs.
+\newcommand{\mdash}{\ensuremath{\mathrm{-}}} % for use within formulas
+\providecommand {\NA}{\ensuremath{\text{---}}}    % for Not applicable (or available). Needs to be renewcommanded for APS to \cdots
+
+% some terms whose definition we may change
+\newcommand{\Lone}{Level-1\xspace} % Level-1 or L1 ?
+\newcommand{\Ltwo}{Level-2\xspace}
+\newcommand{\Lthree}{Level-3\xspace}
+
+% processes
+\newcommand{\dyee}{\ensuremath{Z/\gamma^*\to e^+e^-}}
+\newcommand{\dymm}{\ensuremath{Z/\gamma^*\to\mu^+\mu^-}}
+\newcommand{\dytt}{\ensuremath{Z/\gamma^*\to\tau^+\tau^-}}
+\newcommand{\dyll}{\ensuremath{Z/\gamma^*\to\ell^+\ell^-}}
+\newcommand{\zee}{\ensuremath{Z\to e^+e^-}}
+\newcommand{\zmm}{\ensuremath{Z\to\mu^+\mu^-}}
+\newcommand{\ztt}{\ensuremath{Z\to\tau^+\tau^-}}
+\newcommand{\zll}{\ensuremath{Z\to\ell^+\ell^-}}
+%\newcommand{\ttbar}{\ensuremath{t\bar{t}}}
+\newcommand{\ppww}{\ensuremath{pp \to W^+W^-}}
+\newcommand{\wwll}{\ensuremath{WW\to \ell^+\ell^-}}
+\newcommand{\wwlnln}{\ensuremath{W^+W^-\to \ell^+\nu \ell^-\bar{\nu}}}
+\newcommand{\hww}{\ensuremath{\Hi \to \WW}}
+\newcommand{\wz}{\ensuremath{WZ}}
+\newcommand{\zz}{\ensuremath{ZZ}}
+\newcommand{\wgamma}{\ensuremath{W\gamma}}
+\newcommand{\wjets}{\ensuremath{W+}jets} 
+\newcommand{\tw}{\ensuremath{tW}} 
+\newcommand{\singletopt}{\ensuremath{t} ($t$-chan)} 
+\newcommand{\singletops}{\ensuremath{t} ($s$-chan)} 
+\newcommand{\cPZ}{\PZ} % plain Z (no superscript 0)
+
+% particles
+
+\newcommand{\pipm}{\ensuremath{\pi^{\pm}}}
+\newcommand{\pizero}{\ensuremath{\pi^{0}}}
+\newcommand{\Hi}{\ensuremath{\mathrm{H}}}
+\newcommand{\V}{\ensuremath{\mathrm{V}}}
+\newcommand{\W}{\ensuremath{\mathrm{W}}}
+\newcommand{\Wjets}{\ensuremath{\mathrm{W+jets}}}
+\newcommand{\Zjets}{\ensuremath{\mathrm{Z+jets}}}
+\newcommand{\Wt}{\ensuremath{\mathrm{Wt}}}
+\newcommand{\Wstar}{\ensuremath{\mathrm{W}^{*}}}
+\newcommand{\Wparenthesisstar}{\ensuremath{\mathrm{W}^{(*)}}}
+\newcommand{\WW}{\ensuremath{\W^+\W^-}}
+\newcommand{\PHpmpm}{\ensuremath{\mathrm{H^{\pm\pm}}}}
+%\newcommand{\Z}{\ensuremath{\mathrm{Z}}}
+\newcommand{\Zstar}{\ensuremath{\mathrm{Z}^{*}}}
+\newcommand{\ZZ}{\ensuremath{\Z\Z}}
+\newcommand{\WZ}{\ensuremath{\W\Z}}
+\newcommand{\El}{\ensuremath{\mathrm{e}}}
+\newcommand{\Elp}{\ensuremath{\mathrm{e}^{+}}}
+\newcommand{\Elm}{\ensuremath{\mathrm{e}^{-}}}
+\newcommand{\Elpm}{\ensuremath{\mathrm{e}^{\pm}}}
+\newcommand{\Elmp}{\ensuremath{\mathrm{e}^{\mp}}}
+\newcommand{\M}{\ensuremath{\mu}}
+\newcommand{\Mp}{\ensuremath{\mu^{+}}}
+\newcommand{\Mm}{\ensuremath{\mu^{-}}}
+\newcommand{\Mpm}{\ensuremath{\mu^{\pm}}}
+\newcommand{\Mmp}{\ensuremath{\mu^{\mp}}}
+\newcommand{\Tau}{\ensuremath{\tau}}
+\newcommand{\Nu}{\ensuremath{\nu}}
+\newcommand{\Nubar}{\ensuremath{\bar{\nu}}}
+\newcommand{\Lep}{\ensuremath{\ell}}
+\newcommand{\Lepp}{\ensuremath{\ell^{+}}}
+\newcommand{\Lepm}{\ensuremath{\ell^{-}}}
+\newcommand{\Lprime}{\ensuremath{\Lep^{\prime}}}
+\newcommand{\Prot}{\ensuremath{\mathrm{p}}}
+\newcommand{\Pbar}{\ensuremath{\bar{\mathrm{p}}}}
+\newcommand{\PP}{\Prot\Prot}
+\newcommand{\PPbar}{\Prot\Pbar}
+%\newcommand{\ttbar}{\ensuremath{\mathrm{t}\bar{\mathrm{t}}}}
+\newcommand{\qq}{\ensuremath{\mathrm{q}\mathrm{q}}}
+%\newcommand{\bbbar}{\ensuremath{\mathrm{b}\bar{\mathrm{b}}}}
+\newcommand{\Wtb}{\ensuremath{\W\mathrm{t}\mathrm{b}}}
+\newcommand{\Top}{\ensuremath{\mathrm{t}}}
+\newcommand{\Bot}{\ensuremath{\mathrm{b}}}
+\newcommand{\Atop}{\ensuremath{\bar{\mathrm{t}}}}
+\newcommand{\Abot}{\ensuremath{\bar{\mathrm{b}}}}
+\newcommand{\WH}{\ensuremath{\W\Hi}}
+\newcommand{\ZH}{\ensuremath{\Z\Hi}}
+
+
+% \newenvironment{scotch}[1]{\protect\centering\ruledtabular\tabular{#1}}{\endtabular\endruledtabular}
+
+\begin{document}
+\include{titlepage}
+% \cleardoublepage 
+\include{abstract}
+\include{synopsis_main}
+\printbibliography
+\include{publications}
+
+% \pagebreak
+\newpage
+\begin{center}
+  \textbf{\large{Registration Details}}
+  \begin{itemize}
+    \item \textbf{Thesis title:} Search for Anomalous Gauge Coupling through Vector Boson Scattering and Development of the GEM Detectors at the CMS Experiment.
+    \item \textbf{Research Scholar:} Ram Krishna Sharma
+    \item \textbf{Thesis Supervisor:} Dr. Md. Naimuddin
+    \item \textbf{Department:} Department of Physics $\&$ Astrophysics
+    \item \textbf{Ph.D. Registration No:} SF-I/Ph.D./2574
+    \item \textbf{Date of Registration:} October 25, 2012
+  \end{itemize}
+\end{center}
+
+\end{document}

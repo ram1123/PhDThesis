@@ -1,6 +1,19 @@
 \chapter{Gaseous Detector Important Points} % (fold)
 \label{cha:gaseous_detector_important_points}
 
+\section{Gain Measurement} % (fold)
+\label{sec:gain_measurement}
+The gain of a detector can be calculated using the ratio of output to the input value of current, like:
+\begin{equation}
+    Gain~=~\frac{I_{out}}{q~\times~f}
+\end{equation}
+where q is the charge collected at the first layer of GEM foil and is calculated as:
+\begin{equation}
+    q~= n~\times~e
+\end{equation}
+where e is the electron charge, n is the average number of electrons produced in the drift region by the incident particles and $f$ is the interaction rate of the incident particles in the gas. For the given X-ray source with a specific energy and the known ionization potential of the used gas mixture n can be calculated and in our case it is found to be $n \sim 290$.
+% section gain_measurement (end)
+
 \section{Transparancy} % (fold)
 \label{sec:transparancy}
 The fraction of ionization electrons transferred through the GEM foil is known as its \textit{transparancy}. 
@@ -13,11 +26,12 @@ This is important while finding out the energy resolution and directly effects t
 \section{Charge-up effect} % (fold)
 \label{sec:charge_up_effect}
 
-The effect caused by the the electrons or ions coming from the primary or secondary ionization from the amplification region sticks to the insulator surface inside the GEM holes, which lead to the modification of electric field in the holes, is known as the ``\textit{ \textbf{charge-up effect}}''.
+The effect caused by the the electrons or ions coming from the primary or secondary ionization from the amplification region sticks to the insulator surface inside the GEM holes, which lead to the modification of electric field in the holes and is known as the ``\textit{ \textbf{charge-up effect}}''.
 
-This effect has direct effect on the electron transparancy and the effective gain of the GEM detector.
+It has direct effect on the electron transparancy and the effective gain of the GEM detector.
 
-Also, the charge-up effect depends on the geometry of the holes. For the conical hole gain increases about 60\% then the cylindrical hole. And there is no effect of the charge-up for the cylindrical hole.
+Also, the charge-up effect depends on the geometry of the holes.
+For the conical hole gain increases about 60\% than the cylindrical hole. There is no effect of the charge-up for the cylindrical hole.
 
 
 % section charge_up_effect (end)
