@@ -188,13 +188,18 @@ Luminosity is defined as:
 \begin{equation}
     \Lagr = \frac{k_bN_1N_2f_{rev}\gamma}{A_{eff}}~,
 \end{equation}
-Where, $k_b$ is the number of bunches per beam, $N_1$ and $N_2$ are the number of protons in the two bunches, $f_{rev}$ the revolution frequency of proton beams, and $A_{eff}$ is the effective transverse area of the beam. The different parameters of the beam as showing in the Fig.~\ref{fig:lumi}.
+Where, $k_b$ is the number of bunches per beam, $N_1$ and $N_2$ are the number of protons in the two bunches, $f_{rev}$ the revolution frequency of proton beams, {\color{red}$\gamma$ is the geometric factor}and $A_{eff}$ is the effective transverse area of the beam. The different parameters of the beam as showing in the Fig.~\ref{fig:lumi}.
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.95\textwidth]{figures/LHC/Luminosity_calculation.pdf}
 	\caption{Layout decribing the bunch parameters and interaction area.}
 	\label{fig:lumi}
 \end{figure}
+{\color{red}The geometric factor $\gamma$ is given by
+\begin{equation}
+	\gamma = \frac{1}{\sqrt{1+(\frac{\sigma_s}{\sigma_{xing}}\frac{\alpha}{2})^2}}
+\end{equation}
+where $\sigma_s$ is the r.m.s. bunch length, $\sigma_{xing}$ is the transverse beam size in the crossing plane, and $\alpha/2$ is the half crossing angle~\cite{Hostettler2017}.}
 % The luminosity is proportional to the number of events per second so it should be maximised. Luminosity is the 
 % \hspace{2 cm}$\epsilon_n$ is the normalised RMS transverse beam emittance (same in both )\\
 % \hspace{2 cm}$\beta^*$ is the beta-function at the interaction point\\
@@ -312,7 +317,7 @@ The CMS detector design is shown in Figure~\ref{fig:CMS-detector}.
 \end{figure}
 
 The above mentioned shape of CMS was inspired by all the known particles that will reach to the CMS detector.
-The known particle that will reach CMS detector are $e^{\pm}$, $\mu^{\pm}$, $\gamma$, $\pi^{\pm}$, $k^{\pm}$, p, n, $k_{L}$ and $k_{S}$.
+The known particle that will reach CMS detector are $e^{\pm}$, $\mu^{\pm}$, $\gamma$, $\pi^{\pm}$, K$^{\pm}$, p, n, $k_{L}$ and $k_{S}$.
 These can be grouped in two categories based on electromagnetic and strong interactions.
 All the strongly interacting particles will be detected by HCAL while all the electromagnetic interacting particles should be detected by ECAL.
 But only electrons and photons are detected by ECAL not muons.
@@ -458,7 +463,7 @@ Also, this can be understood from the SM cross-section of pp as compared to the 
 \end{figure}
 The maximum amount of data that can be stored every day is of the order of few Terabytes that decide the rate at which we can accept the events ($\sim$ 100 Hz).
 Thus, the concept of the trigger, method to select events of interest, was first introduced by ZEUS experiment~\cite{ZEUSCollaboration1993}, that handles data in real time, coupled with complex data acquisition (DAQ) system.
-While designing the trigger one has to keep in mind that trigger should efficiently accept the interesting physics\todo[inline]{define ``interesting physics''}  while rejecting the non-interesting ones as whatever information is lost at this level can not be recovered.
+While designing the trigger one has to keep in mind that trigger should efficiently accept the interesting {\color{red}physics while} rejecting the non-interesting ones as whatever information is lost at this level can not be recovered.
 
 The CMS trigger system is divided into two steps - Level-1 trigger which is a custom hardware running synchronously with the LHC bunch crossing frequency of 40 MHz and the High-Level Trigger (HLT)~\cite{paper:JINST:CMSCollaboration,Cittolin:578006,Khachatryan2017}. The CMS trigger flow diagram is shown in Fig.~\ref{fig:cms-trigger}. 
 \begin{figure}[!htbp]

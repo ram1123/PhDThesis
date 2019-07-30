@@ -41,16 +41,17 @@ GEM is a relatively new concept introduced by Fabio Sauli~\cite{Sauli1997} at CE
 It is chemically pierced with a uniform array of holes using the photolithography and acid etching processes~\cite{Benlloch1998}, as shown in Fig.~\ref{fig:gem} (left).
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.95\textwidth]{figures/GEM/KEKDTP3.pdf}
-    \caption{Cross-sectional view of a GEM foil etched with holes (left). The strong electric field generated in the vicinity and inside the holes after the application of potential difference across the GEM foil (right).}
+    \includegraphics[width=0.45\textwidth]{figures/GEM/KEKDTP3.pdf}
+    \includegraphics[width=0.47\textwidth]{figures/GEM/35-Figure28-10-1.pdf}
+    \caption{Cross-sectional view of a GEM foil etched with holes (left)~\cite{Colaleo:2021453}. The strong electric field generated in the vicinity and inside the holes after the application of potential difference across the GEM foil (right)~\cite{PDG2018}. Here, electric field lines (solid) and equipotentials (dashed) are shown.}
     \label{fig:gem}
 \end{figure}
 
 A potential difference is applied between the two copper layers which create a high electric field inside the holes (Fig.~\ref{fig:gem}) and is given as:
 \begin{equation}
-    E = \frac{V}{d}~,
+    |\vec{E}| = \frac{V}{|\vec{d}|}~,
 \end{equation}
-where E is the electric field inside a hole in the GEM foil, V is the voltage applied between the two copper layers and d is the thickness of the GEM foil.
+where $|\vec{E}|$ is the magnitude of electric field inside a hole in the GEM foil, V is the voltage applied between the two copper layers and $|\vec{d}|$ is the magnitude of thickness of the GEM foil.
 
 To illustrate the working of a GEM detector, the active detector medium could be divided into three different regions: drift, amplification and induction regions, as shown in Fig.~\ref{fig:gemOutline}.
 \begin{figure}[htbp]
@@ -86,7 +87,7 @@ A detector arrangement where three GEM foils are stacked together is known as a 
 \begin{figure}[!htbp]
     \begin{center}
         \includegraphics[width=0.85\textwidth]{figures/GEM/triple_gem.pdf}
-        \caption{The working mechanism of a GEM detector.}
+        \caption{The working mechanism of a GEM detector~\cite{Abbaneo2014}.}
         \label{fig:gemgaps}
     \end{center}
 \end{figure} 
@@ -179,7 +180,9 @@ In the next version, GE11-II, the readout sectors were increased from 8 to 24 wh
 
 In the third version of GE11, known as GE11-III. In this version it was split into several pieces and used the mechanical stretching during the assembly then glued to the frame and drift board~\cite{Abbaneoo2012}.
 
-In the fourth version of GE11, GE11-IV, the major achievement was to abandoned the use of glue while assembling the detector. Because of this the stretching improved and the board deformation issue was resolved as compared to the GE11-III. Still it takes few hour in assembling and need to use the pre-bending of the with respect to the bowing observed. Thus, it was not reliable for the mass production~\cite{Abbaneo2013}. 
+{\color{red}In the fourth version of GE11, GE11-IV, the major achievement was to use the bolts and abandoned the use of glue while assembling the detector. Because of this the stretching improved and the board deformation issue was resolved as compared to the GE11-III. Still it takes few hour in assembling.}
+% and need to use the pre-bending of the with respect to the bowing observed. 
+Thus, it was not reliable for the mass production~\cite{Abbaneo2013}. 
 
 The pre-bending issue is resolved in the GE11-V prototype by tensioning the foil against the independent ``\textit{pull-out}'' pieces. This version is opted for the final production of the GE11 chamber for installation in the CMS during Long-Shut-down-2.
 % subsubsection ge1_1_generations (end)
@@ -405,7 +408,7 @@ The hit profile and beam profile recorded in the tracker for one of the runs are
 \caption{2D- beam profile plot for the first, second and third tracker. The X and Y axis of the plots correspond to the distance (in mm) measured from the central position of the trackers in X and Y direction respectively. The different colours in the colour palette correspond to the number of hits registered in the detector at a particular (x,y) position.}\label{fig:BeamProfile}
 \end{figure}
 
-From both hit profile and beam profile, one can see that the beam is point beam like a beam having a Gaussian spread, centred around (50,50), i.e., at the centre of the tracker.
+From both hit profile and beam profile, one can see that the beam is point beam having maximum hits at the centre and gradually decreasing as moving apart from centre.
 
 The first step towards the track and cluster reconstruction is to discriminate the background tracks coming from detector noise (fake tracks) from the signal (muon) tracks. Once the fake tracks are removed from the collection, valid hits are used to generate tracks.
 
@@ -467,7 +470,14 @@ To have an efficient efficiency we should also define a fiducial area in which w
         \item The selected events are used to fill 2D histogram for different cases. The first histogram contains all those events that have a valid hit in the trackers only, as shown in Fig.~\ref{fig:fiducial_area_sel} (left). Another 2D histogram is filled with all those events where there are valid hits in all three trackers as well as in the GE1/1, as shown in Fig.~\ref{fig:fiducial_area_sel} (right). The ratio of the two histograms defined above is computed and is shown in Fig.~\ref{fig:fiducial_area_sel} (bottom)
         \item Finally, the region (0,80) in the ratio histogram where efficiency is maximum is considered as the fiducial region. This fiducial region is used for the efficiency calculation for GE1/1 detector.
 \end{itemize}
-Here, the calculated fiducial region is (0,80), which can be observed from Fig.~\ref{fig:fiducial_area_sel}(bottom).
+Here, the calculated fiducial region is (0,80), which can be observed from Fig.~\ref{fig:fiducial_area_sel}(bottom). The reason for doing this is that all muons are not going perpendicular to the plane of the detector. Some of them are at some angle. When these muons are passing by the edge of tracker and passed all three trackers then these will be counted as good muons for the efficiency calculation. But, as these are not passing by the detector under test (DUT) so it will give us wrong result. This is also explained pictorially in Fig.~\ref{fig:explain_why_fiducial_area}.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Pictures/explain_why_fiducial_area.png}
+    \caption{Defining fiducial region for efficiency calculation}
+    % \caption{Need for fiducial region: Muons passing at some angle with respect to the normal of detector plane can skip the DUT, which should not be counted for efficiency calculation.}
+    \label{fig:explain_why_fiducial_area}
+\end{figure}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.45\textwidth]{figures/GEM/FiducialAreaCal_TrackerOnly.pdf}%
@@ -511,43 +521,45 @@ Where, $\epsilon_{max}$ is the maximum obtained efficiency, $HV_{50\%}$ is the a
 \todo[inline]{update fit parameters}
 Let us define four different function, based on equation~\ref{eq:Fit_efficiency}, F1 for $(i\eta,i\phi)$ sector (5,2) with gas $Ar/CO_2/CF_4$, F2 for $(i\eta,i\phi)$ sector (1,2) with gas $Ar/CO_2/CF_4$, F3 for $(i\eta,i\phi)$ sector (8,2) with gas $Ar/CO_2/CF_4$ and F4 for $(i\eta,i\phi)$ sector (5,2) with gas $Ar/CO_2$.\\
 % subsection fit_parameters (end)
-After fit F1 is given as
+F1 is given by 
+% After fit F1 is given as
 \begin{equation}
     F1 = [0] + \frac{0.989}{[1]+exp(-[2]\times(x-697.3))}~,
 \end{equation}
-where,
+Here, the two numbers 0.989 and 697.3 are $\epsilon_{max}$ and $HV_{50\%}$ as stated in equation~\ref{eq:Fit_efficiency}. Similarly, the two numbers are taken from data for F2, F3 and F4.
+After fit the parameters of F1 is given as
 % $[0] = -1.44526e-02 \pm 4.28771e-02$, \\$[1] = 9.84833e-01 \pm 4.19715e-02$ and \\$[2] = 9.97591e-01 \pm 8.53940e-02$
 \begin{align*}
-[0] &= -1.44526e-02 \pm 4.28771e-02,\\
-[1] &= 9.84833e-01 \pm 4.19715e-02,~and \\
-[2] &= 9.97591e-01 \pm 8.53940e-02
+[0] &= -1.445e-02 \pm 4.288e-02,\\
+[1] &= 9.848e-01 \pm 4.197e-02,~and \\
+[2] &= 9.976e-01 \pm 8.539e-02
 \end{align*}
-After fit F2 is given as
+After fit the parameters of F2 is given as
 \begin{equation}
     F2 = \frac{0.968}{[0]+exp(-[1]\times(x-64.9))}~,
 \end{equation}
 where,
 \begin{align*}
-[0] &= 9.92180e-01 \pm 5.56034e-03,\\
-[1] &= 8.25180e-01 \pm 3.62098e-02
+[0] &= 9.922e-01 \pm 5.560e-03,\\
+[1] &= 8.252e-01 \pm 3.621e-02
 \end{align*} 
-After fit F3 is given as
+After fit the parameters of F3 is given as
 \begin{equation}
     F3 = \frac{0.973}{[0]+exp(-[1]\times(x-66))}~,
 \end{equation}
 where,
 \begin{align*}
-[0] &= 9.96407e-01 \pm 9.00503e-03, \\
-[1] &= 7.67029e-01 \pm 4.59276e-02
+[0] &= 9.964e-01 \pm 9.005e-03, \\
+[1] &= 7.670e-01 \pm 4.593e-02
 \end{align*}
-After fit F4 is given as
+After fit the parameters of F4 is given as
 \begin{equation}
     F4 = \frac{0.985}{[0]+exp(-[1]\times(x-55.8))}~,
 \end{equation}
 where,
 \begin{align*}
-[0] &= 1.00305e+00 \pm 7.91473e-03,\\
-[1] &= 8.15287e-01 \pm 5.46309e-02
+[0] &= 1.003e+00 \pm 7.915e-03,\\
+[1] &= 8.153e-01 \pm 5.463e-02
 \end{align*}
 
 Fig. \ref{fig:Efficiency_ch} shows the GE1/1 detection efficiency with two different gas mixtures $Ar/CO_2$ (70/30) calculated for sector $(i\eta,i\phi)=(5,2)$ and $Ar/CO_2/CF_4$ (45/15/40) for three different sectors $(i\eta,i\phi)=\{(1,2),(5,2),(8,2)\}$.
@@ -613,14 +625,14 @@ This means that we are able to reach faster timing at lower gains with addition 
 \caption{Time-resolution with respect to $E_{drift}$ (top) and current supplied to high voltage divider (bottom) for two different gas mixture.}
 \label{TimeResolution}
 \end{figure}
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[width=5.5cm,height=6cm]{figures/GEM/Run1644.pdf}%
-    \includegraphics[width=5.5cm,height=6cm]{figures/GEM/Run1869.pdf}%
-    \includegraphics[width=5.5cm,height=6cm]{figures/GEM/Run2066.pdf}
-    \caption{Cluster size distribution for GE1/1 detectors obtained during the beam test campaign: for run number 1644 in region ($\eta$, $\phi$) = (5,2) (left), for the Run number 1869 in region ($\eta$, $\phi$) = (8,2) (middle) and for Run number 2066 in region ($\eta$, $\phi$) = (1,2) (right).}
-    \label{fig:CSDpoissonfunction}
-\end{figure}
+% \begin{figure}[!htbp]
+%     \centering
+%     \includegraphics[width=5.5cm,height=6cm]{figures/GEM/Run1644.pdf}%
+%     \includegraphics[width=5.5cm,height=6cm]{figures/GEM/Run1869.pdf}%
+%     \includegraphics[width=5.5cm,height=6cm]{figures/GEM/Run2066.pdf}
+%     \caption{Cluster size distribution for GE1/1 detectors obtained during the beam test campaign: for run number 1644 in region ($\eta$, $\phi$) = (5,2) (left), for the Run number 1869 in region ($\eta$, $\phi$) = (8,2) (middle) and for Run number 2066 in region ($\eta$, $\phi$) = (1,2) (right).}
+%     \label{fig:CSDpoissonfunction}
+% \end{figure}
 \begin{figure}[!htbp]
     \begin{center}
       \includegraphics[width=5.5cm,height=6cm]{figures/GEM/CurrentvsClusterSizeR1592R1646.pdf}%
@@ -646,10 +658,10 @@ The basis of this algorithm is that we consider clusters if one or more continuo
 Three golden run ranges, with different pseudo-rapidity sectors, viz 2014H4A, 2014H4C and 2014H4D are studied.
 The description of these runs is given in Table~\ref{tab:gemTBgoldenruns}.
 
-To fit the cluster size distribution,a Poisson distribution function is used. Figure~\ref{fig:CSDpoissonfunction} shows the cluster size distribution for different ($\eta$, $\phi$) sector fitted using the Poisson distribution function.
+% To fit the cluster size distribution,a Poisson distribution function is used. Figure~\ref{fig:CSDpoissonfunction} shows the cluster size distribution for different ($\eta$, $\phi$) sector fitted using the Poisson distribution function.
 
 % Study for the cluster size is done only for the three above mentioned golden run ranges.
- The distribution is studied for different values of fiducial regions and it is observed that the cluster size is independent of the dimensions of the fiducial region (Fig.~\ref{fig:CSDfiducialregion}).
+The distribution is studied for different values of fiducial regions and it is observed that the cluster size is independent of the dimensions of the fiducial region (Fig.~\ref{fig:CSDfiducialregion}).
 
 Cluster size study distributions for the GE1/1-IV and GE1/1-IV-GIF are plotted as a function of current supplied to the high voltage divider and are shown in Figure~\ref{fig:CSDGE1/1}.
 % Cluster size is taken with the Poisson fitting function. 
@@ -874,6 +886,10 @@ It is observed that the two foils - one produced by Micropack and another produc
 
 % subsection electrical_test (end)
 % section characterization_and_production_of_gem_foil (end)
-% \section{Summary} % (fold)
-% \label{sec:summary}
+\section{Summary} % (fold)
+\label{sec:summary}
+This chapter mentions thee performeed detector activities. Here mainly the details and results from the 2014 beam test in terms of measured efficiency, time resolution and cluster size are described. In this beam test we tested the GE1/1 detector with gas mixtures of Ar \& $CO_2$ and also Ar, $CO_2$ \& $CF_4$. One of the important conclusions drawn from this study was that one can operate the GEM detector without using $CF_4$ gas, which is a non-eco friendly gas, without compromising the efficiency and the time resolution of the detector.
+
+This chapter also contains the characterization studies of the GEM foil developed in India. An Indian company, Micropack Pvt. Ltd., got the technology for GEM foil production through the Transfer of Technology (TOT) agreement with CERN. It was successfully able to produce $10~cm~\times~10~cm$ foils using the double mask technique. This GEM foil is characterized using the optical and electrical method. These results are mentioned in terms of the defects and the leakage current in GEM foils that we observed.
+
 % section summary (end)

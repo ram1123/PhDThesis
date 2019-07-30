@@ -104,7 +104,7 @@ Gauge invariance is the key ingredient in the construction of the SM of electrom
 
 % \subsubsection{Example: Quantum Electrodynamics} % (fold)
 % \label{ssub:example_quantum_electrodynamics}
-The construction of QED is an example of local gauge theory as the Lagrangian function (Eq.~\ref{eq:qed_lagrangian}) that describes the QED of the spin-half particle remains invariant by the local gauge transformation of the electron field $\psi(x)$ and the photon field $A_{\mu(x)}$ at all space-time point x.
+The construction of QED is an example of local gauge theory as the Lagrangian function (Eq.~\ref{eq:qed_lagrangian}) that describes the QED of the spin-half particle remains invariant by the local gauge transformation of the electron field $\psi(x)$ and the photon field $A_{\mu(x)}$ at all space-time point x,
 \begin{equation}\label{eq:qed_lagrangian}
     \Lagr = i \bar{\psi}\gamma^{\mu} D_{\mu}\psi - m\bar{\psi}\psi,
     % \Lagr = i \bar{\psi}\gamma^{\mu} \partial_{\mu}\psi - m\bar{\psi}\psi
@@ -112,7 +112,7 @@ The construction of QED is an example of local gauge theory as the Lagrangian fu
 The transformation followed by the electron field and photon field is:
 \begin{eqnarray}\label{eq:qed_phase}
     \psi(x) & \rightarrow & e^{iq\chi(x)}\psi(x), \nonumber \\
-    A_\mu(x) & \rightarrow & A_\mu(x) - {\partial_\mu \chi(x)}, 
+    A_\mu(x) & \rightarrow & A_\mu(x) - {\partial_\mu \chi(x)}. 
 \end{eqnarray}
 Where the $\chi(x)$ is the arbitrary phase transformation, q is the electron-photon coupling.
 And the $D_{\mu}$ given in the eq.~\ref{eq:qed_lagrangian} is known as covariant derivative and is given as:
@@ -198,7 +198,9 @@ In component form it can be written as:
     \Lagr_{int} & = & \frac{1}{2} \Big[  g_w \epsilon_{ijk}\big( \partial_{\mu} W_{\nu i} - \partial_{\nu} W_{\mu i} \big)W^{\mu}_j \times W^{\nu}_k \Big] \nonumber \\
         &   & - \frac{1}{4} g_W^2 \epsilon_{ijk} \epsilon_{imn} W^{\mu}_j W^{\nu}_k W_{m \mu} W_{n \nu}
 \end{eqnarray}
-Here, the interaction part of Lagrangian shows that in weak interaction there are triple as well as quartic both types of self-couplings are allowed, as shown in Fig.~\ref{fig:sm_triple_quartic}. In weak interaction, these self-couplings are the consequences of the non-Abelian nature of the SU(2) group algebra. In terms of the physical fields, there are two types of triple gauge couplings - $\gamma \ww$ and $Z \ww$ - and three types of quartic gauge couplings, $\ww \ww$, $\ww ZZ$, and $\ww \gamma \gamma$, which are allowed in the SM.
+Here, the interaction part of Lagrangian shows that in weak interaction there are triple as well as quartic both types of self-couplings are allowed, as shown in Fig.~\ref{fig:sm_triple_quartic}. In weak interaction, these self-couplings are the consequences of the non-Abelian nature of the SU(2) group algebra. 
+{\color{red}In terms of the physical fields, there are two types of triple gauge couplings - $\gamma \ww$ and $Z \ww$ - and three types of quartic gauge couplings, $\ww \ww$, $\ww ZZ$, $\ww Z \gamma$ and $\ww \gamma \gamma$, which are allowed in the SM.
+Here, $\w^\pm$, $Z$, and $\gamma$ are the linear combination of $W_1$, $W_2$ and $W_3$ fields, as discussed in section \ref{sub:brief_introduction_to_higgs_mechanism}.}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{Pictures/sm-triple-quarticgc.png}
@@ -377,7 +379,7 @@ There are several different ways by which the gauge bosons can interact via a qu
     \centering
     \includegraphics[width=0.20\textwidth,height=3cm]{figures/Intro/VV_Scattering_diagrams_1.png}%
     \includegraphics[width=0.20\textwidth,height=3cm]{figures/Intro/VV_Scattering_diagrams_2.png}%
-    \includegraphics[width=0.20\textwidth,height=3cm]{figures/Intro/VV_Scattering_diagrams_3.png}%
+    % \includegraphics[width=0.20\textwidth,height=3cm]{figures/Intro/VV_Scattering_diagrams_3.png}%
     \includegraphics[width=0.20\textwidth,height=3cm]{figures/Intro/VV_Scattering_diagrams_4.png}%
     \includegraphics[width=0.20\textwidth,height=3cm]{figures/Intro/VV_Scattering_diagrams_5.png}
     \caption{All possible VBS diagrams.}
@@ -401,7 +403,7 @@ Vector Boson Scattering requires six weak vertices, so it is a $\mathcal{O}(\alp
 
 One of the important signatures of VBS are the two jets in the forward pseudo-rapidity region, called as tagging jets, resulting from the quark emitting the gauge bosons. Thus, the pseudo-rapidity between the tagging jets is expected to be large.
 
-Furthermore, there are different modes of decay of w-bosons like $WW \rightarrow l \nu l\nu $, $WW \rightarrow jj jj $, and $WW \rightarrow l \nu jj$. The leptonic channel is considered to have less background specially if working with same sign W-bosons but it has very less cross-section than semi-leptonic or fully hadronic. While the fully hadronic channel has comparatively larger cross-section but it suffers from huge QCD background. Thus, one of best ways to work with semi-leptonic channel is that it has larger branching fraction than fully leptonic and comparatively lesser background than fully-hadronic, for which the analysis was performed and the details are given in Section~\ref{cha:physics_analysis}.
+Furthermore, there are different modes of decay of w-bosons like $WW \rightarrow l \nu l\nu $, $WW \rightarrow jj jj $, and $WW \rightarrow l \nu jj$. The leptonic channel is considered to have less background specially if working with same sign W-bosons but it has very less cross-section than semi-leptonic or fully hadronic. While the fully hadronic channel has comparatively larger cross-section but it suffers from huge QCD background. Thus, one of best ways to work with semi-leptonic channel is that it has larger branching fraction than fully leptonic and comparatively lesser background than fully-hadronic, for which the analysis was performed and the details are given in Chapter~\ref{cha:anomalous_quartic_gauge_coupling_measurement}.
 % Due to experimental limitations it was not yet observed.
 % 
 

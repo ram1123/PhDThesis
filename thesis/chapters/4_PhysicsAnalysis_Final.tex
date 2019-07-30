@@ -12,7 +12,7 @@ At the LHC, VBS is characterized by presence of two gauge bosons in association 
 
 The main goal of this analysis is to search for the presence of aQGCs in candidate events containing a hadronically decaying gauge boson ($V$) produced with large transverse momentum $\pt$, a $\PW$ or $\PZ$ boson decaying to leptons (electrons or muons), and two forward jets. This final state benefits from a higher branching ratio of the $V$ decay compared to previous searches at the LHC for aQGCs in VBS involving only leptonic boson decays~\cite{Sirunyan:2017ret, ATLAS_ssWW, CMS_ssWW, Aaboud:2016ffv,Aad:2016ett, Sirunyan:2017fvv, Khachatryan:2016mud, Khachatryan:2017jub, Khachatryan:2016vif,Aaboud:2017pds}. The ATLAS collaboration reported limits on aQGCs in VBS using the $\PW V$ final state, where $\PW$ decays to leptons, in proton-proton (pp) collisions at $\sqrt{s}=8\TeV$~\cite{Aaboud2017}. 
 
-Extended Higgs sectors with additional SU(2) isotriplet scalar give rise to charged Higgs bosons with couplings to $\PW$ and $\PZ$ bosons at the tree level~\cite{CE1,CE2}. In particular, the Georgi-Machacek (GM)~\cite{GEORGI1985463} model, with both real and complex triplets,  preserves the tree level custodial symmetry. In this model, singly and doubly charged Higgs bosons are produced via vector boson fusion (VBF) and decay to $\PW$ and $\PZ$ bosons, and same-sign $\PW$ boson pairs, respectively. The ATLAS and CMS Collaborations performed searches for charged Higgs bosons in these topologies and set constraints on the GM model~\cite{Sirunyan:2017ret,Sirunyan:2017sbn,PhysRevLett.114.231801}.
+Extended Higgs sectors with additional SU(2) isotriplet scalar give rise to charged Higgs bosons with couplings to $\PW$ and $\PZ$ bosons at the tree level~\cite{Englert2013a}. In particular, the Georgi-Machacek (GM)~\cite{GEORGI1985463} model, with both real and complex triplets,  preserves the tree level custodial symmetry. In this model, singly and doubly charged Higgs bosons are produced via vector boson fusion (VBF) and decay to $\PW$ and $\PZ$ bosons, and same-sign $\PW$ boson pairs, respectively. The ATLAS and CMS Collaborations performed searches for charged Higgs bosons in these topologies and set constraints on the GM model~\cite{Sirunyan:2017ret,Sirunyan:2017sbn,PhysRevLett.114.231801}.
 
 This chapter presents a study of VBS in $\PW\PW$, $\PW\PZ$, and $\PZ\PZ$ final states using pp collisions at $\sqrt{s}=13\TeV$. The data sample corresponds to an integrated luminosity of $35.9 \pm 0.9\fbinv$ collected with the CMS detector~\cite{Chatrchyan:2008zzk} at the CERN LHC in 2016. 
 
@@ -269,7 +269,7 @@ The aQGC signal samples are produced using \MADGRAPH{}5\_a\MCATNLO at LO accurac
 
 
 
-The Drell--Yan process is simulated with one, two, three, and four outgoing partons at Born level at LO using \MADGRAPH{}5\_a\MCATNLO. The $\PW+$jets process is simulated at LO in $\mathrm{H_{T}}$\footnote{$\mathrm{H_T}$ is defined as the sum of transverser momentum of all jets in an event.} bins using \MADGRAPH{}5\_a\MCATNLO. $\ttbar$, $\ttbar \PW$, $\ttbar \PZ$, and single top processes are generated at next-to-leading order (NLO) using \textsc{POWHEG2.0}~\cite{Alioli:2008gx,Nason:2004rx,Frixione:2007vw,powheg:2010}. The simulated samples of background processes are normalized to the best theoretical prediction. The complete list of background samples can be found in Table~\ref{tab:bkgSamples}.
+The Drell--Yan process is simulated with one, two, three, and four outgoing partons at Born level at LO using \MADGRAPH{}5\_a\MCATNLO. The $\PW+$jets process is simulated at LO using \MADGRAPH{}5\_a\MCATNLO. $\ttbar$, $\ttbar \PW$, $\ttbar \PZ$, and single top processes are generated at next-to-leading order (NLO) using \textsc{POWHEG2.0}~\cite{Alioli:2008gx,Nason:2004rx,Frixione:2007vw,powheg:2010}. The simulated samples of background processes are normalized to the best theoretical prediction. The complete list of background samples can be found in Table~\ref{tab:bkgSamples}.
 
 The \PYTHIA~8.205~\cite{Sjostrand:2015} package is used  for parton showering, hadronization, and the underlying event simulation, with tune CUETP8M1~\cite{Skands:2014pea,Khachatryan:2015pea}. The NNPDF~3.0~\cite{nnpdf} set is used as the default set of parton distribution functions (PDFs). The PDFs are calculated to the same order in QCD as the hard process. 
 % %
@@ -499,7 +499,7 @@ For muon identification there are six different algorithms are commonly used in 
 
 The muons are selected using the {\em``Tight''} muon identification mentioned above.
 Additionally, like in the electron case, a third muon veto is also applied to reject events with more than two genuine leptons using the {\em``Loose''} identification. 
-For the muon isolation, in the same manner as for electrons, a cone of $\Delta R = 0.4$ is built to compute the flux of particle flow candidates, the ``delta-beta'' correction is applied to correct for pileup contamination.
+For the muon isolation, in the same manner as for electrons, a cone of $\Delta R = 0.4$ is built to compute the flux of particle flow candidates, the ``delta-beta'' correction\footnote{The vertex association of leptons does not account for the neutral particles produced by the pile-up interactions. To consider the missed neutral particles, a specific correction is applied, which is known as ``delta-beta'' corrections. It uses the particle based isolation to preedict the neutral particle deposits in the isolation cone based on particle deposits due to pile-up in the same cone.} is applied to correct for pileup contamination~\cite{Bachtis2013}.
 This correction is achieved by subtracting half the sum of the \pt of the charged particles in the cone of interest but with particles not originating from the primary vertex.
 
 The muon isolation is therefore defined as:
@@ -553,7 +553,7 @@ The signal region is defined by requiring $\tau_{21}<0.55$ and $ 65 ~\GeV < m_{V
 The selected jets are expected to be mostly coming from gluons or light-quarks
 due to initial state radiation. Thus, in order to suppress backgrounds coming from top quarks, events are vetoed if a $b$-tagged jet is found.
 Jets with $\pt$ greater than 30 $\GeV$ and lying within the tracker fiducial region ($\left|\eta\right|<2.4$) are considered as $b$-taggable.
-A jet is tagged as a $b$-jet candidate if its Combined Secondary Vertex (CSV) discriminator is greater than 0.5426. To define the top control region, the tight working point (CSV $>$ 0.9535) is used.
+A jet is tagged as a $b$-jet candidate if its Combined Secondary Vertex (CSV) discriminator is greater than 0.5426. To define the top control region, the tight working point (CSV $>$ 0.9535) is used~\cite{b-jet_id2013}.
 % The recipe provided by the BTV group~\cite{Twiki:BTAGPOGSF} using the recommended measurements has been used to reweight the b-tagging (in)efficiencies of the selected jets.
 
 
@@ -703,32 +703,32 @@ The fits to the corresponding MC predictions are shown in Figure~\ref{fig:mWW_1}
 	 \hline \hline
 	 \multicolumn{2}{|c|}{W+jets, $f_{ExpTail}$}\\
 	 \hline
-	 a 			&	0.0360242 $\pm$ 0.0259207\\
-	 b 			&	196.282	$\pm$ 69.6708\\
-	 $N$ 		&	240.834 $\pm$ 17.9165\\
+	 a 			&	0.036 $\pm$ 0.026\\
+	 b 			&	196.282	$\pm$ 69.671\\
+	 $N$ 		&	240.834 $\pm$ 17.917\\
 	 \hline \hline
 	 \multicolumn{2}{|c|}{W+jets (alternate function), $f_{Exp}$}\\
 	 \hline
-	 c 			&	-0.00349426 $\pm$ 0.000258006\\
-	 $N$ 		&	240.69 $\pm$ 17.9176\\
+	 c 			&	-0.003 $\pm$ 0.000\\
+	 $N$ 		&	240.690 $\pm$ 17.918\\
 	 \hline \hline
 	 \multicolumn{2}{|c|}{Diboson, $f_{ExpN}$}\\
 	 \hline
-	 c 			&	-0.00415878 $\pm$ 0.000478786\\
-	 n 			&	-203.63 $\pm$ 424.762\\
-	 $N$ 		&	27.4306 $\pm$ 1.10149\\
+	 c 			&	-0.004 $\pm$ 0.001\\
+	 n 			&	-203.630 $\pm$ 424.762\\
+	 $N$ 		&	27.431 $\pm$ 1.101\\
 	 \hline \hline
 	 \multicolumn{2}{|c|}{TTbar, $f_{ExpN}$}\\
 	 \hline
-	 c 			&	-0.00671012 $\pm$ 0.00124636\\
+	 c 			&	-0.007 $\pm$ 0.001\\
 	 n 			&	-983.791 $\pm$ 914.875\\
-	 $N$ 		&	42.0095 $\pm$ 2.51186\\
+	 $N$ 		&	42.010 $\pm$ 2.512\\
 	 \hline \hline
 	 \multicolumn{2}{|c|}{Single Top, $f_{ExpN}$}\\
 	 \hline
-	 c 			&	-0.0026518 $\pm$ 0.00234551\\
-	 n 			&	1045.48 $\pm$ 2235.03\\
-	 $N$ 		&	10.5114 $\pm$ 2.11656\\
+	 c 			&	-0.003 $\pm$ 0.002\\
+	 n 			&	1045.480 $\pm$ 2235.030\\
+	 $N$ 		&	10.511 $\pm$ 2.117\\
 	 \hline \hline
 	\end{tabular}
  	\caption{Extracted fit parameters for the functions describing the $m_{WV}$ distributions.}
@@ -823,46 +823,46 @@ The resulting shapes are shown in Figure~\ref{fig:mW_1}. The shown error band is
 	 \hline \hline
 	 \multicolumn{2}{|c|}{W+jets ($f_{User1}$)}\\
 	 \hline
-	 $p_0$		&	25.0479 $\pm$ 0.885452\\
-	 $p_1$		&	-4.03783 $\pm$ 0.328605\\
-	 $N$		&	478.191 $\pm$ 35.4216\\
+	 $p_0$		&	25.048 $\pm$ 0.885\\
+	 $p_1$		&	-4.038 $\pm$ 0.329\\
+	 $N$		&	478.191 $\pm$ 35.422\\
 	 \hline \hline
 	 \multicolumn{2}{|c|}{W+jets (alternate function, $f_{ErfExp}$)}\\
 	 \hline
-	 c 			&	-0.0228734 $\pm$ 0.00217427\\
-	 offset 	&	50.9183 $\pm$ 2.56036\\
-	 width 		&	13.7415 $\pm$ 3.89626\\
-	 $N$		&	460.073 $\pm$ 34.2282\\
+	 c 			&	-0.023 $\pm$ 0.002\\
+	 offset 	&	50.918 $\pm$ 2.560\\
+	 width 		&	13.742 $\pm$ 3.896\\
+	 $N$		&	460.073 $\pm$ 34.228\\
 	 \hline \hline
 	 \multicolumn{2}{|c|}{Diboson, $f_{ExpGaus}$}\\
 	 \hline 
-	 $f_1$		&	0.452621 $\pm$ 0.0175585\\
-	 c 			&	-0.00625601 $\pm$ 0.00115951 \\
-	 $\mu$		&	82.3131 $\pm$ 0.39325\\
-	 $\sigma$	&	10 $\pm$ 9.41247e-07\\
-	 $N$		&	87.2154 $\pm$ 1.89749\\
+	 $f_1$		&	0.452 $\pm$ 0.018\\
+	 c 			&	-0.006 $\pm$ 0.001 \\
+	 $\mu$		&	82.313 $\pm$ 0.393\\
+	 $\sigma$	&	10.0 $\pm$ 9.412e-07\\
+	 $N$		&	87.215 $\pm$ 1.897\\
 	 \hline \hline
 	 \multicolumn{2}{|c|}{TTbar, $f_{2Gaus\_ErfExp}$}\\
 	 \hline 
-	 $f_1$		&	0.320894 $\pm$ 0.0891809\\
-	 c 			&	-0.0254783 $\pm$ 0.00692614\\
-	 offset 	&	79.35 (constant)\\
-	 width 		&	30.1227 $\pm$ 5.73131\\
-	 $f_2$		&	0.67125 (constant)\\
-	 $\mu_1$	&	82.7893 $\pm$ 0.609335\\
-	 $\sigma_1$	&	8.51989 $\pm$ 0.780058\\
+	 $f_1$		&	0.321 $\pm$ 0.089\\
+	 c 			&	-0.025 $\pm$ 0.007\\
+	 offset 	&	79.350 (constant)\\
+	 width 		&	30.123 $\pm$ 5.731\\
+	 $f_2$		&	0.671 (constant)\\
+	 $\mu_1$	&	82.789 $\pm$ 0.609\\
+	 $\sigma_1$	&	8.520 $\pm$ 0.780\\
 	 $f_3$		&	1.0 (constant)\\
-	 $\mu_2$	&	$\mu_1$ + 6.9129 \\
-	 $\sigma_2$	&	$\sigma_1$ + 3.6819\\
-	 $N$		&	152.598 $\pm$ 4.8036\\
+	 $\mu_2$	&	$\mu_1$ + 6.913 \\
+	 $\sigma_2$	&	$\sigma_1$ + 3.682\\
+	 $N$		&	152.598 $\pm$ 4.804\\
 	 \hline \hline
 	 \multicolumn{2}{|c|}{Single-Top, $f_{ExpGaus}$}\\
 	 \hline 
-	 $f_1$		&	0.471434 $\pm$ 0.080531\\
-	 c 			&	-0.00367233 $\pm$ 0.00476394 \\
-	 $\mu$		&	82.6023 $\pm$ 1.16547\\
-	 $\sigma$	&	8.25865 $\pm$ 1.01946\\
-	 $N$		&	35.5749 $\pm$ 2.98679\\
+	 $f_1$		&	0.471 $\pm$ 0.081\\
+	 c 			&	-0.004 $\pm$ 0.005 \\
+	 $\mu$		&	82.602 $\pm$ 1.165\\
+	 $\sigma$	&	8.259 $\pm$ 1.019\\
+	 $N$		&	35.575 $\pm$ 2.987\\
 	 \hline 
 	\end{tabular}
  	\caption{Extracted fit parameters for the functions describing the $m_{V}$ distributions.}
