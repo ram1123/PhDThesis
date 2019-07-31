@@ -311,9 +311,10 @@ The high voltage configuration used during the beam test is shown in Fig.~\ref{f
 Also, the voltage across the GEM foils and  the electric field  with respect to the current in the voltage divider is shown in Fig.~\ref{fig:GEM_voltage_electricfield}. 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/GEM/GE11_IV_ElectricField_detector.pdf}%
-    \includegraphics[width=0.5\textwidth]{figures/GEM/GE11_IV_VoltageAcross_GEM.pdf}
-    \caption{Electric field (left) and voltage across each GEM foil (right) for the tested GE1/1 detector.}
+    \includegraphics[width=0.5\textwidth]{figures/GEM/GE11_IV_ElectricField_detector_2.pdf}%
+    \includegraphics[width=0.5\textwidth]{figures/GEM/GE11_IV_VoltageAcross_GEM_2.pdf}
+    \caption{(Left) Electric field of the indiction region (green), drift region (blue) and between the trasfer region (red) is shown. (Right) Voltage across each GEM foil for the tested GE1/1 detector is shown.}
+    % \caption{Electric field (left) and voltage across each GEM foil (right) for the tested GE1/1 detector.}
     \label{fig:GEM_voltage_electricfield}
 \end{figure}
 
@@ -388,7 +389,7 @@ The discriminator output was provided into the logic and coincidence (to generat
 \subsection{Data Analysis} % (fold)
 \label{sub:test_beam_analysis}
 The raw data collected during these beam test campaigns were in the binary format.
-First, the raw data (binary information) are converted into the standard ROOT data format,which areanalyzed using the ``\textit{\textbf{TURBO-SOFTWARE}}''~\cite{git-trubosoftware} package.
+First, the raw data (binary information) are converted into the standard ROOT data format,which are analysed using the ``\textit{\textbf{TURBO-SOFTWARE}}''~\cite{git-trubosoftware} package.
 The output from the TURBO-SOFTWARE data analysis consists of hit informations for every strip from the detector, which are further used to reconstruct the particle tracks and clusters.
 A valid \textbf{hit} is defined when one or more strip of the VFAT chips surpass the threshold set on the readout chip.
 A \textbf{cluster} is defined as the number of adjacent fired strips along x or y-axis.
@@ -474,7 +475,7 @@ Here, the calculated fiducial region is (0,80), which can be observed from Fig.~
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.45\textwidth]{Pictures/explain_why_fiducial_area.png}
-    \caption{Defining fiducial region for efficiency calculation}
+    \caption{Muons whose path is not parallel to the normal of the detector may sometimes pass through all three trackers but not from the detector sector under study.}
     % \caption{Need for fiducial region: Muons passing at some angle with respect to the normal of detector plane can skip the DUT, which should not be counted for efficiency calculation.}
     \label{fig:explain_why_fiducial_area}
 \end{figure}
@@ -888,8 +889,8 @@ It is observed that the two foils - one produced by Micropack and another produc
 % section characterization_and_production_of_gem_foil (end)
 \section{Summary} % (fold)
 \label{sec:summary}
-This chapter mentions thee performeed detector activities. Here mainly the details and results from the 2014 beam test in terms of measured efficiency, time resolution and cluster size are described. In this beam test we tested the GE1/1 detector with gas mixtures of Ar \& $CO_2$ and also Ar, $CO_2$ \& $CF_4$. One of the important conclusions drawn from this study was that one can operate the GEM detector without using $CF_4$ gas, which is a non-eco friendly gas, without compromising the efficiency and the time resolution of the detector.
+This chapter mentions the performed detector activities. Here mainly the details and results from the 2014 beam test in terms of measured efficiency, time resolution and cluster size are described. In this beam test we tested the GE1/1 detector with gas mixtures of Ar \& $CO_2$ and also Ar, $CO_2$ \& $CF_4$. One of the important conclusions drawn from this study was that one can operate the GEM detector without using $CF_4$ gas, which is a non-eco friendly gas, without compromising the efficiency and the time resolution of the detector. Also, we could operate our detector at lower operating voltage as compared to the Ar, $CO_2$ \& $CF_4$, which further reduces the discharge probability.
 
-This chapter also contains the characterization studies of the GEM foil developed in India. An Indian company, Micropack Pvt. Ltd., got the technology for GEM foil production through the Transfer of Technology (TOT) agreement with CERN. It was successfully able to produce $10~cm~\times~10~cm$ foils using the double mask technique. This GEM foil is characterized using the optical and electrical method. These results are mentioned in terms of the defects and the leakage current in GEM foils that we observed.
+This chapter also contains the characterization studies of the GEM foil developed in India. An Indian company, Micropack Pvt. Ltd., got the technology for GEM foil production through the Transfer of Technology (TOT) agreement with CERN. It was successfully able to produce $10~cm~\times~10~cm$ foils using the double mask technique. This GEM foil was characterized using the optical and electrical method. These results are mentioned in terms of the defects and the leakage current in GEM foils that we observed.
 
 % section summary (end)
