@@ -471,14 +471,7 @@ To have an efficient efficiency we should also define a fiducial area in which w
         \item The selected events are used to fill 2D histogram for different cases. The first histogram contains all those events that have a valid hit in the trackers only, as shown in Fig.~\ref{fig:fiducial_area_sel} (left). Another 2D histogram is filled with all those events where there are valid hits in all three trackers as well as in the GE1/1, as shown in Fig.~\ref{fig:fiducial_area_sel} (right). The ratio of the two histograms defined above is computed and is shown in Fig.~\ref{fig:fiducial_area_sel} (bottom)
         \item Finally, the region (0,80) in the ratio histogram where efficiency is maximum is considered as the fiducial region. This fiducial region is used for the efficiency calculation for GE1/1 detector.
 \end{itemize}
-Here, the calculated fiducial region is (0,80), which can be observed from Fig.~\ref{fig:fiducial_area_sel}(bottom). The reason for doing this is that all muons are not going perpendicular to the plane of the detector. Some of them are at some angle. When these muons are passing by the edge of tracker and passed all three trackers then these will be counted as good muons for the efficiency calculation. But, as these are not passing by the detector under test (DUT) so it will give us wrong result. This is also explained pictorially in Fig.~\ref{fig:explain_why_fiducial_area}.
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.45\textwidth]{Pictures/explain_why_fiducial_area.png}
-    \caption{Muons whose path is not parallel to the normal of the detector may sometimes pass through all three trackers but not from the detector sector under study.}
-    % \caption{Need for fiducial region: Muons passing at some angle with respect to the normal of detector plane can skip the DUT, which should not be counted for efficiency calculation.}
-    \label{fig:explain_why_fiducial_area}
-\end{figure}
+Here, the calculated fiducial region is (0,80), which can be observed from Fig.~\ref{fig:fiducial_area_sel}(bottom).
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.45\textwidth]{figures/GEM/FiducialAreaCal_TrackerOnly.pdf}%
@@ -487,6 +480,15 @@ Here, the calculated fiducial region is (0,80), which can be observed from Fig.~
     \caption{2D distributions showing events with hits registered in the trackers (top left), events registered in three trackers and GE1/1's (top right) and the division of the two histograms used to define the fiducial region for GE1/1 efficiency measurements (bottom).}
     \label{fig:fiducial_area_sel}
 \end{figure}
+The reason for doing this is that all muons are not going perpendicular to the plane of the detector. Some of them are at some angle. When these muons are passing by the edge of tracker and passed all three trackers then these will be counted as good muons for the efficiency calculation. But, as these are not passing by the detector under test (DUT) so it will give us wrong result. This is also explained pictorially in Fig.~\ref{fig:explain_why_fiducial_area}.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Pictures/explain_why_fiducial_area.png}
+    \caption{Muons whose path is not parallel to the normal of the detector may sometimes pass through all three trackers but not from the detector sector under study.}
+    % \caption{Need for fiducial region: Muons passing at some angle with respect to the normal of detector plane can skip the DUT, which should not be counted for efficiency calculation.}
+    \label{fig:explain_why_fiducial_area}
+\end{figure}
+
 % subsubsection fiducial_area_selection (end)
 \subsubsection{Efficiency Measurement}
 Efficiency, $\epsilon$, for a GE1/1 detector for the current beam test set-up is defined as:
@@ -597,7 +599,13 @@ where $u_{\pm}= t-t_0\pm\frac{f_{clk}}{2}$.
 The the experimental data are fitted with this convoluted function.
 % From, the fit we extract the time resolution of the detector before the convolution.
 The extracted time resolution as a function of $E_{drift}$ and current supplied to high voltage divider are shown in Fig. \ref{TimeResolution}. 
-
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.75\textwidth]{figures/GEM/TimeResolution_Edrift.pdf}\\
+\includegraphics[width=0.75\textwidth]{figures/GEM/TimeResolution_Current.pdf}\\
+\caption{Time-resolution with respect to $E_{drift}$ (top) and current supplied to high voltage divider (bottom) for two different gas mixture.}
+\label{TimeResolution}
+\end{figure}
 Here, the time resolution for the detector operated using $Ar/CO_2$ gas mixture is fitted using a polynomial of degree 2, say $f(x) = a + bx + cx^2$. The parameter values for the time resolution as a function of the current supplied to high voltage divider are given below:
 \begin{align*}
     a & =  297.06 \pm 2.94,  \nonumber \\
@@ -618,14 +626,6 @@ The time resolution for the detector operated with $Ar/CO_2/CF_4$ gax mixture is
 The time resolution with $Ar/CO_2$ (70/30) gas mixture is higher even for lower values of $E_{drift}$.
 % However, for any given point on the $Ar/CO_2$ curve has a gain approximately one order of magnitude higher gain than the corresponding gain with $Ar/CO_2/CF_4$ (45/15/40).
 This means that we are able to reach faster timing at lower gains with addition of $CF_4$.This is important from the detector safety view point because this will allow us to operate the detector at lower gains,there by reducing the discharge probability.
-
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.75\textwidth]{figures/GEM/TimeResolution_Edrift.pdf}\\
-\includegraphics[width=0.75\textwidth]{figures/GEM/TimeResolution_Current.pdf}\\
-\caption{Time-resolution with respect to $E_{drift}$ (top) and current supplied to high voltage divider (bottom) for two different gas mixture.}
-\label{TimeResolution}
-\end{figure}
 % \begin{figure}[!htbp]
 %     \centering
 %     \includegraphics[width=5.5cm,height=6cm]{figures/GEM/Run1644.pdf}%
@@ -634,24 +634,6 @@ This means that we are able to reach faster timing at lower gains with addition 
 %     \caption{Cluster size distribution for GE1/1 detectors obtained during the beam test campaign: for run number 1644 in region ($\eta$, $\phi$) = (5,2) (left), for the Run number 1869 in region ($\eta$, $\phi$) = (8,2) (middle) and for Run number 2066 in region ($\eta$, $\phi$) = (1,2) (right).}
 %     \label{fig:CSDpoissonfunction}
 % \end{figure}
-\begin{figure}[!htbp]
-    \begin{center}
-      \includegraphics[width=5.5cm,height=6cm]{figures/GEM/CurrentvsClusterSizeR1592R1646.pdf}%
-      \includegraphics[width=5.5cm,height=6cm]{figures/GEM/CurrentvsClusterSizeR1869R1903.pdf}%
-      \includegraphics[width=5.5cm,height=6cm]{figures/GEM/CurrentvsClusterSizeR2065R2123.pdf}
-    \end{center}
-    \caption{Mean value of cluster size distribution at different current supplied to high voltage divider obtained during the beam test campaign: for 2014H4A which was taken for region ($\eta$, $\phi$) = (5,2) (left), for 2014H4C taken for region ($\eta$, $\phi$) = (8,2) (middle) and for 2014H4D taken for region ($\eta$, $\phi$) = (1,2).}
-  \label{fig:CSDfiducialregion}
-\end{figure}
-\begin{figure}[!htbp]
-   \begin{center}
-     \includegraphics[width=6cm,height=6cm]{figures/GEM/CurrentvsClusterSizeAll3EtaPhi.pdf}%
-     \includegraphics[width=6cm,height=6cm]{figures/GEM/CurrentvsClusterSizeAll3EtaPhiGE11IVGIF.pdf}
-   \end{center}
-   \caption{Cluster size distribution: Left - GE1/1-IV, Right - GE1/1-IV-GIF}
-   \label{fig:CSDGE1/1}
-\end{figure}
-
 
 \subsubsection{Cluster Size Measurement}
 To measure the cluster size of GE1/1, clusterization algorithm is used.
@@ -663,8 +645,24 @@ The description of these runs is given in Table~\ref{tab:gemTBgoldenruns}.
 
 % Study for the cluster size is done only for the three above mentioned golden run ranges.
 The distribution is studied for different values of fiducial regions and it is observed that the cluster size is independent of the dimensions of the fiducial region (Fig.~\ref{fig:CSDfiducialregion}).
-
+\begin{figure}[!htbp]
+    \begin{center}
+      \includegraphics[width=5.5cm,height=6cm]{figures/GEM/CurrentvsClusterSizeR1592R1646.pdf}%
+      \includegraphics[width=5.5cm,height=6cm]{figures/GEM/CurrentvsClusterSizeR1869R1903.pdf}%
+      \includegraphics[width=5.5cm,height=6cm]{figures/GEM/CurrentvsClusterSizeR2065R2123.pdf}
+    \end{center}
+    \caption{Mean value of cluster size distribution at different current supplied to high voltage divider obtained during the beam test campaign: for 2014H4A which was taken for region ($\eta$, $\phi$) = (5,2) (left), for 2014H4C taken for region ($\eta$, $\phi$) = (8,2) (middle) and for 2014H4D taken for region ($\eta$, $\phi$) = (1,2).}
+  \label{fig:CSDfiducialregion}
+\end{figure}
 Cluster size study distributions for the GE1/1-IV and GE1/1-IV-GIF are plotted as a function of current supplied to the high voltage divider and are shown in Figure~\ref{fig:CSDGE1/1}.
+\begin{figure}[!htbp]
+   \begin{center}
+     \includegraphics[width=6cm,height=6cm]{figures/GEM/CurrentvsClusterSizeAll3EtaPhi.pdf}%
+     \includegraphics[width=6cm,height=6cm]{figures/GEM/CurrentvsClusterSizeAll3EtaPhiGE11IVGIF.pdf}
+   \end{center}
+   \caption{Cluster size distribution: Left - GE1/1-IV, Right - GE1/1-IV-GIF}
+   \label{fig:CSDGE1/1}
+\end{figure}
 % Cluster size is taken with the Poisson fitting function. 
 The cluster size is greater in ($\eta$, $\phi$) = (5,2) region for both the detectors due to the uniformity in readouts channels.The GE1/1 $4^{th}$ generation prototype used suffered from the significant bending in the readout and drift PCB. This affects GE1/1 properties like primary charge created, uniformity, transparency of bottom of third GEM foil, charge collection by the readout, etc. Thus, it is expected that non-uniformity in the cluster size distribution in ($\eta$, $\phi$) sector (1,2), (5,2), and (8,2) is a consequence of this. This issue is improved in the next version of GE1/1 prototype known as GE1/1-V.
 
