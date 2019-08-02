@@ -129,7 +129,7 @@ This chapter presents a study of VBS in $\PW\PW$, $\PW\PZ$, and $\PZ\PZ$ final s
 Several Monte Carlo (MC) event generators are used to simulate the signal and
 background processes. For all processes, the detector response is simulated using a detailed description of the CMS detector, based on the \textsc{GEANT4} 
 package~\cite{Agostinelli:2002hh}, and event reconstruction is performed with
-the same algorithms as used for data. Proton-proton interactions occuring in the same beam crossing bin as the event of interest (pileup) are included in the simulation samples. The simulated events are weighted so that the pileup distribution matches the data, with an average pileup of about $27$ interactions per beam crossing.
+the same algorithms as used for data. Proton-proton interactions occurring in the same beam crossing bin as the event of interest (pileup) are included in the simulation samples. The simulated events are weighted so that the pileup distribution matches the data, with an average pileup of about $27$ interactions per beam crossing.
 
 \subsection{Data samples}
 
@@ -158,7 +158,7 @@ SingleElectron  &       Run2016C-03Feb2017           \\
 \hline
   \end{tabular}
 %}
-  \caption{List of data samples used in the analysis. Here different run names corresponds to the different time stamp during which data was collected, and the date in the data sample name corresponds to the time stamp at wich it was converted to the physics objects, i.e, electrons, muons, jets, etc from the hit and energy deposit information.}
+  \caption{List of data samples used in the analysis. Here different run names corresponds to the different time stamp during which data was collected, and the date in the data sample name corresponds to the time stamp at which it was converted to the physics objects, i.e, electrons, muons, jets, etc. from the hit and energy deposit information.}
   \label{tab:datasample}
   \end{center}
 \end{table}
@@ -253,11 +253,11 @@ The QCD initiated production of two gauge bosons with two final state quarks (wh
 \centering
 \includegraphics[width=0.45\textwidth]{Plots/plots/interference_comparison_mww.png}
 \includegraphics[width=0.45\textwidth]{Plots/plots/interference_comparison_mjj_vbs.png}
-\caption{Distributions of $m_{\PW V}$ (left) and $m_{jj}$ (right) in the signal region with interference contribution (red) and without intereference contribution (blue).}
+\caption{Distributions of $m_{\PW V}$ (left) and $m_{jj}$ (right) in the signal region with interference contribution (red) and without interference contribution (blue).}
 \label{fig:interference}
 \end{figure*}
 
-The aQGC signal samples are produced using \MADGRAPH{}5\_a\MCATNLO at LO accuracy. The default coupling for the event generation is set to $f_{T0} / \Lambda^{4} = -12.5 [\mathrm{TeV}]^{-4}$. Other coupling strengths are obtained by means of the reweighting method in \MADGRAPH{}5\_a\MCATNLO~\cite{Mattelaer2016,Mattelaer-reweight}. Figure~\ref{fig:aqgc_signal} shows the mass distributions of the  $\PW \PW$ system for few aQGC parameters for the operators $S0$ (left) and $T2$ (right). The expected enhancement of the production cross section at large masses for nonzero aQGC is clearly seen.      
+The aQGC signal samples are produced using \MADGRAPH{}5\_a\MCATNLO at LO accuracy. The default coupling for the event generation is set to $f_{T0} / \Lambda^{4} = -12.5 [\mathrm{TeV}]^{-4}$. Other coupling strengths are obtained by means of the reweighting method in \MADGRAPH{}5\_a\MCATNLO~\cite{Mattelaer2016,Mattelaer-reweight}. Figure~\ref{fig:aqgc_signal} shows the mass distributions of the  $\PW \PW$ system for few aQGC parameters for the operators $S0$ (left) and $T2$ (right). The expected enhancement of the production cross section at large masses for non-zero aQGC is clearly seen.      
   
 \begin{figure*}[!htbp]
 \centering
@@ -403,7 +403,7 @@ The data samples used in the analysis were taken with the following triggers:
 \item HLT\_Ele27\_WPTight\_Gsf\_v* (electron channel)
 \item HLT\_IsoTkMu24\_v* or  HLT\_IsoMu24\_v* (muon channel)
 \end{itemize}
-The explanation of these triggers are given in Table~\ref{tab:trigger-path}. The trigger efficiencies in data and simulation are measured using tag-and-probe~\cite{Tag_probe}. In tag-and-probe method the correction factors  for the values extracted from the simulation are determined using $Z \rightarrow l^+ l^-$ sample in both data and simulation. This removes any systematic uncertainty coming from imperfections in the simulation. For the measurement for a given efficiency contains events selected with two lepton candidates. The first lepton, known as ``\textit{tag}'', was choosen based on the tight identification and isolation requirements. The other leptons, known as ``\textit{probe}'', is selected based on the criteria which depends on the efficiency being measured. The invariant mass of the choosen tag and probe lepton candidate should fall in the range of 60-120 \GeV. The signal yields are obtained for two exclusive subsamples of events in which the probe lepton passes or fails the selection criteria considered. Fits are performed to the invariant-mass distribution of the pass and fail subsamples, including a term that accounts for the background. The measured efficiency is deduced from the relative level of signal in the pass and fail subsamples; its uncertainty includes a systematic contribution from the fitting procedure. The correction factors are obtained as ratios of tag-and-probe efficiencies for the data and for the simulation. The ratio of data and simulation efficiencies is found to be consistent with unity within 1\%.
+The explanation of these triggers are given in Table~\ref{tab:trigger-path}. The trigger efficiencies in data and simulation are measured using tag-and-probe~\cite{Tag_probe}. In tag-and-probe method the correction factors  for the values extracted from the simulation are determined using $Z \rightarrow l^+ l^-$ sample in both data and simulation. This removes any systematic uncertainty coming from imperfections in the simulation. For the measurement for a given efficiency contains events selected with two lepton candidates. The first lepton, known as ``\textit{tag}'', was chosen based on the tight identification and isolation requirements. The other leptons, known as ``\textit{probe}'', is selected based on the criteria which depends on the efficiency being measured. The invariant mass of the chosen tag and probe lepton candidate should fall in the range of 60-120 \GeV. The signal yields are obtained for two exclusive subsamples of events in which the probe lepton passes or fails the selection criteria considered. Fits are performed to the invariant-mass distribution of the pass and fail subsamples, including a term that accounts for the background. The measured efficiency is deduced from the relative level of signal in the pass and fail subsamples; its uncertainty includes a systematic contribution from the fitting procedure. The correction factors are obtained as ratios of tag-and-probe efficiencies for the data and for the simulation. The ratio of data and simulation efficiencies is found to be consistent with unity within 1\%.
 
 
 %%%%%%%%%%%
@@ -568,7 +568,7 @@ Missing transverse energy is estimated from the imbalance of the transverse mome
 \label{sec:event_selection}
 The event selection aims to identify events with one or two leptons and a Lorentz-boosted $V$ boson produced with VBS topology. Candidate events with a tightly identified lepton with $\pt>30\GeV$ target the $\PW V \rightarrow \ell \nu V$ decays, characterized by a significant amount of missing transverse energy ($\ptmiss$) associated to the undetected neutrino. The Drell-Yan and QCD multi-jet background processes are reduced by requiring $\ptmiss>50\GeV$ ($\ptmiss>80\GeV$) in the muon (electron) final state. 
 
-Candidate events with two same flavor leptons of opposite charges with  $\pt>30\GeV$ target the  $\PZ V \rightarrow \ell \ell V$ decays. The candidate $Z$ boson invariant mass is required to lie within $15\GeV$ of the nominal $\PZ$ boson mass.
+Candidate events with two same flavour leptons of opposite charges with  $\pt>30\GeV$ target the  $\PZ V \rightarrow \ell \ell V$ decays. The candidate $Z$ boson invariant mass is required to lie within $15\GeV$ of the nominal $\PZ$ boson mass.
 
 Events are required to have at least one $V$-tagged jet with $\pt>200\GeV$, $|\eta|<2.4$, and $65~\GeV < m_{V} < 105~\GeV$. In the case of multiple $V$ candidates, the one with mass closest to the nominal $\PW$ boson mass is selected.  The events are required to contain at least two jets with $\pt>30\GeV$ and $|\eta|<5.0$, and $\Delta R(j,V)>0.8$. In the case of more than two jet candidates, the pair with the largest dijet mass is selected. The VBS topology is targeted by requiring a large dijet mass $m_{jj}>800\GeV$, and a large pseudorapidity separation $|\Delta \eta_{jj}|>4.0$.  
 
@@ -577,7 +577,7 @@ Events with three or more loosely identified leptons with $\pt>20\GeV$ and $|\et
 The longitudinal component of the neutrino momentum in $\PW V \rightarrow \ell \nu V$ events is estimated by constraining the mass of the lepton and neutrino system to be the nominal $\PW$ boson mass~\cite{Sirunyan:2018iff}. The resulting quadratic equation is solved using $\vec{\mathrm{p}}_{T}^{\mathrm{miss}}$ as an estimate of the neutrino $\vec{\mathrm{p}}_{T}$.
 
 Additional selection criteria are then used to enhance the sensitivity to aQGCs. Candidate events are required to have  $z_{V}^{*} < 0.3$ and $z_{W}^{*} < 0.3$, where $z_{V}^{*} = |\eta_{V}-(\eta_{j1}+\eta_{j2})/2|/|\Delta \eta_{jj}|$ is the Zeppenfeld variable~\cite{Rainwater:1996ud}, $\eta_{V}$ is the
-pseudorapidity of a gauge boson, and $\eta_{j1}$ and $\eta_{j2}$ are the pseudorapidities of the leading and subleading jet, respectively. In addition, events are required to have $\vartheta>1.0$ where $\vartheta = \mathrm{min}(\mathrm{min}(\eta_{W},\eta_{V})-\mathrm{min}(\eta_{j1},\eta_{j2}),\mathrm{min}(\eta_{j1},\eta_{j2})-\mathrm{min}(\eta_{W},\eta_{V}))$ is the so called boson centrality. 
+pseudorapidity of a gauge boson, and $\eta_{j1}$ and $\eta_{j2}$ are the pseudorapidities of the leading and sub-leading jet, respectively. In addition, events are required to have $\vartheta>1.0$ where $\vartheta = \mathrm{min}(\mathrm{min}(\eta_{W},\eta_{V})-\mathrm{min}(\eta_{j1},\eta_{j2}),\mathrm{min}(\eta_{j1},\eta_{j2})-\mathrm{min}(\eta_{W},\eta_{V}))$ is the so called boson centrality. 
 
 Statistical analysis of the event yields is performed with a fit to the mass distribution of the $\PW V$ or $\PZ V$ system. The mass distributions are binned as follows: $m_{\PW V}$ = [$600$,$700$,$800$,$900$,$1000$,$1200$,$1500$,$2000$,$\infty$]. The distributions of $m_{\PW V}$ and $m_{\PZ V}$ in the signal region are shown in Figure~\ref{fig:signal2}. The data yield together with the SM expectation for the different processes is given in Table~\ref{tab:sel_yields15}. The expected yields of the background processes are obtained from the fit to the Asimov dataset for the SM only hypothesis. 
 
@@ -586,7 +586,7 @@ Statistical analysis of the event yields is performed with a fit to the mass dis
 \centering
 \includegraphics[width=0.45\textwidth]{Plots/plots/wv_signal.pdf}
 \includegraphics[width=0.45\textwidth]{Plots/plots/zv_signal.pdf}
-\caption{Distributions of $m_{WV}$ (left) and $m_{ZV}$ (right) in the signal region. The gray bands include uncertainties from the predicted yields. The histograms for other backgrounds include the contributions from QCD initiated dibosons, top, $\PW+$jets, and Drell--Yan processes. The overflow is included in the last bin.The bottom inset in each figure shows the ratio of the number of events observed in data to that of the total background prediction.}
+\caption{Distributions of $m_{WV}$ (left) and $m_{ZV}$ (right) in the signal region. The grey bands include uncertainties from the predicted yields. The histograms for other backgrounds include the contributions from QCD initiated dibosons, top, $\PW+$jets, and Drell--Yan processes. The overflow is included in the last bin.The bottom inset in each figure shows the ratio of the number of events observed in data to that of the total background prediction.}
 \label{fig:signal2}
 \end{figure*}
 
@@ -611,7 +611,7 @@ Statistical analysis of the event yields is performed with a fit to the mass dis
   \hline
   \end{tabular}
 % }
-\caption{Expected yields from various background processes in $\PW V$ and $\PZ V$ final states. The statistical and systematic uncertainties are shown. The aQGC and charged higgs signal yields are also shown.}
+\caption{Expected yields from various background processes in $\PW V$ and $\PZ V$ final states. The statistical and systematic uncertainties are shown. The aQGC and charged Higgs signal yields are also shown.}
 \label{tab:sel_yields15}
   \end{center}
 \end{table}
@@ -893,7 +893,7 @@ The background estimation is validated using a reduced sideband region and then 
 
 
 \subsection{$\PZ+$jets}
-The $\PZ+$jets background process prediction in the $\PZ V$ final state is performed using the alpha-ratio method descriped above. The methods to obtain the prediction and the corresponding systematic uncertainties are identical to what was done for the $\PW+$jets prediction in the $\PW V$ final state. Figure~\ref{fig:zvfits} shows the corresponding fit of the $m_{ZV}$ distribution in the sideband region in the $\PZ V$ final state.  
+The $\PZ+$jets background process prediction in the $\PZ V$ final state is performed using the alpha-ratio method described above. The methods to obtain the prediction and the corresponding systematic uncertainties are identical to what was done for the $\PW+$jets prediction in the $\PW V$ final state. Figure~\ref{fig:zvfits} shows the corresponding fit of the $m_{ZV}$ distribution in the sideband region in the $\PZ V$ final state.  
 
 \begin{figure}[!htbp] 
 	 \centering 
@@ -908,7 +908,7 @@ The $\PZ+$jets background process prediction in the $\PZ V$ final state is perfo
 % section background_estimation (end)
 
 
-\section{Systematic Uncertanity} % (fold)
+\section{Systematic Uncertainty} % (fold)
 \label{sec:systematic_uncertanity}
 In the following the systematic uncertainties which are taken into account in the fit to the $m_{WV}$ and $m_{ZV}$ shapes are listed.  
 Uncertainties which do not only influence the overall normalization (\eg the uncertainty in the luminosity measurement), but also the distribution of relevant kinematic observables (\eg the uncertainty in the jet energy scale), are treated as shape uncertainties.
@@ -1003,7 +1003,7 @@ this procedure is about 5\% in MC estimated processes.
 
 For the processes estimated from simulation, the
 available statistics of the MC sample limits the precision of the
-modeling, and is therefore taken as a systematic
+modelling, and is therefore taken as a systematic
 uncertainty. Similarly, the backgrounds estimated from data are
 limited by the available statistics in the corresponding control
 samples. Therefore, for these uncertainties, the same treatment is
@@ -1032,7 +1032,7 @@ Figure~\ref{fig:theory} shows the nominal and the up/down one standard deviation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{$V+$jets}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The statistical uncertainties from the fit in the sideband region are propagated to the final prediction. The fit normalization uncertainty is $15\%$. The fit function is modeled using a functional shape of form $f=\exp\left[-m/(c_{0}+c_1\cdot m)\right]$ in the control region fit. The uncertainties in the fit parameters - $c_{0}$ and $c_{1}$ - are treated as nuisance parameters in the combine fit and affect the shape of the background prediction. Figure~\ref{fig:wjet} shows the nominal and the up/down one standard deviation predictions. The statistical uncertainty in the alpha-ratio values due to limited number of simulated events are also propagated to the result. 
+The statistical uncertainties from the fit in the sideband region are propagated to the final prediction. The fit normalization uncertainty is $15\%$. The fit function is modelled using a functional shape of form $f=\exp\left[-m/(c_{0}+c_1\cdot m)\right]$ in the control region fit. The uncertainties in the fit parameters - $c_{0}$ and $c_{1}$ - are treated as nuisance parameters in the combine fit and affect the shape of the background prediction. Figure~\ref{fig:wjet} shows the nominal and the up/down one standard deviation predictions. The statistical uncertainty in the alpha-ratio values due to limited number of simulated events are also propagated to the result. 
 %
 \begin{figure}[!htbp]
   \begin{center}

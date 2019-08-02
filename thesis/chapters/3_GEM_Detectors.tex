@@ -37,13 +37,13 @@ A brief description of the working principle and properties of the GEM detectors
 
 \section{Design and working principle of GEM detector} % (fold)
 \label{sec:design_and_working_principle_of_gem}
-GEM is a relatively new concept introduced by Fabio Sauli~\cite{Sauli1997} at CERN, which consists of a thin polyimide sheet (usually a thin Kapton foil\footnote{Kapton was chosen as the insulating layer as it can sustain very high radiation as well as it works with the wide range of the temperature. It is a plastic polyamide, created by DuPont.}~\cite{Kapton-sheet} with thickness 50 $\mu m$) coated with thin layer metal (usually copper) on its both sides.
+GEM is a relatively new concept introduced by Fabio Sauli~\cite{Sauli1997} at CERN, which consists of a thin polyimide sheet (usually a thin Kapton foil\footnote{Kapton was chosen as the insulating layer as it can sustain very high radiation as well as it works with the wide range of the temperature. It is a plastic polyimide, created by DuPont.}~\cite{Kapton-sheet} with thickness 50 $\mu m$) coated with thin layer metal (usually copper) on its both sides.
 It is chemically pierced with a uniform array of holes using the photolithography and acid etching processes~\cite{Benlloch1998}, as shown in Fig.~\ref{fig:gem} (left).
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.45\textwidth]{figures/GEM/KEKDTP3.pdf}
     \includegraphics[width=0.47\textwidth]{figures/GEM/35-Figure28-10-1.pdf}
-    \caption{Cross-sectional view of a GEM foil etched with holes (left)~\cite{Colaleo:2021453}. The strong electric field generated in the vicinity and inside the holes after the application of potential difference across the GEM foil (right)~\cite{PDG2018}. Here, electric field lines (solid) and equipotentials (dashed) are shown.}
+    \caption{Cross-sectional view of a GEM foil etched with holes (left)~\cite{Colaleo:2021453}. The strong electric field generated in the vicinity and inside the holes after the application of potential difference across the GEM foil (right)~\cite{PDG2018}. Here, electric field lines (solid) and equipotential (dashed) are shown.}
     \label{fig:gem}
 \end{figure}
 
@@ -79,7 +79,7 @@ Multi-layered boards could also be used to achieve a two-dimensional readout fro
     \centering
     \includegraphics[width=0.5\textwidth]{figures/GEM/Comp_threeGEMS_Gain.pdf}%
     \includegraphics[width=0.5\textwidth]{figures/GEM/Comp_threeGEMS_DischargeProbability.pdf}
-    \caption{Comparison of total effective gain on anode as a function of applied voltage for single, double and triple layred GEM detectors (left). The discharge probality as a function of applied voltage is shown for the single, double and triple layred GEM detectors (right)~\cite{Bachmann2002}.}
+    \caption{Comparison of total effective gain on anode as a function of applied voltage for single, double and triple layered GEM detectors (left). The discharge probability as a function of applied voltage is shown for the single, double and triple layered GEM detectors (right)~\cite{Bachmann2002}.}
     \label{fig:tripleGEM_discharge_gain}
 \end{figure}
 
@@ -146,8 +146,8 @@ Each partition is subdivided along the $\phi$-coordinate into three readout sect
 To improve the muon tracking capabilities, two GEM chambers will be mounted face-to-face to form a double layer called ``\textit{Super-Chamber}".
 Thus each Super-Chamber will provide two impact points for each muon track which can be ORed together to generate the final muon hits.
 The full layer by layer mechanical design of a GEM chamber is shown in Fig.~\ref{fig:GE1/1}. 
-The main parts of a GEM detector are its foil, drift plane, readout board, shielding and high voltage divider.Before being installed into the CMS detector,the working and various operational parameter of CMSge1/1 detectors were deeply scrutinized during several beam test compaigns.
-Adetailed study and results obtained during during two of such beam tests is given in the following section.
+The main parts of a GEM detector are its foil, drift plane, readout board, shielding and high voltage divider.Before being installed into the CMS detector,the working and various operational parameter of CMSge1/1 detectors were deeply scrutinized during several beam test campaigns.
+A detailed study and results obtained during during two of such beam tests is given in the following section.
 \begin{figure}[!htbp]
     \begin{center}
         \includegraphics[width=0.95\textwidth]{figures/GEM/GE11cad.pdf}
@@ -346,7 +346,7 @@ where e is the electron charge, n is the average number of electrons produced in
 
 \subsection{Beam Test Experimental Set-up}
 % A simple schematic diagram of the experimental setup is shown in Fig.~\ref{fig:tbsetup}.
-The experimental set-up consists of three plastic organic scintillators, three trackers and a GE1/1 prototype, being flushed with an Ar/CO$_{2}$ (70:30) gas mixture.
+The experimental set-up consists of three plastic organic scintillator, three trackers and a GE1/1 prototype, being flushed with an Ar/CO$_{2}$ (70:30) gas mixture.
 The trackers are triple-GEM detectors with an active area of $10~cm\times10~cm$ having 256 strips in both horizontal (y-coordinate) and vertical (x-coordinate) directions with respect to the beam and a pitch of $0.4~mm$.
 The three trackers constitute a muon tracking telescope which is used to reconstruct the beam trajectories and reduces background events.
 Figure~\ref{fig:daq} shows the experimental set-up used to perform beam test studies.
@@ -365,12 +365,12 @@ The tracking telescope is equipped with the digital chips VFAT2~\cite{Aspell:200
 On detector electronics connects the output from the front-end ASIC (VFAT2) to the GEM readout board.
 The VFAT2 chip is connected to the hybrids which are plugged into the connectors on the readout board.
 %The trigger is generated using the coincidence of three photo-multiplier tubes with mounted scintillators. 
-The analog pulses from the three scintillators, named S1, S2 and S3 are fed into discriminator for analog to digital conversion.
+The analog pulses from the three scintillator, named S1, S2 and S3 are fed into discriminator for analog to digital conversion.
 The discriminator output was provided into the logic and coincidence (to generate event trigger) before being sent to the other DAQ systems (Figure.~\ref{fig:tbs}).
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.95\textwidth]{figures/GEM/daq.pdf}
-\caption{Perspective view of the experimental set-up used for performance measurement in the beam test studies. The trigger system is generated using the signal collected from three scintillators connected in coincidence unit.}\label{fig:tbs}
+\caption{Perspective view of the experimental set-up used for performance measurement in the beam test studies. The trigger system is generated using the signal collected from three scintillator connected in coincidence unit.}\label{fig:tbs}
 \end{figure}
 % The active area of the GE1/1 detector is covered with readout strips located in the GEM Electronic Board. 
 % The readout strips are taken out in 24 readout sectors (in ($\eta$,$\phi$) phase space).
@@ -429,7 +429,7 @@ The goal is to reduce the $\chi^{2}$ of the track fits in order to improve track
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.99\textwidth]{figures/GEM/GEM_Alignment_FlowChart.pdf}
-    \caption{Flowchart illustrating the workflow of detector alignment algorithm.}
+    \caption{Flowchart illustrating the work flow of detector alignment algorithm.}
     \label{fig:alignment}
 \end{figure}
 
@@ -466,7 +466,7 @@ For each value of (X offset, Y offset) pair, tracks are linearly fitted in the $
 To have an efficient efficiency we should also define a fiducial area in which we are going to calculate the efficiency. We define the fiducial area as:
 \begin{itemize}
         \item Only valid tracks are considered during this procedure, which are defined as the tracks having hits registered in all the three trackers.
-        \item These valid tracks are then extrapolated to GE1/1’s. Only those tracks are finally selected for which the corresponding hit position in the GE1/1 has a residual value less than 5mm.
+        \item These valid tracks are then extrapolated to GE1/1’s. Only those tracks are finally selected for which the corresponding hit position in the GE1/1 has a residual value less than 5 mm.
         \item The selected events are used to fill 2D histogram for different cases. The first histogram contains all those events that have a valid hit in the trackers only, as shown in Fig.~\ref{fig:fiducial_area_sel} (left). Another 2D histogram is filled with all those events where there are valid hits in all three trackers as well as in the GE1/1, as shown in Fig.~\ref{fig:fiducial_area_sel} (right). The ratio of the two histograms defined above is computed and is shown in Fig.~\ref{fig:fiducial_area_sel} (bottom)
         \item Finally, the region (0,80) in the ratio histogram where efficiency is maximum is considered as the fiducial region. This fiducial region is used for the efficiency calculation for GE1/1 detector.
 \end{itemize}
@@ -637,7 +637,7 @@ This means that we are able to reach faster timing at lower gains with addition 
 \subsubsection{Cluster Size Measurement}
 To measure the cluster size of GE1/1, clusterization algorithm is used.
 The basis of this algorithm is that we consider clusters if one or more continuous strips in GE1/1 are fired.
-Three golden run ranges, with different pseudo-rapidity sectors, viz 2014H4A, 2014H4C and 2014H4D are studied.
+Three golden run ranges, with different pseudo-rapidity sectors, viz. 2014H4A, 2014H4C and 2014H4D are studied.
 The description of these runs is given in Table~\ref{tab:gemTBgoldenruns}.
 
 % To fit the cluster size distribution,a Poisson distribution function is used. Figure~\ref{fig:CSDpoissonfunction} shows the cluster size distribution for different ($\eta$, $\phi$) sector fitted using the Poisson distribution function.
@@ -665,7 +665,7 @@ Cluster size study distributions for the GE1/1-IV and GE1/1-IV-GIF are plotted a
 % Cluster size is taken with the Poisson fitting function. 
 The cluster size is greater in ($\eta$, $\phi$) = (5,2) region for both the detectors due to the uniformity in readouts channels.The GE1/1 $4^{th}$ generation prototype used suffered from the significant bending in the readout and drift PCB. This affects GE1/1 properties like primary charge created, uniformity, transparency of bottom of third GEM foil, charge collection by the readout, etc. Thus, it is expected that non-uniformity in the cluster size distribution in ($\eta$, $\phi$) sector (1,2), (5,2), and (8,2) is a consequence of this. This issue is improved in the next version of GE1/1 prototype known as GE1/1-V.
 
-To conclude,these beam test compaign ensured the good detection efficiencyand fine spatial and letency resolutionof GE1/1 detector.In the following section,the characterization studies performed during the development phase of GEM foils in India are reported. 
+To conclude,these beam test campaign ensured the good detection efficiency and fine spatial and latency resolution of GE1/1 detector.In the following section,the characterization studies performed during the development phase of GEM foils in India are reported. 
 % subsection results (end)
 
 % section gem_for_cms (end)
